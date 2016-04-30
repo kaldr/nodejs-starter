@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="#"><i class="w navi_icon">&nbsp;</i></a> <a href="#" class="floatR ml5" id="warn_btn"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a href="#" class="floatR"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi" style="display: none;"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="#"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="#"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="#"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="#"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="#"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="#"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="#"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="#"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="#"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">系统配置</span></h2>
+    
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu active" href="#">权限设置</a> </li>
+      <li><a class="menu" href="#">基础数据</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">权限设置</h2>
+      <!--<div class="add_role emp_obj mb10"><i>&nbsp;</i>
+        <input type="text" class="form-control" placeholder="添加新角色，请输入新角色名称......">
+      </div>-->
+      <div id="toolbar" class="mb15 clearFix">
+      <a href="#" class="btn_s floatL mr10 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>新建权限</a>
+        <label class="search_qp floatL mr10"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关职责关键词">
+        </label>
+        <select id="select_pad" class="form-control floatL" style="width:110px;">
+          <option>选择分类</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2 two">分类名称</span><span class="col-md-2 hideEle">角色</span><span class="col-md-7 hideEle">权限内容</span><span class="col-md-1 two">引用数</span></div>
+
+      <div class="page_con"> 
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2 two"><span class="color9">总经办</span></div>
+           <div class="col-md-2 hideEle">董事长</div>
+          <div class="col-md-7 hideEle"><span class="l_c">订单管理、行程管理、线路管理、财务报账、财务报表、三清单、财务审核、财务流程</span></div>
+          <div class="col-md-1 two">已引用<font class="red_t"> 6</font> 个</div>
+        </li>
+        <li>
+          <div class="col-md-2 two"><span class="color9">总经办</span></div>
+           <div class="col-md-2 hideEle">董事长</div>
+          <div class="col-md-7 hideEle"><span class="l_c">订单管理、行程管理、线路管理、财务报账、财务报表、三清单、财务审核、财务流程</span></div>
+          <div class="col-md-1 two">已引用<font class="red_t"> 6</font> 个</div>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+  </div>
+  <!-- main_con END-->
+  
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20"><a class="coll_btn">&nbsp;</a></div>
+      <h3 class="mb10 clearFix"><b class="floatL ft16">职责信息</b><a class="floatR blue_txt" id="edit_info" href="#">编辑信息</a></h3>
+      <div class="info_row mb20 clearFix"> <font>职责名称：</font>
+        <label><span>总经理</span>
+          <input type="text" value="总经理" class="form-control w100" >
+        </label>
+        <font>分类目录：</font>
+        <label><span>总经办</span>
+          <select class="form-control w100">
+            <option>总经办</option>
+          </select>
+        </label>
+<!--        <font>分配功能：</font>
+        <label><span>可分配</span>
+          <select class="form-control w100">
+            <option>可分配</option>
+          </select>
+        </label>-->
+      </div>
+      <h3 class="mb10"><b class="ft16">权限设置</b><a href="#" id="edit_set" class="floatR blue_txt">修改设置</a></h3>
+      <h4><span>订单中心</span></h4>
+      <ul class="info_pad">
+        <li><a class="s_panel" href="#">查看订单</a>
+          <div class="show_pop"> <i class="arr_top">&nbsp;</i>
+          <div class="seTab_menu"><a class="active" href="#">二级菜单A</a><a href="#">二级菜单B</a><a href="#">二级菜单C</a></div>
+          <div class="seTab_con"><strong>选操作权限：</strong>
+          <p>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              全选 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              查看 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              编辑 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              预订订单 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              删除 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              订单统计 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="" value="option1">
+              订单结算 </label>
+              </p>
+              </div>
+          </div>
+        </li>
+        <li><a class="s_panel" href="#">编辑订单</a>
+          <div class="show_pop">
+           <div class="seTab_menu"><a class="active" href="#">二级菜单A</a><a href="#">二级菜单B</a><a href="#">二级菜单C</a></div>
+          <div class="seTab_con"> <i class="arr_top">&nbsp;</i> <strong>操作权限：</strong> <p><span class="linkRow"> <a href="#">编辑</a> <a href="#">预订订单</a> <a href="#">删除</a> <a href="#">订单统计</a> <a href="#">订单结算</a> </span></p> </div></div>
+        </li>
+        <li><a class="s_panel" href="#">下订单</a></li>
+        <li><a class="s_panel" href="#">删除订单</a></li>
+      </ul>
+      <h4><span>产品中心</span></h4>
+      <ul class="info_pad">
+        <li> <a class="s_panel" href="#">自助游</a></li>
+        <li><a class="s_panel" href="#">组团游</a></li>
+        <li><a class="s_panel" href="#">邮轮游</a></li>
+        <li><a class="s_panel" href="#">定制游</a></li>
+      </ul>
+      <h4><span>个人中心</span></h4>
+      <ul class="info_pad">
+        <li><a class="s_panel" href="#">办理任务</a></li>
+        <li><a class="s_panel" href="#">线路毛利</a></li>
+        <li><a class="s_panel" href="#">业务提成</a></li>
+        <li><a class="s_panel" href="#">短消息</a></li>
+        <li><a class="s_panel" href="#">部门订单</a></li>
+        <li><a class="s_panel" href="#">行程管理</a></li>
+        <li><a class="s_panel" href="#">门市帐户</a></li>
+        <li><a class="s_panel" href="#">签证</a> </li>
+      </ul>
+      <h4><span>财务中心</span></h4>
+      <ul class="info_pad">
+        <li> <a class="s_panel" href="#">帐务处理</a></li>
+        <li><a class="s_panel" href="#">暂借款撤销</a></li>
+        <li><a class="s_panel" href="#">预付款撤销</a></li>
+        <li><a class="s_panel" href="#">财务结算(新)</a></li>
+        <li><a class="s_panel" href="#">账务处理(新)</a></li>
+        <li><a class="s_panel" href="#">汇款认领</a></li>
+        <li><a class="s_panel" href="#">财务收支清单</a></li>
+        <li><a class="s_panel" href="#">订单收款</a></li>
+        <li><a class="s_panel"  href="#">财务收支清单</a></li>
+        <li><a class="s_panel" href="#">订单收款</a></li>
+        <li><a class="s_panel" href="#">财务结算</a></li>
+        <li><a class="s_panel" href="#">订单退款</a></li>
+        <li><a class="s_panel" href="#">代理充值</a></li>
+        <li><a class="s_panel" href="#">汇款到账</a></li>
+        <li><a class="s_panel" href="#">导游津贴</a></li>
+        <li><a class="s_panel" href="#">三清单处理</a></li>
+        <li><a class="s_panel" href="#">业务员提成</a></li>
+        <li><a class="s_panel" href="#">结算收款</a></li>
+        <li><a class="s_panel" href="#">财务结算</a></li>
+        <li><a class="s_panel" href="#">预领支出</a></li>
+        <li><a class="s_panel" href="#">退团退款</a></li>
+        <li><a class="s_panel" href="#">导游结算</a></li>
+        <li><a class="s_panel" href="#">导游津贴</a></li>
+        <li><a class="s_panel" href="#">暂借款付款</a></li>
+        <li><a class="s_panel" href="#">暂借款撤销</a></li>
+        <li><a class="s_panel" href="#">预付款撤销</a></li>
+        <li><a class="s_panel" href="#">财务结算(新)</a></li>
+        <li><a class="s_panel" href="#">账务处理(新)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--container END--> 
+<script type="text/javascript">
+
+$("#edit_info").click( function() {
+	$(".info_row").addClass("edit_s");
+	$(this).text("保存修改");
+});
+
+$("#edit_set").click( function() {
+	$(".info_pad").addClass("edit_pad");
+	$(this).text("保存修改");
+});
+
+$(".info_pad li a.s_panel").click(function() {
+	var x=$(this).position();
+	var x1=x.left+18;
+	var y1=x.top+30;
+	$(this).next(".show_pop").find(".arr_top").css({left:x1});
+	$(this).parents("li").find(".s_panel").addClass("active");
+	$(this).parents("li").find(".show_pop").toggle().css({top:y1});
+	$(this).parents("li").siblings().find(".show_pop").hide();
+});
+</script> 
+<script src="../js/common.js"></script>
+</body>
+</html>

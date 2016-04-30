@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/order.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container">
+<!--sideBar start-->
+<div id="sideBar">
+  <div id="avatar_info_panel">
+    <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+    <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+      <ul class="navi">
+        <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+        <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+        <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+        <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+        <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+        <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+        <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+        <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+        <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+      </ul>
+    </div>
+    <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+      <p class="ft14">杨颖</p>
+      <p>计调主管</p>
+    </div>
+  </div>
+  <p class="double_line">&nbsp;</p>
+  <h2 class="subTit clearFix"><span class="floatL">订单中心</span></h2>
+  <ul class="sub_menu" style="display:block">
+    <li>
+      <div class="subArr_tit">线路订单</div>
+      <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">组团游</a><a href="#" class="menu">自助游</a><a href="#" class="menu">邮轮游</a><a href="#" class="menu">自驾游</a><a href="#" class="menu">定制游</a><a href="#" class="menu">一团一议</a></div>
+    </li>
+    <li><a class="menu" href="#">出游签证</a> </li>
+    <li><a class="menu" href="#">机票业务</a> </li>
+    <li><a class="menu" href="#">地接线路</a></li>
+  </ul>
+</div>
+<!--sideBar END--> 
+<!--info_tipPop start-->
+<div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+  <div class="col-md-8 floatL">
+    <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+    <p>你的转正/调薪审批已通过</p>
+  </div>
+</div>
+<!--info_tipPop END--> 
+<!-- main_con start-->
+<div id="main_con">
+  <div id="main">
+          <h2 class="ft18 mb15">门票下单</h2>
+      <div class="mb15 clearFix" id="toolbar">
+        <label class="search_qp floatL mr10"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>国家</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>省份</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>城市</option>
+        </select>
+        <select class="form-control floatL w100 hideEle">
+          <option>景区级别</option>
+           <option>景区级别2</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2 hideEle">订单编号</span><span class="col-md-3 two">景区名称</span><span class="col-md-2 two">景区级别</span><span class="col-md-4 hideEle">地址</span><span class="col-md-1 hideEle">门票种类</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2 hideEle">D00293650</div>
+          <div class="col-md-3 two"><span class="l_c">宁波天童寺</span></div>
+          <div class="col-md-2 two">5A级</div>
+          <div class="col-md-4 hideEle"><span class="l_c">中国浙江省宁波市鄞州区东乡太白山麓</span></div>
+          <div class="col-md-1 hideEle"><font class="red_t">3</font></div>
+        </li>
+        <li>
+          <div class="col-md-2 hideEle">D00293650</div>
+          <div class="col-md-3 two"><span class="l_c">宁海森林温泉</span></div>
+          <div class="col-md-2 two">5A级</div>
+          <div class="col-md-4 hideEle"><span class="l_c">中国浙江省宁波市宁海县深甽镇南溪温泉(近卧龙谷)</span></div>
+          <div class="col-md-1 hideEle"><font class="red_t">3</font></div>
+
+        </li>
+      </ul>
+  </div>
+</div>
+<!-- main_con END--> 
+<!--zz_info start-->
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">下单详情</span></div>
+    <div class="mb10"><strong class="ft20 mr20">天目湖御水温泉</strong><span class="ft14">位于江苏省常州市溧阳市李家园村888号</span></div>
+    <div class="picD mb15 clearFix"> <img width="320" height="200" src="../images/default/p1.jpg" alt=""> <img width="202" height="99" src="../images/default/ms.jpg" alt=""> <img width="234" height="99"src="../images/default/p4.jpg" alt=""> <img  width="234" height="99" src="../images/default/p3.jpg" alt=""> <img width="202" height="99" src="../images/default/ms.jpg" alt=""> </div>
+    <p class="ft14 mb10"><b>门票预订</b></p>
+    <div class="tList">
+      <div class="ticketInfo mb10">
+        <div class="clearFix lineBox">
+          <div class="ticke_l pt5"><a class="blue_txt tit_wq mr20">温泉+自助餐晚餐【平时】<i class="arr_b">&nbsp;</i></a><font class="color6">￥238.00</font></div>
+          <div class="ticket_r"><span class="red_t mr15">￥476.00</span><a class="numVH minus" href="#"></a>
+            <input value="3" class="form-control vhInput" name="" type="text">
+            <a class="numVH plus" href="#"></a> </div>
+        </div>
+        <div class="dropInfo">
+          <p><b class="color3">预订时间：</b>如需预订，您最晚要在游玩当天14:00前下单，请尽早预订。</p>
+          <p><b class="color3">包含项目：</b>门票包含冯宅、绮园、张乐平纪念馆、张元济纪念馆、海盐县博物馆、绮园文化广场、绮园商业街、朱宅（张元济纪念馆和朱宅维修，暂停开放）。</p>
+          <p><b class="color3">预订说明：</b>①为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息；
+            ②门票当天有效，出园需入园，需再次购买门票。</p>
+        </div>
+      </div>
+      <div class="ticketInfo mb10">
+        <div class="clearFix lineBox">
+          <div class="ticke_l pt5"><a class="blue_txt tit_wq mr20">温泉+自助餐晚餐【周末】温泉+自助餐晚餐【周末】<i class="arr_b">&nbsp;</i></a><font class="color6">￥238.00</font></div>
+          <div class="ticket_r"><span class="red_t mr15">￥476.00</span><a class="numVH minus" href="#"></a>
+            <input value="3" class="form-control vhInput" name="" type="text">
+            <a class="numVH plus" href="#"></a> </div>
+        </div>
+        <div class="dropInfo">
+          <p><b class="color3">预订时间：</b>如需预订，您最晚要在游玩当天14:00前下单，请尽早预订。</p>
+          <p><b class="color3">包含项目：</b>门票包含冯宅、绮园、张乐平纪念馆、张元济纪念馆、海盐县博物馆、绮园文化广场、绮园商业街、朱宅（张元济纪念馆和朱宅维修，暂停开放）。</p>
+          <p><b class="color3">预订说明：</b>①为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息；
+            ②门票当天有效，出园需入园，需再次购买门票。</p>
+        </div>
+      </div>
+    </div>
+    <div class="algin_right"><b class="mr10">总计：<font class="red_t">952.00</font> 元</b> <a class="btn_s red_btn" href="#">预 订</a></div>
+    <div class="tipMy color9 mb10 pt10 center">---------------------- 以下门票预订(请程序删除这行提示)--------------------</div>
+    <div class="ft16 mb15"><b>门票预定</b></div>
+    <div class="border_panel clearFix mb15">
+      <div class="box box1">
+        <div class="clearFix mb30"><span class="t1">陈艳丽</span><span class="floatR"><a href="#" class="blue_txt mr10"><i class="iconT gh">&nbsp;</i>更换</a><a href="#" class="blue_txt"><i class="iconT xq">&nbsp;</i>详情</a></span></div>
+        <p class="clearFix pt5"><span class="ft14"><i class="iconT sj">&nbsp;</i>18758888888</span><a href="#" class="floatR blue_txt"><i class="iconT fsdx">&nbsp;</i>发送短信</a></p>
+      </div>
+      <div style="width:65%; " class="box box2">
+        <p class="mb10 line20">景区名称：天目湖御水温泉</p>
+        <p class="mb10 line20">景区级别：5A级</p>
+        <p class="line20">景区地址：江苏省常州市溧阳市李家园村888号</p>
+      </div>
+    </div>
+    <p class="mb10"><b class="ft14">门票信息</b></p>
+    <div class="ticketInfo mb10">
+      <div class="clearFix lineBox">
+        <div class="ticke_l pt5"><i class="step_dot">1</i> <span class="mr20">温泉+自助餐晚餐【平时】</span><font class="color6">￥238.00</font></div>
+        <div class="ticket_r"><span class="red_t mr15">￥476.00</span><a href="#" class="numVH minus"></a>
+          <input type="text" name="" class="form-control vhInput" value="3">
+          <a href="#" class="numVH plus"></a> </div>
+      </div>
+      <div class="clearFix lineBox">
+        <div class="ticke_l pt5"><i class="step_dot">2</i> <span class="mr20">温泉+自助餐晚餐【平时】</span><font class="color6">￥238.00</font></div>
+        <div class="ticket_r"><span class="red_t mr15">￥476.00</span><a href="#" class="numVH minus"></a>
+          <input type="text" name="" class="form-control vhInput" value="3">
+          <a href="#" class="numVH plus"></a> </div>
+      </div>
+      <div class="pt10 mb10 algin_right"><b>总计：<font class="red_t">476.00</font> 元</b></div>
+    </div>
+    <p class="mb10"><b class="ft14">联系人信息</b></p>
+    <table class="form_tab mb15" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="10%">联系人：</th>
+        <td width="38%">
+          <input type="text" placeholder="" name="" class="form-control">
+        </td>
+        <th width="12%">联系号码：</th>
+        <td>
+          <input type="text" placeholder="" name="" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <th>邮箱地址：</th>
+        <td>
+          <input type="text" placeholder="" name="" class="form-control">
+        </td>
+        <th>证件号码：</th>
+        <td>
+          <select name="" class="form-control w100">
+            <option>身份证</option>
+          </select>
+          <input type="text" placeholder="" name="" class="form-control w180 floatR">
+        </td>
+      </tr>
+      <tr>
+        <th>联系地址：</th>
+        <td colspan="3">
+          <select class="form-control w100 mr10" name="">
+            <option>中国</option>
+          </select>
+          <select class="form-control w100 mr10" name="">
+            <option>省份</option>
+          </select>
+          <select class="form-control w120" name="">
+            <option>城市</option>
+          </select>
+          <input type="text" class="form-control w300 floatR" placeholder="详细地址" name="">
+        </td>
+      </tr>
+    </table>
+    <p class="mb10"><b class="ft14">业务员信息</b></p>
+    <table class="form_tab mb15" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="10%">业务员：</th>
+        <td><a href="#" class="btn_s red_btn blueBtn">选择业务员</a></td>
+      </tr>
+    </table>
+    <p class="mb10"><b class="ft14">出行人信息</b></p>
+    <table class="form_tab mb15" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="10%">出行人数：</th>
+        <th width="6%">成人</th>
+        <td width="17%">
+          <input class="form-control" name="" type="text">
+        </td>
+        <th width="7%">小孩</th>
+        <td width="17%">
+          <input class="form-control" name="" type="text">
+        </td>
+        <th width="7%">婴儿</th>
+        <td width="17%">
+          <input class="form-control" name="" type="text">
+        </td>
+        <th><a class="btn_s red_btn blueBtn" href="#">填写详细信息</a></th>
+      </tr>
+      <tr>
+        <th>使用日期：</th>
+        <td colspan="7">
+          <div class="input-group date form_date w200"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p class="mb5"><b class="ft14 mr30">选择保险</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+      <tbody>
+        <tr>
+          <th width="5%">
+            <label>
+              <input type="checkbox" name="" value="">
+            </label>
+          </th>
+          <th width="22%">保险名称</th>
+          <th>说明</th>
+          <th width="12%">单价(元)</th>
+          <th width="12%">保险时间</th>
+          <th width="12%">保险费用(元)</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="" value="">
+            </label>
+          </td>
+          <td>泰康境内旅游意外险</td>
+          <td>
+            <div class="algin_left">境内旅游专款，价格实惠，享有意外、医疗等基础保障 </div>
+          </td>
+          <td>10.00</td>
+          <td>7天</td>
+          <td>10.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="" value="">
+            </label>
+          </td>
+          <td>泰康境内旅游意外险</td>
+          <td>
+            <div class="algin_left">境内旅游专款，价格实惠，享有意外、医疗等基础保障 </div>
+          </td>
+          <td>10.00</td>
+          <td>7天</td>
+          <td>10.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="mr30 ft14">费用清单</b><a class="blue_txt mr20" href="#">增加</a><a class="blue_txt mr20" href="#">减少</a></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+      <tbody>
+        <tr>
+          <th width="15%">费用类型</th>
+          <th width="15%">费用名称</th>
+          <th>费用备注</th>
+          <th width="13%">费用金额(元)</th>
+        </tr>
+        <tr>
+          <td>正常费用</td>
+          <td>名单费用</td>
+          <td>
+            <div class="algin_left">参团15人，名单总计：69544.00 元 ( 包含 签证费：491.00 元 和 机建费：491.00 元 ) </div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td>正常费用</td>
+          <td>保险费用</td>
+          <td>
+            <div class="algin_left">泰康境内旅意险(高端版)5份，泰康境内旅意险5份</div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td>减少费用</td>
+          <td>老会员优惠</td>
+          <td>
+            <div class="algin_left">参加无数次优惠50元</div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="algin_right"><b>预计费用总计：<font class="red_t">69544.00</font> 元</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="mr30 ft14">订单备注</b></p>
+    <p class="mb5">支付时间和方式</p>
+    <div class="mb10">
+      <input class="form-control" name="" type="text">
+    </div>
+    <p class="mb5">备注</p>
+    <div class="mb20">
+      <textarea class="form-control" name="" cols="" rows="3"></textarea>
+    </div>
+    <div class="clearFix algin_right">
+      <input type="button" class="btn_ok red_btn big_button mr10" value="确定" name="">
+      <input type="button" class="btn_cancel big_button" value="取消" name="">
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+</div>
+<!--container END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

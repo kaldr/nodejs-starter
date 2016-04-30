@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="#"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="#"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="#"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="#"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="#"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="#"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="#"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="#"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="#"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="#"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">任务</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">共同岗位 <span>(12450 )</span></a> </li>
+      <li><a class="menu" href="#">分配给我的<span>(2)</span></a> </li>
+      <li><a class="menu" href="#">今天</a></li>
+      <li><a class="menu" href="#">本周</a></li>
+      <li><a class="menu" href="#">以后</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">今天</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>新建任务</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关职责关键词">
+        </label>
+        <select class="form-control floatL w120">
+          <option>任务完成情况</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select id="select_pad" class="form-control floatR w100 hideEle">
+          <option>排序方式</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-8 one">任务详情</span><span class="col-md-2 hideEle">优先级别</span><span class="col-md-2 hideEle">需完成日期</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="l col-md-8 one"><label>
+            <input type="checkbox" class="mr10 check stopPro" value="">
+            <font class="mr20">设计一条从宁波到美国的组团游线路</font><font class="color9 ft12">内容请参照上个月的美国线路优惠活动，设计好之后请先让我过目再上架</font></label><a class="glyphicon glyphicon-trash stopPro mr30"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-danger">非常紧急</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font>星期三</div>
+        </li>
+        <li>
+          <div class="l col-md-8 one"><label>
+            <input  type="checkbox" class="mr10 check stopPro" value="">
+            <font class="mr20">设计一条从杭州到巴厘岛的组团游线路</font></label><a class="glyphicon glyphicon-trash stopPro mr30"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-warning">紧急</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font> 星期三</div>
+        </li>
+        <li>
+          <div class="l col-md-8 one"><label>
+            <input type="checkbox" class="mr10 check stopPro" value="">
+            <font class="mr20">8月份三清单汇总</font><font class="color9 ft12">8月份的三清单请尽快做好交给我过目</font></label><a class="glyphicon glyphicon-trash mr30 stopPro"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-success">重要</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font> 星期三</div>
+        </li>
+        <li>
+          <div class="l col-md-8 one"><label>
+            <input  type="checkbox" class="mr10 check stopPro" value="">
+            <font class="mr20">设计一条从宁波到美国的组团游线路</font><font class="color9 ft12">图片不要用之前的，请找计调李松会要</font></label><a class="glyphicon glyphicon-trash stopPro mr30"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-info">一般</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font> 星期三</div>
+        </li>
+        <li class="redRow">
+          <div class="l col-md-8 one"><label>
+            <input type="checkbox" class="mr10 check stopPro" value="">
+            <font class="mr20">8月份三清单汇总</font><font class="color9 ft12">8月份的三清单请尽快做好交给我过目</font></label><a class="glyphicon glyphicon-trash mr30 stopPro"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-success">重要</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font> 星期三</div>
+        </li>
+        <li class="overRow">
+          <div class="l col-md-8 one"><label>
+            <input  type="checkbox" checked class="mr10 check stopPro" value="">
+            <font class="mr20">设计一条从杭州到巴厘岛的组团游线路</font></label><a class="glyphicon glyphicon-trash mr30 stopPro"></a></div>
+          <div class="col-md-2 hideEle"><font class="btn_s h24 btn-warning">紧急</font></div>
+          <div class="col-md-2 hideEle"><font class="mr10">2015-09-01</font> 星期三</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="passed">&nbsp;</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">任务详情</span></div>
+      <div class="ed_row">
+        <div class="ft16 mb10"><span class="glyphicon glyphicon-unchecked mr10"></span><strong>设计一条从宁波到美国的组团游线路(点击即可编辑)</strong></div>
+        <div class="detail_p color6">旅游行业新生准备设计一款旅游产品，设计一款完整的旅游产品包括那些内容，需要注意的问题，怎样才能做到直接使用的深度</div>
+      </div>
+      <div class="edit_form">
+        <form>
+          <div class="form-group">
+            <input type="" class="form-control" id="" placeholder="设计一条从宁波到美国的组团游线路(点击即可编辑)">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="" placeholder="添加任务描述，按Ctrl+Enter健提交" cols="" rows=""></textarea>
+          </div>
+          <div class="clearFix">
+            <button type="submit" class="btn btn-primary ml20 floatR">取消</button>
+            <button type="submit" class="btn btn-primary floatR">提交</button>
+          </div>
+        </form>
+      </div>
+      <div class="line_b mb25">&nbsp;</div>
+      <!--task_menu start-->
+      <ul class="task_menu mb30">
+        <li>
+          <div class="innerBox">
+            <div class="color9 mb5">任务创建者</div>
+            <div class="clearFix"> <img class="ava30 floatL mr20" src="../images/default/pic1.jpg" alt="">
+              <p class="ft14 r_info">杨颖 <span class="color9"> 计调主管</span></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="innerBox">
+            <div class="color9 mb5">截止日期</div>
+            <div class="clearFix"> <img class="floatL pt5 mr20" src="../images/calendar.png" alt="" title="">
+              <div id="dateSpe" class="input-group date form_date col-md-5"> <span class="input-group-addon cL"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input class="form-control" size="16" type="text" placeholder="选择截止日期" value="" readonly>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="innerBox">
+            <div class="color9 mb5">优先级别</div>
+            <div class="clearFix r_info" id="priorit_level"> <a href="#"><span class="btn_s btn-success s">&nbsp;</span>重要</a> </div>
+          </div>
+          <div id="lev_pop" class="popover bottom lev_pop">
+            <div class="arrow"></div>
+            <div class="popover-content">
+              <p class="levP"><a href="#"><span class="btn_s btn-danger s">&nbsp;</span>非常紧急</a></p>
+              <p class="levP"><a href="#"><span class="btn_s btn-warning s">&nbsp;</span>紧急</a></p>
+              <p class="levP"><a href="#"><span class="btn_s btn-success s">&nbsp;</span>重要</a></p>
+              <p class="levP"><a href="#"><span class="btn_s btn-info s">&nbsp;</span>一般</a></p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!--task_menu END--> 
+      <!-- dis_box start-->
+      <div class="dis_box mb30">
+        <div class="dis_row line_b">
+          <p class="color9 mb10">分配</p>
+          <ul class="dis_list clearFix">
+            <li><a href="#"><img class="ava30" src="../images/default/pic1.jpg" alt=""></a>
+              <p>郝莹莹</p>
+            </li>
+            <li><a href="#"><img class="ava30" src="../images/default/pic1.jpg" alt=""></a>
+              <p>阳光</p>
+            </li>
+            <li><a class="add_ava" href="#">+</a>
+              <div id="dis_pop" class="popover bottom">
+                <div class="arrow"></div>
+                <div class="popover-title">
+                  <label class="search_qp"><span class="search_i"></span>
+                    <input type="text" placeholder="查找人员" style="width:160px;" class="form-control w150">
+                  </label>
+                </div>
+                <div class="popover-content">
+                  <ul class="mem_list">
+                    <li> <a class="lev_1" href="#"><i class="arr_right">&nbsp;</i><span class="mr10">航空部</span> 32/34</a>
+                      <div class="sub_ava"> <a href="#"><img class="ava30" src="../images/default/pic1.jpg" alt="">詹丹丹</a> <a href="#"><img class="ava30" src="../images/default/ava.jpg" alt="">杨夏妮</a> </div>
+                    </li>
+                    <li> <a class="lev_1" href="#"><i class="arr_right">&nbsp;</i><span class="mr10">信息部 </span> 32/34</a>
+                      <div class="sub_ava"> <a href="#"><img class="ava30" src="../images/default/pic1.jpg" alt="">詹丹丹</a> <a href="#"><img class="ava30" src="../images/default/ava.jpg" alt="">杨夏妮</a> </div>
+                    </li>
+                    <li> <a class="lev_1" href="#"><i class="arr_right">&nbsp;</i><span class="mr10">航空部</span> 32/34</a>
+                      <div class="sub_ava"> <a href="#"><img class="ava30" src="../images/default/pic1.jpg" alt="">詹丹丹</a> <a href="#"><img class="ava30" src="../images/default/ava.jpg" alt="">杨夏妮</a> </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="dis_row" style="padding-bottom:10px;">
+          <p class="color9 mb10">任务记录</p>
+          <dl class="dis_dl">
+            <dt><a href="#">杨颖创建了任务</a></dt>
+            <dd><font class="mr10">08-30</font> 10:52:33</dd>
+            <dt><a href="#">杨颖创建了任务</a></dt>
+            <dd><font class="mr10">08-30</font> 10:52:33</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- dis_box END--> 
+      <!--评论 start-->
+      <h3 class="mb10"><b class="ft16">评论</b></h3>
+      <div class="mb10">
+        <textarea class="form-control" name="" cols="" placeholder="输入您要评论的内容" rows=""></textarea>
+      </div>
+      <div class="clearFix mb20"><span class="color9">0/500</span>
+        <button class="btn btn-primary floatR" type="submit">评论</button>
+      </div>
+      <div class="cmt_box">
+        <div class="cmt_row">
+          <div class="cmt_con clearFix"> <a href="#"><img class="ava50 floatL" src="../images/default/ava.jpg" alt=""></a>
+            <div class="cmt_info">
+              <p class="ft14 mb5"><a class="bold" href="#">郝莹</a></p>
+              <div class="color6 line20 mb5">从宁波到美国没有直飞的飞机，还是直接设计从上海到美国的线路吧。</div>
+              <p><span class="color9 mr30">08-30  15:11:20</span><a class="blue_txt" href="#">回复</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="cmt_row">
+          <div class="cmt_con clearFix"> <a href="#"><img class="ava50 floatL" src="../images/default/pic1.jpg" alt=""></a>
+            <div class="cmt_info">
+              <p class="ft14 mb5"><a class="bold" href="#">阳光</a></p>
+              <div class="color6 line20 mb5">从宁波到美国没有直飞的飞机，还是直接设计从上海到美国的线路吧。</div>
+              <p><span class="color9 mr30">08-30  15:11:20</span></p>
+            </div>
+          </div>
+          <div class="cmt_con clearFix feedBack"> <a href="#"><img class="ava50 floatL" src="../images/default/ava.jpg" alt=""></a>
+            <div class="cmt_info">
+              <p class="ft14 mb5"><a class="bold" href="#">郝莹</a><span class="color9 ml5 mr5 ft12">回复</span><a class="bold" href="#"> 阳光</a></p>
+              <div class="color6 line20 mb5">从宁波到美国没有直飞的飞机，还是直接设计从上海到美国的线路吧。</div>
+              <p><span class="color9 mr30">08-30  15:11:20</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--评论 END--> 
+    </div>
+  </div>
+  <!--zz_info END--> 
+</div>
+<!--container END--> 
+<!--warn_box start-->
+<div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+  <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+  <h2 class="mb10">转正/调薪审批</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR col-md-9">
+        <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>你的转正/调薪审批已通过</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">意向客户</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：已过预期跟踪时间</p>
+      </div>
+    </div>
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：有一条意向客户认领</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">最新任务</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>给你分配了一条任务：设计一条从宁波
+          到美国的组团游线路</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--warn_box END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script type="text/javascript">
+
+$(".ed_row").click( function() { 
+	$(this).hide();
+	$(".edit_form").show();
+});
+
+//dateTime
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+});
+
+$("#priorit_level").click( function() {
+	$("#lev_pop").toggle();
+});
+
+
+$("#lev_pop .levP").click( function() {
+		var textP=$(this).html();
+		$("#priorit_level").html(textP);
+		$(this).parents("#lev_pop").hide();
+});
+
+$(".task_menu li").last().addClass("last");
+//点击空白消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#lev_pop,#priorit_level").length == 0){ 
+		$("#lev_pop").hide();
+	} 
+})
+
+
+$(".add_ava").click(function() {
+	$("#dis_pop").toggle();
+});
+$(document).bind("click",function(e){ 
+	var target1 = $(e.target); 
+	if(target1.closest("#dis_pop,.add_ava").length == 0){ 
+		$("#dis_pop").hide();
+	} 
+})
+</script> 
+<script src="../js/common.js"></script>
+</body>
+</html>

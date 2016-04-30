@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>test</title>
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/bootstrap.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/common.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/layout_crm.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/HYFramework.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/components/bower-angularjs/animation.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/components/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/components/textAngular/src/textAngular.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/product.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/personnelAdministration.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/hyCalendar.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/ngDialog.min.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/ng-img-crop.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/css/intention_customer.css">
+    <link rel="stylesheet" href="http://erp.iflying.com/public/js/datetimepicker/bootstrap-datetimepicker.css">
+    <script src="http://erp.iflying.com/public/jquery/js/jquery-1.11.3.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/bower-angularjs/??angular.min.js,angular-animate.min.js,i18n/angular-locale_zh-cn.js,angular-ui-event/dist/event.min.js,angular-cookies.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/angular-bootstrap/??ui-bootstrap.min.js,ui-bootstrap-tpls.js"></script>
+    <script src="http://erp.iflying.com/public/components/angularjs-autocomplete/build/angularjs-autocomplete.js"></script>
+    <script src="http://erp.iflying.com/public/components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/textAngular/dist/textAngular.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/textAngular/dist/textAngular-sanitize.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/textAngular/dist/textAngular-rangy.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/underscore/underscore-min.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/??HYFramework.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/util??UrlConfig.js,intentionCustomerUrlConfig.js,Util.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/??Dialog.js,Button.js,User.js,List.js,MainView.js,Notice.js,Sidebar.js,SubView.js,LoadingBar.js,Scroll.js,Permission.js,Page.js,CommonFactory.js,HYImgCrop.js,HYCalendar.js,HYDialog.js,SocketIO.js,UICalendar.js,StateFlowFactory.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/??MainInfoController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/view/??SidebarView.js,CommonDirectives.js,Stroke.js,PlanDirectives.js,ResizeDirectives.js,PersonelDirectives.js,ModifyAssessmentDirectives.js"></script>
+    <script src="http://erp.iflying.com/public/js/bootstrap.js"></script>
+    <script src="http://erp.iflying.com/public/js/permission.js"></script>
+    <script src="http://erp.iflying.com/public/js/socket.io.js"></script>
+    <script src="http://erp.iflying.com/public/js/jquery.lazyload.min.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/product/??Product.js,ProductCruise.js,ProductTicket.js,ProductPlan.js,Drivingtour.js,ProductCustomizedtour.js,ProductFreetour.js,ProductVisa.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/intensionCustomer/??ICPerformanceManagement.js,ICCityAssignment.js,ICOrder.js,ICCustomer.js,ICOrderAdded.js,ICConfirmOrder.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/system/??basicData.js,permission.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/customer/??CustomerCustomers.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/administration/??AdministrationGoodsApply.js,AdministrationStaff.js,AdministrationGoodsExport.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/??HYRoute.js,TestRoute.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/product/??ProductRoute.js,ProductPlanRoute.js,ProductVisaRoute.js,ProductFreetourRoute.js,ProductCruiseRoute.js,ProductCustomizedtourRoute.js,ProductDrivingtourRoute.js,ProductTicketRoute.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/system/??SystemBasicDataRoute.js,SystemPermissionRoute.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/customer/??CustomerRoute.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/administration/??AdministrationGoodsApply.js,AdministrationStaff.js,AdministrationGoodsExport.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/module/route/intentionCustomer/??ICCityAssignmentRoute.js,ICConfirmOrderRoute.js,ICCustomerRoute.js,ICOrderAddedRoute.js,ICOrderRoute.js,ICPerformanceManagementRoute.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/product/??ProductPlanController.js,ProductCustomizedtourController.js,ProductCruisePlanController.js,ProductVisaController.js,ProductTicketController.js,ProductCruiseController.js,ProductFreetourController.js,ScheduleController.js,ProductTeamtourController.js,ProductDrivingtourController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/components/??MemberPickerContorller.js,SelectConditionController.js,MainViewController.js,TicketController.js,PlugInTestController.js,AjaxController.js,HotelController.js,DirectiveController.js,SubViewController.js,ListController.js,RefreshController.js,CropController.js,SidebarController.js,PermissionController.js,WarningBoxController.js,ErrorInfoController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/system/??permissionController.js,basicDataControl.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/customer/??CustomerCustomersController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/administration/??AdministrationGoodsExportController.js,AdministrationGoodsApplyController.js,AdministrationStaffController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/intentionCustomer/??ICOrderRecordController.js,ICOrderEditorController.js,ICOrderLineDetailController.js,ICCustomerEditorController.js,ICOrderController.js,ICOrderAssessmentController.js,ICOrderConfirmationController.js,ICOrderMessageController.js,ICPerformanceManagementController.js,ICOrderAddedEditorController.js,ICCityAssignmentController.js"></script>
+    <script src="http://erp.iflying.com/public/components/HYFramework/controller/user/??UserInfoController.js"></script>
+
+  </head>
+
+  <script id="javascript">
+    angular.module('myApp', [
+      'ui.bootstrap' // BootStrapUI
+    ]).controller('MyCtrl', function($scope) {
+      $scope.IsShow = false;
+      $scope.show = function() {
+        $scope.IsShow = !$scope.IsShow;
+      }
+      $scope.today = function() {
+        $scope.dt = new Date();
+      };
+      $scope.today();
+
+      $scope.clear = function() {
+        $scope.dt = null;
+      };
+
+      // Disable weekend selection
+      $scope.disabled = function(date, mode) {
+        return (mode === 'day' && (date.getDay() === 0 || date.getDay() === 6));
+      };
+
+      $scope.toggleMin = function() {
+        $scope.minDate = $scope.minDate
+          ? null
+          : new Date();
+      };
+      $scope.toggleMin();
+      $scope.maxDate = new Date(2020, 5, 22);
+
+      $scope.open = function($event) {
+        $scope.status.opened = true;
+      };
+
+      $scope.setDate = function(year, month, day) {
+        $scope.dt = new Date(year, month, day);
+      };
+
+      $scope.dateOptions = {
+        formatYear: 'yy',
+        startingDay: 1
+      };
+
+      $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+      $scope.format = $scope.formats[0];
+
+      $scope.status = {
+        opened: false
+      };
+
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      var afterTomorrow = new Date();
+      afterTomorrow.setDate(tomorrow.getDate() + 2);
+      $scope.events = [
+        {
+          date: tomorrow,
+          status: 'full'
+        }, {
+          date: afterTomorrow,
+          status: 'partially'
+        }
+      ];
+
+      $scope.getDayClass = function(date, mode) {
+        if (mode === 'day') {
+          var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+
+          for (var i = 0; i < $scope.events.length; i++) {
+            var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+
+            if (dayToCheck === currentDay) {
+              return $scope.events[i].status;
+            }
+          }
+        }
+
+        return '';
+      };
+    });
+  </script>
+  <style id="custom-css">
+    div {
+      box-sizing: border-box;
+    }
+
+    #sh2 {
+      display: inline-block;
+      background-color: lightblue;
+      border-radius: 10px;
+      padding: 10px;
+      width: 500px;
+      height: auto;
+      min-height: 100px;
+    }
+
+    #sh2 span {
+      display: inline-block;
+      background-color: darkblue;
+      color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+    }
+
+    #sh2 span a {
+      color: red;
+      text-decoration: none;
+    }
+
+    auto-complete-div {
+      position: relative;
+      display: inline-block;
+    }
+
+    auto-complete-div input {
+      outline: none;
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      margin: 2px 0 0 3px;
+    }
+
+    auto-complete-div ul {
+      background-color: yellow;
+      border: 1px solid #ccc;
+      box-shadow: 3px 3px 3px #ccc;
+      box-sizing: border-box;
+      display: none;
+      left: 0;
+      list-style-type: none;
+      margin: 0;
+      min-width: 300px;
+      overflow-y: auto;
+      padding: 0;
+      position: absolute;
+      top: 1.5em;
+      width: auto;
+    }
+
+    auto-complete-div ul li {
+      padding: 2px 5px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    auto-complete-div ul li.selected {
+      background-color: #ccc;
+    }
+
+    auto-complete-div ul li.key1 {
+      background-color: red;
+    }
+
+    auto-complete-div ul li.key2 {
+      background-color: green;
+      color: #fff;
+    }
+
+    auto-complete-div ul li.key3 {
+      background-color: blue;
+    }
+
+    auto-complete-div ul li.key3 {
+      background-color: darkblue;
+      color: #fff;
+    }
+
+    #sh2 span.key1 {
+      background-color: red;
+    }
+
+    #sh2 span.key2 {
+      background-color: green;
+    }
+
+    #sh2 span.key3 {
+      background-color: blue;
+    }
+
+    #sh2 span.key4 {
+      background-color: darkblue;
+    }
+
+  </style>
+</head>
+
+<body ng-app="myApp" ng-controller="MyCtrl">
+
+  <a href='#aaaa' ng-click="show()">点我</a>
+
+  <button class="btn btn-default" popover-placement='bottom' popover-is-open="IsShow" type="button" uib-popover="I appeared on mouse enter!">Mouseenter</button>
+  <div class="col-md-6">
+    <p class="input-group">
+      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close"/>
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="open($event)">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+      </span>
+    </p>
+  </div>
+</body>
+
+</html>

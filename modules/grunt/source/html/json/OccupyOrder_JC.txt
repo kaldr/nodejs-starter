@@ -1,0 +1,44 @@
+{
+    "Status": 0,
+    "OrderLines": [
+        {
+            "Amount": 750,
+            "Price": 375,
+            "Quantity": 2,
+            "Description": "狮子 王演出区 域 101/ LKS SECTION 101",
+            "Name": "狮子王 演 出区域 101（ 供应商 渠道）",
+            "PLU": "SHTHORWSN"
+        }
+    ],
+    "OrderSeats": [
+        {
+            "Price": 375,
+            "Section": "SECTION101",
+            "Seat": "8",
+            "Row": "BB",
+            "Name": "8",
+            "Category": "All Ages",
+            "PLU": "SHTHORWSN"
+        },
+        {
+            "Price": 375,
+            "Section": "SECTION101",
+            "Seat": "10",
+            "Row": "BB",
+            "Name": "10",
+            "Category": "All Ages",
+            "PLU": "SHTHORWSN"
+        }
+    ],
+    "OTAId": "OTA",
+    "Timestamp": "2015-12-06 00:29:46",
+    "GovernmentID": "123456199012040000",
+    "Endorsement": "Endorsement12345",
+    "SeatmapId": "3089",
+    "EventId": "4367",
+    "ApplicationToken": "AQAAANC…",
+    "OrderDate": "2015-12-06",
+    "VisitDate": "2015-12-06",
+    "SourceID": "ORDER00001",
+    "SessionID": "28d5fe7a-3dd1-4ed2-bae9-ac7f8829ac85"
+}

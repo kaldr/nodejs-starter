@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/order.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container">
+<!--sideBar start-->
+<div id="sideBar">
+  <div id="avatar_info_panel">
+    <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+    <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+      <ul class="navi">
+        <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+        <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+        <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+        <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+        <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+        <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+        <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+        <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+        <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+      </ul>
+    </div>
+    <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+      <p class="ft14">杨颖</p>
+      <p>计调主管</p>
+    </div>
+  </div>
+  <p class="double_line">&nbsp;</p>
+  <h2 class="subTit clearFix"><span class="floatL">订单中心</span></h2>
+  <ul class="sub_menu" style="display:block">
+    <li>
+      <div class="subArr_tit">线路订单</div>
+      <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">组团游</a><a href="#" class="menu">自助游</a><a href="#" class="menu">邮轮游</a><a href="#" class="menu">自驾游</a><a href="#" class="menu">定制游</a><a href="#" class="menu">一团一议</a></div>
+    </li>
+    <li><a class="menu" href="#">出游签证</a> </li>
+    <li><a class="menu" href="#">机票业务</a> </li>
+    <li><a class="menu" href="#">地接线路</a></li>
+  </ul>
+</div>
+<!--sideBar END--> 
+<!--info_tipPop start-->
+<div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+  <div class="col-md-8 floatL">
+    <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+    <p>你的转正/调薪审批已通过</p>
+  </div>
+</div>
+<!--info_tipPop END--> 
+<!-- main_con start-->
+<div id="main_con">
+  <div id="main">
+    <h2 class="ft18 mb15">签证下单</h2>
+    <div class="mb15 clearFix" id="toolbar">
+      <label class="search_qp floatL mr10"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>签证国家</option>
+      </select>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>签证类型</option>
+      </select>
+    </div>
+    <div class="tit_qx mb10 clearFix"><span class="col-md-2 hideEle">签证国家</span><span class="col-md-3 two">签证名称</span><span class="col-md-2 two">签证类型</span><span class="col-md-2 hideEle">是否面试</span><span class="col-md-2 hideEle">入境情况</span><span class="col-md-1 hideEle">单价</span></div>
+    <ul class="per_list">
+      <li>
+        <div class="col-md-2 two">土耳其</div>
+        <div class="col-md-3 two"><span class="l_c">土耳其电子签证</span></div>
+        <div class="col-md-2 hideEle">移民签证</div>
+        <div class="col-md-2 hideEle">是</div>
+        <div class="col-md-2 hideEle">限时多次入境</div>
+        <div class="col-md-1 hideEle"><font class="red_t">5000</font></div>
+      </li>
+      <li>
+        <div class="col-md-2 two">土耳其</div>
+        <div class="col-md-3 two"><span class="l_c">土耳其电子签证</span></div>
+        <div class="col-md-2 hideEle">移民签证</div>
+        <div class="col-md-2 hideEle">是</div>
+        <div class="col-md-2 hideEle">限时多次入境</div>
+        <div class="col-md-1 hideEle"><font class="red_t">5000</font></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- main_con END--> 
+<!--zz_info start-->
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">下单详情</span></div>
+    <div class="linkToolBar"><a class="btn_s red_btn" href="#"><i class="iconT shoping">&nbsp;</i>直客购买</a> <a class="btn_s blueBtn" href="#"><i class="iconT shoping">&nbsp;</i>同行购买</a></div>
+    <div class="traTit ft16 bold mb10">土耳其电子签证</div>
+    <table class="border_tab lr mb25" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="10%">签证国家</th>
+        <td width="13%">土耳其</td>
+        <th width="13%">签证类型</th>
+        <td width="12%">探亲签证</td>
+        <th width="10%">有效期</th>
+        <td width="15%">以领馆批出为准</td>
+        <th width="12%">最长停留</th>
+        <td width="15%">15天</td>
+      </tr>
+      <tr>
+        <th>含签证费用</th>
+        <td>是</td>
+        <th>送签地点</th>
+        <td>上海</td>
+        <th>办理时长</th>
+        <td>送签后3~7个工
+          作日</td>
+        <th>入境次数</th>
+        <td>单次入境</td>
+      </tr>
+      <tr>
+        <th>是否面试</th>
+        <td>是</td>
+        <th>提前预定天数</th>
+        <td>10天</td>
+        <th>最少预定数</th>
+        <td>2位</td>
+        <th>开放内部预定</th>
+        <td>是</td>
+      </tr>
+      <tr>
+        <th>销售价格</th>
+        <td><span class="red_t">1300元/人</span></td>
+        <th>代理价格</th>
+        <td><span class="red_t">1000元/人</span></td>
+        <th>结算价格</th>
+        <td><span class="red_t">1100元/人</span></td>
+        <th>抵用券</th>
+        <td><span class="red_t">200元</span></td>
+      </tr>
+      <tr>
+        <th width="10%">受理范围</th>
+        <td colspan="7">护照签发地为上海、浙江、江苏、安徽、江西。如护照签发地不在上述地区内，其他地区申请者需在上述地区内工作、生活
+          或学习并提供已有六个月记录的有效居住证或暂住证复印件。</td>
+      </tr>
+    </table>
+    <div class="bold mb5 ft14">活动说明</div>
+    <table class="border_tab lr mb20" width="200" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="15%">选择活动：</th>
+        <td width="40%">飞扬周年庆</td>
+        <th width="15%">赞助方式：</th>
+        <td width="30%">按人头</td>
+      </tr>
+      <tr>
+        <th>余位：</th>
+        <td><span class="mr15">手机 200位</span><span class="mr15">网站 100位</span><span>系统 200位</span></td>
+        <th>赞助商：</th>
+        <td>飞扬旅行社</td>
+      </tr>
+      <tr>
+        <th>立减金额：</th>
+        <td><span class="mr15">成人 50元/人</span><span class="mr15">小孩 50元/人</span><span>婴儿 50元/人</span></td>
+        <th></th>
+        <td></td>
+      </tr>
+    </table>
+    <div class="bold mb10 ft14">所需签证资料</div>
+    <div class="tab2 mb10"><a class="active" href="#">在职职员</a><a href="#">退休人员</a><a href="#">在校学生</a><a href="#">学龄前儿童</a><a href="#">自由职业者</a></div>
+    <div class="tab2Con mb20">
+      <div class="tab_box" style="display:block">
+        <table class="border_tab"  border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="17%">需要签证资料</th>
+            <th>情况说明</th>
+          </tr>
+          <tr>
+            <td class="left">境外消费证明材料</td>
+            <td class="left">
+              <p>下列材料三选一：</p>
+              A、申请人本人的信用卡（VISA卡）；北京领区需要附上信用卡原件和近半年的该卡的对账单<br>
+              B、旅行支票(原件)；<br>
+              C、欧元现金原件(复印件，每人每天至少50欧元)</td>
+          </tr>
+          <tr>
+            <td class="left">各类财产证明</td>
+            <td class="left">当前收入证明、纳税单、房产证或企业产权证、资产证明。</td>
+          </tr>
+          <tr>
+            <td class="left">行程表和/或其他有关
+              旅行计划的说明</td>
+            <td class="left">请准备一份关于本次赴美之行的安排或计划，以证明出游的真实性与合理性。</td>
+          </tr>
+          <tr>
+            <td class="left">在职/在读准假证明</td>
+            <td class="left">申请人所在单位的介绍信，详细说明申请人的职位、工资、入职时间、是否获准休假、赴美参加商务活动的目的
+              （如有）等。</td>
+          </tr>
+          <tr>
+            <td class="left">因私护照</td>
+            <td class="left">A、护照原件：请确认您的护照在归国后还有6个月以上有效期，且留有两页以上空白签证页，（旧版护照）护照<br>
+              末页请本人用黑色水笔亲自签名；护照有效期不够或护照已签满，请先行更换您的护照。<br>
+              B、护照首页（有照片页）复印件。<br>
+              C、若换发过护照需提供旧护照原件，若遗失需提供遗失说明（本人手写的中文护照遗失说明）。</td>
+          </tr>
+          <tr>
+            <td class="left">已婚人士</td>
+            <td class="left">A、请确认您的护照在归国后还有6个月以上有效期，且留有两页以上空白签证页，（旧版护照）护照末页请本人<br>
+              用黑色水笔亲自签名；护照有效期不够或护照已签满，请先行更换您的护照。<br>
+              B、结婚证书复印件（结婚证丢失，需要有关部门包括：街道、档案局、民政局出具的婚姻关系证明原件）。<br>
+              要求：在A4纸上打印或由开具证明的相关单位手写，需要有证明人的姓名职务电话，加盖证明单位的公章。<br>
+              C、如申请人离异，需提供离婚证或法院离婚判决书复印件。</td>
+          </tr>
+          <tr>
+            <td class="left">个人信息表</td>
+            <td class="left">请准备一份关于本次赴美之行的安排或计划，以证明出游的真实性与合理性。</td>
+          </tr>
+          <tr>
+            <td class="left">在职/在读准假证明</td>
+            <td class="left">申请人所在单位的介绍信，详细说明申请人的职位、工资、入职时间、是否获准休假、赴美参加商务活动的目的
+              （如有）等。</td>
+          </tr>
+          <tr>
+            <td class="left">户口本复印件</td>
+            <td class="left">A、护照原件：请确认您的护照在归国后还有6个月以上有效期，且留有两页以上空白签证页，（旧版护照）护照<br>
+              末页请本人用黑色水笔亲自签名；护照有效期不够或护照已签满，请先行更换您的护照。<br>
+              B、护照首页（有照片页）复印件。<br>
+              C、若换发过护照需提供旧护照原件，若遗失需提供遗失说明（本人手写的中文护照遗失说明）。</td>
+          </tr>
+          <tr>
+            <td class="left">在职人员附加材料</td>
+            <td class="left">A、请确认您的护照在归国后还有6个月以上有效期，且留有两页以上空白签证页，（旧版护照）护照末页请本人<br>
+              用黑色水笔亲自签名；护照有效期不够或护照已签满，请先行更换您的护照。<br>
+              B、结婚证书复印件（结婚证丢失，需要有关部门包括：街道、档案局、民政局出具的婚姻关系证明原件）。<br>
+              要求：在A4纸上打印或由开具证明的相关单位手写，需要有证明人的姓名职务电话，加盖证明单位的公章。<br>
+              C、如申请人离异，需提供离婚证或法院离婚判决书复印件。</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab_box">2</div>
+      <div class="tab_box">3</div>
+      <div class="tab_box">4</div>
+      <div class="tab_box">5</div>
+    </div>
+    <div class="bold mb10 ft14">保险</div>
+    <table class="border_tab mb20"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="10%">保险ID</th>
+        <th width="15%">保险公司</th>
+        <th width="14%">险种编号</th>
+        <th width="20%">保险类型</th>
+        <th>保险说明</th>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>泰康保险</td>
+        <td>20201424</td>
+        <td>泰康境内旅意险(高端版)</td>
+        <td class="left">高端境内旅游保障，彰显尊贵身价，全面护航</td>
+      </tr>
+    </table>
+    <div class="bold mb10 ft14">注意事项</div>
+    <div class="pan_info mb20"> 1、请根据自身的行程安排尽早办理签证，以免因领馆工作日不稳定而影响出游；<br>
+      2、建议提供真实的机票、酒店预订记录以及其他材料，虚假材料易导致拒签；<br>
+      3、建议签证办理好后在支付机票和酒店费用，以避免不必要的损失；<br>
+      4、在预定前建议先查看签证办理范围，是否符合办签要求；<br>
+      5、请在收到出签护照后仔细查看签证有效期，并在有效期合理安排出行时间，按时归国；<br>
+      6、资产类材料请尽可能多提供，有助于您的签证出签。 </div>
+    <div class="bold mb10 ft14">费用说明</div>
+    <div class="pan_info mb20"> 1、您所申请的签证是否可以成功，取决于相关国家使领馆签证官的直接审核结果；若最终发生拒签状况，申请人应自然接受此结果，同时放弃<br>
+      追究本公司任何责任的权利，本公司将不予退还签证费。<br>
+      2、预计工作日&quot;为使馆签发签证时，正常情况下的处理时间；若遇特殊原因如假期、使馆内部人员调整、签证打印机或传真机故障等，则有可能<br>
+      会产生延迟出签的情况；对申请人根据签证预计日期提示，而进行的后续旅程安排所造成的可能经济损失，本公司不承担任何责任。<br>
+      3、请申请人拿到签证后再做出行后期安排,未取得签证之前所发生的一切经济损失,本公司不承担任何责任。<br>
+      4、有关签证资料上公布的签证有效期和停留天数，仅做参考而非任何法定承诺，一切均以签证官签发的签证内容及移民局的入境许可为唯一依<br>
+      据。<br>
+      5、如使馆所签发的签证信息错误，我公司会积极协助改正,但我公司不承担因签证信息错误产生的损失. </div>
+    <div class="bold mb10 ft14">温馨提示</div>
+    <div class="pan_info mb20"> 温馨提示。 </div>
+    <div class="tipMy color9 mb10 pt10 center">---------------------- 以下门票预订(请程序删除这行提示)--------------------</div>
+    <div class="ft16 mb15"><b>签证预定</b></div>
+    <div class="border_panel clearFix mb15">
+      <div class="box box1">
+        <div class="clearFix mb30"><span class="t1">陈艳丽</span><span class="floatR"><a class="blue_txt mr10" href="#"><i class="iconT gh">&nbsp;</i>更换</a><a class="blue_txt" href="#"><i class="iconT xq">&nbsp;</i>详情</a></span></div>
+        <p class="clearFix pt5"><span class="ft14"><i class="iconT sj">&nbsp;</i>18758888888</span></p>
+      </div>
+      <div class="box box2" style="width:65%; ">
+        <table class="tab_infoList th-right" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="20%">签证名称：</th>
+            <td width="25%">科威特</td>
+            <td width="20%">&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <th>签证有效期：</th>
+            <td>90天</td>
+            <th>签证类别：</th>
+            <td>旅游签证</td>
+          </tr>
+          <tr>
+            <th>停留时间：</th>
+            <td>30天</td>
+            <th>入境情况：</th>
+            <td>单次入境</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <ul class="honor_list mb20">
+      <li>
+        <div class="honor_title"> <span class="arr arr_down"></span>签证具体信息 </div>
+        <div class="drop_con pt15">
+          <table class="tabTra th-right" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="11%">签证国家</th>
+              <td width="14%">土耳其</td>
+              <th width="11%">签证类型</th>
+              <td width="14%">探亲签证</td>
+              <th width="11%">有效期</th>
+              <td width="15%">以领馆批出为准</td>
+              <th width="11%">最长停留</th>
+              <td width="13%">15天</td>
+            </tr>
+            <tr>
+              <th>含签证费用</th>
+              <td>是</td>
+              <th>送签地点</th>
+              <td>上海</td>
+              <th>办理时长</th>
+              <td>送签后3~7个工作日</td>
+              <th>入境次数</th>
+              <td>单次入境</td>
+            </tr>
+            <tr>
+              <th>是否面试</th>
+              <td>是</td>
+              <th>提前预定天数</th>
+              <td>10天</td>
+              <th>最少预定数</th>
+              <td>2位</td>
+              <th>开放内部预定</th>
+              <td>是</td>
+            </tr>
+            <tr>
+              <th>销售价格</th>
+              <td><span class="red_t">1300元/人</span></td>
+              <th>代理价格</th>
+              <td><span class="red_t">1300元/人</span></td>
+              <th>结算价格</th>
+              <td><span class="red_t">1300元/人</span></td>
+              <th>抵用券</th>
+              <td><span class="red_t">1300元/人</span></td>
+            </tr>
+            <tr>
+              <th>受理范围</th>
+              <td colspan="7">护照签发地为上海、浙江、江苏、安徽、江西。如护照签发地不在上述地区内，其他地区申请者需在上述地区内工作、
+                生活或学习并提供已有六个月记录的有效居住证或暂住证复印件。</td>
+            </tr>
+          </table>
+        </div>
+      </li>
+    </ul>
+    <p class="mb10"><b class="ft14">联系人信息</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab mb15">
+      <tbody>
+        <tr>
+          <th width="11%">联系人：</th>
+          <td width="38%">
+            <input type="text" placeholder="" name="" class="form-control">
+          </td>
+          <th width="12%">联系号码：</th>
+          <td>
+            <input type="text" placeholder="" name="" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <th>邮箱地址：</th>
+          <td>
+            <input type="text" placeholder="" name="" class="form-control">
+          </td>
+          <th>证件号码：</th>
+          <td>
+            <select name="" class="form-control w100">
+              <option>身份证</option>
+            </select>
+            <input type="text" placeholder="" name="" class="form-control w180 floatR">
+          </td>
+        </tr>
+        <tr>
+          <th>联系地址：</th>
+          <td colspan="3">
+            <select class="form-control w100 mr10" name="">
+              <option>中国</option>
+            </select>
+            <select class="form-control w100 mr10" name="">
+              <option>省份</option>
+            </select>
+            <select class="form-control w120" name="">
+              <option>城市</option>
+            </select>
+            <input type="text" class="form-control w300 floatR" placeholder="详细地址" name="">
+          </td>
+        </tr>
+        
+        <tr>
+          <th>紧急联系人：</th>
+          <td colspan="3">
+          	<textarea class="form-control" name="" cols="" rows="2"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>身体状况：</th>
+          <td colspan="3">
+          	<textarea class="form-control" name="" cols="" rows="2"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="ft14">业务员信息</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab mb15">
+      <tbody>
+        <tr>
+          <th width="10%">业务员：</th>
+          <td><a class="btn_s red_btn blueBtn" href="#">选择业务员</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="ft14">购买信息</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab mb15">
+      <tbody>
+        <tr>
+          <th width="10%">购买人数：</th>
+          <th width="6%">成人</th>
+          <td width="17%">
+            <input type="text" name="" class="form-control">
+          </td>
+          <th width="7%">小孩</th>
+          <td width="17%">
+            <input type="text" name="" class="form-control">
+          </td>
+          <th width="7%">婴儿</th>
+          <td width="17%">
+            <input type="text" name="" class="form-control">
+          </td>
+          <th><a href="#" class="btn_s red_btn blueBtn">填写详细信息</a></th>
+        </tr>
+        <tr>
+          <th>使用日期：</th>
+          <td colspan="7">
+            <div class="input-group date form_date w200"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb5"><b class="ft14 mr30">选择保险</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+      <tbody>
+        <tr>
+          <th width="5%">
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </th>
+          <th width="22%">保险名称</th>
+          <th>说明</th>
+          <th width="12%">单价(元)</th>
+          <th width="12%">保险时间</th>
+          <th width="12%">保险费用(元)</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </td>
+          <td>泰康境内旅游意外险</td>
+          <td>
+            <div class="algin_left">境内旅游专款，价格实惠，享有意外、医疗等基础保障 </div>
+          </td>
+          <td>10.00</td>
+          <td>7天</td>
+          <td>10.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </td>
+          <td>泰康境内旅游意外险</td>
+          <td>
+            <div class="algin_left">境内旅游专款，价格实惠，享有意外、医疗等基础保障 </div>
+          </td>
+          <td>10.00</td>
+          <td>7天</td>
+          <td>10.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="mr30 ft14">费用清单</b><a href="#" class="blue_txt mr20">增加</a><a href="#" class="blue_txt mr20">减少</a></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+      <tbody>
+        <tr>
+          <th width="15%">费用类型</th>
+          <th width="15%">费用名称</th>
+          <th>费用备注</th>
+          <th width="13%">费用金额(元)</th>
+        </tr>
+        <tr>
+          <td>正常费用</td>
+          <td>名单费用</td>
+          <td>
+            <div class="algin_left">参团15人，名单总计：69544.00 元 ( 包含 签证费：491.00 元 和 机建费：491.00 元 ) </div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td>正常费用</td>
+          <td>保险费用</td>
+          <td>
+            <div class="algin_left">泰康境内旅意险(高端版)5份，泰康境内旅意险5份</div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td>减少费用</td>
+          <td>老会员优惠</td>
+          <td>
+            <div class="algin_left">参加无数次优惠50元</div>
+          </td>
+          <td>69544.00</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="algin_right"><b>预计费用总计：<font class="red_t">69544.00</font> 元</b></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="mr30 ft14">订单备注</b></p>
+    <p class="mb5">备注</p>
+    <div class="mb20">
+      <textarea rows="3" cols="" name="" class="form-control"></textarea>
+    </div>
+    <div class="clearFix algin_right">
+      <input type="button" name="" value="确定" class="btn_ok red_btn big_button mr10">
+      <input type="button" name="" value="取消" class="btn_cancel big_button">
+    </div>
+  </div>
+  <!--container END--> 
+</div>
+<!--container END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

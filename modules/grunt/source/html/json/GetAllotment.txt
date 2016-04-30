@@ -1,0 +1,36 @@
+{
+    "Status": 0,
+    "Allotments": [
+        {
+            "Status": 403,
+            "Locked": 0,
+            "Balance": 0,
+            "EntitlementDate": "2015-11-11",
+            "Used": 0,
+            "Distributed": 0,
+            "CutOff": "2015-11-11"
+        },
+        {
+            "Status": 401,
+            "Locked": 0,
+            "Balance": 0,
+            "EntitlementDate": "2015-11-12",
+            "Used": 0,
+            "Distributed": 0,
+            "CutOff": "2015-11-12"
+        },
+        {
+            "Status": 401,
+            "Locked": 0,
+            "Balance": 0,
+            "EntitlementDate": "2015-11-17",
+            "Used": 0,
+            "Distributed": 0,
+            "CutOff": "2015-11-17"
+        }
+    ],
+    "OTAId": "OTA",
+    "Timestamp": "2015-11-10 20:43:09",
+    "EndDate": "2015-11-17",
+    "StartDate": "2015-11-11"
+}

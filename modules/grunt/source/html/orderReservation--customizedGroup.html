@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/order.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container">
+<!--sideBar start-->
+<div id="sideBar">
+  <div id="avatar_info_panel">
+    <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+    <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+      <ul class="navi">
+        <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+        <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+        <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+        <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+        <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+        <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+        <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+        <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+        <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+      </ul>
+    </div>
+    <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+      <p class="ft14">杨颖</p>
+      <p>计调主管</p>
+    </div>
+  </div>
+  <p class="double_line">&nbsp;</p>
+  <h2 class="subTit clearFix"><span class="floatL">订单中心</span></h2>
+  <ul class="sub_menu" style="display:block">
+    <li>
+      <div class="subArr_tit">线路订单</div>
+      <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">组团游</a><a href="#" class="menu">自助游</a><a href="#" class="menu">邮轮游</a><a href="#" class="menu">自驾游</a><a href="#" class="menu">定制游</a><a href="#" class="menu">一团一议</a></div>
+    </li>
+    <li><a class="menu" href="#">出游签证</a> </li>
+    <li><a class="menu" href="#">机票业务</a> </li>
+    <li><a class="menu" href="#">地接线路</a></li>
+  </ul>
+</div>
+<!--sideBar END--> 
+<!--info_tipPop start-->
+<div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+  <div class="col-md-8 floatL">
+    <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+    <p>你的转正/调薪审批已通过</p>
+  </div>
+</div>
+<!--info_tipPop END--> 
+<!-- main_con start-->
+<div id="main_con">
+  <div id="main">
+    <h2 class="ft18 mb15">一团一议下单</h2>
+    <div class="mb15 clearFix" id="toolbar">
+      <label class="search_qp floatL mr10"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>所有站点</option>
+      </select>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>出游类型</option>
+      </select>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>国内目的地</option>
+      </select>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>境外目的地</option>
+      </select>
+      <select class="form-control floatL w100 hideEle mr10">
+        <option>出游天数</option>
+      </select>
+    </div>
+    <div class="tit_qx mb10 clearFix"><span class="col-md-1-5 two">产品编号</span><span class="col-md-1-5 two">产品类型</span><span class="col-md-4 hideEle">线路名称</span><span class="col-md-2 hideEle">目的地</span><span class="col-md-1-5 hideEle">出游天数</span><span class="col-md-2 hideEle">计调</span></div>
+    <ul class="per_list">
+      <li>
+        <div class="col-md-1-5 hideEle ">100223238</div>
+        <div class="col-md-1-5 hideEle">跟团游</div>
+        <div class="col-md-4 two"><span class="l_c">全景四川—成都、九寨沟、牟尼沟、乐山、峨</span></div>
+        <div class="col-md-2 two">长白山</div>
+        <div class="col-md-1-5 hideEle">10</div>
+        <div class="col-md-2 hideEle">方媛媛</div>
+      </li>
+      <li>
+        <div class="col-md-1-5 hideEle ">100223238</div>
+        <div class="col-md-1-5 hideEle">自由行</div>
+        <div class="col-md-4 two"><span class="l_c">美国B1/B2（商务/旅游）签证</span></div>
+        <div class="col-md-2 two">长白山</div>
+        <div class="col-md-1-5 hideEle">10</div>
+        <div class="col-md-2 hideEle">方媛媛</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- main_con END--> 
+<!--zz_info start-->
+<div id="zz_info">
+<div class="zz_conts">
+  <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">下单详情</span></div>
+  <div class="linkToolBar"><a href="#"> <i class="iconT i-question">&nbsp;</i>产品解答</a><a href="#"> <i class="iconT i-email2">&nbsp;</i>发送邮件</a><a href="#"> <i class="iconT i-print">&nbsp;</i>打印</a><a href="#" class="btn_s red_btn"><i class="iconT shoping">&nbsp;</i>购买</a></div>
+  
+  <div class="traTit ft16 bold mb10">醉美波西米亚风，秋季赏枫之旅----中东欧五国11日游</div>
+  <div class="traTool ft14 mb10"><span class="mr20">行程天数：4天5晚</span> <span class="mr20">出发城市：宁波</span> <span class="mr20">往返交通：飞机 / 飞机</span></div>
+  <div class="traDescript color6 mb20">( 提前45天报名优惠200元/人 ) 秋季赏枫之旅，集秋色、购物、美食、最美小镇、特色行程、特色住宿于一体，飞扬自组团，全程四星酒店住宿一晚上免费升级五星，尊贵享受，性价比高！</div>
+  <div class="proFeature clearFix mb20">
+    <div class="ft14 bold mb10">产品特色</div>
+    <div class="color6 line20 featureBox">
+      <p>1：飞扬自组团，飞扬领队全程陪同，专车接送机场~</p>
+      <p> 2：全程市区四星级酒店，免费升级一晚五星酒店，一晚上升级温泉酒店告别<br>
+        郊区！贵宾享受！</p>
+      <p>3：特别安排欣赏多瑙河最美的一段&mdash;&mdash;瓦豪风景区</p>
+      <p>4：独家安排匈牙利首屈一指的温泉疗养地---黑维兹</p>
+      <p>5：美食体验--精心安排维也纳当地特色美食烤排骨</p>
+      <p>6：特别安排东欧最大--潘多夫名牌奥特莱斯，尽情享受购物乐趣！</p>
+      <p>7：免费赠送：WIFI设备，产品为高速设备，每台设备可供5人使用（以手机
+        为佳，若连接其他设备可能会影响使用速度），每天都有500M流量，用
+        完后降速到128K，第二天循环往复（个别国家或区域无法提供，敬请谅解）</p>
+    </div>
+  </div>
+  <div class="bold mb5 ft14">套餐</div>
+  <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+    <tbody>
+      <tr>
+        <th width="10%">编号</th>
+        <th width="32%">套餐名称</th>
+        <th width="9%">销售价格</th>
+        <th width="9%">代理价格</th>
+        <th width="9%">成本价格</th>
+        <th width="9%">活动价格</th>
+        <th>计划时间</th>
+      </tr>
+      <tr>
+        <td>396473</td>
+        <td>安吉凯蒂猫家园（HelloKitty乐园）</td>
+        <td>2200</td>
+        <td>2200</td>
+        <td>2200</td>
+        <td>2200</td>
+        <td>2015.10.30 ~ 2015.11.25</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="mb10">套餐1说明：</p>
+  <div class="pan_info color6 mb20"> 1：出发前45天以上，买家可免费变更一次团期；<br>
+    2：出发前45天及以内，买家不可变更团期；<br>
+    3：出发前45天以上，买家通知取消，收取订单10%的费用<br>
+    4：出发前45天及以内，买家通知取消，收取订单100%的费用<br>
+    5：本价格不含签证费用。报名截止：由于机位数量有限，报名截止日期以实际报名情况为准（报名满员即截止）。报名以资料到齐、费用到账为<br>
+    准；<br>
+    6：团队报价按2人入住1间房核算，单人报名时请补单房差，如报名后能找到团友拼房可退单房差。<br>
+    7：团队机票一经开出，不得更改，改签或退票。飞行时间、车程时间等以当日实际所用时间为准。如遇国家或航空公司政策性调整机票、燃油<br>
+    税价格，按调整后的实际价格结算；<br>
+    8：机票出票后，放弃使用首段国内联程航班，则无法接驳国际航班，由此产生的一切损失费由游客承担；团队游览中不允许擅自离团（自由活<br>
+    动除外），如有不便敬请谅解； </div>
+  <div class="bold mb15 ft14">推荐行程</div>
+  <div class="traInfo_panel clear"> 
+    <!--tabPanel 1 start-->
+    <div class="tabPanel show">
+      <h3 class="tit_y mb20"><span class="mr20">第一天</span> 上海--帕尔马</h3>
+      <!--day start-->
+      <div class="day">
+        <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+          <tbody>
+            <tr>
+              <th width="11%">交通类型</th>
+              <th width="18%">路段</th>
+              <th width="21%">交通公司、航班/车站</th>
+              <th width="17%">交通型号</th>
+              <th width="33%">参考时间</th>
+            </tr>
+            <tr>
+              <td>飞机</td>
+              <td>宁波&mdash;&mdash;曼谷</td>
+              <td>亚洲航空/FD412</td>
+              <td>空客320（中）</td>
+              <td>
+                <p><span class="blue_txt">出发06:30</span> 泰国廊曼国际机场</p>
+                <p><span class="red_t">到达11:30</span> 宁波栎社国际机场</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="color6 pan_info mb15">
+          <p>早餐后，前往国家5A级旅游景区【玉龙雪山风景区】（游览时间约2小时，含云杉坪索道）；游览高原牧场甘海子、“小九寨”蓝月谷、东巴圣地玉水寨等景点（游览时间约40分钟）；赠送大型实景表演【印象丽江】（表演时间90分钟）；返回市区，途中参观螺旋藻配送中心；游览茶马古道重镇【束河古镇】（游览时间约1小时）。</p>
+          <p> ◎温馨提示：</p>
+          <p> 1、《印象丽江》要进入玉龙雪山后才能观看，未进雪山的游客则无法赠送观看；如遇《印象丽江》停演，则不能赠送，请谅解！</p>
+          <p> 2、蓝月谷、白水河、玉水寨等玉龙雪山小景点风格类似，且游览时间有限，一般视时间游览2-3个。</p>
+          <p> 3、游览雪山比较耗体力，建议准备点巧克力等高热量的零食，另外如果出现高原反应，请马上告诉导游，根据高原反应的程度采取相应的措施（吸氧或者送雪山医务室等）。</p>
+          <p> 4、节假日和旅游旺季，雪山游客较多，乘坐索道需排队等候，请谅解。</p>
+        </div>
+        <div class="mb15"><font class="hotTxt">华尔街</font><font class="hotTxt">时代广场</font><font class="hotTxt">帝国大厦</font></div>
+        <div class="mb5">华尔街</div>
+        <div class="color6 pan_info mb20"> 华尔街是纽约市曼哈顿区南部从百老汇路延伸到东河的一条大街道的名字，全长仅三分之一英里，宽仅11米，是英文“墙街”的音译。街道狭窄而短，从百老汇到东河仅有7个街段，却以“美国的金融中心”闻名于世。美国摩根财阀、洛克菲勒石油大王和杜邦财团等开设的银行、保险、航运、铁路等公司的经理处集中于此。著名的纽约证券交易所也在这里，至今仍是几个主要交易所的总部：如纳斯达克、美国证券交易所、纽约期货交易所等。“华尔街”一词现已超越这条街道本身，成为附近区域的代称，亦可指对整个美国经济具有影响力的金融市场和金融机构。 </div>
+        <div class="outPicBox">
+          <ul class="line_pic clearFix">
+            <li><img alt="" src="../images/default/p1.jpg"></li>
+            <li><img alt="" src="../images/default/p2.jpg"></li>
+            <li><img alt="" src="../images/default/p3.jpg"></li>
+          </ul>
+        </div>
+        <div class="mb5">时代广场</div>
+        <div class="color6 pan_info mb20"> 时代广场（TimesSquare）是美国纽约市曼哈顿的一块街区，中心位于西42街与百老汇大道交会处，范围东西向分别至第六大道与第九大道、南北向分别至西39街与西52街，构成曼哈顿中城商业区的西部。时报广场的名称源自《纽约时报》（NewYorkTimes）早期在此设立的总部大楼，由于NewYorkTimes又常被译为“纽约时代报”，因此也有“时代广场”的译名方式存在。构。 </div>
+        <div class="outPicBox">
+          <ul class="line_pic clearFix">
+            <li><img alt="" src="../images/default/p4.jpg"></li>
+            <li><img alt="" src="../images/default/p5.jpg"></li>
+          </ul>
+        </div>
+        <div class="otherInfo mb25">
+          <div class="lineB"><b class="mr30">酒店信息</b><span class="mr20">酒店：<font class="color6">济州太平洋大酒店（Pacific Hotel)</font></span> <span class="mr20">参考星级：<font class="color6">五星</font></span></div>
+          <div class="lineB"><b class="mr30">餐饮信息</b><span class="mr20">早餐：<font class="color6">包含    酒店早餐自助 </font></span> <span class="mr20">午餐：<font class="color6">自理</font></span><span class="mr20">晚餐：<font class="color6">包含    当地特色餐饮</font></span></div>
+        </div>
+      </div>
+      <!--day END-->
+      <h3 class="tit_y mb20"><span class="mr20">第二天</span> 帕尔马--五渔村--佛罗伦萨</h3>
+      <div class="day">
+        <div class="color6 pan_info mb15"> 酒店早餐后，前往关西双古都之一的奈良。<br>
+          驱车前往奈良的观光象征-【奈良公园】（约60分），公园内巨树耸立，还有历史悠久的古迹、花草、山林及岩石等；另有驯鹿成群，共有1,200多只。你可以买些鹿饼干，和鹿一起嬉戏。迈入奈良公园内，你可看见一座神社&mdash;【春日大社】，它为当时的掌权者藤原家族的守护神而建造的神社。（约30分）<br>
+          随后前往本州第二大城市&mdash;大阪。<br>
+          驱车前往由幕府将军丰臣秀吉于1586年所建【大阪城公园】（不登天守阁）（约30分），随后前往大阪繁华商业区&mdash;【心斋桥】（约60分）这里从早到晚熙熙攘攘，到处是市民和游客的人流，令您流连忘返。 </div>
+      </div>
+      <!-- day END-->
+      <div class="bold mb15 ft14">保险</div>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+        <tbody>
+          <tr>
+            <th width="11%">保险ID</th>
+            <th width="11%">保险公司</th>
+            <th width="11%">险种编号</th>
+            <th width="25%">保险类型</th>
+            <th>保险说明</th>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>泰康保险</td>
+            <td>20201424</td>
+            <td>泰康境内旅意险(高端版)</td>
+            <td>高端境内旅游保障，彰显尊贵身价，全面护航</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>泰康保险</td>
+            <td>20201424</td>
+            <td>泰康境内旅意险(高端版)</td>
+            <td>高端境内旅游保障，彰显尊贵身价，全面护航</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="bold mb15 ft14">注意事项</div>
+      <div class="section">
+        <div class="color6 pan_info mb15">
+          <p>1、请根据自身的行程安排尽早办理签证，以免因领馆工作日不稳定而影响出游；</p>
+          <p>2、建议提供真实的机票、酒店预订记录以及其他材料，虚假材料易导致拒签；</p>
+          <p>3、建议签证办理好后在支付机票和酒店费用，以避免不必要的损失；</p>
+          <p>4、在预定前建议先查看签证办理范围，是否符合办签要求；</p>
+          <p>5、请在收到出签护照后仔细查看签证有效期，并在有效期合理安排出行时间，按时归国；</p>
+          <p>6、资产类材料请尽可能多提供，有助于您的签证出签。</p>
+        </div>
+      </div>
+      <div class="bold mb15 ft14">费用说明</div>
+      <div class="section">
+        <div class="color6 pan_info mb15">
+          <p>1、您所申请的签证是否可以成功，取决于相关国家使领馆签证官的直接审核结果；若最终发生拒签状况，申请人应自然接受此结果，同时放弃
+            追究本公司任何责任的权利，本公司将不予退还签证费。</p>
+          <p>2、预计工作日"为使馆签发签证时，正常情况下的处理时间；若遇特殊原因如假期、使馆内部人员调整、签证打印机或传真机故障等，则有可能
+            会产生延迟出签的情况；对申请人根据签证预计日期提示，而进行的后续旅程安排所造成的可能经济损失，本公司不承担任何责任。</p>
+          <p>3、请申请人拿到签证后再做出行后期安排,未取得签证之前所发生的一切经济损失,本公司不承担任何责任。</p>
+          <p>4、有关签证资料上公布的签证有效期和停留天数，仅做参考而非任何法定承诺，一切均以签证官签发的签证内容及移民局的入境许可为唯一依
+            据。</p>
+          <p>5、如使馆所签发的签证信息错误，我公司会积极协助改正,但我公司不承担因签证信息错误产生的损失.</p>
+        </div>
+      </div>
+      <div class="bold mb15 ft14">温馨提示</div>
+      <div class="section">
+        <div class="color6 pan_info mb15">
+          <p>1、请务必确保您的护照在归国后仍有半年以上有效期，并且至少留有两页空白签证页；</p>
+          <p> 2、在办理签证期间，我司可能会根据您的材料情况要求补交其他材料、增收担保金或予以劝退；使（领）馆有可能根据客人所提供的资料进行
+            电话抽查，也可能会针对您的实际情况，要求补交其他材料，或延长签证受理时间,您须及时补交，否则有拒签风险（此情况由使（领）馆决
+            定，我司无法干预）。</p>
+          <p>3、您所申请的签证是否可以成功，取决于相关国家使（领）馆签证官的直接审核结果；若最终发生拒签状况，我司不承担任何责任，且不予退
+            还签证费用。如客人因护照及个人原因或因使（领）馆工作出现差错以致在出入境时遇到问题，我司不承担责任。</p>
+          <p>4、所有材料的复印件，在职证明、存款证明以及关系证明等原件均不退还。如有需要，请自行提前准备好相应材料复印件，一旦送签，我司将
+            无法提供。</p>
+          <p>5、签证结果返回我司后，您的护照及其它返回的原件资料，您可选择来我司自取，或委托快递寄送，如您选择快递寄送方式，则表示您授权我
+            司委托第三方(快递公司）进行快递服务，第三方所有服务条款、权利与义务，您均已了解和认 可。对于快递有可能带来的丢失、破损、或
+            其他问题，由第三方对您进行负责，我司不予承担责任及由此产生的任何赔偿。当您选择我司的产品或服务时，视同您已认同此条款的内容</p>
+        </div>
+      </div>
+    </div>
+    <!--tabPanel 1 END--> 
+  </div>
+</div>
+</div>
+<!--container END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

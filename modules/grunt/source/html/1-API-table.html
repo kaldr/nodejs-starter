@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+<!--inputTag CSS and JS: -->
+</head>
+<body>
+
+参考地址<a href="http://wenzhixin.net.cn/p/bootstrap-table/docs/examples.html" target="_blank"> http://wenzhixin.net.cn/p/bootstrap-table/docs/examples.html</a>
+<br />
+<a href="http://blog.csdn.net/jianxin1009/article/details/8565828" target="_blank">http://blog.csdn.net/jianxin1009/article/details/8565828</a>
+<br />
+<a href="http://editor.datatables.net/examples/styling/bootstrap.html" target="_blank">http://editor.datatables.net/examples/styling/bootstrap.html</a>
+<br />
+<a href="http://editor.datatables.net/generator/index">http://editor.datatables.net/generator/index</a>
+
+
+        <table id="table1"
+           data-toggle="table"
+           class="yellow_tab"
+           data-pagination="pagination"
+           data-sort-name="id" data-sort-order="desc"
+           data-page-list="[5, 10, 20, 50, 100, 200]"
+           data-toolbar=""
+>
+          <thead>
+            <tr>
+            
+              <th data-field="id" data-checkbox="true">线路编号</th>
+              <th data-align="left">线路名称</th>
+              <th>发团时间</th>
+              <th>成人价</th>
+              <th>儿童价</th>
+              <th>房差价</th>
+              <th>计划人数</th>
+              <th>剩余人数</th>
+              <th>计调员</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+                <p> <a class="red_txt mr15" href="#">新产品</a><a class="red_txt mr10" href="#">热卖</a><a class="red_txt mr10" href="#">特惠</a><a class="red_txt mr10" href="#">推荐</a><a class="red_txt" href="#">独家产品</a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+                <p> <a class="red_txt mr15" href="#">新产品</a><a class="red_txt mr10" href="#">热卖</a><a class="red_txt mr10" href="#">特惠</a><a class="red_txt mr10" href="#">推荐</a><a class="red_txt" href="#">独家产品</a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+                <p> <a class="red_txt mr15" href="#">新产品</a><a class="red_txt mr10" href="#">热卖</a><a class="red_txt mr10" href="#">特惠</a><a class="red_txt mr10" href="#">推荐</a><a class="red_txt" href="#">独家产品</a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+            <tr>
+              <td>H000001</td>
+              <td>
+                <p><a class="travel_route" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+              </td>
+              <td>2015-06-21</td>
+              <td>19999</td>
+              <td>6999</td>
+              <td>500</td>
+              <td>200</td>
+              <td><span class="red_txt">500</span></td>
+              <td><a href="#">陈阳素</a></td>
+            </tr>
+          </tbody>
+        </table>
+        
+<!--bootstrap table js css--> 
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-table/bootstrap-table.min.css">
+<script src="../js/bootstrap-table/jquery.base64.js"></script> 
+<script src="../js/bootstrap-table/bootstrap-table.js"></script> 
+<script src="../js/bootstrap-table/bootstrap-table-export.js"></script> 
+<script src="../js/bootstrap-table/placeholder.js"></script>         
+<script>
+$('#table1').bootstrapTable({
+         //url: 'data/data7.json',
+		  height: 542
+ });
+</script>
+</body>
+</html>

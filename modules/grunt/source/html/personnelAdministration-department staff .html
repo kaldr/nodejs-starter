@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/personnelAdministration.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">人事行政</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">绩效考核</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">1</a><a href="#" class="menu">2</a><a href="#" class="menu">3</a></div>
+      </li>
+      <li><a class="menu" href="#">信息公告</a> </li>
+      <li><a class="menu" href="#">部门职员</a> </li>
+      <li><a class="menu" href="#">值班信息</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">部门职员</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a href="#" class="btn_s floatL mr20 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>添加职员</a>
+        <label class="search_qp floatL mr10"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>部门</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>在职</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">职员名称</span><span class="col-md-2">工号</span><span class="col-md-2">部门</span><span class="col-md-2">职位</span><span class="col-md-1-5">级别</span><span class="col-md-1-5">手机号码</span><span class="col-md-2">入职时间</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-1-5"><img class="ava30 mt4 mr10 floatL" src="../images/default/p1.jpg" alt=""> 杨颖</div>
+          <div class="col-md-2">009</div>
+          <div class="col-md-2"><span class="l_c">总经理办公室</span></div>
+          <div class="col-md-2"><span class="l_c">董事长兼CEO</span></div>
+          <div class="col-md-1-5">A+</div>
+          <div class="col-md-1-5">13800000000</div>
+          <div class="col-md-2">2015-11-20</div>
+        </li>
+        <li>
+          <div class="col-md-1-5"><img class="ava30 mt4 mr10 floatL" src="../images/default/p1.jpg" alt=""> 杨颖</div>
+          <div class="col-md-2">009</div>
+          <div class="col-md-2"><span class="l_c">总经理办公室</span></div>
+          <div class="col-md-2"><span class="l_c">董事长兼CEO</span></div>
+          <div class="col-md-1-5">A+</div>
+          <div class="col-md-1-5">13800000000</div>
+          <div class="col-md-2">2015-11-20</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">职员详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-account">&nbsp;</i>更改账号</a><a href="#"> <i class="iconT i-password">&nbsp;</i>重置密码</a><a href="#"> <i class="iconT i-lock">&nbsp;</i>锁定</a></div>
+      <div class="clerkInfo mb20">
+        <div class="mb10"><img class="ava100" src="../images/default/ava.jpg" alt=""></div>
+        <p class="ft16 mb5">张桃子<i class="sex female">&nbsp;</i><i class="sex male">&nbsp;</i></p>
+        <p>董事长兼CEO</p>
+      </div>
+      <p class="mb10"><b class="ft14">公司</b></p>
+      <table class="tab_infoList th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">工号：</th>
+          <td width="23%">001</td>
+          <th width="12%">所属部门：</th>
+          <td width="21%">总经理办公室</td>
+          <th width="12%">级别：</th>
+          <td>A+</td>
+        </tr>
+        <tr>
+          <th>角色类型：</th>
+          <td>系统管理员</td>
+          <th>办公电话：</th>
+          <td>87238686 (8632)</td>
+          <th>办公手机：</th>
+          <td>13566331111 (666363)</td>
+        </tr>
+      </table>
+      <p class="mb10"><b class="ft14">生活</b></p>
+      <table class="tab_infoList th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">生日：</th>
+          <td width="23%">1991.08.23</td>
+          <th width="12%">身份证：</th>
+          <td width="21%">330282199111111111</td>
+          <th width="12%">教育程度：</th>
+          <td>本科</td>
+        </tr>
+        <tr>
+          <th>婚姻情况：</th>
+          <td>已婚</td>
+          <th>QQ：</th>
+          <td>493059727</td>
+          <th>Email：</th>
+          <td>iwantzhou@163.com</td>
+        </tr>
+        <tr>
+          <th>家庭住址：</th>
+          <td colspan="5">浙江宁波海曙灵桥小区×××号</td>
+        </tr>
+        <tr>
+          <th>个人简介：</th>
+          <td colspan="5">因为有梦，所以飞扬！</td>
+        </tr>
+      </table>
+    </div>
+    <!--container END--> 
+  </div>
+  <!--container END--> 
+  
+  <!--subConts start-->
+  <div id="subConts">
+    <div class="outPop">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">添加职员</span></div>
+      <table class="form_tab mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="11%">员工姓名：</th>
+          <td width="32%">
+            <input class="form-control" name="" type="text">
+          </td>
+          <th width="12%">性别：</th>
+          <td width="27%">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              男 </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              女 </label>
+          </td>
+          <td rowspan="3"><a href="javascript:void(0);" class="btn_addPic2 addAvatar">
+            <p><span class="add_txt">+</span><font>添加头像</font></p>
+            <input type="file" name="pic" size="3" title="" class="filePrew_img">
+            <div class="picLoad"></div>
+            </a></td>
+        </tr>
+        <tr>
+          <th>工号：</th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+          <th>所属部门：</th>
+          <td>
+            <select class="form-control" name="">
+              <option>总经理办公室</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>岗位名称：</th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+          <th>级别：</th>
+          <td>
+            <select class="form-control" name="">
+              <option>A+</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>角色类型：</th>
+          <td colspan="4">
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>办公电话：</th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+          <th>电话工号：</th>
+          <td colspan="2">
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>手机号码：</th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+          <th>手机短号：</th>
+          <td colspan="2">
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>出生年月：</th>
+          <td>
+            <select class="form-control w80 mr10" name="">
+              <option>1991</option>
+            </select>
+            <select class="form-control w65 mr10" name="">
+              <option>10</option>
+            </select>
+            <select class="form-control w65" name="">
+              <option>10</option>
+            </select>
+          </td>
+          <th>身份证号码：</th>
+          <td colspan="2">
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>教育程度：</th>
+          <td>
+            <select class="form-control" name="">
+              <option>本科</option>
+            </select>
+          </td>
+          <th>婚姻状况：</th>
+          <td colspan="2">
+            <label class="radio-inline">
+              <input type="radio" value="option1" id="inlineRadio1" name="inlineRadioOptions">
+              已婚 </label>
+            <label class="radio-inline">
+              <input type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions">
+              未婚 </label>
+          </td>
+        </tr>
+        <tr>
+          <th>QQ：</th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+          <th>Email：</th>
+          <td colspan="2">
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>家庭住址：</th>
+          <td colspan="4">
+            <select class="form-control w100 mr10" name="">
+              <option>国家</option>
+            </select>
+            <select class="form-control w100 mr10" name="">
+              <option>省份</option>
+            </select>
+            <select class="form-control w100 mr10" name="">
+              <option>城市</option>
+            </select>
+            <input style="width:320px;" class="form-control" placeholder="详细地址" name="" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th>个人简介：</th>
+          <td colspan="4">
+            <textarea class="form-control" name="" cols="" rows="3"></textarea>
+          </td>
+        </tr>
+      </table>
+      <div class="clearFix algin_right">
+        <input type="button" name="" value="确定" class="btn_ok red_btn big_button mr10">
+        <input type="button" name="" value="取消" class="btn_cancel big_button">
+      </div>
+    </div>
+  </div>
+  
+  <!--datetimepicker--> 
+</div>
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

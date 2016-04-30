@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/tourGuide.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">导游中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">导游排班</a> </li>
+      <li><a class="menu" href="#">导游安排</a> </li>
+      <li><a class="menu" href="#">导游游记</a></li>
+      <li><a class="menu active" href="#">导游管理</a></li>
+      <li><a class="menu" href="#">导游荣誉</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">导游管理</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a href="#" class="btn_s floatL mr20 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>添加社外导游</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关导游信息">
+        </label>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>部门导游</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2 two">姓名</span><span class="col-md-2 hideEle">性别</span><span class="col-md-2 hideEle">联系方式</span><span class="col-md-2 hideEle">导游资格证</span><span class="col-md-2 hideEle">领队资格证</span><span class="col-md-2 two">类别</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2 two">王乐陆</div>
+          <div class="col-md-2 hideEle">男</div>
+          <div class="col-md-2 hideEle">15728047112</div>
+          <div class="col-md-2 hideEle">DZG2014ZJ11157</div>
+          <div class="col-md-2 hideEle">浙-006125</div>
+          <div class="col-md-2 two">部门导游</div>
+        </li>
+        <li>
+          <div class="col-md-2 two">王乐陆</div>
+          <div class="col-md-2 hideEle">男</div>
+          <div class="col-md-2 hideEle">15728047112</div>
+          <div class="col-md-2 hideEle">DZG2014ZJ11157</div>
+          <div class="col-md-2 hideEle">浙-006125</div>
+          <div class="col-md-2 two">部门导游</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">导游详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+      <div class="traTit ft14 bold mb10">导游信息</div>
+      <table class="tabTra th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="14%">姓       名：</th>
+          <td width="36%">王乐陆</td>
+          <th width="14%">工       号：</th>
+          <td width="36%">814</td>
+        </tr>
+        <tr>
+          <th>性       别：</th>
+          <td>男</td>
+          <th>身份证号：</th>
+          <td>33068319931026381X</td>
+        </tr>
+        <tr>
+          <th>手机号码：</th>
+          <td>15728047112</td>
+          <th>类       别：</th>
+          <td>部门导游</td>
+        </tr>
+        <tr>
+          <th>导游类型：</th>
+          <td>导游兼领队</td>
+          <th>导游证号：</th>
+          <td>DZG2014ZJ11157</td>
+        </tr>
+        <tr>
+          <th>领队资格证：</th>
+          <td>无</td>
+          <th>护照号：</th>
+          <td>无</td>
+        </tr>
+        <tr>
+          <th>护照有效期：</th>
+          <td>无</td>
+          <th></th>
+          <td></td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">荣誉信息</div>
+      <ul class="honor_list mb25">
+        <li>
+          <div class="honor_title"> <span class="arr arr_right"></span>2014-05-12泰国6日游的王女士送王乐路锦旗 </div>
+        </li>
+        <li>
+          <div class="honor_title"> <span class="arr arr_down"></span>2014-05-12泰国6日游的王女士送王乐路锦旗 </div>
+          <div class="honor_detail">
+            <p>5月12日，早上五点客人王伶俐和领队联系说明自己身体不适，有胆结石状况。领队表态，一对此事非常遗憾，希望客人身体早日康复。二 告知如果不能成行，费用没有退，希望客人能理解。如果身体不适，在海外就医的费用昂贵，如果身体状况要求提前返回国内，团队票是不能改签和退票的。新的机票要自己承担。而且由于客人参见的是特价团，价格优惠。单出的正常机票可能远远超过特价团费。三 是否出行，请从医嘱。四联系线路经理，以旅行社领导的姿态，表示关心，了解请况，和再次告知以及备注，防止单线联系的可能风险。<br>
+              机场集合，客人已经在机场。观察，客人体虚。<br>
+              到达泰国曼谷酒店，查房重点看了解王女士，回答还可以。<br>
+              5月13日，早上集合，王女士反映，身体不适合出行，决定休息一天，待在曼谷酒店。领队观察客人身体虚弱，但没有疼痛难忍的症状。于是地导游协商，安排地接社人员照顾。领队表态 一 已经安排人员照顾，如果有需要，送就医，王女士说暂时不用送医院。二 履行暂时离团的手续。三 告知离团是餐食是自理的，但是为了表示旅行社的关心和领队导游的关心，免费提供午餐的晚餐，由酒店送餐。四 领队会按每两到三小时一次的频率，和客人联系关注。当天按时联系，客人表示身体尚可。团队回到酒店后，王女士通过其他客人联系领队表示身体难以坚持，想提前回家。通过客人的语言和观察客人的情况，客人有低烧状况，判断王女士必须尽快回宁波就医。预知可能会有机票价格障碍，需要劝说客人克服障碍。<br>
+              当夜 联系地接社导游和OP了解航班状况，票价。然后联系组团社OP通知边防做分团手续。说服王女士以及同行的12位朋友购买当晚12点四十，曼谷飞赴上海的机票。正价人民币2130.联系王女士的女儿早上到上海接机。履行离团手续，联系出租车，领队送客人机场办理登机，委托同航班三位中粮集团在泰国的三位中国朋友全程照顾。客人安全顺利抵达上海机场。第二天，王女士检查得知，胆结石并发心肌炎。由于及时就医，手术治疗，半个月后，康复出院。<br>
+              感谢上天的机缘，让我能帮到这位王女士，我得到了助人后的喜悦，感谢我不知名字的中粮集团的三位中国朋友，让我以往的认为陌生中国人之间到底有没有爱心的疑问，得到正面的回应。</p>
+          </div>
+        </li>
+        <li>
+          <div class="honor_title"> <span class="arr arr_right"></span>2014-05-12泰国6日游的王女士送王乐路锦旗 </div>
+        </li>
+      </ul>
+      <div class="traTit ft14 bold mb10">出团信息</div>
+      <ul class="featureUL">
+        <li class="featureBox">
+          <div class="box">
+            <div class="bot"></div>
+            <a href="#" target="_blank"> <img src="http://img1.vbooking.net/prd/201411/26/51c21f597ec8c60d69dabd4ce2a95b13ffdd827b.jpg">
+            <div class="record_time"><span class="t_past">已经出团</span></div>
+            <div class="bot_text">
+              <h5>美国东海岸+西海岸+尼亚加拉瀑美国东海岸+西海岸+尼亚加拉瀑</h5>
+              <p>2015/09/25-2015/10/10</p>
+            </div>
+            </a> </div>
+        </li>
+        <li class="featureBox">
+          <div class="box">
+            <div class="bot"></div>
+            <a href="#" target="_blank"> <img src="http://img1.vbooking.net/prd/201507/26/4bdb899e66acd0f2ad3ca46deff8eb2f7b3f82f0.jpg">
+            <div class="record_time"><span class="t_future">即将出团</span></div>
+            <div class="bot_text">
+              <h5>美国东海岸+西海岸+尼亚加拉瀑美国东海岸+西海岸+尼亚加拉瀑</h5>
+              <p>2015/09/25-2015/10/10</p>
+            </div>
+            </a> </div>
+        </li>
+        <li class="featureBox">
+          <div class="box">
+            <div class="bot"></div>
+            <a href="#" target="_blank"> <img src="http://img1.vbooking.net/prd/201504/20/5453664ef6077da8fbc398ee98164e1971597f8d.jpg">
+            <div class="record_time"><span class="t_present">正在团中</span></div>
+            <div class="bot_text">
+              <h5>美国东海岸+西海岸+尼亚加拉瀑美国东海岸+西海岸+尼亚加拉瀑</h5>
+              <p>2015/09/25-2015/10/10</p>
+            </div>
+            </a> </div>
+        </li>
+        <li class="featureBox">
+          <div class="box">
+            <div class="bot"></div>
+            <a href="#" target="_blank"> <img src="http://img1.vbooking.net/prd/201410/16/7ae442b52653b920ea31f0e5af47dce9520b0916.jpg">
+            <div class="record_time"><span class="t_present">正在团中</span></div>
+            <div class="bot_text">
+              <h5>美国东海岸+西海岸+尼亚加拉瀑美国东海岸+西海岸+尼亚加拉瀑</h5>
+              <p>2015/09/25-2015/10/10</p>
+            </div>
+            </a> </div>
+        </li>
+      </ul>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+  <div id="subConts">
+  <div class="outPop" style="right: 0px; height: 100%;">
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onclick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">添加社外导游</span></div>
+      <table cellspacing="0" cellpadding="0" border="0" class="form_tab noFixed">
+        <tbody><tr>
+          <th width="12%">姓名：</th>
+          <td width="38%">
+            <input type="text" class="form-control" placeholder="输入赞助商名称">
+          </td>
+                    <th width="12%">性别：</th>
+          <td>
+           <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            男 </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            女 </label>
+            <span class="floatR">帐号： <input type="text" class="form-control w150" placeholder=""></span>
+          </td>
+        </tr>
+        <tr>
+          <th>移动电话：</th>
+          <td>
+          <input type="text" class="form-control" placeholder="">
+          </td>
+          <th>旅游短号：</th>
+          <td>
+            <input type="text" class="form-control" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th>导游证号：</th>
+          <td>
+          <input type="text" class="form-control" placeholder="">
+          </td>
+          <th>领队资格证：</th>
+          <td>
+            <input type="text" class="form-control" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th>经理资格证：</th>
+          <td>
+          <input type="text" class="form-control" placeholder="">
+          </td>
+          <th>所属公司：</th>
+          <td>
+            <input type="text" class="form-control" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh">说明：</th>
+          <td colspan="3">
+            <textarea class="form-control" placeholder="" name="" cols="" rows=""></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="algin_right">
+              <input type="button" value="确定" class="btn_s red_btn big_button mr10">
+              <input type="button" value="取消" class="btn_s red_btn big_button cancelBtn">
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+      
+      <div class="popBox full-width" style="top:350px; left:20px;"> <span class="arr_t"></span>
+
+  <!-- popover-content start-->
+  <div class="popover-content">
+ <p class="mb10"> <b class="ft14">导游投保</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right mb20 noFixed">
+        <tbody>
+        <tr>
+        	<th width="13%">团队名称：</th>
+            <td colspan="5">12日游</td>
+        </tr>
+        <tr>
+          <th width="13%">团号：</th>
+          <td width="20%"></td>
+          <th width="13%">发团时间：</th>
+          <td width="20%"></td>
+          <th width="13%">回团时间：</th>
+          <td></td>
+        </tr>
+        
+      </tbody></table>
+      <p class="mb10"><span class="mr20">保险名称：泰康境外旅游意外险</span>保险金额：<font class="red_t">￥60.00</font></p>
+      <div class="blueOutline mb10">
+      	<table class="tab_infoList th-right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th width="12%">导游姓名：</th>
+    <td width="17%">张三</td>
+    <th width="12%">联系号码：</th>
+    <td width="17%"></td>
+    <th width="12%">性别：</th>
+    <td width="17%"></td>
+    <td><p class="algin_right mr20"><a class="blue_txt" href="#">取消投保</a></p></td>
+  </tr>
+  <tr>
+    <th>证件类型：</th>
+    <td></td>
+    <th>证件号码：</th>
+    <td></td>
+    <th>生日：</th>
+    <td></td>
+    <td><p class="algin_right mr20"><a class="blue_txt" href="#">下载保单</a></p></td>
+  </tr>
+</table>
+
+      </div>
+  </div>
+  <!-- popover-content END-->
+
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<!--container END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+	
+</script>
+</body>
+</html>

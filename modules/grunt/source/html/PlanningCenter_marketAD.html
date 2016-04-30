@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">企划中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">分摊管理</a> </li>
+      <li><a class="menu" href="#">付款记录</a> </li>
+      <li><a class="menu" href="#">广告费用(统计)</a></li>
+      <li><a class="menu" href="#">营销广告</a></li>
+      <li><a class="menu" href="#">市场活动</a></li>
+      <li>
+        <div class="subArr_tit">线上活动</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">活动管理</a><a href="#" class="menu">产品管理</a><a href="#" class="menu">赞助商</a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">新建广告</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a href="#" class="btn_s floatL mr20 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>新建广告</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <div class="input-group date form_date hideEle w120 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="开始时间" readonly>
+        </div>
+        <span class="floatL mr10 pt5 hideEle">至</span>
+        <div class="input-group date form_date hideEle w120 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="结束时间" readonly>
+        </div>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>审核状态</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>来源</option>
+        </select>
+        <select class="form-control floatR w100 hideEle mr10">
+          <option>排序方式</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1 hideEle">广告编号</span><span class="col-md-4 two">广告标题</span><span class="col-md-2 hideEle">合作单位</span><span class="col-md-2 hideEle">预算费用(元)</span><span class="col-md-1 hideEle">广告状态</span><span class="col-md-1 two">发起人</span><span class="col-md-1 hideEle">时间</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-1 hideEle">BAD0103</div>
+          <div class="col-md-4 two"><span class="l_c"><font class="blue_txt">【传媒广告】</font>宁波晚报2015年7-12月份</span></div>
+          <div class="col-md-2 hideEle">宁波广播电视报社</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-1 hideEle"><span class="green_txt">已通过</span></div>
+          <div class="col-md-1 two">施洁</div>
+          <div class="col-md-1 hideEle">2015-06-10</div>
+        </li>
+        <li>
+          <div class="col-md-1 hideEle">AB00385769</div>
+          <div class="col-md-4 two"><span class="l_c"><font class="blue_txt">【墙体广告】</font>宁波晚报2015年7-12月份</span></div>
+          <div class="col-md-2 hideEle">宁波广播电视报社</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-1 hideEle"><span class="red_t">被退回</span></div>
+          <div class="col-md-1 two">施洁</div>
+          <div class="col-md-1 hideEle">2015-06-10</div>
+        </li>
+        <li>
+          <div class="col-md-1 hideEle">AB00385769</div>
+          <div class="col-md-4 two"><span class="l_c"><font class="blue_txt">【传媒广告】</font>宁波晚报2015年7-12月份</span></div>
+          <div class="col-md-2 hideEle">宁波广播电视报社</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-1 hideEle"><span class="color6">未审核</span></div>
+          <div class="col-md-1 two">施洁</div>
+          <div class="col-md-1 hideEle">2015-06-10</div>
+        </li>
+        <li>
+          <div class="col-md-1 hideEle">AB00385769</div>
+          <div class="col-md-4 two"><span class="l_c"><font class="blue_txt">【传媒广告】</font>宁波晚报2015年7-12月份</span></div>
+          <div class="col-md-2 hideEle">宁波广播电视报社</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-1 hideEle"><span class="yellow_txt">审核中</span></div>
+          <div class="col-md-1 two">施洁</div>
+          <div class="col-md-1 hideEle">2015-06-10</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">广告详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="glyphicon glyphicon-eye-open blue_txt">&nbsp;</i>查看合同</a><a href="#"> <i class="glyphicon glyphicon-transfer blue_txt">&nbsp;</i>转让</a><a href="#"> <i class="glyphicon glyphicon-credit-card blue_txt">&nbsp;</i>付款</a><a href="#"> <i class="glyphicon glyphicon-import blue_txt">&nbsp;</i>投放</a><a href="#"> <i class="glyphicon glyphicon-adjust blue_txt">&nbsp;</i>分摊</a></div>
+      <p class="ft14 mb5"><b>广告信息</b></p>
+      <table class="tab_infoList mb15" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">广告标题：</th>
+          <td width="40%" colspan="3">2014年7月22日-12月30日东南商报广告</td>
+        </tr>
+        <tr>
+          <th width="10%">合作单位：</th>
+          <td width="40%">宁波日报报业集有限公司 （商报）</td>
+          <th width="10%">合同时间：</th>
+          <td>2015-06-18 至  2015-07-18</td>
+        </tr>
+        <tr>
+          <th>预算总额：</th>
+          <td>800,000.00 元</td>
+          <th>结算方式：</th>
+          <td>先投放后付款</td>
+        </tr>
+        <tr>
+          <th>资费说明：</th>
+          <td colspan="3">年初晚报计划2015年投放40万。但晚报的价格下调，因而投放的版面增多，同期商报的版面也减少了。1-6月
+            份广告费已近40万。</td>
+        </tr>
+        <tr>
+          <th>广告分析：</th>
+          <td colspan="3">这小子很懒，什么都没有留下。</td>
+        </tr>
+      </table>
+      <div class="p_box mb20">
+        <div class="color9 titp">累计投放<b class="yellow_txt"> 6 </b>次，共计<b class="yellow_txt"> 132,500.00 </b>元，已分摊<b class="yellow_txt"> 132,500.00</b> 元</div>
+        <p class="color6 mb5">本次总费用&nbsp;&nbsp; <b class="red_t">800,000.00</b> 元</p>
+        <p class="color6 mb5">申请付款为&nbsp;&nbsp; <b class="red_t">4200.00</b> 元</p>
+        <p class="color6 mb10"><span class="mr30">已付款&nbsp;&nbsp;<b class="green_txt">800,000.00</b> 元</span><span>未支付 <b class="color9">1000.00</b> 元</span></p>
+      </div>
+      <p class="ft14 mb5"><b class="mr30">付款记录</b></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+        <tr>
+          <th width="14%">付款编号</th>
+          <th width="12%">付款金额(元)</th>
+          <th>申请人/日期</th>
+          <th width="12%">审核状态 </th>
+          <th width="23%">付款人/日期 </th>
+          <th width="15%">操作 </th>
+        </tr>
+        <tr>
+          <td>AF00394751</td>
+          <td>43200.00 </td>
+          <td>陈乔恩/2015-08-27</td>
+          <td><span class="green_txt">审核通过</span> </td>
+          <td>陈乔恩 /2015-08-27</td>
+          <td><a class="blue_txt mr10" href="#">重新开始</a><a class="blue_txt" href="#">删除</a></td>
+        </tr>
+        <tr>
+          <td>AF00394751</td>
+          <td>43200.00 </td>
+          <td>陈乔恩/2015-08-27</td>
+          <td><span class="green_txt">审核通过</span> </td>
+          <td>陈乔恩 /2015-08-27</td>
+          <td><a class="blue_txt mr10" href="#">重新开始</a><a class="blue_txt" href="#">删除</a></td>
+        </tr>
+      </table>
+      <p class="ft14 mb5"><b class="mr30">投放记录</b></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+        <tr>
+          <th width="14%">投放编号</th>
+          <th>投放时间 / 截至时间</th>
+          <th width="12%">费用金额(元)</th>
+          <th width="11%">投放进度 </th>
+          <th width="12%">分摊情况 </th>
+          <th width="11%">投放人 </th>
+          <th width="16%">操作 </th>
+        </tr>
+        <tr>
+          <td>ADD0332</td>
+          <td>2014-10-15 至 2014-10-20</td>
+          <td>0</td>
+          <td><span class="green_txt">投放完成</span> </td>
+          <td>已分摊</td>
+          <td>半版</td>
+          <td><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt mr10" href="#">转让</a><a class="blue_txt" href="#">删除</a></td>
+        </tr>
+      </table>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+  <!--warn_box start-->
+  <div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+    <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+    <h2 class="mb10">转正/调薪审批</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR col-md-9">
+          <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>你的转正/调薪审批已通过</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">意向客户</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：已过预期跟踪时间</p>
+        </div>
+      </div>
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：有一条意向客户认领</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">最新任务</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>给你分配了一条任务：设计一条从宁波
+            到美国的组团游线路</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--warn_box END--> 
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop">
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20" onclick="shutDown();">&nbsp;</a><span class="ft16">新建广告</span></div>
+      <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">广告标题：</th>
+          <td colspan="3">
+            <input type="text" placeholder="输入广告标题" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <th width="10%">合作单位：</th>
+          <td class="relative" colspan="3"><a class="btn_s red_btn blueBtn" href="#">选择合作单位 </a>
+            <div class="popBox"> <span class="arr_t"></span>
+              <h3 class="popover-title">选择合作单位<a class="yellow_txt ml20" href="#">新增单位</a></h3>
+              <!-- popover-content start-->
+              <div class="popover-content">
+                <div class="mb10">
+                  <label class="search_qp mr10"><span class="search_i"></span>
+                    <input type="text" placeholder="输入相关合作单位关键词进行搜索" style="width:270px" class="form-control w250">
+                  </label>
+                  <select class="form-control w120" name="">
+                    <option>全部类型</option>
+                  </select>
+                </div>
+                <table class="tabTra td-center"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <th>单位名称</th>
+                    <th width="20%">联系人</th>
+                    <th width="20%">联系号码 </th>
+                    <th width="20%">操作</th>
+                  </tr>
+                  <tr>
+                    <td class="left">宁波万达国际旅行社有限公司</td>
+                    <td>王飞</td>
+                    <td>89216908</td>
+                    <td><a class="yellow_txt" href="#">选择</a></td>
+                  </tr>
+                  <tr>
+                    <td class="left">宁波万达国际旅行社有限公司</td>
+                    <td>王飞</td>
+                    <td>89216908</td>
+                    <td><a class="yellow_txt" href="#">选择</a></td>
+                  </tr>
+                </table>
+                <div class="tipMy color9 mb10 pt10 center">----------------------以下是新增单位(请程序删除这行提示)--------------------</div>
+                <div class="mb10"><a href="#" class="yellow_txt mr20"><span class="glyphicon glyphicon-chevron-left"></span> 返回</a> <b>新增单位</b></div>
+                <div>
+                  <div class="row_h clearFix mb10">
+                    <label class="col-md-1-5 control-label">单位类型：</label>
+                    <div class="col-md-3">
+                      <select class="form-control" name="">
+                        <option>请选择</option>
+                      </select>
+                    </div>
+                    <label class="col-md-2 control-label" style="width:15%">单位名称：</label>
+                    <div class="col-md-6">
+                      <input class="form-control" placeholder="输入单位名称" name="" type="text" />
+                    </div>
+                  </div>
+                  <div class="row_h clearFix mb10" style="border-bottom:1px solid #d9d9d9; padding-bottom:10px;">
+                    <label class="col-md-1-5 control-label">选择城市：</label>
+                    <div class="col-md-3">
+                      <select class="form-control" name="">
+                        <option>选择城市</option>
+                      </select>
+                    </div>
+                    <label class="col-md-2 control-label" style="width:15%">单位名称：</label>
+                    <div class="col-md-6">
+                      <input class="form-control" placeholder="输入单位名称" name="" type="text" />
+                    </div>
+                  </div>
+                  <div class="row_h clearFix mb10">
+                    <label class="col-md-1-5 control-label">联系人：</label>
+                    <div class="col-md-3">
+                      <input placeholder="输入联系人姓名" class="form-control" name="" type="text" />
+                    </div>
+                    <label class="col-md-2 control-label" style="width:15%">联系电话：</label>
+                    <div class="col-md-6">
+                      <input class="form-control" placeholder="输入联系电话" name="" type="text" />
+                    </div>
+                  </div>
+                  <div class="row_h clearFix mb10">
+                    <label class="col-md-1-5 control-label">账户全称：</label>
+                    <div class="col-md-3">
+                      <input placeholder="输入账户全称" class="form-control" name="" type="text" />
+                    </div>
+                    <label class="col-md-2 control-label" style="width:15%">银行账户：</label>
+                    <div class="col-md-6">
+                      <input class="form-control" placeholder="输入银行账户" name="" type="text" />
+                    </div>
+                  </div>
+                  <div class="row_h clearFix mb10">
+                    <label class="col-md-1-5 control-label">开户行：</label>
+                    <div class="col-md-1-90">
+                      <input placeholder="输入开户行" class="form-control" name="" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tipMy color9 mb10 pt10 center">----------------------新增单位结束(请程序删除这行提示)--------------------</div>
+              </div>
+              <!-- popover-content END-->
+              <div class="popover-footer">
+                <label class="pt10 mr10">
+                  <input type="checkbox">
+                  保存后选择</label>
+                <input type="button" class="btn_ok red_btn  mr10" value="确定">
+                <input type="button" class="btn_cancel" value="取消">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th width="10%">合作时间：</th>
+          <td colspan="3">
+            <div class="input-group date form_date hideEle w120 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="开始时间" readonly>
+            </div>
+            <span class="floatL mr10 pt5 hideEle">至</span>
+            <div class="input-group date form_date hideEle w120 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="结束时间" readonly>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th width="10%">预算总额：</th>
+          <td width="40%">
+            <input type="text" placeholder="输入预算总额" class="form-control">
+          </td>
+          <th width="12%">结算方式：</th>
+          <td width="40%">
+            <select name="" class="form-control">
+              <option>现金支付</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh" width="10%">资费说明：
+            <p><a href="#" class="blue_txt pt5 mr10 inline">新增物品</a></p>
+          </th>
+          <td colspan="3">
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+              <tbody>
+                <tr>
+                  <th>物品名称</th>
+                  <th width="20%">单价金额(元)</th>
+                  <th width="30%">计价单位</th>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh" width="10%">资费说明：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" placeholder="输入资费说明" class="form-control"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh" width="10%">广告分析：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" placeholder="输入广告分析" class="form-control"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <div class="algin_right">
+              <input type="button" class="btn_s red_btn big_button mr10" value="保存">
+              <input type="button" class="btn_s red_btn big_button cancelBtn" value="取消">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--subConts END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "Status": 0,
+    "OTAId": "OTA",
+    "StatusText": ""
+}

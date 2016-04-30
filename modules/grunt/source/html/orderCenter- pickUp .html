@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/order.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">订单中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">线路订单</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">组团游</a><a href="#" class="menu">自助游</a><a href="#" class="menu">邮轮游</a><a href="#" class="menu">自驾游</a><a href="#" class="menu">定制游</a><a href="#" class="menu">一团一议</a></div>
+      </li>
+      <li><a class="menu" href="#">出游签证</a> </li>
+      <li><a class="menu" href="#">机票业务</a> </li>
+      <li><a class="menu" href="#">地接线路</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">地接</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a href="#" class="btn_s floatL mr10 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>添加地接</a>
+        <label class="search_qp floatL mr10"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <div class="input-group date form_date hideEle w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+        </div>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>收款状态</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>订单时间</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1 hideEle">订单编号</span><span class="col-md-1 two">下单会员</span><span class="col-md-4">产品名称</span><span class="col-md-2 hideEle">出游时间</span><span class="col-md-2 hideEle">总金额</span><span class="col-md-2 hideEle">下单时间</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-1 hideEle">D00293650</div>
+          <div class="col-md-1 two">徐先生</div>
+          <div class="col-md-4 two"><span class="l_c ml20">代订车 好运江南</span></div>
+          <div class="col-md-2 hideEle">2015-11-19  至 2015-11-22</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-2 hideEle">2015-09-17  15:37</div>
+        </li>
+        <li>
+          <div class="col-md-1 hideEle">D00293650</div>
+          <div class="col-md-1 two">徐先生</div>
+          <div class="col-md-4 two"><span class="l_c ml20">宁波普陀四日游 重庆新亚国旅</span></div>
+          <div class="col-md-2 hideEle">2015-11-19  至 2015-11-22</div>
+          <div class="col-md-2 hideEle">43200.00</div>
+          <div class="col-md-2 hideEle">2015-09-17  15:37</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">订单详情</span></div>
+      <div class="linkToolBar relative miniPop"><a href="#"> <i class="iconT zr">&nbsp;</i>转让</a><a href="#"> <i class="iconT bx">&nbsp;</i>保险</a><a href="#"> <i class="iconT cw">&nbsp;</i>财务</a> <a href="#"> <i class="iconT zr">&nbsp;</i>转让记录</a></div>
+      <div class="border_panel clearFix mb15">
+        <div class="box box1">
+          <div class="clearFix mb30"><span class="t1">陈艳丽</span><span class="floatR"><a class="blue_txt mr10" href="#"><i class="iconT gh">&nbsp;</i>更换</a><a class="blue_txt" href="#"><i class="iconT xq">&nbsp;</i>详情</a></span></div>
+          <p class="clearFix pt5"><span class="ft14"><i class="iconT sj">&nbsp;</i>18758888888</span><a class="floatR blue_txt" href="#"><i class="iconT fsdx">&nbsp;</i>发送短信</a></p>
+        </div>
+        <div class="box box2" style="width:44%">
+          <p class="mb10 line20">订单编号：D02154625</p>
+          <p class="mb10 line20">下单时间：2015-06-19 15:35</p>
+          <p class="line20">订单来源：网站订单</p>
+        </div>
+        <div class="box box3">
+          <p class="mb10 line20">营业款<b>：1149.00</b></p>
+          <p class="mb10 line20">预收款：<b class="red_t">500.00</b></p>
+          <p class="line20">未收款：<b>649.00</b></p>
+        </div>
+      </div>
+      <p class="mb5"><b class="ft14">产品信息</b><a href="#" class="blue_txt floatR blue_txt"><i class="iconT i-edit">&nbsp;</i> 编辑</a></p>
+      <div class="outline_box mb20">
+        <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+          <tr>
+            <th width="7%">团号：</th>
+            <td>29905</td>
+            <th width="10%">线路名称：</th>
+            <td width="20%">代订车  好运江南 </td>
+            <th width="12%">发团日期： </th>
+            <td width="16%">2015-06-19 </td>
+            <th width="10%">回团日期： </th>
+            <td width="13%">2015-06-25 </td>
+          </tr>
+        </table>
+      </div>
+      <p class="mb5"><b class="ft14">联系人信息</b><a href="#" class="blue_txt floatR blue_txt"><i class="iconT i-edit">&nbsp;</i> 编辑</a></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right mb20">
+        <tr>
+          <th width="10%">联系人</th>
+          <td width="12%">张桃子</td>
+          <th width="10%">性别</th>
+          <td width="12%">男 </td>
+          <th width="10%">联系电话 </th>
+          <td width="17%">0731-85588111 </td>
+          <th width="10%">联系传真 </th>
+          <td>0731-85588222 </td>
+        </tr>
+      </table>
+      <p class="mb10"><b class="mr30 ft14">业务员信息</b><a class="blue_txt floatR blue_txt" href="#"><i class="iconT i-edit">&nbsp;</i> 编辑</a></p>
+      <div class="line20 mb20">业务员：无</div>
+      <div class="mb10 relative"><b class="mr30 ft14">组团社信息</b><a class="blue_txt floatR blue_txt" href="#"><i class="iconT i-edit">&nbsp;</i> 编辑</a> </div>
+      <div class="line20 mb20">组团社：无</div>
+      <p class="mb10"><b class="mr30 ft14">预控人数</b></p>
+      <div class="line20 mb20"><span class="mr20">成人：1 人</span><span class="mr20">小孩：1 人</span><span class="mr20">婴儿：1 人</span></div>
+      <p class="mb10"><b class="mr30 ft14">费用信息</b></p>
+      <div class="line20 mb20">团款金额：<span class="red_t">3500.00</span> 元</div>
+      <p class="mb10"><b class="mr30 ft14">备注</b><a href="#" class="blue_txt floatR blue_txt"><i class="iconT i-edit">&nbsp;</i> 编辑</a></p>
+      <div class="line20">
+        <div class="mb10">
+          <p>备注</p>
+          <p>无</p>
+        </div>
+      </div>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop">
+    <div class="popInner" id="add_groupTravel">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">新建地接</span></div>
+      <p class="mb5"><b class="ft14">产品信息</b></p>
+      <table class="tab_infoList th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">线路名称：</th>
+          <td width="37%">
+            <input name="" class="form-control" placeholder="" type="text">
+          </td>
+          <th width="12%"></th>
+          <td>
+           
+          </td>
+        </tr>
+        <tr>
+          <th>发团时间：</th>
+          <td>
+            <div class="input-group date form_date hideEle"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+          </td>
+          <th>回团时间：</th>
+          <td>
+            <div class="input-group date form_date hideEle"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <p class="mb5"><b class="ft14">联系人信息</b></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right mb20">
+        <tr>
+          <th width="7%">联系人</th>
+          <td width="15%">
+            <input class="form-control" name="" type="text">
+          </td>
+          <th width="9%">性别</th>
+          <td width="15%">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              男 </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              女 </label>
+          </td>
+          <th width="10%">联系电话 </th>
+          <td width="15%">
+            <input class="form-control" name="" type="text">
+          </td>
+          <th width="11%">联系传真 </th>
+          <td>
+            <input class="form-control" name="" type="text">
+          </td>
+        </tr>
+      </table>
+      <p class="mb5"><b class="ft14">业务员信息</b></p>
+      <div class="mb20">业务员：<a class="btn_s blueBtn ml5" href="#">选择业务员</a></div>
+      <p class="mb5"><b class="ft14">组团社信息</b></p>
+      <div class="mb20">组团社：<a class="btn_s blueBtn ml5" href="#">选择组团社</a></div>
+      <p class="mb5"><b class="ft14">预控人数</b></p>
+      <table class="tab_infoList th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="8%">成人：</th>
+          <td width="25%">
+            <input class="form-control w150" name="" type="text">
+            人 </td>
+          <th width="10%">小孩：</th>
+          <td width="23%">
+            <input class="form-control w150" name="" type="text">
+            人 </td>
+          <th width="10%">婴儿：</th>
+          <td>
+            <input class="form-control w150" name="" type="text">
+            人 </td>
+        </tr>
+      </table>
+      <p class="mb10"><b class="mr30 ft14">费用信息</b></p>
+      <div class="mb20 line20">团款金额：
+        <input class="form-control w100" name="" type="text">
+        元 </div>
+      <p class="mb10"><b class="mr30 ft14">订单备注</b></p>
+      <p class="mb5">备注</p>
+      <div class="mb20">
+        <textarea class="form-control" name="" cols="" rows="3"></textarea>
+      </div>
+      <div class="algin_right"><a class="btn_s mr10 big_button red_btn w100 ft14" href="#">确定</a><a class="btn_s w100 big_button cancelBtn ft14" href="#">取消</a></div>
+   <!--选择结算单位 start-->
+<div class="popBox full-width" style="top:450px; left:20px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择结算单位</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10">
+      <label class="search_qp mr10"><span class="search_i"></span>
+        <input type="text" placeholder="输入相关合作单位关键词进行搜索" class="form-control w250">
+      </label>
+      <select class="form-control w120" name="">
+        <option>全部类型</option>
+      </select>
+    </div>
+    <table class="tabTra td-center mb10"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="13%">类型</th>
+        <th>单位名称</th>
+        <th width="18%">联系人</th>
+        <th width="13%">联系号码 </th>
+        <th width="13%">操作</th>
+      </tr>
+      <tr>
+        <td>公司</td>
+        <td class="left">宁波万达国际旅行社有限公司</td>
+        <td>王飞</td>
+        <td>89216908</td>
+        <td><a class="blue_txt" href="#">选择</a></td>
+      </tr>
+      <tr>
+        <td>公司</td>
+        <td class="left">宁波万达国际旅行社有限公司</td>
+        <td>王飞</td>
+        <td>89216908</td>
+        <td><a class="blue_txt" href="#">选择</a></td>
+      </tr>
+    </table>
+    <ul class="pagination pagination-sm">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+   
+    </div>
+  </div>
+</div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+})  
+</script>
+</body>
+</html>

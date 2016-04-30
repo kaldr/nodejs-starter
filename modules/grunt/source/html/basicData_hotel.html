@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">系统配置</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">权限设置</div>
+        <div class="subMenu_panel"><a class="menu" href="#">未完成 <span>(1)</span></a><a class="menu" href="#">已完成 <span>(4)</span></a></div>
+      </li>
+      <li>
+        <div class="subArr_tit">基础数据</div>
+        <div class="subMenu_panel"><a class="menu" href="#">景点 </a><a class="menu" href="#">酒店 </a><a class="menu" href="#">交通 </a><a class="menu" href="#">签证 </a><a class="menu" href="#">邮轮品牌 </a><a class="menu" href="#">旅游用品 </a><a class="menu" href="#">当地游 </a><a class="menu" href="#">目的地 </a><a class="menu" href="#">委托社 </a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <div class="tabMenu">
+        <ul class="nav nav-tabs tbT">
+          <li class="active"><a href="#team" data-toggle="tab">团队</a></li>
+          <li><a href="#ship" data-toggle="tab">游轮</a></li>
+          <li><a href="#a3" data-toggle="tab">自由行</a></li>
+          <li><a href="#a4" data-toggle="tab">一团一议</a></li>
+          <li><a href="#a5" data-toggle="tab">自驾游</a></li>
+          <li><a href="#a6" data-toggle="tab">定制游</a></li>
+          <li><a href="#a7" data-toggle="tab">签证</a></li>
+          <li><a href="#a8" data-toggle="tab">门票</a></li>
+          <li><a href="#a9" data-toggle="tab">机票</a></li>
+          <li><a href="#a10" data-toggle="tab">地接</a></li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="team">
+          <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>添加酒店</a>
+            <label class="search_qp floatL mr20"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <select class="form-control floatL w100 hideEle mr10">
+              <option>国家</option>
+            </select>
+            <select class="form-control floatL w100 hideEle mr10">
+              <option>省份</option>
+            </select>
+            <select class="form-control floatL w100 hideEle mr10">
+              <option>城市</option>
+            </select>
+            <select class="form-control floatL w100 hideEle mr10">
+              <option>酒店级别</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-1 hideEle">序号</span><span class="col-md-1 hideEle">国家</span><span class="col-md-4 two">酒店名称</span><span class="col-md-1 two">酒店级别</span><span class="col-md-5 hideEle">具体地址</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-1 hideEle">1</div>
+              <div class="col-md-1 hideEle">西班牙</div>
+              <div class="col-md-4 two">马德里Catalonia Las Cortes</div>
+              <div class="col-md-1 two">四星</div>
+              <div class="col-md-5 hideEle">Del Prado, 6, 中央车站, 28014 马德里, 西班牙</div>
+            </li>
+            <li>
+              <div class="col-md-1 hideEle">2</div>
+              <div class="col-md-1 hideEle">西班牙</div>
+              <div class="col-md-4 two">马德里Catalonia Las Cortes</div>
+              <div class="col-md-1 two">四星</div>
+              <div class="col-md-5 hideEle">Del Prado, 6, 中央车站, 28014 马德里, 西班牙</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="a3">2...</div>
+        <div class="tab-pane fade" id="a4">3...</div>
+        <div class="tab-pane fade" id="a5">4...</div>
+        <div class="tab-pane fade" id="a6">5...</div>
+        <div class="tab-pane fade" id="a7">6...</div>
+        <div class="tab-pane fade" id="a8">7...</div>
+        <div class="tab-pane fade" id="a9">8...</div>
+        <div class="tab-pane fade" id="a10">9...</div>
+      </div>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">特罗吉尔Apartments Dado Trogir</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+      <div class="ft14 mb20"><b class="mr20">酒店图片</b><a href="#" class="blue_txt">14</a>张</div>
+      <div class="mb10"><b class="ft14">基础信息</b></div>
+      <div class="outline_box mb20">
+        <table class="tab_infoList th-right ver_top" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="10%">酒店名称：</th>
+            <td>特罗吉尔Apartments Dado Trogir <span class="yellow_txt ml20">当地标准四星</span></td>
+          </tr>
+          <tr>
+            <th>酒店地址：</th>
+            <td>Ulica Kralja Tomislava 73, 21220 特罗吉尔, 克罗地亚</td>
+          </tr>
+          <tr>
+            <th>联系号码：</th>
+            <td>100-783698</td>
+          </tr>
+          <tr>
+            <th>坐落位置：</th>
+            <td>闹市区</td>
+          </tr>
+          <tr>
+            <th>酒店描述：</th>
+            <td>Apartments Dado Trogir公寓位于特罗吉尔（Trogir）的大海旁，提供带免费无线网络连接的空调住宿，每间住宿都设有
+              一个海景阳台，距离受联合国教科文组织保护的特罗吉尔老城区（Trogir Old Town）及其Kamerlengo Castle城堡有1.5
+              公里。公寓都配备了一台卫星电视和保险箱，还都设有一间带用餐区的设备齐全的厨房。私人浴室设有淋浴、吹风机、浴袍
+              和免费洗浴用品。</td>
+          </tr>
+          <tr>
+            <th>周边描述：</th>
+            <td>公寓距离一个当地巴士站仅有10米，距离斯普利特机场（Split Airport）有6.5公里。公寓内设有免费私人停车场。 </td>
+          </tr>
+        </table>
+      </div>
+      <div class="mb10"><b class="ft14">酒店政策</b></div>
+      <div class="outline_box mb20">
+        <table class="tab_infoList th-right ver_top" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="18%">入住时间：</th>
+            <td>12:00<span class="ml20">退房时间：16:00</span></td>
+          </tr>
+          <tr>
+            <th>预定取消/预付政策：</th>
+            <td>不同类型的客房附带不同的取消预订和预先付费政策</td>
+          </tr>
+          <tr>
+            <th>儿童和加床：</th>
+            <td>允许客人携带儿童入住。
+              允许1名12岁以下的儿童，使用现有床铺免费。允许1名1岁以下的儿童，加1张婴儿床，免费。  
+              最多容纳：每间客房1张婴儿床。</td>
+          </tr>
+          <tr>
+            <th>宠物：</th>
+            <td>不允许携带宠物入住。</td>
+          </tr>
+          <tr>
+            <th>预订须知：</th>
+            <td>酒店提供往返成田（Narita）和羽田（Haneda）机场的额外收费的豪华巴士服务。 <br>
+              房价不包括每人每晚的住宿税，客人必须直接在酒店缴税。 <br>
+              请注意，加床须视供应情况而定，且须事先得到酒店的确认。此外，酒店在客人办理入住后不提供加床。 <br>
+              敬请注意，部分客房不可加床。 <br>
+              请注意，热水浴池设施仅供女性客人使用。 <br>
+              请注意，房价不包含儿童的早餐。 <br>
+              请注意，客房的最多入住人数包括所有儿童，且在任何情况下均不可超出规定入住人数。如果入住人数超出规定人数，酒店将<br>
+              要求客人入住其他客房并支付额外费用。如无空房，酒店可能无法保证客人可以入住。</td>
+          </tr>
+        </table>
+      </div>
+      <div class="mb10"><b class="ft14">酒店设施</b></div>
+      <div class="outline_box mb25">
+        <p class="mb5">商务：</p>
+        <div class="color6 mb15"><span class="mr20">会议室</span><span class="mr20">商务中心</span></div>
+        <p class="mb5">娱乐：</p>
+        <div class="color6 mb15"><span class="mr20">KTV</span><span class="mr20">棋牌室</span><span class="mr20">桑拿</span></div>
+        <p class="mb5">服务项目：</p>
+        <div class="color6"><span class="mr20">机场班车（额外收费）</span><span class="mr20">24小时前台</span><span class="mr20">快速办理入住/退房手续</span><span class="mr20">快速办理入住/退房手续</span><span class="mr20">快速办理入住/退房手续</span></div>
+      </div>
+      <div class="mb10"><b class="ft14">酒店房型</b></div>
+      <table class="tabTra" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="20%" class="center">
+            <p class="mb10 ml10 mr10 ft14">东京塔景翻新大
+              号床间</p>
+            <p class="red_t">500元/间</p>
+          </td>
+          <td>
+            <table class="tab_infoList noBorder" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="2"><span class="mr20">可住人数：2</span><span class="mr20">客房面积：50m2</span><span class="mr20">床型描述：超级大床</span></td>
+              </tr>
+              <tr>
+                <td width="13%">房型描述：</td>
+                <td>经过整修的客房拥有高天花板，设有带卫星频道的平板电视、保险箱和带浴缸及洗浴用品的别具一格浴室。</td>
+              </tr>
+              <tr>
+                <td width="13%">客房设施：</td>
+                <td>地标景，按次点播收费电视、电话、卫星频道、平面电视、保险箱、空调、书桌、特长睡床 (超过两米)、
+                  暖气、 淋浴、浴缸、吹风机、免费洗浴用品、卫生间、浴室、拖鞋、冰箱、唤醒服务、闹钟、浴巾</td>
+              </tr>
+              <tr>
+                <td width="13%">特色服务：</td>
+                <td>所有客房均提供免费WiFi</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <ul class="picList">
+                    <li><img src="../images/default/ms.jpg" alt="">
+                      <div class="txtInfo">大床</div>
+                    </li>
+                    <li><img src="../images/default/ms.jpg" alt="">
+                      <div class="txtInfo">大床</div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="20%" class="center">
+            <p class="mb10 ml10 mr10 ft14">东京塔景翻新大
+              号床间</p>
+            <p class="red_t">500元/间</p>
+          </td>
+          <td>
+            <table class="tab_infoList noBorder" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td colspan="2"><span class="mr20">可住人数：2</span><span class="mr20">客房面积：50m2</span><span class="mr20">床型描述：超级大床</span></td>
+              </tr>
+              <tr>
+                <td width="13%">房型描述：</td>
+                <td>经过整修的客房拥有高天花板，设有带卫星频道的平板电视、保险箱和带浴缸及洗浴用品的别具一格浴室。</td>
+              </tr>
+              <tr>
+                <td width="13%">客房设施：</td>
+                <td>地标景，按次点播收费电视、电话、卫星频道、平面电视、保险箱、空调、书桌、特长睡床 (超过两米)、
+                  暖气、 淋浴、浴缸、吹风机、免费洗浴用品、卫生间、浴室、拖鞋、冰箱、唤醒服务、闹钟、浴巾</td>
+              </tr>
+              <tr>
+                <td width="13%">特色服务：</td>
+                <td>所有客房均提供免费WiFi</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <ul class="picList">
+                    <li><img src="../images/default/ms.jpg" alt="">
+                      <div class="txtInfo">大床</div>
+                    </li>
+                    <li><img src="../images/default/ms.jpg" alt="">
+                      <div class="txtInfo">大床</div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!--zz_info END--> 
+</div>
+<!--container END--> 
+<!--warn_box start-->
+<div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+  <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+  <h2 class="mb10">转正/调薪审批</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR col-md-9">
+        <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>你的转正/调薪审批已通过</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">意向客户</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：已过预期跟踪时间</p>
+      </div>
+    </div>
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：有一条意向客户认领</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">最新任务</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>给你分配了一条任务：设计一条从宁波
+          到美国的组团游线路</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--warn_box END-->
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  添加定制游 start-->
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onClick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">添加酒店</span></div>
+      <ul class="nav nav-tabs tabBlue mb15">
+        <li class="active"><a href="#m1" data-toggle="tab">酒店信息</a></li>
+        <li><a href="#m2" data-toggle="tab">房型管理</a></li>
+        <li><a href="#m3 " data-toggle="tab">图片管理</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="m1">
+          <p class="ft14 bold mb10">基础信息</p>
+          <form role="form" action="#" class="form-horizontal my_form clearFix mb20" novalidate>
+            <!--basicInfo start-->
+            <div class="basicInfo">
+              <div class="row_h row_full">
+                <div class="form-group">
+                  <label class="col-md-2 control-label"><span class="need">●</span>酒店名称：</label>
+                  <div class="col-md-10">
+                    <input type="text" placeholder="输入酒店名称" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>标准类型：</label>
+                  <div class="col-md-8">
+                    <select class="form-control">
+                      <option>当地标准</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group n2">
+                  <label class="col-md-5 control-label"><span class="need">●</span>酒店等级：</label>
+                  <div class="col-md-7">
+                    <select class="form-control">
+                      <option>四星</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row_h row_full">
+                <div class="form-group">
+                  <label class="col-md-2 control-label"><span class="need">●</span>酒店地址：</label>
+                  <div class="col-md-10">
+                    <p class="mb10">
+                      <select class="form-control w100 mr10">
+                        <option>国家</option>
+                      </select>
+                      <select class="form-control w100 mr10">
+                        <option>省份</option>
+                      </select>
+                      <select class="form-control w100">
+                        <option>城市</option>
+                      </select>
+                    </p>
+                    <p>
+                      <input type="text" placeholder="详细地址" class="form-control">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>联系号码：</label>
+                  <div class="col-md-8">
+                    <input type="text" placeholder="输入联系号码" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group n2">
+                  <label class="col-md-5 control-label"><span class="need">●</span>坐落位置：</label>
+                  <div class="col-md-7">
+                    <select class="form-control">
+                      <option>闹市区</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row_h row_full">
+                <div class="form-group">
+                  <label class="col-md-2 control-label"><span class="need">●</span>酒店描述：</label>
+                  <div class="col-md-10">
+                    <textarea class="form-control" name="" cols="" placeholder="填写酒店描述" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--basicInfo END--> 
+            <!--upload_box start-->
+            <div class="upload_box"> <a class="btn_addPic2 bigLoad" href="javascript:void(0);"><span class="add_txt">+</span>
+              <p>点击添加详细页轮显图<br>
+                此图为封面图</p>
+              <input type="file" class="filePrew_img" title="" size="3" name="pic">
+              <div class="picLoad"></div>
+              </a>
+              <ul class="uploadList">
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"><img src="../images/default/p3.jpg" alt=""></div>
+                  </a> </li>
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"></div>
+                  </a> </li>
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"></div>
+                  </a> </li>
+              </ul>
+            </div>
+            <!--upload_box END-->
+            
+            <div class="row_h mb10">
+              <label class="col-md-1 control-label">周边描述：</label>
+              <div class="col-md-11">
+                <textarea rows="2" placeholder="填写周边描述" class="form-control"></textarea>
+              </div>
+            </div>
+          </form>
+          <p class="ft14 bold mb10">酒店政策</p>
+          <table class="form_tab noFixed mb10" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="13%">入住时间：</th>
+              <td width="37%">
+                <input type="text" placeholder="输入入住时间，如00:00" class="form-control">
+              </td>
+              <th width="13%">退房时间：</th>
+              <td width="37%">
+                <input type="text" placeholder="输入退房时间，如00:00" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>预订取消/预付：</th>
+              <td>
+                <input type="text" placeholder="输入预订取消/预付政策" class="form-control">
+              </td>
+              <th>儿童和加床：</th>
+              <td>
+                <input type="text" placeholder="输入儿童和加床政策" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>宠物：</th>
+              <td>
+                <input type="text" placeholder="输入宠物政策" class="form-control">
+              </td>
+              <th>预订须知：</th>
+              <td>
+                <input type="text" placeholder="输入预订须知" class="form-control">
+              </td>
+            </tr>
+          </table>
+          <p class="ft14 bold mb10">酒店设施</p>
+          <p class="mb10">商务：</p>
+          <div class="checkGroup gb">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              会议室 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              商务中心 </label>
+          </div>
+          <div class="mb20">
+            <input type="text" placeholder="其他信息" class="form-control">
+          </div>
+          <p class="mb10">娱乐：</p>
+          <div class="checkGroup gb">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              KTV </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              棋牌室 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              桑拿 </label>
+          </div>
+          <div class="mb20">
+            <input type="text" placeholder="其他信息" class="form-control">
+          </div>
+          <p class="mb10">休闲：</p>
+          <div class="checkGroup gb">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              泳池 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              健身房 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              美容美发 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              SPA </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              球场 </label>
+          </div>
+          <div class="mb20">
+            <input type="text" placeholder="其他信息" class="form-control">
+          </div>
+          <p class="mb10">餐饮：</p>
+          <div class="checkGroup gb">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              中餐 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              西餐 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              宴会厅 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              酒吧 </label>
+          </div>
+          <div class="mb20">
+            <input type="text" placeholder="其他信息" class="form-control">
+          </div>
+          <p class="mb10">房间设备：</p>
+          <div class="checkGroup gb">
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              空调 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              WiFi </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              冰柜 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              洗涑用品 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              吹风机 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              水壶 </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="" value="">
+              电熨斗 </label>
+          </div>
+          <div class="mb20">
+            <input type="text" placeholder="其他信息" class="form-control">
+          </div>
+          <div><a href="#" class="btn_s red_btn big_button mr10">保存</a><a href="#" class="btn_s red_btn big_button cancelBtn">取消</a></div>
+        </div>
+        <div class="tab-pane fade" id="m2">
+          <div style="top:600px; left:10px;" class="popBox full-width"> <span class="arr_t"></span>
+            <h3 class="popover-title">添加房型 </h3>
+            <!-- popover-content start-->
+            <div class="popover-content">
+              <table class="form_tab noFixed mb10" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th width="10%">房型标题：</th>
+                  <td colspan="3">
+                    <input type="text" class="form-control" placeholder="输入房型标题">
+                  </td>
+                </tr>
+                <tr>
+                  <th width="10%">参考价：</th>
+                  <td width="40%">
+                    <input type="text" class="form-control" placeholder="输入参考价">
+                  </td>
+                  <th width="13%">可住人数：</th>
+                  <td width="37%">
+                    <input type="text" class="form-control" placeholder="输入可住人数">
+                  </td>
+                </tr>
+                <tr>
+                  <th>床型描述：</th>
+                  <td>
+                    <input type="text" style="width:96%;" class="form-control" placeholder="输入床型描述">
+                  </td>
+                  <th>房型面积：</th>
+                  <td>
+                    <input type="text" class="form-control" placeholder="输入房型面积">
+                  </td>
+                </tr>
+                <tr>
+                  <th class="ver_topTh">房型描述：</th>
+                  <td colspan="3">
+                    <textarea class="form-control" placeholder="房型描述" rows="2"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="ver_topTh">客房设施：</th>
+                  <td colspan="3">
+                    <textarea class="form-control" placeholder="输入客房设施" rows="2"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="ver_topTh">特色服务：</th>
+                  <td colspan="3">
+                    <textarea class="form-control" placeholder="输入特色服务" rows="2"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>房型图片：</th>
+                  <td colspan="3"><a class="btn_s red_btn blueBtn loadP" href="#">+ 添加图片
+                    <input type="file" class="filePrew" title="" size="3" name="pic">
+                    </a></td>
+                </tr>
+              </table>
+            </div>
+            <!-- popover-content END-->
+            <div class="popover-footer">
+              <input type="button" value="确定" class="btn_ok red_btn  mr10">
+              <input type="button" value="取消" class="btn_cancel">
+            </div>
+          </div>
+          <div class="mb10"> <a class="blue_txt" href="#">添加房型</a></div>
+          <div class="outline_box mb30">
+            <div class="algin_right"> <a class="blue_txt mr15" href="#">编辑</a><a class="blue_txt" href="#">删除</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab ver_top mb10">
+              <tbody>
+                <tr>
+                  <th width="10%">房型标题：</th>
+                  <td colspan="">Ocean Lagoon House</td>
+                </tr>
+                <tr>
+                  <th width="10%">参考价：</th>
+                  <td width="40%">500</td>
+                  <th width="13%">可住人数：</th>
+                  <td width="37%">2</td>
+                </tr>
+                <tr>
+                  <th>床型描述：</th>
+                  <td>超级大床</td>
+                  <th>客房面积：</th>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <th>房型描述：</th>
+                  <td colspan="3">这是一间大房间</td>
+                </tr>
+                <tr>
+                  <th>客房设施：</th>
+                  <td colspan="3">超级大床</td>
+                </tr>
+                <tr>
+                  <th>特色服务：</th>
+                  <td colspan="3">超级大床</td>
+                </tr>
+                <tr>
+                  <th>房型图片：</th>
+                  <td colspan="3">
+                    <ul class="picList">
+                      <li><img alt="" src="../images/default/ms.jpg">
+                        <div class="txtInfo">大床</div>
+                      </li>
+                      <li><img alt="" src="../images/default/ms.jpg">
+                        <div class="txtInfo">大床</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div><a href="#" class="btn_s red_btn big_button mr10">保存</a><a href="#" class="btn_s red_btn big_button cancelBtn">取消</a></div>
+        </div>
+        <div class="tab-pane fade" id="m3">
+          <div class="mb10 relative"> <a id="addPic" class="blue_txt" href="#">添加图片</a> 
+            
+            <!--myPop start-->
+            <div style="display:block; width:500px;" class="popover bottom myPop">
+              <div class="arrow"></div>
+              <!-- popover-content start-->
+              <div class="popover-content">
+                <div class="mb10"><b class="mr20">添加图片</b></div>
+                <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <th width="15%">图片标题：</th>
+                    <td>
+                      <input type="" class="form-control" id="" placeholder="输入图片标题">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>上传图片：</th>
+                    <td><a class="btn_s red_btn blueBtn loadP" href="#">+ 添加图片
+                      <input type="file" class="filePrew" title="" size="3" name="pic">
+                      </a></td>
+                  </tr>
+                  <tr>
+                    <td class="algin_right" colspan="2">
+                      <input type="button" class="btn_ok red_btn  mr10" value="确定">
+                      <input type="button" class="btn_cancel" value="取消" name="">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- popover-content END--> 
+            </div>
+            <!--myPop END--> 
+            
+          </div>
+          <ul class="picList clearFix mb30">
+            <li><img src="../images/default/ms.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/ms.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/p1.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/p5.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/ms.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/p1.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+            <li><img src="../images/default/p5.jpg" alt="">
+              <div class="txtInfo">文字</div>
+            </li>
+          </ul>
+          <div><a href="#" class="btn_s red_btn big_button mr10">保存</a><a href="#" class="btn_s red_btn big_button cancelBtn">取消</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/personnelAdministration.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">财务中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">财务结算</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">支出结算</a><a href="#" class="menu">收入结算</a></div>
+      </li>
+      <li><a class="menu" href="#">汇款认领</a> </li>
+      <li><a class="menu" href="#">收支清单</a> </li>
+      <li><a class="menu" href="#">订单收款</a></li>
+      <li><a class="menu" href="#">财务结算</a></li>
+      <li><a class="menu" href="#">业务员提成</a></li>
+      <li><a class="menu" href="#">导游津贴</a></li>
+      <li>
+        <div class="subArr_tit">三清单</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">1</a><a href="#" class="menu">2</a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">收支清单</h2>
+      <div id="toolbar" class="mb15 clearFix">
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" placeholder="输入关键字" class="form-control w250">
+        </label>
+        <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+        </div>
+        <select class="form-control floatL w120 mr10">
+          <option>结算方式</option>
+        </select>
+        <select class="form-control floatL w120 mr10">
+          <option>清算类型</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2">清算时间</span><span class="col-md-3">信息内容</span><span class="col-md-2">类型</span><span class="col-md-15">金额</span><span class="col-md-2">结算方式</span><span class="col-md-1-5">操作人</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2">2015-11-10 08:46:21 </div>
+          <div class="col-md-3"><span class="l_c">【舌尖上的潮汕】广东潮州古城、汕头南澳岛双人游</span></div>
+          <div class="col-md-2">组团游</div>
+          <div class="col-md-15">43200.00</div>
+          <div class="col-md-2">刷卡</div>
+          <div class="col-md-1-5">张桃子</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb10 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">收支详情</span></div>
+      <div class="yBox mb20">
+        <p class="mb15"><b>结算金额(元)</b></p>
+        <p style="font-size:40px;">500.00</p>
+      </div>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right noFixed mb20">
+        <tbody>
+          <tr>
+            <th width="12%">信息内容 </th>
+            <td colspan="3">【赏牡丹，游古都】西安兵马俑、法门寺、洛阳龙门</td>
+          </tr>
+          <tr>
+            <th width="12%">结算银行 </th>
+            <td>招商银行</td>
+            <th width="12%">收支类型 </th>
+            <td width="38%">订单收支(团队游)</td>
+          </tr>
+          <tr>
+            <th>提交时间 </th>
+            <td>2015-11-10 09:44:35</td>
+            <th>清算时间</th>
+            <td>2015-11-10 09:48:56</td>
+          </tr>
+          <tr>
+            <th>结算方式 </th>
+            <td>支付宝</td>
+            <th>操作人</th>
+            <td>张奕红</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!--container END--> 
+
+<!--datetimepicker-->
+</div>
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/tourGuide.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">导游中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">导游排班</a> </li>
+      <li><a class="menu active" href="#">导游安排</a> </li>
+      <li><a class="menu" href="#">导游游记</a></li>
+      <li><a class="menu" href="#">导游管理</a></li>
+      <li><a class="menu" href="#">导游荣誉</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">导游安排</h2>
+      <div class="mb15 clearFix" id="toolbar">
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关导游信息">
+        </label>
+        <div class="input-group date form_date hideEle w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+        </div>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>分配状态</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>评分状态</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2 hideEle">订单编号</span><span class="col-md-4 two">线路名称</span><span class="col-md-3 hideEle">起止时间</span><span class="col-md-1 hideEle">计调</span><span class="col-md-2 two">分配状态</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2 hideEle">DX_T15-16870</div>
+          <div class="col-md-4 two"><span class="l_c">【飞扬自组】澳新11日-CX宁波-11D8N-升级版</span></div>
+          <div class="col-md-3 hideEle">2015-06-18 至 2015-06-20</div>
+          <div class="col-md-1 hideEle">施洁</div>
+          <div class="col-md-2 two"><span class="yellow_txt">未分配</span></div>
+        </li>
+        <li>
+          <div class="col-md-2 hideEle">DX_T15-16870</div>
+          <div class="col-md-4 two"><span class="l_c">【飞扬自组】澳新11日-CX宁波-11D8N-升级版</span></div>
+          <div class="col-md-3 hideEle">2015-06-18 至 2015-06-20</div>
+          <div class="col-md-1 hideEle">施洁</div>
+          <div class="col-md-2 two"><span class="red_t">未分配</span></div>
+        </li>
+        <li>
+          <div class="col-md-2 hideEle">DX_T15-16870</div>
+          <div class="col-md-4 two"><span class="l_c">【飞扬自组】澳新11日-CX宁波-11D8N-升级版</span></div>
+          <div class="col-md-3 hideEle">2015-06-18 至 2015-06-20</div>
+          <div class="col-md-1 hideEle">施洁</div>
+          <div class="col-md-2 two"><span class="green_txt">已安排</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">团队综合信息</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-sendEmail">&nbsp;</i>发送短信</a><a href="#"> <i class="iconT i-print">&nbsp;</i>打印</a></div>
+      <div class="traTit ft14 bold mb10">基本信息</div>
+      <table class="tabTra th-right mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">线路名称：</th>
+          <td width="38%">济州首尔经典五日游</td>
+          <th width="12%">团队编号：</th>
+          <td width="38%"><a href="#" class="blue_txt">DX_T15-16870</a></td>
+        </tr>
+        <tr>
+          <th>线路类型：</th>
+          <td>飞扬自组</td>
+          <th>起止时间：</th>
+          <td>2015-06-28 至 2015-06-30</td>
+        </tr>
+        <tr>
+          <th>计划状态：</th>
+          <td>已回团</td>
+          <th>团队计调：</th>
+          <td>李英</td>
+        </tr>
+        <tr>
+          <th>导游类型：</th>
+          <td>带团导游</td>
+          <th>导游状态：</th>
+          <td>已分配</td>
+        </tr>
+        <tr>
+          <th>导       游：</th>
+          <td>张桃子</td>
+          <th>备       注：</th>
+          <td>请派一个老练熟悉的领队谢谢</td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">订单信息</div>
+      <div class="spanPanel mb15"><span>营业款总计：<b>12766.00</b> 元 </span><span> 已收款总计：<b>12766.00</b> 元</span><span>应收款总计：<b>0.00 </b>元</span><span>保险总成本：<b>0 </b>元</span><span>人数统计：<b>38 / 38 (38 + 0 + 0)</b></span></div>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="11%">订单编号</th>
+          <th width="13%">会员信息</th>
+          <th width="12%">营业款（元）</th>
+          <th width="12%">已收款（元）</th>
+          <th width="12%">应收款（元）</th>
+          <th width="9%">人数</th>
+          <th width="10%">私顾</th>
+          <th>备注</th>
+        </tr>
+        <tr>
+          <td><a class="blue_txt" href="#">D00125467</a></td>
+          <td>
+            <p>竺翠菊</p>
+            <p>15867227591</p>
+          </td>
+          <td>556.00 </td>
+          <td>556.00 </td>
+          <td>0 </td>
+          <td>
+            <p>2人</p>
+            <p>(2+0+0)</p>
+          </td>
+          <td>章丹丹</td>
+          <td class="left">小孩子都是20的半餐 每人一瓶矿泉水</td>
+        </tr>
+        <tr>
+          <td><a class="blue_txt" href="#">D00125467</a></td>
+          <td>
+            <p>竺翠菊</p>
+            <p>15867227591</p>
+          </td>
+          <td>556.00 </td>
+          <td>556.00 </td>
+          <td>0 </td>
+          <td>
+            <p>2人</p>
+            <p>(2+0+0)</p>
+          </td>
+          <td>章丹丹</td>
+          <td class="left">小孩子都是20的半餐 每人一瓶矿泉水</td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">预领旅行用品信息</div>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="17%">旅游用品 </th>
+          <th width="12%">单价(元) </th>
+          <th width="12%">数量 </th>
+          <th width="12%">金额(元) </th>
+          <th width="12%">状态 </th>
+          <th width="12%">来源 </th>
+          <th>说明 </th>
+        </tr>
+        <tr>
+          <td>旅游帽</td>
+          <td>2.80 </td>
+          <td>120</td>
+          <td>336.00 </td>
+          <td><span class="green_txt">已出库</span></td>
+          <td>前台发放</td>
+          <td>旅游帽有50顶</td>
+        </tr>
+        <tr>
+          <td>旅游帽</td>
+          <td>2.80 </td>
+          <td>120</td>
+          <td>336.00 </td>
+          <td><span class="green_txt">已出库</span></td>
+          <td>前台发放</td>
+          <td>旅游帽有50顶</td>
+        </tr>
+        <tr>
+          <td colspan="7">
+            <p class="algin_right mr10"><b class="mr15">数量 <font class="red_t">240</font></b><b>合计 <font class="red_t">240</font>元</b></p>
+          </td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">预领金信息</div>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="8%">&nbsp; </th>
+          <th width="18%">团队导游 </th>
+          <th width="18%">申请人 </th>
+          <th width="18%">总金额 </th>
+          <th width="18%">审核状态 </th>
+          <th>支付状态 </th>
+        </tr>
+        <tr>
+          <td><a class="glyphicon glyphicon-plus blue_txt" href="#"></a></td>
+          <td>徐卓瑾</td>
+          <td>徐晓君</td>
+          <td>26000.50</td>
+          <td>审核通过 </td>
+          <td><span class="green_txt">已支付</span></td>
+        </tr>
+        <tr>
+          <td class="dropTd" colspan="6">
+            <table class="tabTra" border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                  <th width="18%">项目名称</th>
+                  <th width="18%">单价 </th>
+                  <th width="18%">数量 </th>
+                  <th width="18%">金额 </th>
+                  <th>说明 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>备用金</td>
+                  <td>252.00</td>
+                  <td>1</td>
+                  <td>252.00</td>
+                  <td>这个是备用金</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="6">
+            <p class="algin_right mr10"><b>合计 <font class="red_t">240</font>元</b></p>
+          </td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">导游报账</div>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">导游 </th>
+          <th width="12%">标题 </th>
+          <th width="12%">类别 </th>
+          <th width="12%">金额(元) </th>
+          <th width="12%">审核状态 </th>
+          <th width="12%">结算状态 </th>
+          <th>说明 </th>
+        </tr>
+        <tr>
+          <td>杜丽娜</td>
+          <td>过路费</td>
+          <td>支出</td>
+          <td>336.00 </td>
+          <td>审核通过</td>
+          <td><span class="green_txt">已结算</span></td>
+          <td>过路费:310</td>
+        </tr>
+        <tr>
+          <td colspan="7">
+            <p class="algin_right mr10"><b>合计 <font class="red_t">240</font>元</b></p>
+          </td>
+        </tr>
+      </table>
+      <div class="traTit ft14 bold mb10">团队保险信息</div>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%"> </th>
+          <th width="30%">保险名称 </th>
+          <th width="30%">保险数量 </th>
+          <th width="30%">保险金额 </th>
+        </tr>
+        <tr>
+          <td><a href="#" class="glyphicon glyphicon-plus blue_txt"></a></td>
+          <td>泰康境外旅游意外险</td>
+          <td>1</td>
+          <td>26000.50</td>
+        </tr>
+        <tr>
+          <td class="dropTd" colspan="4">
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra">
+              <thead>
+                <tr>
+                  <th width="15%">姓名 </th>
+                  <th width="26%">证件号 </th>
+                  <th width="18%">保险金额 </th>
+                  <th width="18%">保单号 </th>
+                  <th>生效时间 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>陈琼</td>
+                  <td>330226198701125276</td>
+                  <td>1</td>
+                  <td>2820017676030</td>
+                  <td>2015-09-04</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p class="algin_right mr10"><b>合计 <font class="red_t">240</font>元</b></p>
+          </td>
+        </tr>
+      </table>
+      <div class="traTit ft14 mb10"><b>团队备注说明</b> <a class="blue_txt floatR" href="#"><i class="iconT i-edit">&nbsp;</i> 编辑</a></div>
+      <div class="mb20">
+        <textarea class="form-control" name="" cols="" rows="3" placeholder="输入团队备注说明"></textarea>
+      </div>
+      <div class="clearFix algin_right">
+        <input type="button" name="" value="保存" class="btn_ok red_btn mr10"><input type="button" name="" value="取消" class="btn_cancel">
+      </div>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+</div>
+<!--container END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+
+$(".speTab").delegate(".glyphicon-plus","click", function(){
+	$(this).toggleClass("glyphicon-minus");
+	$(this).parents("tr").toggleClass("active");
+	$(this).parents("tr").next("tr").find("td.sub_td").toggle();
+});	
+</script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">客服中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu active" href="#">来电记录</a> </li>
+      <li><a class="menu" href="#">订单回访</a> </li>
+      <li><a class="menu" href="#">客户投诉</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">成本管理</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a onclick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>新建成本</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关来电信息">
+        </label>
+        <select class="form-control floatL w180 hideEle mr10">
+          <option>选择采购类型</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>选择目的地</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">成本编号</span><span class="col-md-3">成本名称</span><span class="col-md-1-5">采购类型</span><span class="col-md-2">供应形势</span><span class="col-md-1-5">总成本</span><span class="col-md-2">创建时间</span><span class="col-md-1-5">创建人</span></div>
+      <ul class="per_list speList">
+        <li>
+          <div class="col-md-1-5">100229781</div>
+          <div class="col-md-3"><span class="l_c">西米亚风东欧五国11日游成本记录</span></div>
+          <div class="col-md-1-5"> 产品线路</div>
+          <div class="col-md-2">委托社全包</div>
+          <div class="col-md-1-5">12300.00</div>
+          <div class="col-md-2"><span class="color9">2015-08-12 10:25:33</span></div>
+          <div class="col-md-1-5">黄小丽</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="titT clearFix mb15"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">新建成本</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-print">&nbsp;</i>打印</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+      <div class="mb10"><img src="../images/default/c2.gif" alt=""></div>
+      <div class="clearFix mb20"><b class="ft14">2015-09-21</b><span class="floatR ft14">总成本：<b class="pink_txt">15963.00</b></span></div>
+      <p class="mb5">交通成本</p>
+      <table class="tabTra th-center mb20 noFixed" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>交通类型</th>
+          <th colspan="2">预计成本</th>
+        </tr>
+        <tr>
+          <td width="20%">
+            <p class="center">邮轮</p>
+          </td>
+          <td>
+            <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+            <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+          </td>
+          <td width="20%">
+            <p class="pink_txt center">12000.00</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="20%">
+            <p class="center">大巴</p>
+          </td>
+          <td>
+            <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+            <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+          </td>
+          <td width="20%">
+            <p class="pink_txt center">12000.00</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="20%">
+            <p class="center">飞机</p>
+          </td>
+          <td colspan="2">
+            <p style="width:133px;" class="pink_txt center floatR">12000.00</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="algin_right">交通成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+          </td>
+        </tr>
+      </table>
+      <p class="mb5">酒店成本</p>
+      <table class="tabTra th-center mb20 noFixed" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>酒店类型</th>
+          <th colspan="2">预计成本</th>
+        </tr>
+        <tr>
+          <td width="20%">
+            <p class="center">邮轮</p>
+          </td>
+          <td>
+            <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+            <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+          </td>
+          <td width="20%">
+            <p class="pink_txt center">12000.00</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div class="algin_right">酒店成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+</div>
+<!--container END-->
+<div id="subConts">
+  <div class="outPop">
+    <div id="add_groupTravel" class="popInner">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">新建成本</span></div>
+      <table class="form_tab mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>成本名称：</th>
+          <td colspan="3">
+            <input name="" placeholder="输入成本名称" class="form-control" type="text">
+          </td>
+        </tr>
+        <tr>
+          <th width="10%">采购类型：</th>
+          <td width="38%">
+            <select class="form-control" name="">
+              <option>产品线路</option>
+            </select>
+          </td>
+          <th width="15%">对应产品/活动：</th>
+          <td>
+            <select class="form-control" name="">
+              <option>产品线路</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>供应模式：</th>
+          <td>
+            <select class="form-control w120" name="">
+              <option>资源打包</option>
+            </select>
+            <select class="form-control w150 floatR" name="">
+              <option>选择商家</option>
+            </select>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div class="mb20"><img src="../images/default/c2.gif" alt=""></div>
+      <p class="red_t center mb15">（*点击以上多选框，可对有着相同计划的团期进行批量编辑）</p>
+      <div class="mb15"><span class="selectd">2015-9-12<a href="#" class="msYellow_close"></a></span><span class="selectd">2015-9-20<a href="#" class="msYellow_close"></a></span></div>
+      <ul class="nav nav-tabs clearFix tabBlue mb15">
+        <li class="active"><a href="#traffic" data-toggle="tab">交通</a></li>
+        <li><a href="#hotel" data-toggle="tab">酒店</a></li>
+        <li><a href="#ticket" data-toggle="tab">门票</a></li>
+        <li><a href="#restaurant" data-toggle="tab">餐饮</a></li>
+        <li><a href="#supplies" data-toggle="tab">旅游用品</a></li>
+      </ul>
+      <div class="algin_right cbAll"><span>成本总计：<b class="ft16 red_t">255.00元</b></span></div>
+      <div class="tab-content clear">
+        <div class="tab-pane fade in active" id="traffic">
+          <div class="outline_box">
+            <div class="mb5"><a class="yellow_txt" href="#">+ 添加交通成本</a></div>
+            <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="10%">交通类型：</th>
+                <td width="15%">
+                  <select class="form-control" name="">
+                    <option>飞机</option>
+                  </select>
+                </td>
+                <th width="11%">目的地：</th>
+                <td width="18%">
+                  <input class="form-control" name="" type="text">
+                </td>
+                <th width="10%">委托社：</th>
+                <td>
+                  <select class="form-control" name="">
+                    <option></option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>预付定金：</th>
+                <td>
+                  <input class="form-control w80" name="" type="text">
+                  元</td>
+                <th></th>
+                <td></td>
+                <th></th>
+                <td></td>
+              </tr>
+            </table>
+            <div class="dot_b mb10" style="padding:0;">&nbsp;</div>
+            <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="10%">交通类型：</th>
+                <td width="15%">
+                  <select class="form-control" name="">
+                    <option>邮轮</option>
+                  </select>
+                </td>
+                <th width="11%">目的地：</th>
+                <td width="18%">
+                  <input class="form-control" name="" type="text">
+                </td>
+                <th width="10%"></th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>舱房类型：</th>
+                <td>
+                  <select class="form-control" name="">
+                    <option></option>
+                  </select>
+                </td>
+                <th>房间数：</th>
+                <td>
+                  <input class="form-control" name="" type="text">
+                </td>
+                <th>单间价：</th>
+                <td>
+                  <input class="form-control w100" name="" type="text">
+                  元/间</td>
+              </tr>
+              <tr>
+                <th>舱房类型：</th>
+                <td>
+                  <select class="form-control" name="">
+                    <option></option>
+                  </select>
+                </td>
+                <th>房间数：</th>
+                <td>
+                  <input class="form-control" name="" type="text">
+                </td>
+                <th>单间价：</th>
+                <td>
+                  <input class="form-control w100" name="" type="text">
+                  元/间 <a class="blue_txt floatR" href="#">点击添加舱房类型</a></td>
+              </tr>
+            </table>
+                        <div class="dot_b mb10" style="padding:0;">&nbsp;</div>
+            <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="10%">交通类型：</th>
+                <td width="15%">
+                  <select class="form-control" name="">
+                    <option>大巴</option>
+                  </select>
+                </td>
+                <th width="10%">目的地：</th>
+                <td width="15%">
+                  <input class="form-control" name="" type="text">
+                </td>
+                <th width="10%"></th>
+                <td width="15%"></td>
+               <th width="10%"></th>
+                <td width="15%"></td>
+              </tr>
+              <tr>
+                <th>座位总数：</th>
+                <td>
+                   <input class="form-control w80" name="" type="text"> 位
+                </td>
+                <th>成交座位：</th>
+                <td>
+                  <input class="form-control w80" name="" type="text"> 位
+                </td>
+                <th>可拼座位：</th>
+                <td>
+                  <input class="form-control w80" name="" type="text"> 位</td>
+                                  <th>导游座位：</th>
+                <td>
+                  <input class="form-control w80" name="" type="text"> 位</td>
+              </tr>
+              <tr>
+                <th>座位单价：</th>
+                <td>
+                   <input class="form-control w65" name="" type="text"> 元/位
+                </td>
+                <th>开车时间：</th>
+                <td>
+                  <input class="form-control w80" name="" type="text"> 
+                </td>
+                
+                <td colspan="4">
+                <div class="mb10"> 上车地点： <input class="form-control w280" name="" type="text"></div>
+                <div class="mb10"> 上车地点： <input class="form-control w280" name="" type="text"></div>
+                <div class="algin_right"><a class="blue_txt" href="#">点击添加上车地点</a></div>
+                </td>
+                                
+                
+              </tr>
+            </table>
+          </div>
+          <div class="btnRow clearFix"><span class="mr20">成本总计：<b class="ft14 red_t">255.00元</b></span>
+            <input type="button" name="" value="保存" class="btn_ok mr10">
+            <input type="button" name="" value="取消" class="btn_cancel">
+          </div>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是列表(请程序删除这行提示)--------------------</div>
+          <div class="mb10"><a href="#" class="blue_txt">添加交通成本</a></div>
+          <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-center mb20 noFixed">
+            <tbody>
+              <tr>
+                <th>交通类型</th>
+                <th colspan="2">预计成本</th>
+                <th>操作</th>
+              </tr>
+              <tr>
+                <td width="15%">
+                  <p class="center">邮轮</p>
+                </td>
+                <td>
+                  <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                  <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                </td>
+                <td width="15%">
+                  <p class="pink_txt center">12000.00</p>
+                </td>
+                <td width="15%">
+                  <div class="center"><a class="yellow_txt mr10" href="#">编辑</a><a class="yellow_txt" href="#">删除</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="center">大巴</p>
+                </td>
+                <td>
+                  <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                  <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                </td>
+                <td>
+                  <p class="pink_txt center">12000.00</p>
+                </td>
+                <td>
+                  <div class="center"><a class="yellow_txt mr10" href="#">编辑</a><a class="yellow_txt" href="#">删除</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="center">飞机</p>
+                </td>
+                <td colspan="2">
+                  <p class="pink_txt center floatR" style="width:133px;">12000.00</p>
+                </td>
+                <td>
+                  <div class="center"><a class="yellow_txt mr10" href="#">编辑</a><a class="yellow_txt" href="#">删除</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="algin_right">交通成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="hotel">
+          <div class="outline_box">
+            <div class="mb5"><a class="yellow_txt" href="#">+ 添加酒店成本</a></div>
+            <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="10%">酒店类型：</th>
+                <td width="15%">
+                  <select class="form-control" name="">
+                    <option>快捷酒店</option>
+                  </select>
+                </td>
+                <th width="11%">酒店名称：</th>
+                <td colspan="3">
+                  <input class="form-control" name="" type="text">
+                </td>
+              </tr>
+              <tr>
+                <th>房间类型：</th>
+                <td>
+                  <select name="" class="form-control">
+                    <option>邮轮</option>
+                  </select>
+                </td>
+                <th>房间数：</th>
+                <td>
+                  <input type="text" name="" class="form-control">
+                </td>
+                <th>单间价：</th>
+                <td>
+                  <input type="text" name="" class="form-control w100">
+                  元/间 <a href="#" class="blue_txt floatR">点击添加房间类型</a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="btnRow clearFix"><span class="mr20">酒店成本总计：<b class="ft14 red_t">255.00元</b></span>
+            <input type="button" class="btn_ok mr10" value="保存" name="">
+            <input type="button" class="btn_cancel" value="取消" name="">
+          </div>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是列表(请程序删除这行提示)--------------------</div>
+          <div class="mb10"><a class="blue_txt" href="#">添加酒店成本</a></div>
+          <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-center mb20 noFixed">
+            <tbody>
+              <tr>
+                <th>酒店名称</th>
+                <th colspan="2">预计成本</th>
+                <th>操作</th>
+              </tr>
+              <tr>
+                <td width="15%">
+                  <p class="center">快捷酒店</p>
+                </td>
+                <td>
+                  <div><span class="col-md-7">标准双人房</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                  <div><span class="col-md-7">SPA套房标准双人间</span><span class="col-md-2">8间</span><span class="col-md-3">540元/间</span></div>
+                </td>
+                <td width="15%">
+                  <p class="pink_txt center">12000.00</p>
+                </td>
+                <td width="15%">
+                  <div class="center"><a href="#" class="yellow_txt mr10">编辑</a><a href="#" class="yellow_txt">删除</a></div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                  <div class="algin_right">酒店成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="ticket">
+          <div class="outline_box">
+            <div class="mb5"><a href="#" class="yellow_txt">+ 添加门票成本</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab">
+              <tbody>
+                <tr>
+                  <th width="10%">景区级别：</th>
+                  <td width="15%">
+                    <select name="" class="form-control">
+                      <option>5A景区</option>
+                    </select>
+                  </td>
+                  <th width="11%">景区名称：</th>
+                  <td colspan="3">
+                    <input type="text" name="" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th>门票数量：</th>
+                  <td>
+                    <input type="text" class="form-control" name="">
+                  </td>
+                  <th>门票价格：</th>
+                  <td>
+                    <input type="text" class="form-control w100" name="">
+                    元/间 </td>
+                  <th></th>
+                  <td> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btnRow clearFix"><span class="mr20">门票成本总计：<b class="ft14 red_t">255.00元</b></span>
+            <input type="button" class="btn_ok mr10" value="保存" name="">
+            <input type="button" class="btn_cancel" value="取消" name="">
+          </div>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是列表(请程序删除这行提示)--------------------</div>
+          <div class="mb10"><a href="#" class="blue_txt">添加门票成本</a></div>
+          <table class="tabTra th-center td-center mb20 noFixed" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="12%">景区级别</th>
+              <th>景区名称</th>
+              <th width="12%">门票价格</th>
+              <th width="12%">门票数量</th>
+              <th width="12%">预计成本</th>
+              <th width="15%">操作</th>
+            </tr>
+            <tr>
+              <td>5A</td>
+              <td>松岛枫</td>
+              <td>500</td>
+              <td>20</td>
+              <td><span class="red_t">1000.00</span></td>
+              <td><a class="yellow_txt mr10" href="#">编辑</a><a class="yellow_txt" href="#">删除</a></td>
+            </tr>
+            
+              <td colspan="6">
+                <div class="algin_right">门票成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+              </td>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="restaurant">
+          <div class="outline_box">
+            <div class="mb5"><a href="#" class="yellow_txt">+ 添加餐饮成本</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab">
+              <tbody>
+                <tr>
+                  <th width="10%">餐饮类型：</th>
+                  <td width="15%">
+                    <select name="" class="form-control">
+                      <option>快捷</option>
+                    </select>
+                  </td>
+                  <th width="13%">人头数量：</th>
+                  <td width="18%">
+                    <input type="text" name="" class="form-control">
+                  </td>
+                  <th width="13%">单人价格：</th>
+                  <td>
+                    <input type="text" name="" class="form-control w100">
+                    元/人 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btnRow clearFix"><span class="mr20">餐饮成本总计：<b class="ft14 red_t">255.00元</b></span>
+            <input type="button" class="btn_ok mr10" value="保存" name="">
+            <input type="button" class="btn_cancel" value="取消" name="">
+          </div>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是列表(请程序删除这行提示)--------------------</div>
+          <div class="mb10"><a class="blue_txt" href="#">添加餐饮成本</a></div>
+          <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-center td-center mb20 noFixed">
+            <tbody>
+              <tr>
+                <th width="20%">餐饮类型</th>
+                <th>人头数量</th>
+                <th width="20%">单人价格</th>
+                <th width="20%">预计成本</th>
+                <th width="20%">操作</th>
+              </tr>
+              <tr>
+                <td>快餐</td>
+                <td>500</td>
+                <td>20</td>
+                <td><span class="red_t">1000.00</span></td>
+                <td><a href="#" class="yellow_txt mr10">编辑</a><a href="#" class="yellow_txt">删除</a></td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="algin_right">餐饮成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane fade" id="supplies">
+          <div class="outline_box">
+            <div class="mb5"><a class="yellow_txt" href="#">+ 添加旅游用品成本</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab">
+              <tbody>
+                <tr>
+                  <th width="10%">物品名称：</th>
+                  <td width="15%">
+                    <input type="text" class="form-control" name="">
+                  </td>
+                  <th width="13%">物件数量：</th>
+                  <td width="18%">
+                    <input type="text" class="form-control" name="">
+                  </td>
+                  <th width="13%">单件价格：</th>
+                  <td>
+                    <input type="text" class="form-control w100" name="">
+                    元/件 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btnRow clearFix"><span class="mr20">门票成本总计：<b class="ft14 red_t">255.00元</b></span>
+            <input type="button" name="" value="保存" class="btn_ok mr10">
+            <input type="button" name="" value="取消" class="btn_cancel">
+          </div>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是列表(请程序删除这行提示)--------------------</div>
+          <div class="mb10"><a href="#" class="blue_txt">添加旅游用品成本</a></div>
+          <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-center td-center mb20 noFixed">
+            <tbody>
+              <tr>
+                <th width="20%">物品名称</th>
+                <th>物品数量</th>
+                <th width="20%">单件价格</th>
+                <th width="20%">预计成本</th>
+                <th width="20%">操作</th>
+              </tr>
+              <tr>
+                <td>旅游帽</td>
+                <td>500</td>
+                <td>200</td>
+                <td><span class="red_t">1000.00</span></td>
+                <td><a class="yellow_txt mr10" href="#">编辑</a><a class="yellow_txt" href="#">删除</a></td>
+              </tr>
+              <tr>
+                <td colspan="6">
+                  <div class="algin_right">门票成本总计：<span class="ft16 red_t">¥1200.00</span></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是保存成功(请程序删除这行提示)--------------------</div>
+      <div class="finished_row">
+        <div class="finishedRow mb20"><span class="glyphicon glyphicon-ok-circle mr10"></span><span class="ft20 color9">保存成功！</span></div>
+        <p class="ft14 color6 center mb25">您所编辑成本已为您保存成功您可以点击 <a href="#" class="blue_txt underline">查看</a> 进入成本页面，或点击<a href="#" class="blue_txt underline">编辑</a>对该成本继续</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+	
+</script>
+</body>
+</html>
