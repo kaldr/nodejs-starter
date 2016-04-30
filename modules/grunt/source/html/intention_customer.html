@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/intention_customer.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<style>
+.popover { width: auto; }
+.popBox { display: none; }
+</style>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">意向客户</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">已添加 <span>(12450 )</span></a> </li>
+      <li><a class="menu active" href="#">意向管理<span>(2)</span></a> </li>
+      <li><a class="menu" href="#">订单认领<span>(2)</span></a> </li>
+      <li><a class="menu" href="#">考核分组管理</a></li>
+      <li><a class="menu" href="#">目的地分配</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">意向管理</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>新增意向客户</a>
+        <label class="search_qp floatL mr20 hideEle"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关关键词">
+        </label>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>意向类型</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>跟踪状态</option>
+        </select>
+        <input class="form-control floatL hideEle w150 mr10" placeholder="选择记录时间范围" name="" type="text">
+        <select class="form-control floatR w100 hideEle mr10">
+          <option>排序方式</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1-5 hideEle">意向编号</span><span class="col-md-1-5 two">客户名称</span><span class="col-md-1-5 two">联系方式</span><span class="col-md-4 hideEle">意向描述</span><span class="col-md-1-5 hideEle">跟踪状态</span><span class="col-md-2 hideEle">记录时间</span><span class="col-md-1 hideEle">客服</span></div>
+      <ul class="per_list speList">
+        <li>
+          <div class="col-md-1-5 hideEle">YX1510261003</div>
+          <div class="col-md-1-5 two">王安被</div>
+          <div class="col-md-1-5 two">13605883411</div>
+          <div class="col-md-4 hideEle"><span class="l_c"> 出游时间：<font class="pink_color">2015-06-30 至 2015-07-29</font></span> <span class="l_c">意向类型：<font class="pink_color">普通线路</font>，目的地：<font class="pink_color">澳大利亚</font>，人数：<font class="pink_color">2 </font></span></div>
+          <div class="col-md-1-5 hideEle">意向客户</div>
+          <div class="col-md-2 hideEle">2015-06-30  星期三</div>
+          <div class="col-md-1 hideEle">张晓琳</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">意向客户详情</span></div>
+      <div class="linkToolBar"><a class="default" href="#" onclick="edit();"> <i class="glyphicon glyphicon-edit">&nbsp;</i>编辑</a><a id="transfer" class="default popBtn" href="#"> <i class="glyphicon glyphicon-new-window">&nbsp;</i>业务转移</a> <a id="tra_site" class="default popBtn" href="#"> <i class="glyphicon glyphicon-map-marker">&nbsp;</i>更换站点</a><a id="vist" class="default popBtn" href="#"> <i class="glyphicon glyphicon-eye-open" style="color:#4b77be;">&nbsp;</i>查看回访</a><a id="cmt" class="default popBtn" href="#"> <i class="glyphicon glyphicon-check">&nbsp;</i>评价工作</a><a class="default" href="#"> <i class="glyphicon glyphicon-file">&nbsp;</i>查看日志</a><a class="default" href="#"> <i class="glyphicon glyphicon-trash">&nbsp;</i>删除</a></div>
+      <div class="mb5 relative"><b class="ft16 mr10">王安被</b><span class="mr30">女士</span><a id="tel_num" class="ft14 blue_txt" href="#">13459678843</a><a id="bind_tel" class="red_t popBtn ml20" href="#">绑定手机</a>
+        <div class="popBox" style="z-index:1;"> <span class="arr_t"></span> 
+          <!-- popover-content start-->
+          <div class="popover-content w350">
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab">
+              <tbody>
+                <tr>
+                  <th width="22%">快速输入：</th>
+                  <td>
+                    <select class="form-control w120" name="">
+                      <option>选择信息类型</option>
+                    </select>
+                    <a class="floatR blue_txt" href="#">短信模板管理</a> </td>
+                </tr>
+                <tr>
+                  <th>短信内容：</th>
+                  <td>
+                    <textarea class="form-control" placeholder="一次最多发送500字，62个字按一条短信收费，请控制好字数。" name="" cols="" rows="2"></textarea>
+                    <p>100<font class="color9">/500</font></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="algin_right mb15">
+              <input type="button" value="保存" class="btn_ok red_btn  mr10">
+              <input type="button" value="取消" class="btn_cancel">
+            </div>
+            <div class="record line_t">
+              <div class="mb5">短信发送记录</div>
+              <div class="record_row mb10">
+                <div>2015-7-1  13:52:53<span class="floatR"><font class="red_t mr10">发送失败</font><a class="blue_txt" href="#">重新发送</a></span></div>
+                <div class="color6 line20">15968958930 尊敬的李小姐：您好！爱飞扬旅游网为您分配了
+                  一位您的私人旅游顾问--俞琴，手机：18758365530，电话：
+                  0574-057487450709，稍后她将致电于您,从现在起直至旅行
+                  结束，她将全程为您服务，谢谢！</div>
+              </div>
+              <div class="record_row mb10">
+                <div>2015-7-1  13:52:53<span class="floatR"><font class="color9">发送成功</font></span></div>
+                <div class="color6 line20">15968958930 尊敬的李小姐：您好！爱飞扬旅游网为您分配了
+                  一位您的私人旅游顾问--俞琴，手机：18758365530，电话：
+                  0574-057487450709，稍后她将致电于您,从现在起直至旅行
+                  结束，她将全程为您服务，谢谢！</div>
+              </div>
+            </div>
+          </div>
+          <!-- popover-content END--> 
+        </div>
+        <div class="popBox" style="z-index:1; left:60px;"> <span class="arr_t"></span> 
+          <!-- popover-content start-->
+          <div class="popover-content w400 floatL list_tel">
+            <div class="mb10"><a href="#" class="yellow_txt mr20"><span class="glyphicon glyphicon-chevron-left"></span> 返回</a> 短信模板管理<a class="floatR blue_txt" href="#">新增短信模板</a></div>
+            <table class="tabTra td-center" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="11%">序号</th>
+                <th width="22%">信息类型</th>
+                <th>信息类型</th>
+              </tr>
+              <tr class="active">
+                <td>1</td>
+                <td>公司地址</td>
+                <td><span class="l_c h20">尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>公司地址</td>
+                <td><span class="l_c h20">尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>公司地址</td>
+                <td><span class="l_c h20">尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>公司地址</td>
+                <td><span class="l_c h20">尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户尊敬的客户</span></td>
+              </tr>
+            </table>
+            <div class="center">
+              <ul class="pagination pagination-sm">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="popover-content floatL addTelBox">
+            <div class="mb10">新增短信模板</div>
+            <div class="form-group">
+              <label class="mb5">信息类型：</label>
+              <input type="" class="form-control" placeholder="请输入信息类型名称">
+            </div>
+            <div class="form-group">
+              <label class="mb5">短信内容：</label>
+              <textarea class="form-control" name="" cols="" placeholder="一次最多发送500字，62个字按一条短信收费，请控制好字数。" rows=""></textarea>
+            </div>
+            <p>100<font class="color9">/500</font></p>
+            <div class="algin_right mb15">
+              <input type="button" class="btn_ok red_btn  mr10" value="保存">
+              <input type="button" class="btn_cancel" value="取消">
+            </div>
+          </div>
+          <!-- popover-content END--> 
+        </div>
+        <span class="floatR">客服：张晓<font class="ml20">销售：张娜</font></span> </div>
+      <div class="mb10"><span class="mr20">跟踪状态：意向客户</span> <span class="mr20">所在城市：宁波</span> <span class="mr20">客户类型：普通会员</span> <span class="mr20">客户来源：老爸老妈俱乐部</span> <span>难搞程度：较难搞</span></div>
+      <table class="tabTra lr mb15" border="1" cellspacing="2" cellpadding="2">
+        <tr>
+          <th width="10%">意向类型</th>
+          <td width="15%">组团游</td>
+          <th width="10%">目的地</th>
+          <td width="15%">澳大利亚</td>
+          <th width="13%">出游时间</th>
+          <td colspan="3">2015/10/01~2015/11/20</td>
+        </tr>
+        <tr>
+          <th>出游人数</th>
+          <td>4~5人</td>
+          <th>行程天数</th>
+          <td>15天</td>
+          <th>护照到期时间</th>
+          <td>2020.12.30</td>
+          <th>签证到期时间</th>
+          <td>2015.12.30</td>
+        </tr>
+        <tr>
+          <th>备注说明</th>
+          <td colspan="7">客人对澳大利亚的自然风景去比较感兴趣</td>
+        </tr>
+      </table>
+      <p class="ft14 mb10"><b>产品推荐</b></p>
+      <div class="mb10 clearFix">
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control" style="width:190px;" placeholder="输入相关关键词">
+        </label>
+        <select class="form-control floatL w120 mr10">
+          <option>线路类型</option>
+        </select>
+        <select class="form-control floatL w120 mr10">
+          <option>站点选择</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>行程天数</option>
+        </select>
+        <input class="form-control w150 floatL" name="" placeholder="选择发团时间范围" type="text">
+      </div>
+      <table class="tab_color"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="9%">线路编号</th>
+          <th width="33%">线路名称</th>
+          <th width="10%">发团时间</th>
+          <th width="8%">成人价</th>
+          <th width="8%">小孩价</th>
+          <th width="8%">婴儿价</th>
+          <th width="8%">计划人数</th>
+          <th width="8%">计划人数</th>
+          <th>计调员</th>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td class="left">
+            <div class="inner-cell"><a class="blue_txt" onClick="lineDetail();" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></div>
+          </td>
+          <td>2015-06-21</td>
+          <td>19999</td>
+          <td>6999</td>
+          <td>6999</td>
+          <td>10</td>
+          <td><span class="red_t">5</span></td>
+          <td>陈阳素</td>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td class="left">
+            <div class="inner-cell"><a class="blue_txt" onClick="lineDetail();" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></div>
+          </td>
+          <td>2015-06-21</td>
+          <td>19999</td>
+          <td>6999</td>
+          <td>6999</td>
+          <td>10</td>
+          <td><span class="red_t">5</span></td>
+          <td>陈阳素</td>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td class="left">
+            <div class="inner-cell"><a class="blue_txt" onClick="lineDetail();" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></div>
+          </td>
+          <td>2015-06-21</td>
+          <td>19999</td>
+          <td>6999</td>
+          <td>6999</td>
+          <td>10</td>
+          <td><span class="red_t">5</span></td>
+          <td>陈阳素</td>
+        </tr>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以上是<strong>意向客户情况</strong>(请程序删除这行提示)--------------------</div>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是<strong>签约客户情况</strong>(请程序删除这行提示)--------------------</div>
+      <div class="mb5 pop"><b class="ft16 mr10">王安被</b><span class="mr30">女士</span><a id="tel_num" class="ft14 blue_txt" href="#">13459678843</a></div>
+      <div class="mb10"><span class="mr20">跟踪状态：<font class="green_txt">已签约</font></span> <span class="mr20">所在城市：宁波</span> <span class="mr20">客户类型：普通会员</span> <span class="mr20">客户来源：老爸老妈俱乐部</span> <span>难搞程度：较难搞</span></div>
+      <table class="tabTra lr mb15" border="1" cellspacing="2" cellpadding="2">
+        <tr>
+          <th width="10%">意向类型</th>
+          <td width="15%">组团游</td>
+          <th width="10%">目的地</th>
+          <td width="15%">澳大利亚</td>
+          <th width="13%">出游时间</th>
+          <td colspan="3">2015/10/01~2015/11/20</td>
+        </tr>
+        <tr>
+          <th>出游人数</th>
+          <td>4~5人</td>
+          <th>行程天数</th>
+          <td>15天</td>
+          <th>护照到期时间</th>
+          <td>2020.12.30</td>
+          <th>签证到期时间</th>
+          <td>2015.12.30</td>
+        </tr>
+        <tr>
+          <th>备注说明</th>
+          <td colspan="7">客人对澳大利亚的自然风景去比较感兴趣</td>
+        </tr>
+      </table>
+      <table class="tab_cmt lr mb15" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="10%" class="tit-td" rowspan="2">工作评价</td>
+          <th width="13%">评审人</th>
+          <td width="20%">禅小岩</td>
+          <th width="13%">评审结果</th>
+          <td><b class="color-em mr30">工作不到位</b><a class="blue_txt" href="#">修改评价</a></td>
+        </tr>
+        <tr>
+          <th>备注说明</th>
+          <td colspan="3">服务不是很好，比如XXX方面，还有OOO方面，都需要提升，下次加油。</td>
+        </tr>
+      </table>
+      <p class="ft14 mb10"><b class="mr20">订单信息</b><a class="blue_txt ft12" href="#">查看订单详情</a></p>
+      <table class="tabTra lr mb15" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">线路名称</th>
+          <td width="40%" colspan="3">[ 组团游 ] 澳大利亚深度15天游</td>
+          <th width="10%">订单编号</th>
+          <td width="40%" colspan="3">HCTY078963</td>
+        </tr>
+        <tr>
+          <th>下单时间</th>
+          <td>2015/10/20</td>
+          <th>订单状况</th>
+          <td><span class="color-em">签约订单</span></td>
+          <th>出发城市</th>
+          <td>宁波</td>
+          <th>人数</th>
+          <td>4人</td>
+        </tr>
+        <tr>
+          <th>出团时间</th>
+          <td colspan="3">2015/11/20</td>
+          <th>回团时间</th>
+          <td colspan="3">2015/12/05</td>
+        </tr>
+      </table>
+      <p class="mb10">游客信息</p>
+      <table class="tabTra td-center mb15" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">序号</th>
+          <th width="12%">游客类型</th>
+          <th width="11%">姓名</th>
+          <th width="11%">性别</th>
+          <th width="12%">证件类型</th>
+          <th width="22%">证件号码</th>
+          <th width="11%">房差</th>
+          <th>方案类型</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>成人</td>
+          <td>王安被</td>
+          <td>女</td>
+          <td>身份证</td>
+          <td>33012217891009073</td>
+          <td>拼房</td>
+          <td>常规</td>
+        </tr>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是日志信息(请程序删除这行提示)--------------------</div>
+      <div class="ft16 mb15">日志信息</div>
+      <ul class="nav nav-tabs tabBlue mb15">
+        <li class="active"><a href="#track_record" data-toggle="tab">跟踪记录</a></li>
+        <li><a href="#phone_message" data-toggle="tab">手机短信</a></li>
+        <li><a href="#call_information " data-toggle="tab">通话信息</a></li>
+      </ul>
+      <div class="tab-content mb40">
+        <div class="tab-pane fade in active" id="track_record">
+          <div class="mb10"><a href="#" class="yellow_txt mr20"><span class="arr_st"></span> 返回</a> 跟踪记录</div>
+          <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th class="ver_topTh" width="13%">跟踪内容：</th>
+              <td>
+                <textarea rows="3" class="form-control"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th class="ver_topTh">是否需要跟踪：</th>
+              <td>
+                <p>
+                  <label class="radio-inline">
+                    <input type="radio" value="" id="" name="">
+                    是 </label>
+                  <label class="radio-inline">
+                    <input type="radio" value="" id="" name="">
+                    否 </label>
+                </p>
+                <p><span class="color9">（请谨慎操作不需要跟踪，有可能此订单被客户中心记录无效值，订单合同已签同样需要由客户专员进行跟踪，请勿操作。</span><span class="red_t">只允
+                  许客户不可能成交时选择“不需要跟踪”，请你选择不需要跟踪的理由。）</span></p>
+              </td>
+            </tr>
+            <tr>
+              <th class="ver_topTh">是否需要回追：</th>
+              <td><span class="mr20">
+                <label class="radio-inline">
+                  <input type="radio" value="" id="" name="">
+                  是 </label>
+                <label class="radio-inline">
+                  <input type="radio" value="" id="" name="">
+                  否 </label>
+                </span>
+                <label for="">回追时间：</label>
+                <div class="inline w180 media-middle">
+                  <div class="input-group date form_datetime">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span> <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span> </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="alginRight">
+                  <input type="button" class="btn_ok mr10" value="保存" name="">
+                  <input type="button" class="btn_cancel" value="取消" name="">
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="tipMy color9 mb10 pt10 center">----------------------以下是已添加跟踪记录(请程序删除这行提示)--------------------</div>
+          <div class="mb10 clearfix"><a class="blue_txt floatL" href="#">添加跟踪记录</a><span class="floatR">记录状态：<font class="red_t">需要跟踪</font></span></div>
+          <!--recordPanel start -->
+          <div class="recordPanel"> 
+            <!--record_listRow start-->
+            <div class="record_listRow"> <i class="round_dot">&nbsp;</i>
+              <p class="clearFix mb10"><span class="color3 mr30">2015-06-20 10：00：00</span><span class="color9">私顾：陈英</span></p>
+              <div class="popUp_ify">
+                <div class="arrow"></div>
+                <div class="popover-content">
+                  <p><span class="color3">【系统跟踪】</span>陈英手动修改跟踪状态为<span class="red_txt"> “结束跟踪”</span></p>
+                </div>
+              </div>
+            </div>
+            
+            <!--record_listRow END--> 
+            <!--record_listRow start-->
+            <div class="record_listRow"> <i class="round_dot">&nbsp;</i>
+              <p class="clearFix mb10"><span class="color3 mr30">2015-06-20 10：00：00</span><span class="color9">私顾：陈英</span></p>
+              <div class="popUp_ify">
+                <div class="arrow"></div>
+                <div class="popover-content">
+                  <p class="red_txt mb10">【回追时间】2015-8-5 10:23:00</p>
+                  <p><span class="color3">【跟踪内容】</span>座机联系客人了，没有合适的线路
+                    时间对不上客人是周日-周四这样有时间</p>
+                </div>
+              </div>
+            </div>
+            <!--record_listRow END--> 
+            <!--record_listRow start-->
+            <div class="record_listRow last"> <i class="round_dot">&nbsp;</i>
+              <p class="clearFix mb10"><span class="color3 mr30">2015-06-20 10：00：00</span><span class="color9">私顾：陈英</span></p>
+              <div class="popUp_ify">
+                <div class="arrow"></div>
+                <div class="popover-content">
+                  <p><span class="color3">【跟踪内容】</span>座机联系客人了，没有合适的线路
+                    时间对不上客人是周日-周四这样有时间</p>
+                </div>
+              </div>
+            </div>
+            <!--record_listRow END--> 
+            
+          </div>
+          <!--recordPanel END --> 
+          
+        </div>
+        <div class="tab-pane fade" id="phone_message">
+          <div class="record_listRow"> <i class="round_dot">&nbsp;</i>
+            <p class="clearFix mb10"><span class="color3 mr30">2015-06-20 10：00：00</span><span class="color9">私顾：陈英</span></p>
+            <div class="popUp_ify">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <p><span class="color3">【手机号码】</span>13456738899</p>
+                <p><span class="color3">【短信内容】</span>尊敬的王小姐：您好！爱飞扬旅游
+                  网为您分配了一位您的私人旅游顾问--李来翔，
+                  手机:13325744465,电话:0574-0574 87238663
+                  稍后他将致电于您,从现在起直至旅行结束，他
+                  将全程为您服务，谢谢！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="call_information">
+          <div class="record_listRow"> <i class="round_dot">&nbsp;</i>
+            <p class="clearFix mb10"><span class="color3 mr30">2015-06-20 10：00：00</span><span class="color9">私顾：陈英</span></p>
+            <div class="popUp_ify">
+              <div class="arrow"></div>
+              <div class="popover-content">
+                <p><span class="color3">【呼出】</span>13456738899</p>
+                <p class="mb5"><span class="color3">【接听】</span>79864</p>
+                <p><span class="color9 mr30">通话时长：114秒</span><span class="pull-right"><a href="#" class="blue_txt mr10">收听录音</a><a href="#" class="blue_txt">下载录音</a></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+  <!--warn_box start-->
+  <div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+    <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+    <h2 class="mb10">转正/调薪审批</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR col-md-9">
+          <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>你的转正/调薪审批已通过</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">意向客户</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：已过预期跟踪时间</p>
+        </div>
+      </div>
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：有一条意向客户认领</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">最新任务</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>给你分配了一条任务：设计一条从宁波
+            到美国的组团游线路</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--warn_box END--> 
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  line_detail start-->
+    <div class="popInner hided" id="line_detail">
+      <div class="clearFix mb15"><span class="ft16 floatL sl">
+        <澳新凯墨南北岛14日游>直飞航班，米佛峡湾，免费考拉合影</span><span class="floatR"><font class="blue_txt mr10"><i class="calendar_blue">&nbsp;</i>发团时间：2015/11/24 </font> 价格类型：<select class="form-control w100" name=""><option>豪华价格</option></select></span></div>
+      <p class="color6 mb5">产品类型：<span class="mr10">包机产品</span><span class="mr10">正班机切位产品</span><span class="mr10">酒店预购不可退产品</span><span class="mr10">包船切舱产品</span><span class="mr10">专列切位产品</span></p>
+      <p class="color6 mb15">特色服务：<span class="mr10">独家产品</span><span class="mr10">飞扬自组团</span><span class="mr10">VIP尊享</span></p>
+      <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="9%">成人价</th>
+          <th width="9%">小孩价</th>
+          <th width="9%">婴儿价</th>
+          <th width="9%">单房差</th>
+          <th width="9%">计划数</th>
+          <th width="9%">保留数</th>
+          <th width="9%">暂留数</th>
+          <th width="9%">已签数</th>
+          <th width="9%">剩余数</th>
+          <th>操作</th>
+        </tr>
+        <tr>
+          <td>23999</td>
+          <td>21999</td>
+          <td>21999</td>
+          <td>19999</td>
+          <td>50</td>
+          <td>10</td>
+          <td>2</td>
+          <td>2</td>
+          <td>50</td>
+          <td><a class="blue_txt mr15" href="#">暂留</a><a class="blue_txt" href="#">下单</a></td>
+        </tr>
+      </table>
+      <!--que_box  start -->
+      <div class="que_box clearFix"> 
+        <!--left_col start-->
+        <div class="left_col">
+          <ul class="navi_sub_t clearFix">
+            <li class="active"><a href="#">产品解答</a></li>
+            <li><a href="#">常见问题</a></li>
+          </ul>
+          <div class="con_tab"> 
+            <!-- 产品解答 start-->
+            <div class="row_conts show">
+              <div class="pro_box line_bottom">
+                <p class="mb10">产品介绍：</p>
+                <div id="sub_navi" class="link_p"><a href="#">产品特色</a><a href="#">行程路线</a><a href="#">费用说明</a><a href="#">预定说明</a><a href="#">重要提醒</a><a href="#">出团日期</a></div>
+              </div>
+              <div class="pro_box line_bottom">
+                <p class="mb10">目的地介绍：</p>
+                <div class="navi2"><a class="now2" href="#">巴厘岛</a><a href="#">普吉岛</a></div>
+                <div class="panel_navi show"><a class="active" href="#">概况</a><a href="#">景点</a><a href="#">交通</a><a href="#">美食</a></div>
+                <div class="panel_navi"><a class="active" href="#">2概况</a><a href="#">2消费</a><a href="#">2节庆</a></div>
+              </div>
+              <div class="pro_box">
+                <p class="mb10">销售技巧：</p>
+                <div class="link_p"><a href="#">销售技巧</a></div>
+              </div>
+            </div>
+            <!-- 产品解答 END--> 
+            <!-- 添加自选问题 start--> 
+            <!--            <div class="row_conts">
+              <p class="titRow"><a class="blue_txt" href="#"><i class="glyphicon glyphicon-plus"></i> 添加自选问题</a></p>
+              <div class="titRow">
+                <h3><span>1. 预定常见问题</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+            </div>--> 
+            <!-- 添加自选问题 END--> 
+            <!--常见问题 start-->
+            <div class="row_conts">
+              <div class="titRow"><a id="addQue" class="blue_txt popBtn" href="#"><i class="glyphicon glyphicon-plus"></i> 添加常见问题</a> </div>
+              <div class="titRow">
+                <h3><span>1. 预定常见问题</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+              <div class="titRow">
+                <h3><span>2. 付款和发票</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+              <div class="titRow">
+                <h3><span>3. 签署旅游合同</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+              <div class="titRow">
+                <h3><span>4. 会员中心</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+              <div class="titRow">
+                <h3><span>5. 交通方案</span><i class="arr_b">&nbsp;</i></h3>
+                <ul class="que_list">
+                  <li><a href="#">a.纯玩是什么意思？</a></li>
+                  <li><a href="#">b.单房差是什么？</a></li>
+                  <li><a href="#">c.如何预订旅游线路？</a></li>
+                  <li><a href="#">d.满意度是怎么计算的？</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--常见问题END--> 
+          </div>
+        </div>
+        <!--left_col END-->
+        <div class="right_col">
+          <div class="colA">
+            <p class="red_outline clearFix">
+              <label class="checkbox-inline mr20 pull-left">
+                <input type="checkbox" id="inlineCheckbox1" value="option1">
+                已向客户讲明 </label>
+            </p>
+            <div id="b1">
+              <div class="con_tabT show">
+                <div class="infoPanel color6"> A.  飞扬蜜月拳头产品，线路精心设计，产品不断升级，精心为您考虑每个细节；<br>
+                  B.  精选航班：<br>
+                  1. 特别选择香港航空，服务更贴心，座位更宽敞，让您不惧长途旅行；<br>
+                  2. 杭州出发，香港转机，赠送宁波-杭州机场来回接送，出行更便利；<br>
+                  3. 行李直挂巴厘岛，中转无需提取行李，为您留足在机场扫货的时间；<br>
+                  C.  精选酒店：酒店豪华，升级为2晚花园泳池别墅+2晚海边国际五星度假酒店；<br>
+                  D.  精选景点：高价包巴厘岛别具特色的项目：价值65美金的敞篷车+阿勇河漂流及价值35美金的巴厘岛特色热石精油按摩SPA<br>
+                  E.  度假感受：整整2天自由活动，让您充分享受豪华酒店的度假感受！<br>
+                  F.  全透明：出团前告知酒店名字地段，导游姓名，车餐景点等情况。<br>
+                  G.  独家赠送：多功能电源转换器（每房一个）、蜜月客人凭半年内结婚证可申请蜜月布置。 </div>
+              </div>
+              <!--行程路线 start-->
+              <div class="con_tabT">
+                <ul class="travel_infoTab clearFix mb20 pt5">
+                  <li class="active"><a href="#">A行程</a></li>
+                  <li><a href="#">B行程</a></li>
+                  <li><a href="#">C行程</a></li>
+                  <li><a href="#">D行程</a></li>
+                </ul>
+                <div class="traInfo_panel clear">
+                  <div class="tabPanel show">
+                    <h3 class="tit_y mb20"><span class="mr20">第一天</span> 上海--帕尔马</h3>
+                    <!--day start-->
+                    <div class="day">
+                      <table class="tabTra mb20" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <th width="13%">交通类型</th>
+                          <th width="16%">路段</th>
+                          <th width="21%">交通公司、航班/车站</th>
+                          <th width="17%">交通型号</th>
+                          <th width="33%">参考时间</th>
+                        </tr>
+                        <tr>
+                          <td class="center">飞机</td>
+                          <td class="center">宁波—曼谷</td>
+                          <td class="center">亚洲航空/FD412</td>
+                          <td class="center">空客320（中）</td>
+                          <td>
+                            <p><span class="blue_txt">出发06:30</span> 泰国廊曼国际机场</p>
+                            <p><span class="red_t">到达11:30</span> 宁波栎社国际机场</p>
+                          </td>
+                        </tr>
+                      </table>
+                      <div class="color6 pan_info mb15">
+                        <p>早餐后，前往国家5A级旅游景区【玉龙雪山风景区】（游览时间约2小时，含云杉坪索道）；游览高原牧场甘海子、“小九寨”蓝月谷、东巴圣地玉水寨等景点（游览时间约40分钟）；赠送大型实景表演【印象丽江】（表演时间90分钟）；返回市区，途中参观螺旋藻配送中心；游览茶马古道重镇【束河古镇】（游览时间约1小时）。</p>
+                        <p> ◎温馨提示：</p>
+                        <p> 1、《印象丽江》要进入玉龙雪山后才能观看，未进雪山的游客则无法赠送观看；如遇《印象丽江》停演，则不能赠送，请谅解！</p>
+                        <p> 2、蓝月谷、白水河、玉水寨等玉龙雪山小景点风格类似，且游览时间有限，一般视时间游览2-3个。</p>
+                        <p> 3、游览雪山比较耗体力，建议准备点巧克力等高热量的零食，另外如果出现高原反应，请马上告诉导游，根据高原反应的程度采取相应的措施（吸氧或者送雪山医务室等）。</p>
+                        <p> 4、节假日和旅游旺季，雪山游客较多，乘坐索道需排队等候，请谅解。</p>
+                      </div>
+                      <div class="mb15"><font class="hotTxt">华尔街</font><font class="hotTxt">时代广场</font><font class="hotTxt">帝国大厦</font></div>
+                      <div class="mb5">华尔街</div>
+                      <div class="color6 pan_info mb20"> 华尔街是纽约市曼哈顿区南部从百老汇路延伸到东河的一条大街道的名字，全长仅三分之一英里，宽仅11米，是英文“墙街”的音译。街道狭窄而短，从百老汇到东河仅有7个街段，却以“美国的金融中心”闻名于世。美国摩根财阀、洛克菲勒石油大王和杜邦财团等开设的银行、保险、航运、铁路等公司的经理处集中于此。著名的纽约证券交易所也在这里，至今仍是几个主要交易所的总部：如纳斯达克、美国证券交易所、纽约期货交易所等。“华尔街”一词现已超越这条街道本身，成为附近区域的代称，亦可指对整个美国经济具有影响力的金融市场和金融机构。 </div>
+                      <div class="outPicBox">
+                        <ul class="line_pic clearFix">
+                          <li><img src="../images/default/p1.jpg" alt=""></li>
+                          <li><img src="../images/default/p2.jpg" alt=""></li>
+                          <li><img src="../images/default/p3.jpg" alt=""></li>
+                        </ul>
+                      </div>
+                      <div class="mb5">时代广场</div>
+                      <div class="color6 pan_info mb20"> 时代广场（TimesSquare）是美国纽约市曼哈顿的一块街区，中心位于西42街与百老汇大道交会处，范围东西向分别至第六大道与第九大道、南北向分别至西39街与西52街，构成曼哈顿中城商业区的西部。时报广场的名称源自《纽约时报》（NewYorkTimes）早期在此设立的总部大楼，由于NewYorkTimes又常被译为“纽约时代报”，因此也有“时代广场”的译名方式存在。构。 </div>
+                      <div class="outPicBox">
+                        <ul class="line_pic clearFix">
+                          <li><img src="../images/default/p4.jpg" alt=""></li>
+                          <li><img src="../images/default/p5.jpg" alt=""></li>
+                        </ul>
+                      </div>
+                      <table class="tabTra mb20" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <th width="23%">购物店名称</th>
+                          <th width="14%">停留时间</th>
+                          <th width="63%">购物说明</th>
+                        </tr>
+                        <tr>
+                          <td class="center">秋叶原电器店</td>
+                          <td class="center">60分</td>
+                          <td>大，小电器，抽水马桶，电饭煲以及各式电子产品</td>
+                        </tr>
+                      </table>
+                      <table class="tabTra mb20" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <th width="23%">自费项目</th>
+                          <th width="14%">参考价格</th>
+                          <th width="63%">项目描述</th>
+                        </tr>
+                        <tr>
+                          <td class="center">常规门票</td>
+                          <td class="center">450</td>
+                          <td>法国游不包含门票价格，所以游玩线路中的所涉及的门票游客自费</td>
+                        </tr>
+                        <tr>
+                          <td class="center">购物费</td>
+                          <td class="center">1000</td>
+                          <td>此团为购物图，游客需购买物品消费1000以上</td>
+                        </tr>
+                      </table>
+                      <div class="otherInfo mb25">
+                        <div class="lineB"><b class="mr30">酒店信息</b><span class="mr20">酒店：<font class="color6">济州太平洋大酒店（Pacific Hotel)</font></span> <span class="mr20">参考星级：<font class="color6">五星</font></span></div>
+                        <div class="lineB"><b class="mr30">餐饮信息</b><span class="mr20">早餐：<font class="color6">包含    酒店早餐自助 </font></span> <span class="mr20">午餐：<font class="color6">自理</font></span><span class="mr20">晚餐：<font class="color6">包含    当地特色餐饮</font></span></div>
+                      </div>
+                    </div>
+                    <!--day END--> 
+                  </div>
+                  <div class="tabPanel"> B </div>
+                  <div class="tabPanel"> C行程 </div>
+                </div>
+              </div>
+              <!--行程路线 END-->
+              <div class="con_tabT">
+                <h3 class="mb5"><b>【团费包含】</b> </h3>
+                <div class="color6 infoPanel"> 1.  机票：全程往返经济舱机票（含税）；<br>
+                  2.  酒店：行程所列酒店或同级5晚酒店住宿（含早）； <br>
+                  3.  导游：巴厘岛导游服务；<br>
+                  4.  车辆：巴厘岛当地大巴车服务；<br>
+                  5.  小费：巴厘岛全程导游、领队小费；<br>
+                  6.  巴厘岛离境税20万印尼盾，约合人民币130元/人； </div>
+                <h3 class="mb5"><b>【团费不包含】</b> </h3>
+                <div class="color6 infoPanel"> 1.  酒店内收费电视、电话、饮品、烟酒，水上项目等个人消费；<br>
+                  2.  出入境行李海关课税、超重行李的托运费及保管费；<br>
+                  3.  境外自由活动日期间的用车、用导游、用餐等；<br>
+                  4.  酒店内收费电视、电话、饮品、烟酒等个人消费；<br>
+                  5.  旅游意外险和航空险（建议参保）；<br>
+                  6.  其他不含的费用。。<br>
+                  7.  游览雪山比较耗体力，建议准备点巧克力等高热量的零食，另外如果出现高原反应，请马上告诉<br>
+                  导游，根据高原反应的程度采取相应的措施（吸氧或者送雪山医务室等）。<br>
+                  8.  节假日和旅游旺季，雪山游客较多，乘坐索道需排队等候，请谅解。 </div>
+              </div>
+              <div class="con_tabT"> 4 </div>
+              <div class="con_tabT"> 5 </div>
+              <div class="con_tabT">
+                <div class="date_list">
+                  <p>1. <span>09-14（周四）</span><span>成人价：¥5660起</span><span>小孩价：¥5360起</span><span>婴儿价：¥5360起</span></p>
+                  <p>2. <span> 09-15（周五）</span><span>成人价：¥5660起</span><span>小孩价：¥5360起</span><span>婴儿价：¥5360起</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--que_box  END --> 
+    </div>
+    <!-- line_detail END--> 
+    <!-- add_inCustomer start-->
+    <div id="add_inCustomer" class="popInner">
+      <div class="mb15 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">新增意向客户</span></div>
+      <p class="ft14 mb10"><b>客户基本信息</b></p>
+      <table class="form_tab"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td colspan="8">
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              个人客户 </label>
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              企业客户 </label>
+          </td>
+        </tr>
+        <tr>
+          <th width="10%">客户姓名：</th>
+          <td width="13%">
+            <input type="" class="form-control" placeholder="">
+          </td>
+          <th width="12%">手机号码：</th>
+          <td width="13%">
+            <input type="" class="form-control" placeholder="">
+          </td>
+          <th width="12%">性别：</th>
+          <td width="13%">
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              男 </label>
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              女 </label>
+          </td>
+          <th width="12%">客户等级：</th>
+          <td>普通会员 </td>
+        </tr>
+        <tr>
+          <th>固定电话：</th>
+          <td>
+            <input type="" class="form-control" placeholder="">
+          </td>
+          <th>难搞程度：</th>
+          <td>
+            <select class="form-control">
+              <option>1</option>
+            </select>
+          </td>
+          <th>有无签证：</th>
+          <td>
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              有 </label>
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              无 </label>
+          </td>
+          <th>到期时间：</th>
+          <td>
+            <div class="input-group date form_date">
+              <input class="form-control" size="16" type="text" value="" readonly>
+              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> </div>
+          </td>
+        </tr>
+        <tr>
+          <th>有无护照：</th>
+          <td colspan="7"> <span class="mr20">
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              有 </label>
+            <label class="radio-inline">
+              <input type="radio" name="" id="" value="">
+              无 </label>
+            </span>
+            <label class="" for="">到期时间：</label>
+            <div class="inline media-middle">
+              <div class="input-group date form_date w120">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh">联系地址：</th>
+          <td colspan="7">
+            <div class="mb10">
+              <select class="form-control w120 mr10">
+                <option>选择省份</option>
+              </select>
+              <div class="selectPanel">
+                <div class="current_field">
+                  <div class="selected_txt"><span class="color9">选择城市/县区/街道</span></div>
+                  <i class="arrow_d">&nbsp;</i> </div>
+                <div class="city_option">
+                  <div class="cityTab tab_common"><a class="active" href="#">城市</a><a href="#">县区</a><a href="#">街道</a></div>
+                  <div class="tab_con">
+                    <div class="cityGroup tabBox" style="display:block;"><a href="#">杭州</a><a href="#">宁波</a><a href="#">温州</a><a href="#">衢州</a><a href="#">嘉兴</a><a href="#">丽水</a><a href="#">舟山</a><a href="#">台州</a><a href="#">绍兴</a><a href="#">湖州</a></div>
+                    <div class="cityGroup tabBox">2</div>
+                    <div class="cityGroup tabBox">3</div>
+                  </div>
+                </div>
+              </div>
+              <input type="" class="form-control w250 mr10" id="" placeholder="填写详细地址，如门牌号，楼层，房间号">
+              <input type="button" name="" value="保存" class="btn_ok">
+            </div>
+            <div class="row_input address">
+              <label class="col-md-8">
+                <input type="radio" value="" name="">
+                浙江省宁波市海曙区百丈东路京东小区15幢44单元503室</label>
+              <span class="col-md-4"><a href="#" class="blue_txt mr10">编辑</a><a href="#" class="blue_txt">删除</a></span> </div>
+            <div class="row_input address">
+              <label class="col-md-8">
+                <input type="radio" value="" name="">
+                浙江省宁波市海曙区百丈东路京东小区15幢44单元503室</label>
+              <span class="col-md-4"><a href="#" class="blue_txt mr10">编辑</a><a href="#" class="blue_txt">删除</a></span> </div>
+          </td>
+        </tr>
+      </table>
+      <p class="ft14 mb10"><b>意向需求</b></p>
+      <div>
+        <label class="radio-inline">
+          <input type="radio" name="" id="" value="">
+          业务类型 </label>
+        <label class="radio-inline">
+          <input type="radio" name="" id="" value="">
+          非业务类型 </label>
+      </div>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是业务类型状态(请程序删除这行提示)--------------------</div>
+      <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="11%">客户来源：</th>
+          <td width="14%">
+            <select class="form-control">
+              <option value=""></option>
+            </select>
+          </td>
+          <th width="11%">所属站点：</th>
+          <td width="14%">
+            <select class="form-control">
+              <option value=""></option>
+            </select>
+          </td>
+          <th width="11%">目的地：</th>
+          <td width="14%">
+            <input type="" placeholder="" id="" class="form-control">
+          </td>
+          <th width="11%">出游人数：</th>
+          <td width="14%">
+            <input type="" placeholder="" id="" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <th><span style="margin-left:-10px;">是否参加活动：</span></th>
+          <td>
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              是 </label>
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              否 </label>
+          </td>
+          <th>选择活动：</th>
+          <td>
+            <select class="form-control">
+              <option>1</option>
+            </select>
+          </td>
+          <th>出游时间：</th>
+          <td colspan="3">
+            <div class="input-group date form_date">
+              <input class="form-control" size="16" type="text" value="" readonly>
+              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> </div>
+          </td>
+        </tr>
+        <tr>
+          <th>意向类型：</th>
+          <td colspan="5">
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              线路 </label>
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              签证 </label>
+            <label class="radio-inline">
+              <input type="radio" value="" id="" name="">
+              门票 </label>
+            <select class="form-control w120 ml10 mr5">
+              <option>大区类型</option>
+            </select>
+            <select class="form-control w120">
+              <option>线路类型</option>
+            </select>
+          </td>
+          <th>直转选择：</th>
+          <td>
+            <select class="form-control">
+              <option value=""></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th class="ver_topTh">意向描述：</th>
+          <td colspan="7">
+            <textarea rows="3" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下非业务类型状态(请程序删除这行提示)--------------------</div>
+      <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">问题类型：</th>
+          <td>
+            <select class="form-control w150">
+              <option value=""></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>问题描述：</th>
+          <td>
+            <textarea rows="3" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </table>
+      <div class="fixed_btnRow"><a href="#" class="btn_s red_btn mr20">保存</a><a href="#" class="btn_s red_btn cancelBtn">取消</a></div>
+    </div>
+    <!-- add_inCustomer END--> 
+  </div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker--> 
+
+<!-- pop-transferCon start-->
+<div class="pop-transferCon hide">
+  <form class="form-horizontal w200">
+    <div class="form-group">
+      <label for="" class="col-md-4 control-label">客      服：</label>
+      <div class="col-md-8">
+        <p class="form-control-static">张晓雅  13788659480</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-4 control-label">客服转移：</label>
+      <div class="col-md-8">
+        <select class="form-control">
+          <option>李佳璐</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-4 control-label">私      顾：</label>
+      <div class="col-md-8">
+        <p class="form-control-static">陈晓 15967345692</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-4 control-label">私顾转移：</label>
+      <div class="col-md-8">
+        <select class="form-control">
+          <option>张瑶</option>
+        </select>
+      </div>
+    </div>
+    <div class="center"><a class="btn_ok s" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+  </form>
+</div>
+<!-- pop-transferCon END--> 
+<!-- pop-cmtCon start-->
+<div class="pop-cmtCon hide">
+  <form class="form-horizontal" style="width:240px;">
+    <p class="mb10"><b class="blue_txt ft14">张培蕾</b> 对 <b class="ft14 blue_txt">陈艳娜</b> 工作服务进行评审 </p>
+    <div class="form-group">
+      <label for="" class="col-md-3 control-label">审核结果：</label>
+      <div class="col-md-9">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="" value="">
+          工作到位 </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="" value="">
+          工作不到位 </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-3 control-label">备注说明：</label>
+      <div class="col-md-9">
+        <textarea class="form-control" name="" cols="" rows=""></textarea>
+        <p>100/<font class="color6">500</font></p>
+      </div>
+    </div>
+    <div class="algin_right"><a class="btn_ok s" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+  </form>
+</div>
+<!-- pop-cmtCon END--> 
+<!-- pop-vistCon start-->
+<div class="pop-vistCon hide">
+  <div class="vistCon">
+    <form class="form-horizontal mb10">
+      <div class="form-group">
+        <label for="" class="col-md-20 control-label">回访内容：</label>
+        <div class="col-md-80">
+          <textarea class="form-control" name="" cols="" rows=""></textarea>
+          <p>100/<font class="color6">500</font></p>
+        </div>
+      </div>
+      <div class="algin_right"><a class="btn_ok s" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+    </form>
+    <div class="line_t mb5">回访记录</div>
+    <div class="record_row mb10">
+      <div class="color6"><span class="mr10">2015-7-1  13:52:53</span> 意向客户<span class="floatR">回访人：张晓峰</span></div>
+      <p>客人对澳大利亚的线路有限疑问，就商业去太多了，希望是路线
+        能有多一些的自然风景或者文化底蕴更浓郁的城市</p>
+    </div>
+    <div class="record_row mb10">
+      <div class="color6"><span class="mr10">2015-7-1  13:52:53</span> 意向客户<span class="floatR">回访人：张晓峰</span></div>
+      <p>客人对澳大利亚的线路有限疑问，就商业去太多了，希望是路线
+        能有多一些的自然风景或者文化底蕴更浓郁的城市</p>
+    </div>
+  </div>
+</div>
+<!-- pop-vistCon END--> 
+<!-- pop-siteCon start-->
+<div class="pop-siteCon hide">
+  <div class="mb15">
+    <select class="form-control" name="">
+      <option>宁波</option>
+    </select>
+  </div>
+  <div class="algin_right"><a class="btn_ok s" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+</div>
+<!-- pop-siteCon END--> 
+<!-- pop-bindCon start-->
+<div class="pop-bindCon hide">
+  <div class="mb15">
+    <input class="form-control" placeholder="输入手机号码" name="" type="text">
+  </div>
+  <div class="algin_right"><a class="btn_ok s mr10" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+</div>
+<!-- pop-siteCon END--> 
+<!-- pop-queCon start-->
+<div class="pop-queCon hide">
+  <div class="queCon w300">
+    <form class="form-horizontal ft12">
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="">选择分类：</label>
+        <div class="col-md-10">
+          <div class="select_drop">
+            <div class="current_field">
+              <div class="selected_txt"><span class="color9">选择常见分类</span></div>
+              <i class="arrow_d">&nbsp;</i> </div>
+            <div class="selece_listDrop">
+              <div class="link_list"><a href="#">付款和发票</a><a href="#">签署旅游合同</a><a href="#">会员中心</a></div>
+              <input type="text" name="" placeholder="快速创建分类" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="">问题名称：</label>
+        <div class="col-md-10">
+          <input type="text" name="" placeholder="" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-2 control-label" for="">内容回答：</label>
+        <div class="col-md-10">
+          <textarea rows="3" placeholder="" class="form-control mb10"></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="algin_right"><a class="btn_ok s mr10" href="#">保存</a><a class="btn_cancel s" href="#">取消</a></div>
+</div>
+<!-- pop-queCon END--> 
+
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<!--datetimepicker-->
+<link href="../js/datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script> 
+<script>
+//业务转移 pop
+$('#transfer').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-transferCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#transfer').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//手机号码pop
+$('#tel_num').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-telCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#tel_num').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("tel num");
+    });
+}); 
+//评价工作
+$('#cmt').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-cmtCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#cmt').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("评价工作");
+    });
+});
+//查看回访
+$('#vist').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-vistCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#vist').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("查看回访");
+    });
+});
+//更换站点
+$('#tra_site').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-siteCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#tra_site').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("");
+    });
+});
+
+//绑定手机
+$('#bind_tel').popover({ 
+	trigger:'manual', 
+    html : true,
+	placement:'bottom',  
+    content: function() {  
+           return $(".pop-bindCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#bind_tel').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("");
+    });
+});
+
+
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest(".popover,.popBtn").length == 0){ 
+	   $(".popover").hide();
+	} 
+})
+
+function lineDetail() {
+	edit();
+	$("#line_detail").show();
+	$("#add_inCustomer").hide();
+}
+
+//que_box js
+$(".navi_sub_t li").first().addClass("first");
+$(".navi_sub_t li").click(function(){
+	var curLi=$(this);
+	$(".row_conts.show").removeClass("show");
+	$(".row_conts").eq($(".navi_sub_t li").index(curLi)).addClass("show");
+	$(".navi_sub_t li.active").removeClass("active");
+	curLi.addClass("active");
+});
+
+$(".navi2").delegate('a','click',function(){
+	var curA=$(this);
+	$(".panel_navi.show").removeClass("show");
+	$(".panel_navi").eq($(".navi2 a").index(curA)).addClass("show");
+	$(".navi2 a.now2").removeClass("now2");
+	curA.addClass("now2");
+});
+
+$("#sub_navi").delegate('a','click',function(){
+	var curB=$(this);
+	$("#b1 .con_tabT.show").removeClass("show");
+	$("#b1 .con_tabT").eq($("#sub_navi a").index(curB)).addClass("show");
+	$("#sub_navi a.active").removeClass("active");
+	curB.addClass("active");
+});
+	
+$(".titRow").click( function() {
+	$(this).find(".que_list").show();
+	$(".arr_b.up").removeClass("up");
+	$(this).find(".arr_b").addClass("up");
+	$(this).siblings().find(".que_list").hide();
+});
+//添加常见问题
+$('#addQue').popover({ 
+	trigger:'manual', 
+    html : true,
+	title:"添加常见问题",
+	placement:'right',  
+    content: function() {  
+           return $(".pop-queCon").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#addQue').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert(" 添加常见问题");
+    });
+});
+
+
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+	    pickerPosition: "bottom-left",
+		minView: 2,
+		forceParse: 0
+});
+
+$('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		 pickerPosition: "top-left",
+		forceParse: 0,
+        showMeridian: 1
+});
+	
+
+$(".tab_common").delegate("a","click",function() {
+	var objC=$(this);
+	$(this).addClass("active");
+	$(this).siblings().removeClass("active");
+	$(".tabBox").hide();
+	$(".tabBox").eq($(".cityTab a").index(objC)).show();
+});
+
+$(".tabMenu_diary").delegate("a","click",function() {
+	var objD=$(this);
+	$(this).addClass("active");
+	$(this).siblings().removeClass("active");
+	$(".tab_diaryPanel").hide();
+	$(".tab_diaryPanel").eq($(".tabMenu_diary a").index(objD)).show();
+});
+
+$(".tab_diaryPanel").each( function() {
+   $(this).find(".record_listRow").last().addClass("last");
+});
+</script>
+</body>
+</html>

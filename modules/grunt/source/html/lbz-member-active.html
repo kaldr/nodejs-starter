@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">老班长</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a href="#" class="menu">活动 <span>(12450 )</span></a> </li>
+      <li><a href="#" class="menu">成员 <span>(2 )</span></a> </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="mb15"><span class="ft18 mr30">活动</span></h2>
+      <!-- toolbar start-->
+      <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>新建活动</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <select class="form-control floatL w100 mr10">
+          <option>目的地</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>活动状态</option>
+        </select>
+        <div class="input-group date form_date w200 floatL"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input type="text" readonly placeholder="出游时间范围" value="" size="16" class="form-control">
+        </div>
+        <a href="#" class="blue_txt floatR mr20 mt10">查看数据 </a> </div>
+      <!-- toolbar END-->
+      <div class="tit_qx mb10 clearFix"><span class="col-md-15">活动编号</span><span class="col-md-4">活动名称</span><span class="col-md-15">目的地</span><span class="col-md-2">出游时间</span><span class="col-md-1-5">活动状态</span><span class="col-md-1-5">创建者</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-15">YX1510261003</div>
+          <div class="col-md-4"><span class="l_c">宁波最佳合唱团选拔-优胜团出任费城男童合唱团嘉宾！</span></div>
+          <div class="col-md-15">美国</div>
+          <div class="col-md-2">2015-12-02 ~2015-12-25</div>
+          <div class="col-md-1-5">进行中</div>
+          <div class="col-md-1-5">王小丫</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  
+</div>
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">活动详情</span></div>
+    <div class="linkToolBar"><a href="#"> <i class="iconT i-addInvocie">&nbsp;</i>报名</a><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+    <div class="mb10 clearFix"><b class="ft16 mr20">宁波最佳合唱团选拔-优胜团出任费城男童合唱团嘉宾！ </b><span class="floatR color9"><font class="mr20">创建者：王小丫</font>创建时间：2015-10-15</span></div>
+    <div class="yellow_dotBox ft14 mb15">参与人数 <font class="pink_txt">15</font> 人, 会员 <font class="pink_txt">10</font> 人（其中 <font class="pink_txt"> 5 </font>人为俱乐部成员），非会员<font class="pink_txt"> 5 </font>人</div>
+    <p class="mb10"><b>活动介绍</b></p>
+    <div class="line20 mb25">维也纳童声合唱团是世界上历史最悠久的合唱团之一。它的将近500年的历史使其成为奥地利的象征。
+      儿童时代要成为维也纳童声合唱团的一名成员，到了而立之年应该成为骑术学校的一名骑手，年近花甲则要当一名政府官员。这是维也纳人向往的三个职业维也纳童声合唱团是世界上历史最悠久的合唱团之一。它的将近500年的历史使其成为奥地利的象征。 维也纳童声合唱团实际上分为四个合唱队，每队25个孩子，四个队轮流在国内外演出。平时所有孩子在维也纳奥加滕花园里的寄宿学校学习。这所古老的寄宿学校以“保持传统”著名，顽固地保持着一成不变的教育方法和苛刻的规章制度。</div>
+    <p class="mb10"><b>报名须知</b></p>
+    <div class="line20 mb25">此次音乐会需要提前报名，购票热线 0574-87748222，欢迎加群了解更多群内活动，暑假特推少儿夏令营欢迎参与！</div>
+    <p class="mb10"><b>注意事项</b></p>
+    <div class="line20 mb25">报名需付款后才能获得音乐会门票，仅报名的朋友们，不予保留音乐会门票座次，门票有限，预购从速！ </div>
+    <p class="mb10"><b>报名明细</b></p>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra mb20 td-center">
+      <tbody>
+        <tr>
+          <th width="13%">编号</th>
+          <th width="15%">报名者</th>
+          <th>所在小组</th>
+          <th width="15%">人数</th>
+          <th width="22%">报名日期</th>
+        </tr>
+        <tr>
+          <td>057144656</td>
+          <td>张国锋</td>
+          <td>
+            <p class="algin_left">海曙区，西门口街道</p>
+          </td>
+          <td>12</td>
+          <td>2015-10-12  10:22:12</td>
+        </tr>
+        <tr>
+          <td>057144656</td>
+          <td>张国锋</td>
+          <td>
+            <p class="algin_left">海曙区，西门口街道</p>
+          </td>
+          <td>12</td>
+          <td>2015-10-12  10:22:12</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="tipMy color9 mb10 pt10 center">----------------------以下是<strong>活动报名</strong>(请程序删除这行提示)--------------------</div>
+    <p class="mb10"><b class="ft14">活动报名</b></p>
+    <div class="clearFix mb15">
+      <label class="search_qp floatL mr20"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w250">
+      </label>
+      <a class="blue_txt floatR mt5" href="#">高级搜索 <span class="arr_b"></span></a></div>
+    <div class="clearFix mb10">
+      <select class="form-control w120 mr15" name="">
+        <option>浙江省</option>
+      </select>
+      <select class="form-control w100 mr15" name="">
+        <option>宁波市</option>
+      </select>
+      <select class="form-control w100 mr15" name="">
+        <option>海曙区</option>
+      </select>
+      <select class="form-control w100 mr15" name="">
+        <option>百丈街道</option>
+      </select>
+      <select class="form-control w100 mr15" name="">
+        <option>是否会员</option>
+      </select>
+      <select class="form-control w100" name="">
+        <option>是否俱乐部成员</option>
+      </select>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra mb20 td-center">
+      <tbody>
+        <tr>
+          <th width="8%">
+            <label>
+              <input name="" type="checkbox" value="">
+            </label>
+          </th>
+          <th width="16%">成员编号</th>
+          <th width="12%">姓名</th>
+          <th width="11%">性别</th>
+          <th width="11%">年龄</th>
+          <th width="12%">是否会员</th>
+          <th>是否俱乐部成员</th>
+          <th width="13%">入会时间</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input name="" type="checkbox" value="">
+            </label>
+          </td>
+          <td>VIP2409876</td>
+          <td>张国锋</td>
+          <td> 男</td>
+          <td>12</td>
+          <td>是</td>
+          <td>是</td>
+          <td>2013-11-11</td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <div class="algin_left pl15">
+              <input type="button" class="btn_ok red_btn  mr10" value="确定">
+              <input type="button" class="btn_cancel mr20" value="取消">
+              <span>已选 <font class="pink_txt">2456</font> 人</span></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="popB">
+      <div class="algin_right pt10 mr10"><a class="close_t" href="#">×</a></div>
+      <div class="finishedRow mb20 pt20"><span class="glyphicon glyphicon-ok-circle mr10"></span><span class="ft20 color9">保存成功！</span></div>
+      <div class="center mb30">
+        <input type="button" class="btn_s red_btn big_button mr10" value="继续报名">
+        <input type="button" style="background:#fcb322;" class="btn_s red_btn big_button" value="查看报名明细">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  添加定制游 start-->
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onClick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">新增成员</span></div>
+      <div class="clearFix mb25">
+        <table class="form_tab floatL" style="width:410px;" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th>活动名称：</th>
+            <td colspan="3">
+              <input type="text" placeholder="输入活动名称" class="form-control">
+            </td>
+          </tr>
+          <tr>
+            <th width="16%">是否线上：</th>
+            <td width="30%">
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                是 </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                是 </label>
+            </td>
+            <th width="16%">活动类型：</th>
+            <td>
+              <select class="form-control">
+                <option>户外旅行</option>
+              </select>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>出游时间：</th>
+            <td colspan="3">
+              <div class="input-group date form_date"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>目的地：</th>
+            <td colspan="3">
+              <input type="text" placeholder="请输入国家或城市名" class="form-control">
+            </td>
+          </tr>
+          <tr>
+            <th>活动地点：</th>
+            <td colspan="3">
+              <input type="text" placeholder="输入活动地点" class="form-control">
+            </td>
+          </tr>
+          <tr>
+            <th>活动介绍：</th>
+            <td colspan="3">
+              <textarea class="form-control" name="" cols="" placeholder="输入活动具体详情" rows="3"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>报名须知：</th>
+            <td colspan="3">
+              <textarea class="form-control" name="" cols="" placeholder="输入报名须知" rows="2"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>注意事项：</th>
+            <td colspan="3">
+              <textarea class="form-control" name="" cols="" placeholder="输入注意事项" rows="3"></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="upload_box"> <a href="javascript:void(0);" class="btn_addPic2 bigLoad"><span class="add_txt">+</span>
+          <p>点击添加活动封面图片</p>
+          <input type="file" name="pic" size="3" title="" class="filePrew_img">
+          <div class="picLoad"></div>
+          </a> </div>
+      </div>
+      <div class="right_algin">
+        <input type="button" value="提交活动" class="btn_s red_btn big_button w100 mr10">
+        <input type="button" value="取消" class="btn_s red_btn big_button w100 cancelBtn">
+      </div>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是<strong>老班长活动数据</strong>(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20" onclick="shutDown();">&nbsp;</a><span class="ft16">老班长活动数据</span></div>
+      <div class="center mb15">
+        <select class="form-control w120 mr10">
+          <option>浙江省</option>
+        </select>
+        <select class="form-control w120 mr10">
+          <option>宁波市</option>
+        </select>
+        <select class="form-control w120">
+          <option>海曙区</option>
+        </select>
+      </div>
+      <div class="static_panel">
+        <h2 class="clearFix mb20"><i>&nbsp;</i><strong>累计创建活动<span class="red_txt"> 156541</span> 个 </strong></h2>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">正在进行中</span><span class="floatR">123</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" style="width:60%">&nbsp; </div>
+        </div>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">等待确认</span><span class="floatR">600</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" style="width:80%"> &nbsp; </div>
+        </div>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">已签约</span><span class="floatR">600</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width:100%"> &nbsp; </div>
+        </div>
+      </div>
+      <div class="static_panel">
+        <h2 class="clearFix mb20"><i class="i2">&nbsp;</i><strong>参加成员 <span class="red_txt"> 156541</span> 人 </strong></h2>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">会员</span><span class="floatR">657</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" style="width:20%">&nbsp; </div>
+        </div>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">非会员</span><span class="floatR">600</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-info" style="width:60%"> &nbsp; </div>
+        </div>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">俱乐部成员</span><span class="floatR">600</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width:20%"> &nbsp; </div>
+        </div>
+        <div class="mlr20 mb5 ft14 clearFix"><span class="floatL">非俱乐部成员</span><span class="floatR">300</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-purple" style="width:90%"> &nbsp; </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+</script>
+</body>
+</html>

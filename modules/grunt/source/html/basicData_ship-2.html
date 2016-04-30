@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">系统配置</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">权限设置</div>
+        <div class="subMenu_panel"><a class="menu" href="#">未完成 <span>(1)</span></a><a class="menu" href="#">已完成 <span>(4)</span></a></div>
+      </li>
+      <li>
+        <div class="subArr_tit">基础数据</div>
+        <div class="subMenu_panel"><a class="menu" href="#">景点 </a><a class="menu" href="#">酒店 </a><a class="menu" href="#">交通 </a><a class="menu" href="#">签证 </a><a class="menu" href="#">邮轮品牌 </a><a class="menu" href="#">旅游用品 </a><a class="menu" href="#">当地游 </a><a class="menu" href="#">目的地 </a><a class="menu" href="#">委托社 </a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">邮轮品牌</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>添加邮轮品牌</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-2">序号</span><span class="col-md-3 left">公司名称(中文)</span><span class="col-md-3 left">公司名称(英文)</span><span class="col-md-4 left">公司描述</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-2">1</div>
+          <div class="col-md-3"><span class="l_c">天海邮轮公司</span></div>
+          <div class="col-md-3"><span class="l_c">Skysea Holding International Ltd</span></div>
+          <div class="col-md-4"><span class="l_c">天海邮轮公司（Skysea Holding International Ltd）成立于2013年12月.</span></div>
+        </li>
+        <li>
+          <div class="col-md-2">2</div>
+          <div class="col-md-3"><span class="l_c">天海邮轮公司</span></div>
+          <div class="col-md-3"><span class="l_c">Skysea Holding International Ltd</span></div>
+          <div class="col-md-4"><span class="l_c">天海邮轮公司（Skysea Holding International Ltd）成立于2013年12月.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  
+</div>
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><span class="ft16">海洋量子号</span></div>
+    <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right mb25">
+      <tbody>
+        <tr>
+          <th width="12%">邮轮名称：</th>
+          <td width="13%">海洋量子号</td>
+          <th width="12%">首航日期：</th>
+          <td width="13%">2014</td>
+          <th width="12%">吨位：</th>
+          <td width="13%">167800</td>
+          <th width="12%">吃水位深：</th>
+          <td width="13%">0.00</td>
+        </tr>
+        <tr>
+          <th>载客量：</th>
+          <td>4905</td>
+          <th>船员数：</th>
+          <td>0</td>
+          <th>船舱总数：</th>
+          <td>20</td>
+          <th>甲板楼层：</th>
+          <td>3</td>
+        </tr>
+        <tr>
+          <th>长度：</th>
+          <td>345</td>
+          <th>宽度：</th>
+          <td> 40 </td>
+          <th>最大航速：</th>
+          <td> 30 </td>
+          <th>平均航速：</th>
+          <td> 22 </td>
+        </tr>
+        <tr>
+          <th>视频链接：</th>
+          <td colspan="7"> <a href="#">v.ku6.com/show/nmTMMFrqd</a> </td>
+        </tr>
+        <tr>
+          <th>邮轮描述：</th>
+          <td colspan="7"> 海洋量子号游轮是全球游轮史上的又一次重大飞跃，更多“海上初体验”的娱乐革新被引入其中，例如跳伞体验将让游客在30
+            0英尺的高度体验惊险刺激的空中之旅；海上最大的室内运动及娱乐综合性场馆则配备了碰碰车和旱冰场等设施；还有迄今为止
+            最大且最先进的游轮客房。“海洋量子号”邮轮拥有诸多前所未有的突破性设施，其中最具特色的是受到英国伦敦眼的启发而
+            打造的宝石形的玻璃舱“北极星”。它以360度摇臂支撑在距海平面近100米的高空，让游客将巨大船体和广阔海景尽收眼底。
+            “海洋量子号”作为量子系列中的第一艘邮轮，重约16.8万吨，可容纳4180名乘客，是世界上最大的十艘邮轮之一。 </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mb10"><font class="mr20 ft14 bold">甲板管理</font><a href="#" class="blue_txt">添加图片</a></div>
+    <ul class="jb_list clearFix mb25">
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><a class="editB trash" href="#"><span class="glyphicon glyphicon-trash"></span></a><img src="../images/diary_bg.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/2.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/flag-big.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/diary_bg.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/2.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/flag-big.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/diary_bg.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/2.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+      <li><a class="editB" href="#"><span class="glyphicon glyphicon-pencil"></span></a><img src="../images/default/flag-big.jpg" alt="">
+        <div class="txt_row">第4层甲板-纳布</div>
+      </li>
+    </ul>
+    <div class="mb10"><font class="mr20 ft14 bold">娱乐管理</font><a href="#" class="blue_txt">添加娱乐</a></div>
+    <table class="tabTra td-center mb25" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="27%">标题</th>
+        <th width="15%">楼层</th>
+        <th>说明</th>
+        <th width="12%">图片</th>
+        <th width="15%">操作</th>
+      </tr>
+      <tr>
+        <td>Studio B冰上运动及演艺场</td>
+        <td>2-4层</td>
+        <td class="left">船上最高的酒吧，可以俯瞰甲板全景</td>
+        <td><span class="blue_txt">5</span></td>
+        <td><a class="blue_txt mr15" href="#">编辑</a><a class="blue_txt" href="#">删除</a></td>
+      </tr>
+      <tr>
+        <td>Studio B冰上运动及演艺场</td>
+        <td>2-4层</td>
+        <td class="left">富丽堂皇的双层大剧院，眩目的舞台音乐剧、魔术表演、
+          杂技表演轮番上场，还有美国百老汇歌舞音乐剧。</td>
+        <td><span class="blue_txt">5</span></td>
+        <td><a class="blue_txt mr15" href="#">编辑</a><a class="blue_txt" href="#">删除</a></td>
+      </tr>
+    </table>
+    <div class="mb10"><font class="mr20 ft14 bold">餐厅管理</font><a href="#" class="blue_txt">添加餐厅</a></div>
+    <table class="tabTra td-center mb25" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="27%">标题</th>
+        <th width="15%">楼层</th>
+        <th>说明</th>
+        <th width="12%">图片</th>
+        <th width="15%">操作</th>
+      </tr>
+      <tr>
+        <td>Studio B冰上运动及演艺场</td>
+        <td>2-4层</td>
+        <td class="left">收费餐厅，24小时收费亚洲美食(可送餐)</td>
+        <td><span class="blue_txt">5</span></td>
+        <td><a class="blue_txt mr15" href="#">编辑</a><a class="blue_txt" href="#">删除</a></td>
+      </tr>
+      <tr>
+        <td>Studio B冰上运动及演艺场</td>
+        <td>2-4层</td>
+        <td class="left">提供国际美食自助餐</td>
+        <td><span class="blue_txt">5</span></td>
+        <td><a class="blue_txt mr15" href="#">编辑</a><a class="blue_txt" href="#">删除</a></td>
+      </tr>
+    </table>
+    <div class="mb10"><font class="mr20 ft14 bold">舱位管理</font><a href="#" class="blue_txt">添加舱位</a></div>
+    <table class="tabTra td-center mb25" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="16%">舱型标题 </th>
+        <th width="8%">英文标识</th>
+        <th width="8%">舱位类型 </th>
+        <th width="8%">可住人数</th>
+        <th width="8%">面积 </th>
+        <th>床型</th>
+        <th width="10%">窗型 </th>
+        <th width="9%">甲板层 </th>
+        <th width="8%">图片 </th>
+        <th width="10%">操作 </th>
+      </tr>
+      <tr>
+        <td>特价内舱四人房</td>
+        <td>随机</td>
+        <td>内舱房</td>
+        <td>5</td>
+        <td>12</td>
+        <td>两张单人床（可合并为大床）</td>
+        <td>无窗</td>
+        <td>随机</td>
+        <td><span class="blue_txt">5</span></td>
+        <td><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt" href="#">删除</a></td>
+      </tr>
+    </table>
+    
+    <!--popBox start-->
+    <div style="top:10px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+      <h3 class="popover-title">添加娱乐</h3>
+      <!-- popover-content start-->
+      <div class="popover-content">
+        <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+          <tbody>
+            <tr>
+              <th width="20%">标题：</th>
+              <td width="80%">
+                <input type="text" name="" class="form-control" placeholder="请输入标题">
+              </td>
+            </tr>
+            <tr>
+              <th>楼层：</th>
+              <td>
+                <input type="text" name="" class="form-control" placeholder="请输入楼层">
+              </td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>
+                <textarea class="form-control" placeholder="请输入说明" name="" cols="" rows="2"></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- popover-content END-->
+      <div class="popover-footer">
+        <input type="button" class="btn_ok red_btn  mr10" value="确定">
+        <input type="button" class="btn_cancel" value="取消">
+      </div>
+    </div>
+    <!--popBox END--> 
+    <!--popBox start-->
+    <div style="top:10px; left:400px;" class="popBox auto"> <span class="arr_t"></span>
+      <h3 class="popover-title">添加餐厅</h3>
+      <!-- popover-content start-->
+      <div class="popover-content">
+        <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+          <tbody>
+            <tr>
+              <th width="20%">标题：</th>
+              <td width="80%">
+                <input type="text" name="" class="form-control" placeholder="请输入标题">
+              </td>
+            </tr>
+            <tr>
+              <th>楼层：</th>
+              <td>
+                <input type="text" name="" class="form-control" placeholder="请输入楼层">
+              </td>
+            </tr>
+            <tr>
+              <th>说明：</th>
+              <td>
+                <textarea class="form-control" placeholder="请输入说明" name="" cols="" rows="2"></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- popover-content END-->
+      <div class="popover-footer">
+        <input type="button" class="btn_ok red_btn  mr10" value="确定">
+        <input type="button" class="btn_cancel" value="取消">
+      </div>
+    </div>
+    <!--popBox END--> 
+    <!--popBox start-->
+    <div style="top:300px; left:10px;" class="popBox full-width"> <span class="arr_t"></span>
+      <h3 class="popover-title">添加舱位</h3>
+      <!-- popover-content start-->
+      <div class="popover-content">
+        <table cellspacing="0" cellpadding="0" border="0" class="form_tab th-right">
+          <tbody>
+            <tr>
+              <th width="12%">舱型标题：</th>
+              <td width="13%">
+                <input type="text" placeholder="输入舱型标题" class="form-control" name="">
+              </td>
+              <th width="12%">英文标识：</th>
+              <td width="13%">
+                <input type="text" placeholder="输入联系号码" class="form-control" name="">
+              </td>
+              <th width="12%">舱位类型：</th>
+              <td width="13%">
+                <select class="form-control" name="">
+                  <option>内舱房</option>
+                </select>
+              </td>
+              <th width="12%">可住人数：</th>
+              <td width="13%">
+                <input type="text" placeholder="输入可住人数" class="form-control" name="">
+              </td>
+            </tr>
+            <tr>
+              <th>面积：</th>
+              <td>
+                <input type="text" placeholder="输入面积" class="form-control" name="">
+              </td>
+              <th>床型：</th>
+              <td>
+                <input type="text" placeholder="输入床型" class="form-control" name="">
+              </td>
+              <th>窗型：</th>
+              <td>
+                <input type="text" placeholder="输入窗型" class="form-control" name="">
+              </td>
+              <th>甲板层：</th>
+              <td>
+                <input type="text" placeholder="输入甲板层" class="form-control" name="">
+              </td>
+            </tr>
+            <tr>
+              <th>舱位说明：</th>
+              <td colspan="7">
+                <textarea class="form-control" placeholder="输入客户备注" name="" cols="" rows="4"></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- popover-content END-->
+      <div class="popover-footer">
+        <input type="button" class="btn_ok red_btn  mr10" value="确定">
+        <input type="button" class="btn_cancel" value="取消">
+      </div>
+    </div>
+    <!--popBox END--> 
+    <!--popBox start-->
+    <div style="top:600px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+      <h3 class="popover-title">图片</h3>
+      <!-- popover-content start-->
+      <div class="popover-content w450">
+        <div class="mb10"><a class="blue_txt" href="#">添加图片</a></div>
+        <ul class="jb_list clearFix mb25">
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><a href="#" class="editB trash"><span class="glyphicon glyphicon-trash"></span></a><img alt="" src="../images/diary_bg.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><img alt="" src="../images/default/2.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><img alt="" src="../images/default/flag-big.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><img alt="" src="../images/diary_bg.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><img alt="" src="../images/default/2.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+          <li><a href="#" class="editB"><span class="glyphicon glyphicon-pencil"></span></a><img alt="" src="../images/default/flag-big.jpg">
+            <div class="txt_row">第4层甲板-纳布</div>
+          </li>
+        </ul>
+      </div>
+      <!-- popover-content END-->
+      <div class="popover-footer">
+        <input type="button" value="确定" class="btn_ok red_btn  mr10">
+        <input type="button" value="取消" class="btn_cancel">
+      </div>
+    </div>
+    <!--popBox END--> 
+  </div>
+</div>
+
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  添加定制游 start-->
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onClick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">添加邮轮</span></div>
+      <table class="form_tab" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="15%">公司名称(中文)：</th>
+          <td>
+            <input type="text" placeholder="输入公司名称(中文)" class="form-control">
+          </td>
+          <th width="18%">公司名称(英文)：</th>
+          <td width="35%">
+            <input type="text" placeholder="输入公司名字(英文)" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <th>公司Logo：</th>
+          <td colspan="3"> <a href="#" class="btn_s red_btn blueBtn loadP">+ 添加图片
+            <input type="file" name="pic" size="3" title="" class="filePrew">
+            </a> </td>
+        </tr>
+        <tr>
+          <th>公司简介：</th>
+          <td colspan="3">
+            <textarea placeholder="填写公司简介" class="form-control" name="" cols="" rows="3"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="right_algin">
+            <label class="mr20 mt5 media-middle">
+              <input type="checkbox">
+              确定并添加邮轮信息</label>
+            <input type="button" value="确定" class="btn_s red_btn big_button mr10">
+            <input type="button" value="取消" class="btn_s red_btn big_button cancelBtn">
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- 添加定制游 END--> 
+    
+  </div>
+</div>
+<!--subConts END--> 
+
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script>
+</body>
+</html>

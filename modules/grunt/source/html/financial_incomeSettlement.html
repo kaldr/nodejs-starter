@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/personnelAdministration.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">财务中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">财务结算</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">支出结算</a><a href="#" class="menu">收入结算</a></div>
+      </li>
+      <li><a class="menu" href="#">汇款认领</a> </li>
+      <li><a class="menu" href="#">收支清单</a> </li>
+      <li><a class="menu" href="#">订单收款</a></li>
+      <li><a class="menu" href="#">财务结算</a></li>
+      <li><a class="menu" href="#">业务员提成</a></li>
+      <li><a class="menu" href="#">导游津贴</a></li>
+      <li>
+        <div class="subArr_tit">三清单</div>
+        <div class="subMenu_panel" style="display: none;"><a href="#" class="menu">1</a><a href="#" class="menu">2</a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <div class="tabMenu">
+        <ul class="nav nav-tabs tbT">
+          <li class="active"><a href="#m1" data-toggle="tab">其他收入</a></li>
+          <li><a href="#m2" data-toggle="tab">订单预付款撤回</a></li>
+          <li><a href="#m3" data-toggle="tab">订单暂借款撤回</a></li>
+          <li><a href="#m4" data-toggle="tab">导游预领撤回</a></li>
+          <li><a href="#m5" data-toggle="tab">预支款撤回</a></li>
+          <li><a href="#m6" data-toggle="tab">会员卡退款</a></li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="m1">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date hideEle w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>支付状态</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>选择部门</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>结算类型</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-2">所属部门</span><span class="col-md-2">结算类型</span><span class="col-md-4">申请信息 </span><span class="col-md-1-5">结算金额</span><span class="col-md-1-5">收款状态</span><span class="col-md-1-5">收款时间</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-2">北京专线部</div>
+              <div class="col-md-2">返点返利(业务)</div>
+              <div class="col-md-4"><span class="l_c"><font class="pink_txt">[QS00470238]</font>2015年鄞州区酒店景区人头返利</span></div>
+              <div class="col-md-1-5"><b class="pink_txt">7596</b></div>
+              <div class="col-md-1-5"><span class="green_txt">已收款</span></div>
+              <div class="col-md-1-5">2015-11-16</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade in" id="m2">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>撤销状态</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>选择部门</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">申请时间 </span><span class="col-md-1-5">申请人</span><span class="col-md-1-5">撤销编号</span><span class="col-md-3">撤销名称 </span><span class="col-md-1">申请金额</span><span class="col-md-1">撤销金额</span><span class="col-md-1">撤销方式</span><span class="col-md-1-5">撤回状态</span><span class="col-md-1-5">撤销时间</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-1-5">2016-06-11</div>
+              <div class="col-md-1-5">邵昕怡</div>
+              <div class="col-md-1-5">YFCX00290567</div>
+              <div class="col-md-3"><span class="l_c">10.23李家坑一日游烧烤食材、工具、饮料采</span></div>
+              <div class="col-md-1"><b class="pink_txt">7596</b></div>
+              <div class="col-md-1">7596</div>
+              <div class="col-md-1">抵扣</div>
+              <div class="col-md-1-5"><span class="green_txt">已撤回</span></div>
+              <div class="col-md-1-5">2014-03-09</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade in" id="m3">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>撤销状态</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>选择部门</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">申请时间 </span><span class="col-md-1-5">申请人</span><span class="col-md-1-5">撤销编号</span><span class="col-md-3">撤销名称 </span><span class="col-md-1">申请金额</span><span class="col-md-1">撤销金额</span><span class="col-md-1">撤销方式</span><span class="col-md-1-5">撤回状态</span><span class="col-md-1-5">撤销时间</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-1-5">2016-06-11</div>
+              <div class="col-md-1-5">邵昕怡</div>
+              <div class="col-md-1-5">YFCX00290567</div>
+              <div class="col-md-3"><span class="l_c">10.23李家坑一日游烧烤食材、工具、饮料采</span></div>
+              <div class="col-md-1"><b class="pink_txt">7596</b></div>
+              <div class="col-md-1">7596</div>
+              <div class="col-md-1">抵扣</div>
+              <div class="col-md-1-5"><span class="green_txt">已撤回</span></div>
+              <div class="col-md-1-5">2014-03-09</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade in" id="m4">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>收款状态</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>选择部门</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-2">撤回编号 </span><span class="col-md-4">撤销名称 </span><span class="col-md-1-5">撤回原金额 </span><span class="col-md-1-5">已撤回金额 </span><span class="col-md-1-5">撤回金额</span><span class="col-md-1-5">收款状态</span><span class="col-md-1-5">收款时间</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-2">YC00469340</div>
+              <div class="col-md-4"><span class="l_c"><font class="red_t">[CJ_T16-03042]</font>法瑞意+The Mall+比萨斜塔十日游</span></div>
+              <div class="col-md-1-5">600</div>
+              <div class="col-md-1-5">0</div>
+              <div class="col-md-1-5">600</div>
+              <div class="col-md-1-5"><span class="green_txt">已收款</span></div>
+              <div class="col-md-1-5">2014-03-09</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade in" id="m5">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>收款状态</option>
+            </select>
+            <select class="form-control floatL w100 mr10">
+              <option>选择部门</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">添加时间 </span><span class="col-md-1-5">添加人 </span><span class="col-md-2">撤回编号 </span><span class="col-md-2">撤回标题 </span><span class="col-md-2">结算单位</span><span class="col-md-1-5">撤回原金额</span><span class="col-md-1-5">收款状态</span><span class="col-md-1-5">支付日期</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-1-5">2015-03-11</div>
+              <div class="col-md-1-5">李丽梅</div>
+              <div class="col-md-2">YC00471137</div>
+              <div class="col-md-2"><span class="l_c">普通报销撤回金额用于救济</span></div>
+              <div class="col-md-2"><span class="l_c">李丽梅没个人结算单位</span></div>
+              <div class="col-md-1-5"><b class="pink_txt">7596</b></div>
+              <div class="col-md-1-5"><span class="green_txt">已收款</span></div>
+              <div class="col-md-1-5">2014-03-09</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade in" id="m6">
+          <div class="mb15 clearFix" id="toolbar">
+            <label class="search_qp floatL mr10"><span class="search_i"></span>
+              <input type="text" class="form-control w250" placeholder="输入关键字">
+            </label>
+            <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+            </div>
+            <select class="form-control floatL w100 mr10">
+              <option>结算状态</option>
+            </select>
+          </div>
+          <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">添加时间 </span><span class="col-md-2">结算编号 </span><span class="col-md-3">结算信息 </span><span class="col-md-1-5">结算金额 </span><span class="col-md-1-5">已结金额</span><span class="col-md-1">未结金额</span><span class="col-md-1-5">结算状态</span><span class="col-md-1-5">结算日期</span></div>
+          <ul class="per_list">
+            <li>
+              <div class="col-md-1-5">2015-03-11</div>
+              <div class="col-md-2">TK00445296</div>
+              <div class="col-md-3"><span class="l_c">会员卡[555555057400014016]退卡</span></div>
+              <div class="col-md-1-5"><b class="pink_txt">1000</b></div>
+              <div class="col-md-1-5">0</div>
+              <div class="col-md-1">0</div>
+              <div class="col-md-1-5"><b class="pink_txt">已结算</b></div>
+              <div class="col-md-1-5">2014-03-09</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">结算详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-cancel">&nbsp;</i>取消结算</a> <a href="#"> <i class="iconT i-ticket">&nbsp;</i>小票</a></div>
+      <table class="tabTra th-right noFixed mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">结算名称</th>
+          <td width="38%">2015年天驰公司机场大巴接送费</td>
+          <th width="12%">结算单位</th>
+          <td><a class="blue_txt" href="#">杭州天驰企业事务代理有限公司</a></td>
+        </tr>
+        <tr>
+          <th>结算类型</th>
+          <td>订单差异款(业务)</td>
+          <th>所属部门</th>
+          <td>北京专线部</td>
+        </tr>
+        <tr>
+          <th>结算金额</th>
+          <td><font class="red_t">350.00</font></td>
+          <th>支付状态</th>
+          <td>未收款</td>
+        </tr>
+        <tr>
+          <th>添加人</th>
+          <td><a class="blue_txt" href="#">张蓓蓓</a></td>
+          <th>添加日期</th>
+          <td>2015-06-13</td>
+        </tr>
+        <tr>
+          <th>关联订单信息</th>
+          <td colspan="3">
+            <div class="outline_box blueOutline">
+              <div class="mb5">线路名称：【天海邮轮】"新世纪号"上海港6日跟团游济州+釜山+福冈一日游</div>
+              <p><span class="mr30">订单号：D00308702</span><span> 未收金额：5998.00</span></p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>备注</th>
+          <td colspan="3">2015年余姚至机场大巴接送费（姜燕漏做）</td>
+        </tr>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下预付款撤回详情(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">预付款撤回详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT cw">&nbsp;</i>收款</a> <a href="#"><i class="iconT i-reback">&nbsp;</i>退回</a><a href="#"><i class="iconT i-print">&nbsp;</i>打印</a></div>
+      <table class="tabTra th-right noFixed mb10" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">标题</th>
+          <td width="38%">11月25日 魅力三晋11人机票款</td>
+          <th width="12%">结算单位</th>
+          <td><a class="blue_txt" href="#">海航</a></td>
+        </tr>
+        <tr>
+          <th>付款方式</th>
+          <td>转帐</td>
+          <th>申请时间</th>
+          <td>2015-12-11</td>
+        </tr>
+        <tr>
+          <th>审核状态</th>
+          <td><font class="green_txt">审核通过</font></td>
+          <th>支付状态</th>
+          <td><span class="green_txt">已支付</span></td>
+        </tr>
+        <tr>
+          <th>申请人</th>
+          <td><a href="#" class="blue_txt">张蓓蓓</a></td>
+          <th>所属人</th>
+          <td><a href="#" class="blue_txt">张蓓蓓</a></td>
+        </tr>
+        <tr>
+          <th>金额信息</th>
+          <td colspan="3">总额: <font class="red_t">5900.00</font> 元、 撤销:<span class="red_t"> 0.00</span> 元、核销:<span class="red_t"> 5900.00</span> 元、剩余:<span class="red_t"> 0.00 </span>元</td>
+        </tr>
+        <tr>
+          <th>发票收据</th>
+          <td colspan="3">/</td>
+        </tr>
+        <tr>
+          <th>申请说明</th>
+          <td colspan="3">600元+100元税=700元*11人=7700元-押金1800元=5900元</td>
+        </tr>
+      </table>
+      <table class="tabTra th-right noFixed redTable mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">撤销详情</th>
+          <td>叶友凤、尤淑慧、周尤雅3人美国签证费差价3元</td>
+        </tr>
+      </table>
+      <p class="ft14 mb10"><b>核销信息</b></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+        <tbody>
+          <tr>
+            <th> 序号 </th>
+            <th width="12%">三清单编号</th>
+            <th width="22%">标题</th>
+            <th width="12%">金额</th>
+            <th width="12%">使用日期</th>
+            <th width="10%">使用人</th>
+            <th width="25%">使用说明</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a class="blue_txt" href="#">Q000062599</a></td>
+            <td class="left">2.17-2.22东航3大1小机票</td>
+            <td>4382.00</td>
+            <td>2015-01-13</td>
+            <td><a class="blue_txt" href="#">张桃子</a></td>
+            <td class="left">2.17-2.22东航3大1小机票 合计：1
+              410*3+1370=5600元</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是导游预领撤回详情(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">导游预领撤回详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-cancel">&nbsp;</i>取消结算</a> <a href="#"><i class="iconT i-ticket">&nbsp;</i>小票</a><a href="#"><i class="iconT cw">&nbsp;</i>结算</a></div>
+      <table class="tabTra th-right noFixed mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="12%">团号</th>
+          <td width="38%"><a class="blue_txt" href="#">CJ_T16-00878</a></td>
+          <th width="12%">发团时间</th>
+          <td>2016/1/22</td>
+        </tr>
+        <tr>
+          <th>团队名称</th>
+          <td>全新泰国魅力五晚六日游</td>
+          <th>回团时间</th>
+          <td>2015-12-11</td>
+        </tr>
+        <tr>
+          <th>团队类型</th>
+          <td>飞扬自组</td>
+          <th>团队计调</th>
+          <td><a class="blue_txt" href="#">刘丹妮</a></td>
+        </tr>
+        <tr>
+          <th>全陪导游</th>
+          <td><a href="#" class="blue_txt">张蓓蓓</a></td>
+          <th>送机导游</th>
+          <td>无</td>
+        </tr>
+        <tr>
+          <th>待撤销金额</th>
+          <td colspan="3"><font class="red_t">0.00</font></td>
+        </tr>
+      </table>
+      <p class="ft14 mb10"><b>费用信息</b></p>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+        <tbody>
+          <tr>
+            <th> 序号 </th>
+            <th width="27%">费用名称</th>
+            <th width="12%">数量</th>
+            <th width="12%">单价</th>
+            <th width="12%">总价</th>
+            <th width="28%">使用说明</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="left">2016年1月22日全新泰国魅力五晚六日游</td>
+            <td>15</td>
+            <td>4382.00</td>
+            <td>65730.00</td>
+            <td class="left">2016年1月22日全新泰国魅力五晚六日游
+              泰国落地签证费1000泰铢</td>
+          </tr>
+          <tr>
+            <td colspan="6">
+              <div class="algin_right"><b>总计：数量 <font class="red_t">15</font> 总价<font class="red_t"> 65730.00</font> 元</b></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是预支款撤回(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">结算详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-cancel">&nbsp;</i>取消结算</a> <a href="#"><i class="iconT i-ticket">&nbsp;</i>小票</a><a href="#"><i class="iconT cw">&nbsp;</i>结算</a></div>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right noFixed mb20">
+        <tbody>
+          <tr>
+            <th>撤回标题</th>
+            <td colspan="3">年底过年活动经费</td>
+          </tr>
+          <tr>
+            <th width="12%">结算通道</th>
+            <td width="38%">现金</td>
+            <th width="12%">结算单位</th>
+            <td><a href="#">中国国际航空股份有限公司宁波营业部</a></td>
+          </tr>
+          <tr>
+            <th>合计</th>
+            <td>待撤销金额：<font class="red_t">610.00</font> 已撤销金额：<font class="red_t">0.00</font></td>
+            <th>经办人</th>
+            <td><a class="blue_txt" href="#">张蓓蓓</a></td>
+          </tr>
+          <tr>
+            <th>报销所属人</th>
+            <td><a class="blue_txt" href="#">张蓓蓓</a></td>
+            <th>报销日期</th>
+            <td>2015-06-13</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是会员卡退款(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">退款详情</span></div>
+      <div class="linkToolBar"><a href="#"> <i class="iconT i-cancel">&nbsp;</i>取消结算</a> <a href="#"><i class="iconT i-ticket">&nbsp;</i>小票</a><a href="#"><i class="iconT cw">&nbsp;</i>结算</a></div>
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right noFixed mb20">
+        <tbody>
+          <tr>
+            <th>会员卡卡号</th>
+            <td colspan="3">555555057400010225</td>
+          </tr>
+          <tr>
+            <th width="12%">退卡金额</th>
+            <td width="38%">1000</td>
+            <th width="12%">退卡折扣</th>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <th>退款金额</th>
+            <td><font class="red_t">1000</font></td>
+            <th>退款方式</th>
+            <td>转账</td>
+          </tr>
+          <tr>
+            <th>联系人信息</th>
+            <td>寇主任(13396691179/)</td>
+            <th>所属人</th>
+            <td><a class="blue_txt" href="#">李师师</a></td>
+          </tr>
+          <tr>
+            <th>结算状态</th>
+            <td><span class="green_txt">已结算</span></td>
+            <th>结算时间</th>
+            <td><a class="mr20 blue_txt" href="#">马程程</a> 2016-02-14</td>
+          </tr>
+          <tr>
+            <th>备注</th>
+            <td colspan="3">寇主任(13396691179/)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--container END--> 
+  </div>
+  <!-- subConts start--> 
+  
+  <!--container END--> 
+  
+  <!--datetimepicker--> 
+</div>
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+ 
+ $('#advanced_search').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#advanced_search').popover('hide');
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#advanced_search,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+}) 
+
+$(".tit_wq") .click( function() {
+	$(".dropInfo").hide();
+	$(this).parents(".lineBox").siblings(".dropInfo").show();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2155 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script>
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container">
+<!--sideBar start-->
+<div id="sideBar">
+  <div id="avatar_info_panel">
+    <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+    <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+      <ul class="navi">
+        <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+        <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+        <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+        <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+        <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+        <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+        <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+        <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+        <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+      </ul>
+    </div>
+    <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+      <p class="ft14">杨颖</p>
+      <p>计调主管</p>
+    </div>
+  </div>
+  <p class="double_line">&nbsp;</p>
+  <h2 class="subTit clearFix"><span class="floatL">产品中心</span></h2>
+  <ul class="sub_menu" style="display:block">
+    <li>
+      <div class="subArr_tit">我创建的</div>
+      <div class="subMenu_panel"><a class="menu" href="#">未完成 <span>(1)</span></a><a class="menu" href="#">已完成 <span>(4)</span></a></div>
+    </li>
+    <li>
+      <div class="subArr_tit">所有产品</div>
+      <div class="subMenu_panel"><a class="menu" href="#">未完成 <span>(1)</span></a><a class="menu" href="#">已完成 <span>(4)</span></a></div>
+    </li>
+  </ul>
+</div>
+<!--sideBar END-->
+<!--info_tipPop start-->
+<div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+  <div class="col-md-8 floatL">
+    <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+    <p>你的转正/调薪审批已通过</p>
+  </div>
+</div>
+<!--info_tipPop END-->
+<!-- main_con start-->
+<div id="main_con">
+  <div id="main">
+    <input type="button" value="下一步" class="btn_ok red_btn">
+    <input type="button" value="下一步" class="btn_ok cancelBtn">
+    <h2 class="ft18 mb15">组团游</h2>
+    <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>添加线路</a>
+      <label class="search_qp floatL mr20"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入相关职责关键词">
+      </label>
+      <select class="form-control floatL w120 hideEle mr10">
+        <option>选择所属部门</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select class="form-control floatL w120 hideEle mr10">
+        <option>选择出发地</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select class="form-control floatL w120 hideEle mr10">
+        <option>选择产品状态</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+      <select id="select_pad" class="form-control floatR w100 hideEle">
+        <option>排序方式</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+    <div class="tit_qx mb10 clearFix"><span class="col-md-1-5 two">订单编号</span><span class="col-md-1-5 hideEle">出发地</span><span class="col-md-5 center two">线路名称</span><span class="col-md-1-5 hideEle">产品状态</span><span class="col-md-1 hideEle">发团计划</span><span class="col-md-1-5 hideEle">更新时间</span><span class="col-md-1-5 hideEle">计调</span></div>
+    <ul class="per_list">
+      <li>
+        <div class="col-md-1-5 two">100229781</div>
+        <div class="col-md-1-5 hideEle">宁波</div>
+        <div class="col-md-5 two"><span class="l_c">【宁波站】新马波德申五日游（去程杭州直飞新加坡，回程新加坡直飞宁波</span></div>
+        <div class="col-md-1-5 hideEle">下架</div>
+        <div class="col-md-1 hideEle">23</div>
+        <div class="col-md-1-5 hideEle"><span class="color9">2015-08-12 10:25:33</span></div>
+        <div class="col-md-1-5 hideEle">黄小丽</div>
+      </li>
+      <li>
+        <div class="col-md-1-5 two">100229781</div>
+        <div class="col-md-1-5 hideEle">宁波</div>
+        <div class="col-md-5 two"><span class="l_c">【宁波站】 醉美波西米亚风，秋季赏枫之旅----中东欧五国11日游</span></div>
+        <div class="col-md-1-5 hideEle">下架</div>
+        <div class="col-md-1 hideEle">23</div>
+        <div class="col-md-1-5 hideEle"><span class="color9">2015-08-12 10:25:33</span></div>
+        <div class="col-md-1-5 hideEle">黄小丽</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- main_con END-->
+<!--zz_info start-->
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">线路详情</span></div>
+    <div class="linkToolBar"><a href="#"> <i class="glyphicon glyphicon-eye-open">&nbsp;</i>查看计划</a><a href="#" onClick="edit();"> <i class="glyphicon glyphicon-edit">&nbsp;</i>编辑</a><a href="#"> <i class="glyphicon glyphicon-print">&nbsp;</i>打印</a><a href="#"> <i class="glyphicon glyphicon-download">&nbsp;</i>下载PDF文档</a><a href="#"> <i  class="iconT i-trash">&nbsp;</i>删除</a><a href="#"> <i class="glyphicon glyphicon-shopping-cart" style="font-size:14px;">&nbsp;</i>点击下架</a></div>
+    <div class="traTit ft16 bold mb10">醉美波西米亚风，秋季赏枫之旅----中东欧五国11日游</div>
+    <div class="traTool ft14 mb10"><span class="mr20">行程天数：4天5晚</span> <span class="mr20">出发城市：宁波</span> <span class="mr20">往返交通：飞机 / 飞机</span></div>
+    <div class="traDescript color6 mb20">( 提前45天报名优惠200元/人 ) 秋季赏枫之旅，集秋色、购物、美食、最美小镇、特色行程、特色住宿于一体，飞扬自组团，全程四星酒店住宿一晚上免费升级五星，尊贵享受，性价比高！</div>
+    <div class="proFeature clearFix mb20">
+      <div class="input-append date floatL" id="datetimepicker"> <span class="add-on"><i class="icon-th"></i></span> </div>
+      <div class="rightPro">
+        <div class="ft14 bold mb10">产品特色</div>
+        <div class="color6 line20 featureBox">
+          <p>1：飞扬自组团，飞扬领队全程陪同，专车接送机场~</p>
+          <p> 2：全程市区四星级酒店，免费升级一晚五星酒店，一晚上升级温泉酒店告别<br>
+            郊区！贵宾享受！</p>
+          <p>3：特别安排欣赏多瑙河最美的一段——瓦豪风景区</p>
+          <p>4：独家安排匈牙利首屈一指的温泉疗养地---黑维兹</p>
+          <p>5：美食体验--精心安排维也纳当地特色美食烤排骨</p>
+          <p>6：特别安排东欧最大--潘多夫名牌奥特莱斯，尽情享受购物乐趣！</p>
+          <p>7：免费赠送：WIFI设备，产品为高速设备，每台设备可供5人使用（以手机
+            为佳，若连接其他设备可能会影响使用速度），每天都有500M流量，用
+            完后降速到128K，第二天循环往复（个别国家或区域无法提供，敬请谅解）</p>
+        </div>
+      </div>
+    </div>
+    <div class="bold mb5 ft14">集散地</div>
+    <div class="color6 mb20"><span class="mr30">集合地：飞扬楼下(大沙泥街88号富茂大厦)</span> <span class="mr30">集合参考时间：另行通知</span> <span> 解散地：飞扬楼下(大沙泥街88号富茂大厦)</span></div>
+    <div class="bold mb15 ft14">第一部分 飞扬旅游说明书 线路行程</div>
+    <ul class="travel_infoTab clearFix mb20">
+      <li class="active"><a href="#">A行程</a></li>
+      <li><a href="#">B行程</a></li>
+      <li><a href="#">C行程</a></li>
+      <li><a href="#">D行程</a></li>
+    </ul>
+    <div class="traInfo_panel clear">
+      <!--tabPanel 1 start-->
+      <div class="tabPanel show">
+        <table class="tabTra mb20" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="10%">日程</th>
+            <th>行程描述</th>
+            <th width="15%">住宿参考</th>
+          </tr>
+          <tr>
+            <td class="center">第一天</td>
+            <td>
+              <div>上海--米兰--帕尔马</div>
+              <div>AZ795 PVGMXP 1235/1905 上午上海浦东机场集合，搭乘意航前往米兰，后前往帕尔马酒店休息</div>
+              <div class="color9">早餐：自理  午餐：自理  晚餐：自理</div>
+            </td>
+            <td class="center">四星级商务酒店</td>
+          </tr>
+          <tr>
+            <td class="center">第二天</td>
+            <td>
+              <div>帕尔马--五渔村--佛罗伦萨</div>
+              <div>早餐后，驱车前往列名世界文化遗产之五渔村地区，展开利古里亚海岸的五乡地之旅（选择2-3个村庄，游览时间约2-2.5小时），由蒙特罗索、威尔纳查、科尼利亚、马纳罗拉、利欧马乔雷五个渔村而组成的五乡地区，依著山势而开垦出的房舍与田园，保留原始的自然美，与世隔绝彷彿世外桃源，而被联合国教科文组织列为世界遗产，更有人形容是北意的阿玛菲。</div>
+              <div class="color9">早餐：自理  午餐：自理  晚餐：自理</div>
+            </td>
+            <td class="center">四星级商务酒店</td>
+          </tr>
+        </table>
+        <!-- xcPanel start-->
+        <div class="xcPanel"> <span class="dayPanel">第1天</span>
+          <!-- xc_r start-->
+          <div class="xc_r">
+            <h3 class="xc_tit"><font>慕尼黑</font><span class="tra_tool plane">&nbsp;</span><font>北京</font> <span class="tra_tool bus">&nbsp;</span><font>上海</font><span class="tra_tool ship">&nbsp;</span><font>北京</font><span class="tra_tool train">&nbsp;</span><font>上海</font><span class="tra_tool dongche">&nbsp;</span><font>上海</font></h3>
+            <!-- xc_detail start-->
+            <div class="xc_detail">
+              <table class="tabTra td-center mb20" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th width="11%">交通类型</th>
+                  <th width="18%">路段</th>
+                  <th width="21%">交通公司、航班/车站</th>
+                  <th width="17%">交通型号</th>
+                  <th width="33%">参考时间</th>
+                </tr>
+                <tr>
+                  <td>飞机</td>
+                  <td>宁波——曼谷</td>
+                  <td>亚洲航空/FD412</td>
+                  <td>空客320（中）</td>
+                  <td class="left">
+                    <p><span class="blue_txt">出发06:30</span> 泰国廊曼国际机场</p>
+                    <p><span class="red_t">到达11:30</span> 宁波栎社国际机场</p>
+                  </td>
+                </tr>
+              </table>
+              <p>早餐后，前往国家5A级旅游景区【玉龙雪山风景区】（游览时间约2小时，含云杉坪索道）；游览高原牧场甘海子、“小九寨”蓝月谷、东巴圣地玉水寨等景点（游览时间约40分钟）；赠送大型实景表演【印象丽江】（表演时间90分钟）；返回市区，途中参观螺旋藻配送中心；游览茶马古道重镇【束河古镇】（游览时间约1小时）。</p>
+              <p> ◎温馨提示：</p>
+              <p> 1、《印象丽江》要进入玉龙雪山后才能观看，未进雪山的游客则无法赠送观看；如遇《印象丽江》停演，则不能赠送，请谅解！</p>
+              <p> 2、蓝月谷、白水河、玉水寨等玉龙雪山小景点风格类似，且游览时间有限，一般视时间游览2-3个。</p>
+              <p> 3、游览雪山比较耗体力，建议准备点巧克力等高热量的零食，另外如果出现高原反应，请马上告诉导游，根据高原反应的程度采取相应的措施（吸氧或者送雪山医务室等）。</p>
+              <p> 4、节假日和旅游旺季，雪山游客较多，乘坐索道需排队等候，请谅解。</p>
+              <div class="mb15"><font class="hotTxt">华尔街</font><font class="hotTxt">时代广场</font><font class="hotTxt">帝国大厦</font></div>
+              <div class="mb5">华尔街</div>
+              <p>华尔街是纽约市曼哈顿区南部从百老汇路延伸到东河的一条大街道的名字，全长仅三分之一英里，宽仅11米，是英文“墙街”的音译。街道狭窄而短，从百老汇到东河仅有7个街段，却以“美国的金融中心”闻名于世。美国摩根财阀、洛克菲勒石油大王和杜邦财团等开设的银行、保险、航运、铁路等公司的经理处集中于此。著名的纽约证券交易所也在这里，至今仍是几个主要交易所的总部：如纳斯达克、美国证券交易所、纽约期货交易所等。“华尔街”一词现已超越这条街道本身，成为附近区域的代称，亦可指对整个美国经济具有影响力的金融市场和金融机构。</p>
+              <div class="mb5">时代广场</div>
+              <p> 时代广场（TimesSquare）是美国纽约市曼哈顿的一块街区，中心位于西42街与百老汇大道交会处，范围东西向分别至第六大道与第九大道、南北向分别至西39街与西52街，构成曼哈顿中城商业区的西部。时报广场的名称源自《纽约时报》（NewYorkTimes）早期在此设立的总部大楼，由于NewYorkTimes又常被译为“纽约时代报”，因此也有“时代广场”的译名方式存在。构。 </p>
+              <div class="outPicBox">
+                <ul class="line_pic clearFix">
+                  <li><img alt="" src="../images/default/p4.jpg"></li>
+                  <li><img alt="" src="../images/default/p5.jpg"></li>
+                </ul>
+              </div>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+                <tbody>
+                  <tr>
+                    <th width="23%">购物店名称</th>
+                    <th width="14%">停留时间</th>
+                    <th>购物说明</th>
+                    <th width="10%">操作</th>
+                  </tr>
+                  <tr>
+                    <td>秋叶原电器店</td>
+                    <td>60分</td>
+                    <td class="left">大，小电器，抽水马桶，电饭煲以及各式电子产品</td>
+                    <td><a class="blue_txt" href="#">删除</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+                <tbody>
+                  <tr>
+                    <th width="23%">自费项目</th>
+                    <th width="14%">参考价格</th>
+                    <th width="63%">项目描述</th>
+                  </tr>
+                  <tr>
+                    <td>常规门票</td>
+                    <td>450</td>
+                    <td class="left">法国游不包含门票价格，所以游玩线路中的所涉及的门票游客自费</td>
+                  </tr>
+                  <tr>
+                    <td>购物费</td>
+                    <td>1000</td>
+                    <td class="left">此团为购物图，游客需购买物品消费1000以上</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="otherInfo mb25">
+                <div class="lineB"><b class="mr30">酒店信息</b><span class="mr20">酒店：<font class="color6">济州太平洋大酒店（Pacific Hotel)</font></span> <span class="mr20">参考星级：<font class="color6">五星</font></span></div>
+                <div class="lineB"><b class="mr30">餐饮信息</b><span class="mr20">早餐：<font class="color6">包含    酒店早餐自助 </font></span> <span class="mr20">午餐：<font class="color6">自理</font></span><span class="mr20">晚餐：<font class="color6">包含    当地特色餐饮</font></span></div>
+              </div>
+            </div>
+            <!-- xc_detail END-->
+          </div>
+          <!-- xc_r END-->
+        </div>
+        <!-- xcPanel END-->
+
+        <div class="xcPanel"> <span class="dayPanel">第2天</span>
+          <div class="xc_r">
+            <h3 class="xc_tit"><font>慕尼黑</font><span class="tra_tool plane">&nbsp;</span><font>北京</font> <span class="tra_tool bus">&nbsp;</span><font>上海</font></h3>
+            <div class="xc_detail"> 酒店早餐后，前往关西双古都之一的奈良。<br>
+              驱车前往奈良的观光象征-【奈良公园】（约60分），公园内巨树耸立，还有历史悠久的古迹、花草、山林及岩石等；另有驯鹿成群，共有1,200多只。你可  以买些鹿饼干，和鹿一起嬉戏。迈入奈良公园内，你可看见一座神社—【春日大社】，它为当时的掌权者藤原家族的守护神而建造的神社。（约30分）<br>
+              随后前往本州第二大城市—大阪。<br>
+              驱车前往由幕府将军丰臣秀吉于1586年所建【大阪城公园】（不登天守阁）（约30分），随后前往大阪繁华商业区—【心斋桥】（约60分）这里从早到晚熙熙攘攘，到处是市民和游客的人流，令您流连忘返。 </div>
+          </div>
+        </div>
+        <div class="bold mb15 ft14">第二部分  费用说明</div>
+        <div class="section">
+          <p class="mb5">【费用包含】</p>
+          <div class="color6 pan_info mb15"> 1.  交通：往返团队经济舱机票含税费（团队机票将统一出票，如遇政府或航空公司政策性调整燃油税费，在未出票的情况下我司将有权追加差<br>
+            额，具体航班时间以航班进航空公司系统为准。）。全程空调旅游巴士。<br>
+            2.  签证：团队ADS旅游签证。<br>
+            3.  住宿：入住双人独卫标间4晚+一晚温泉酒店（2-4人间不等）。<br>
+            4.  用餐：行程中团队标准用餐（正餐餐标大约50元/人民币/餐）。<br>
+            5.  门票：行程中所含的景点首道大门票。<br>
+            6.  导服：专职中文领队、导游服务费。 </div>
+          <p class="mb5">【费用不包含】</p>
+          <div class="color6 pan_info mb15">1.  单房差（报价均为二人一间房核算，如需单住请自补单间房差2500元，入住单间）。<br>
+            2.  出入境个人物品海关征税，超重行李的托运费、保管费。<br>
+            3.  因交通延阻、战争、政变、罢工、天气、飞机机器故障、航班取消或更改时间等不可抗力原因所引致的额外费用。<br>
+            4.  酒店内洗衣、理发、电话、传真、收费电视、饮品、烟酒等个人消费。<br>
+            5.  当地参加的自费以及以上“费用包含”中不包含的其它项目。<br>
+            6.  旅游人身意外保险及交通险。</div>
+        </div>
+        <div class="bold mb15 ft14">第三部分  预定说明</div>
+        <div class="section">
+          <div class="color6 pan_info mb15"> 1.  您可登陆爱飞扬旅游网在线预定，您预订的产品支持24小时无损退团服务。<br>
+            2.  爱飞扬的私人旅游顾问在收到您的预定单后，会将电子合同将发送至您的电子邮箱，您可以登录邮箱查看，依据《中华人民共和国合同法》<br>
+            第二章合同的订立第十条、第十一条，在线签订的电子合同，和纸质合同一样具有同样的法律效力。请查看《中华人民共和国合同法》。<br>
+            3.  在线签约支付完成后，爱飞扬的私人旅游顾问会在您出游前一天以邮件的形式发送出团通知书到您的邮箱，您只需耐心等待查收，即可开心<br>
+            出游；出团通知书说明您出游的交通时间、食宿安排和出游需要注意的事项。<br>
+            4.  您预订成功后，该产品（同线路同团期）价格上升不再补收差价（若因航空公司燃油税费调整而引起的差价除外）；价格下降则退还差价；<br>
+            超值出游有保障。 </div>
+        </div>
+        <div class="bold mb15 ft14">第四部分  服务说明</div>
+        <div class="section">
+          <p class="mb5">【关于交通】</p>
+          <div class="color6 pan_info mb15"> 1.  游客必须携带有6个月有效期的护照原件登机；国际航班请提早120分钟到达机场，国内航班请提早90分钟到达机场，请客人为出行顺利提前
+            抵达机场。<br>
+            2.  团队机票不得改签、更改或退票，如因误机或其它事由退票，我司有义务协助办理，但损失由客人自行承担。如遇航空公司临时调整燃油税
+            金，我司会在第一时间通知游客，请游客自补增加差价，敬请配合。<br>
+            3.  车辆方面，同是空调车有新有旧，差别极大。用车均选日本绿牌空调旅游车，保证为每位客人提供一正座。<br>
+            4.  包机航班时间为参考时间，具体以航班进航空公司时间为准。具体行程以出团通知书为准。。 </div>
+          <p class="mb5">【关于住宿】</p>
+          <div class="color6 pan_info mb15"> 1.  大众的观光线路上加以点晴之笔，特别安排了体验日本高科技的新干线。京都古老的世界文化遗产及优雅的庭院风情和奈良的人鹿自然和谐
+            之感，东京大阪的流行时尚。性价比和内容都是您的最佳选择。<br>
+            2.  由于团队行程中所有住宿、用车、景点门票等均为旅行社打包整体销售，因此若游客因自身原因未能游览参观的则视为自动放弃。<br>
+            3.  若遇不可抗力因素，旅行社有权对行程景点及住宿地点用餐先后顺序作出调整，但不影响原定标准数量。知书为准。。 </div>
+          <p class="mb5">【关于游览】</p>
+          <div class="color6 pan_info mb15"> 1.  住宿：日本舒适型酒店（日本酒店不评星）4晚+1晚温泉住宿。具体酒店详见出团通知书。
+            说明：因宁波酒店整体水准在全国都属前茅，且以商务酒店为主，而日本酒店并不象国内按星级评定，我司安排的酒店为国际上3-4星商务酒
+            店标准。<br>
+            2.  客人酒店住宿若出现单男单女，团友须听从导游安排住房，我社会按照报名先后的顺序安排同性客人同住，若经协调最终不能安排的，客人
+            须补单人房差。 <br>
+            3.  行程上所列的单房差为单间的单房差，即补房差后入住的为单间。 </div>
+        </div>
+        <div class="bold mb15 ft14">第五部分  温馨提醒</div>
+        <div class="section">
+          <div class="color6 pan_info mb15">
+            <p> 一．关于证照 </p>
+            <p>请确保因私护照有效,本次旅游归国后至少还有6个月以上有效期，且尚有签证所需空白签证页。</p>
+            <p>二．关于出入境海关规定</p>
+            <p>1、中国海关规定每名出国游客可以随身携带5000美金和20000人民币(中国海关规定条例) ，旅行支票及汇票金额不受限制，国际信用卡在日本当地使用方便,有银联标志的储蓄卡以及信用卡使用范围也日渐扩大。</p>
+            <p>2、出我国海关时摄像机、变焦照相机等海关规定物品必须申报，日本入境时每名游客可以携带2瓶酒（每瓶760升）和卷烟400支或雪茄100支或烟丝500克；香水3盎司。由中国前往日本的旅客，开始实施禁止携带液体物品登机的限制，如携带饮料、化妆水、护肤品等，除在免税店内购买的商品以外的，都必须放入行李一起托运（婴儿食品和有医生处方的必需药品除外），任何动物及其制成品、食品、水果、植物均须向海关申报清楚，否则罚款相当严重。（特别注意用动物成分制作的商品，在日本禁止入境，且有被罚款的可能，如二胡，虎骨膏，麝香膏）。</p>
+          </div>
+        </div>
+      </div>
+
+      <!--tabPanel 1 END-->
+      <div class="tabPanel"> 2 </div>
+      <div class="tabPanel"> 3 </div>
+      <div class="tabPanel"> 4 </div>
+    </div>
+  </div>
+  <!--zz_info END-->
+</div>
+<!--container END-->
+<!--warn_box start-->
+<div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+  <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+  <h2 class="mb10">转正/调薪审批</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR col-md-9">
+        <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>你的转正/调薪审批已通过</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">意向客户</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：已过预期跟踪时间</p>
+      </div>
+    </div>
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>意向客户：有一条意向客户认领</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="mb10">最新任务</h2>
+  <div class="mb20">
+    <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+      <div class="floatR w200">
+        <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+        <p>给你分配了一条任务：设计一条从宁波
+          到美国的组团游线路</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--warn_box END-->
+
+<!--container END-->
+<!--subConts start-->
+<div id="subConts">
+  <div class="headPop">
+    <h2>醉美波西米亚风，秋季赏枫之旅----中东欧五国11日游</h2>
+  </div>
+  <div class="outPop">
+    <!-- add_groupTravel 添加组团游 start-->
+    <div class="popInner" id="add_groupTravel">
+      <div class="mb10 titT clearFix"><a class="coll_btn mr20" onclick="shutDown();">&nbsp;</a><span class="ft16">添加组团游</span></div>
+      <div class="mb10 titT clearFix"><b class="ft14">组团游</b></div>
+      <ul class="step_info clearFix">
+        <li class="first finished"><span class="stepTxt">基本信息</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="finished"><span class="stepTxt">行程设置</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="ongoing"><span class="stepTxt">保险</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li><span class="stepTxt">集散地</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li><span class="stepTxt">扩展说明</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li><span class="stepTxt">完成</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="last"><span class="lineStep">&nbsp;</span></li>
+      </ul>
+      <!--step1_BasicInfo start-->
+      <div id="step1_BasicInfo" class="each_step" style="display:block">
+        <div class="clearFix mb20">
+          <form role="form" action="#" class="form-horizontal my_form form_addMem" novalidate>
+            <!--basicInfo start-->
+            <div class="basicInfo">
+              <div class="row_h row_full">
+                <div class="form-group">
+                  <label class="col-md-2 control-label"><span class="need">●</span>线路名称：</label>
+                  <div class="col-md-10">
+                    <input type="text" placeholder="输入线路名称" class="form-control" id="" check-type="required" required-message="">
+                    <div class="pt5"><a href="#" class="blue_txt"><font class="ft16 mr5 mt5">+</font>添加副标题</a></div>
+                    <p class="sub_title">
+                      <input type="text" placeholder="输入副标题" class="form-control" id="">
+                      <a class="close_s" href="#">&nbsp;</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>出发地：</label>
+                  <div class="col-md-8">
+                    <input type="text" placeholder="输入出发地" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group n2">
+                  <label class="col-md-5 control-label"><span class="need">●</span>目的地：</label>
+                  <div class="col-md-7">
+                    <input type="text" id="" class="tagsinput form-control" placeholder="输入目的地">
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>出游天数：</label>
+                  <div class="col-md-8">
+                    <input type="text" placeholder="输入天数" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group n2">
+                  <label class="col-md-5 control-label"><span class="need">●</span>住宿天数：</label>
+                  <div class="col-md-7">
+                    <input type="text" id="" class="form-control" placeholder="输入天数">
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>去程交通：</label>
+                  <div class="col-md-8">
+                    <select class="form-control">
+                      <option>飞机</option>
+                      <option>火车</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group n2">
+                  <label class="col-md-5 control-label"><span class="need">●</span>回程交通：</label>
+                  <div class="col-md-7">
+                    <select class="form-control">
+                      <option>飞机</option>
+                      <option>火车</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row_h">
+                <div class="form-group">
+                  <label class="col-md-4 control-label"><span class="need">●</span>线路类别：</label>
+                  <div class="col-md-8">
+                    <select class="form-control">
+                      <option>出境游</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- basicInfo END-->
+            <!--upload_box start-->
+            <div class="upload_box"> <a class="btn_addPic2 bigLoad" href="javascript:void(0);"><span class="add_txt">+</span>
+              <p>点击添加详细页轮显图<br>
+                此图为封面图</p>
+              <input type="file" class="filePrew_img" title="" size="3" name="pic">
+              <div class="picLoad"></div>
+              </a>
+              <ul class="uploadList">
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"><img src="../images/default/p3.jpg" alt=""></div>
+                  </a> </li>
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"></div>
+                  </a> </li>
+                <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                  <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                  <div class="picLoad"></div>
+                  </a> </li>
+              </ul>
+            </div>
+            <!--upload_box END-->
+
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-9s control-label"><span class="need">●</span>签证：</label>
+                <div class="col-md-91s">
+                  <p class="mb10 qz">
+                    <label class="radio-inline">
+                      <input type="radio" value="option1" id="inlineRadio1" name="inlineRadioOptions">
+                      是 </label>
+                    <label class="radio-inline">
+                      <input type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions">
+                      否 </label>
+                    <a class="btn_s red_btn blueBtn floatR" href="#">选择签证国家</a></p>
+                  <div><span class="selectd">日本个人旅游签证<a class="msYellow_close" href="#"></a></span><span class="selectd">日本个人旅游签证<a class="msYellow_close" href="#"></a></span><span class="selectd">日本个人旅游签证<a class="msYellow_close" href="#"></a></span></div>
+                  <div class="visa_floating">
+                    <div class="outline_box">
+                      <p class="mb10"><b>添加签证</b></p>
+                      <div class="clearFix mb15">
+                        <label class="search_qp floatL mr10"><span class="search_i"></span>
+                          <input type="text" class="form-control" placeholder="输入相关国家关键词进行搜索">
+                        </label>
+                        <select class="form-control floatL w120 mr10">
+                          <option value="选择国家">选择国家</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                      <div class="mb10"><span class="selectd">日本个人旅游签证<a href="#" class="msYellow_close"></a></span></div>
+                      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb5">
+                        <tr>
+                          <th width="28%">签证信息</th>
+                          <th width="13%">参考价格</th>
+                          <th width="20%">证件类型</th>
+                          <th width="25%">所属人</th>
+                          <th width="14%">操作</th>
+                        </tr>
+                        <tr>
+                          <td>日本个人旅游签证</td>
+                          <td>1200</td>
+                          <td>限时多次入境</td>
+                          <td>张三</td>
+                          <td><a href="#" class="yellow_txt">选择</a></td>
+                        </tr>
+                      </table>
+                      <div class="pageGuide"><a href="#">«</a><a href="#">1</a><a href="#" class="active">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">»</a> 10 <span class="floatR pt5 mr10 color3">共 <b class="red_t">100</b> 条信息</span></div>
+                    </div>
+                    <div class="btnRow clearFix">
+                      <input type="button" class="btn_ok mr10" value="保存" name="">
+                      <input type="button" class="btn_cancel" value="取消" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-9s control-label"><span class="need">●</span>产品特色：</label>
+                <div class="col-md-91s">
+                  <textarea rows="2" placeholder="填写产品特色" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <p class="mb10">线路归属：</p>
+        <div class="checkGroup gb">
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            国际游学 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            老年游 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            亲子游 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            一国深度（欧洲） </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            两国深度（欧洲） </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            三国特色（欧洲） </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            法瑞意 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            东欧系列 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            北欧系列 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            飞扬推荐 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            蜜月游 </label>
+        </div>
+        <p class="mb10">产品类型：</p>
+        <div class="checkGroup gb">
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            包机产品 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            正班机切位产品 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            酒店预购不可退 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            专列切位产品 </label>
+        </div>
+        <p class="mb10">赠送礼品：</p>
+        <div class="checkGroup gb">
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            旅游帽 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            行李牌 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            U型枕 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            眼罩 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            沙滩玩具套餐 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            PVC防水袋 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            高端旅游包 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            旅游三宝 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            一次性水下相机 </label>
+        </div>
+        <p class="mb10">线路标签：</p>
+        <div class="checkGroup gb">
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            独家产品 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            新产品 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            飞扬自组团 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            散拼团 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            全透明 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            特价商品 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            公司游 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            推荐 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="" name="">
+            劲爆价格 </label>
+        </div>
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="下一步">
+          <input type="button" class="btn_ok  cancelBtn" value="下一步" disabled>
+        </div>
+      </div>
+      <!--step1_BasicInfo END-->
+      <!--step2_travelSet start-->
+      <div id="step2_travelSet" class="each_step">
+        <div class="xc_row clearFix mb15">
+          <div class="subM_b active"><a class="blue_txt" href="#">设置多行程 <i class="arr arr_down ml5" style="border-top-color:#4b77be">&nbsp;</i></a>
+            <p class="menu_select" style="display:none;"><a href="#">复制行程</a><a href="#">新建行程</a></p>
+          </div>
+          <a class="blue_txt" href="#">导入行程</a></div>
+        <div class="tab2 mb10"><a class="active" href="#">A行程<i onClick="alert(222);" class="c_s">×</i></a><a href="#">B行程</a><a href="#">C行程</a></div>
+        <!-- travel_set start-->
+        <div class="travel_set"> <a class="arr-d floatL pre-d" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <div class="l_side floatL clearFix">
+            <div class="control-div">
+              <div class="left_set">
+                <ul id="after_set" class="set_list">
+                  <li><a href="#">D1</a></li>
+                  <li><a href="#">D2</a></li>
+                </ul>
+              </div>
+              <div class="right_set">
+                <ul id="before_set" class="set_list floatL">
+                  <li><a href="#">D3</a></li>
+                  <li><a href="#">D4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a class="arr-d floatL next-d" href="#"><span class="glyphicon glyphicon-chevron-right"></span></a> <span class="r_side floatR"><a class=" set_i add_set" href="#">+</a><a class="set_i remove_set" href="#">-</a></span></div>
+        <!-- travel_set END-->
+        <div class="mb20">
+          <input type="" placeholder="输入行程标题" id="" class="form-control">
+        </div>
+        <ul class="eveStep_menu clearFix mb20">
+          <li><a class="txt" href="#">添加文字</a></li>
+          <li><a class="scenery" href="#">添加景点</a></li>
+          <li><a class="restaurant" href="#">添加餐饮</a></li>
+          <li><a class="hotel" href="#">添加住宿</a></li>
+          <li><a class="shopping" href="#">添加购物</a></li>
+          <li><a class="selfPaying" href="#">添加自费项目</a></li>
+          <li><a class="traffic" href="#">交通</a></li>
+        </ul>
+        <!--autoFlow_con start-->
+        <div class="autoFlow_con">
+          <!-- 1 添加文字  start-->
+          <div class="tab_pro" style="display:block">
+            <div>
+              <textarea rows="3" placeholder="请输入文字" class="form-control"></textarea>
+            </div>
+            <div class="btnRow clearFix">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="addTxt_ok">
+              <div class="tipMy color9 mb10 pt10 center">----------------------添加文字确定(请程序删除这行提示)--------------------</div>
+              <div class="clearFix mb10"><strong class="ft14">文字</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+              <div class="pan_info color6 mb20">早餐后，前往国家5A级旅游景区【玉龙雪山风景区】（游览时间约2小时，含云杉坪索道）；游览高原牧场甘海子、“小九寨”蓝月谷、东巴圣地玉水寨等景点（游览时间约40分钟）；赠送大型实景表演【印象丽江】（表演时间90分钟）；返回市区，途中参观螺旋藻配送中心；游览茶马古道重镇【束河古镇】（游览时间约1小时）。<br>
+                ◎温馨提示：<br>
+                1、《印象丽江》要进入玉龙雪山后才能观看，未进雪山的游客则无法赠送观看；如遇《印象丽江》停演，则不能赠送，请谅解！<br>
+                2、蓝月谷、白水河、玉水寨等玉龙雪山小景点风格类似，且游览时间有限，一般视时间游览2-3个。<br>
+                3、游览雪山比较耗体力，建议准备点巧克力等高热量的零食，另外如果出现高原反应，请马上告诉导游，根据高原反应的程度采取相应的措施（吸氧或者送雪山医务室等）。<br>
+                4、节假日和旅游旺季，雪山游客较多，乘坐索道需排队等候，请谅解。</div>
+              <div class="rowBottomFix"><a class="btn_s red_btn" href="#"><strong>保存</strong></a></div>
+            </div>
+          </div>
+          <!-- 1 添加文字  END-->
+          <!-- 2 添加景点  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>选择景点</b></p>
+              <div class="clearFix mb15">
+                <label class="search_qp floatL mr10"><span class="search_i"></span>
+                  <input type="text" placeholder="输入相关职责关键词" class="form-control">
+                </label>
+                <select class="form-control floatL w120 mr10">
+                  <option>选择国家</option>
+                  <option>2</option>
+                </select>
+                <select class="form-control floatL w120 mr10">
+                  <option>选择城市</option>
+                  <option>2</option>
+                </select>
+                <select class="form-control floatL w120 mr10">
+                  <option>景点星级</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="mb10"><span class="selectd">哲学之道<a class="msYellow_close" href="#"></a></span><span class="selectd">宁波凤凰山主题乐园<a class="msYellow_close" href="#"></a></span></div>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+                <tr>
+                  <th width="28%">景区名称</th>
+                  <th width="13%" >星级</th>
+                  <th width="45%">详细地址</th>
+                  <th width="14%">操作</th>
+                </tr>
+                <tr>
+                  <td class="left">宁波凤凰山主题乐园</td>
+                  <td>5A</td>
+                  <td class="left">位于江西省鹰潭市东南20公里处贵溪市境内</td>
+                  <td><a class="yellow_txt" href="#">选择</a></td>
+                </tr>
+                <tr>
+                  <td class="left">景福宫</td>
+                  <td>5A</td>
+                  <td class="left">首尔市钟路区世宗路1号</td>
+                  <td><a class="yellow_txt" href="#">选择</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="btnRow clearFix">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------2 添加景点确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">景点</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <div class="mb10"><font class="hotTxt">华尔街</font><font class="hotTxt">时代广场</font><font class="hotTxt">帝国大厦</font></div>
+            <div class="mb5">华尔街</div>
+            <div class="color6 pan_info mb20"> 华尔街是纽约市曼哈顿区南部从百老汇路延伸到东河的一条大街道的名字，全长仅三分之一英里，宽仅11米，是英文“墙街”的音译。街道狭窄而短，从百老汇到东河仅有7个街段，却以“美国的金融中心”闻名于世。美国摩根财阀、洛克菲勒石油大王和杜邦财团等开设的银行、保险、航运、铁路等公司的经理处集中于此。著名的纽约证券交易所也在这里，至今仍是几个主要交易所的总部：如纳斯达克、美国证券交易所、纽约期货交易所等。“华尔街”一词现已超越这条街道本身，成为附近区域的代称，亦可指对整个美国经济具有影响力的金融市场和金融机构。 </div>
+            <div class="outPicBox">
+              <ul class="line_pic clearFix">
+                <li><img alt="" src="../images/default/p1.jpg"></li>
+                <li><img alt="" src="../images/default/p2.jpg"></li>
+                <li><img alt="" src="../images/default/p3.jpg"></li>
+              </ul>
+            </div>
+            <div class="mb5">时代广场</div>
+            <div class="color6 pan_info mb20"> 时代广场（TimesSquare）是美国纽约市曼哈顿的一块街区，中心位于西42街与百老汇大道交会处，范围东西向分别至第六大道与第九大道、南北向分别至西39街与西52街，构成曼哈顿中城商业区的西部。时报广场的名称源自《纽约时报》（NewYorkTimes）早期在此设立的总部大楼，由于NewYorkTimes又常被译为“纽约时代报”，因此也有“时代广场”的译名方式存在。构。 </div>
+            <div class="outPicBox">
+              <ul class="line_pic clearFix">
+                <li><img alt="" src="../images/default/p4.jpg"></li>
+                <li><img alt="" src="../images/default/p5.jpg"></li>
+              </ul>
+            </div>
+            <div class="fixed_btnRow">
+              <div class="fixed_btnRow">
+                <input type="button" class="btn_ok red_btn" value="保存">
+              </div>
+            </div>
+          </div>
+          <!-- 2 添加景点  END-->
+          <!-- 3 添加餐饮  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>餐饮信息</b></p>
+              <form>
+                <div class="form-group clearFix">
+                  <div class="col-md-4">
+                    <label class="control-label"><span class="need">●</span>早餐：</label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option1" id=""  value="option1" checked>
+                      包含 </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option1" id="" value="option2">
+                      自理 </label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="control-label col-md-1 color6"><span class="need">●</span>说明：</label>
+                    <div class="col-md-11">
+                      <input type="" class="form-control" id="" placeholder="输入餐饮说明">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearFix">
+                  <div class="col-md-4">
+                    <label class="control-label"><span class="need">●</span>午餐：</label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option2" id=""  value="option1" checked>
+                      包含 </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option2" id="" value="option2">
+                      自理 </label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="control-label col-md-1 color6"><span class="need">●</span>说明：</label>
+                    <div class="col-md-11">
+                      <input type="" class="form-control" id="" placeholder="输入餐饮说明">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group clearFix">
+                  <div class="col-md-4">
+                    <label><span class="need">●</span>晚餐：</label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option3" id=""  value="option1" checked>
+                      包含 </label>
+                    <label class="checkbox-inline">
+                      <input type="radio" name="option3" id="" value="option2">
+                      自理 </label>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="col-md-1 color6"><span class="need">●</span>说明：</label>
+                    <div class="col-md-11">
+                      <input type="" class="form-control" id="" placeholder="输入餐饮说明">
+                    </div>
+                  </div>
+                </div>
+                <p class="mb10"><b>特色美食</b></p>
+                <div class="form-group clearFix">
+                  <label class="col-md-1-5"><span class="need">●</span>美食介绍：</label>
+                  <div class="col-md-1-90">
+                    <textarea class="form-control" rows="2"></textarea>
+                  </div>
+                </div>
+                <div class="form-group clearFix">
+                  <label class="col-md-1-5"><span class="need">●</span>美食图片：</label>
+                  <div class="col-md-1-90"><a href="#" class="btn_s red_btn blueBtn loadP mb10"><i class="glyphicon glyphicon-plus mr5"></i>添加图片
+                    <input type="file" name="pic" size="3" title="" class="filePrew">
+                    </a>
+                    <ul class="loadPic_list"><li><img src="../images/default/p3.jpg" alt=""><a class="close_btn" href="#">×</a></li><li><img src="../images/default/p1.jpg" alt=""><a class="close_btn" href="#">×</a></li><li><img src="../images/default/p2.jpg" alt=""><a class="close_btn" href="#">×</a></li></ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="btnRow clearFix">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------3 添加餐饮确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">餐饮</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <div class="mb10"><span class="mr20">早餐：<font class="color6">包含    酒店早餐自助 </font></span> <span class="mr20">午餐：<font class="color6">自理</font></span><span class="mr20">晚餐：<font class="color6">包含    当地特色餐饮</font></span></div>
+            <p class="mb10">美食介绍</p>
+            <div class="color6 pan_info mb20"> 日本列岛的食物可能是世界上最为兼容并蓄的，花样品种繁多，制作精细，讲究营养，体现烹饪美学。 日本的烹饪既有区域性又有季节性。对于许多日本人来说品尝各地风味是旅行的一个重要内容。不论是火车站卖的便当，还是远郊旅馆里的精美正餐，都是游客们孜孜以求的。不过要在这一本书里把日本各地的风味食品逐一介绍实在不可能，即使日本人自己都不一定完全了解。但尝遍所有的食物，也算是一种有价值的生活目标 </div>
+            <div class="outPicBox">
+              <ul class="line_pic clearFix">
+                <li><img src="../images/default/ms.jpg" alt=""></li>
+                <li><img src="../images/default/ms.jpg" alt=""></li>
+                <li><img src="../images/default/ms.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div class="rowBottomFix"><a class="btn_s red_btn" href="#"><strong>保存</strong></a></div>
+          </div>
+          <!-- 3 添加餐饮  END-->
+
+          <!-- 4 添加住宿  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>选择住宿</b></p>
+              <div class="clearFix mb15">
+                <label class="search_qp floatL mr10"><span class="search_i"></span>
+                  <input type="text" class="form-control" placeholder="输入相关酒店关键词进行搜索">
+                </label>
+                <select class="form-control floatL w120 mr10">
+                  <option>选择国家</option>
+                  <option>2</option>
+                </select>
+                <select class="form-control floatL w120 mr10">
+                  <option>选择城市</option>
+                  <option>2</option>
+                </select>
+                <select class="form-control floatL w120 mr10">
+                  <option>景点星级</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="mb10"><span class="selectd">Days Inn Hillsborough<a href="#" class="msYellow_close"></a></span></div>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra">
+                <tr>
+                  <th width="28%">酒店名称</th>
+                  <th width="13%">星级</th>
+                  <th width="45%">详细地址</th>
+                  <th width="14%">操作</th>
+                </tr>
+                <tr>
+                  <td>Days Inn Hillsborough</td>
+                  <td class="center">5A</td>
+                  <td>位于江西省鹰潭市东南20公里处贵溪市境内</td>
+                  <td class="center"><a href="#" class="yellow_txt">选择</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="btnRow clearFix">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------4 添加住宿确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">住宿</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <div class="mb10"><span class="mr20">酒店：<font class="color6">济州太平洋大酒店（Pacific Hotel) </font></span> <span class="mr20">参考星级：<font class="color6">五星</font></span></div>
+            <div class="outPicBox">
+              <ul class="line_pic clearFix">
+                <li><img src="../images/default/hotel.jpg" alt=""></li>
+                <li><img src="../images/default/hotel.jpg" alt=""></li>
+                <li><img src="../images/default/hotel.jpg" alt=""></li>
+              </ul>
+            </div>
+            <div class="rowBottomFix"><a class="btn_s red_btn" href="#"><strong>保存</strong></a></div>
+          </div>
+          <!-- 4 添加住宿  END-->
+          <!-- 5 购物点  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>选择购物点</b></p>
+              <div class="clearFix mb15">
+                <label class="search_qp floatL mr10"><span class="search_i"></span>
+                  <input type="text" class="form-control" placeholder="输入相关购物点关键词进行搜索">
+                </label>
+              </div>
+              <div class="mb10"><span class="selectd">king power国际免税店<font class="color9 ml5">（停留时间：1小时)</font> <a href="#" class="msYellow_close"></a></span></div>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra">
+                <tr>
+                  <th width="34%">购物店名称</th>
+                  <th width="50%">购物说明</th>
+                  <th width="16%">操作</th>
+                </tr>
+                <tr>
+                  <td>king power国际免税店</td>
+                  <td>竹炭牙刷、牙膏、毛巾、枕头、袜子、护颈等</td>
+                  <td class="center timePop"><a href="#" class="yellow_txt timeOut">选择</a>
+                    <div class="popover_time hide">ss</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>king power国际免税店</td>
+                  <td>竹炭牙刷、牙膏、毛巾、枕头、袜子、护颈等</td>
+                  <td class="center timePop"><a href="#" class="yellow_txt timeOut">选择</a>
+                    <div class="popover_time hide">ss</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="btnRow clearFix">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------5 添加购物点确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">购物</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+              <tbody>
+                <tr>
+                  <th width="23%">购物店名称</th>
+                  <th width="14%">停留时间</th>
+                  <th>购物说明</th>
+                  <th width="10%">操作</th>
+                </tr>
+                <tr>
+                  <td>秋叶原电器店</td>
+                  <td>60分</td>
+                  <td class="left">大，小电器，抽水马桶，电饭煲以及各式电子产品</td>
+                  <td><a class="blue_txt" href="#">删除</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="rowBottomFix"><a class="btn_s red_btn" href="#"><strong>保存</strong></a></div>
+          </div>
+          <!-- 5 添加购物点  END-->
+
+          <!-- 6 添加自费项目  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>添加自费项目</b></p>
+              <div class="tabBox_p">
+                <div class="mb10 clearFix"><span>添加自费项目一</span><a class="blue_txt floatR" href="#"><span class="glyphicon glyphicon-remove"></span> 删除</a></div>
+                <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <th width="10%"><span class="need">●</span>项目名称：</th>
+                    <td width="33%">
+                      <input type="text" name="" placeholder="输入项目名称" class="form-control">
+                    </td>
+                    <th width="12%"><span class="need">●</span>参考价格：</th>
+                    <td>
+                      <input type="text" name="" placeholder="输入价格" class="form-control">
+                    </td>
+                    <th width="12%"><span class="need">●</span>停留时间：</th>
+                    <td>
+                      <input type="text" name="" placeholder="输入停留时间" class="form-control">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="ver_topTh"><span class="need">●</span>项目描述：</th>
+                    <td colspan="5">
+                      <textarea class="form-control" placeholder="输入项目描述" rows="2"></textarea>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="tabBox_p">
+                <div class="mb10 clearFix"><span>添加自费项目二</span><a class="blue_txt floatR" href="#"><span class="glyphicon glyphicon-remove"></span> 删除</a></div>
+                <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <th width="10%"><span class="need">●</span>项目名称：</th>
+                    <td width="33%">
+                      <input type="text" name="" placeholder="输入项目名称" class="form-control">
+                    </td>
+                    <th width="12%"><span class="need">●</span>参考价格：</th>
+                    <td>
+                      <input type="text" name="" placeholder="输入价格" class="form-control">
+                    </td>
+                    <th width="12%"><span class="need">●</span>停留时间：</th>
+                    <td>
+                      <input type="text" name="" placeholder="输入停留时间" class="form-control">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="ver_topTh"><span class="need">●</span>项目描述：</th>
+                    <td colspan="5">
+                      <textarea class="form-control" placeholder="输入项目描述" rows="2"></textarea>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="btnRow clearFix"><a class="blue_txt floatL" href="#"><span class="ft16">+</span> 新添自费项目</a>
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------6 添加自费项目确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">自费项目</strong><a href="#" class="floatR ft14 yellow_txt"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+              <tr>
+                <th width="18%">自费项目</th>
+                <th width="14%">参考价格</th>
+                <th width="14%">停留时间</th>
+                <th width="54%">项目描述</th>
+                <th>项目描述</th>
+              </tr>
+              <tr>
+                <td>常规门票</td>
+                <td>450</td>
+                <td>1小时</td>
+                <td class="left">法国游不包含门票价格，所以游玩线路中的所涉及的门票游客自费</td>
+                <td><a class="yellow_txt">删除</a></td>
+              </tr>
+            </table>
+            <div class="rowBottomFix"><a class="btn_s red_btn" href="#"><strong>保存</strong></a></div>
+          </div>
+          <!-- 6 添加自费项目  END-->
+
+          <!-- 7 交通信息  start-->
+          <div class="tab_pro">
+            <div class="outline_box">
+              <p class="mb10"><b>添加交通信息</b></p>
+              <table cellspacing="0" cellpadding="0" border="0" class="form_tab noFixed mb10">
+                <tr>
+                  <th width="10%"><span class="need">●</span>交通类型：</th>
+                  <td width="40%">
+                    <select class="form-control">
+                      <option value="选择交通">选择交通</option>
+                      <option value="2">2</option>
+                    </select>
+                  </td>
+                  <th width="14%"><span class="need">●</span>航班/车站：</th>
+                  <td>
+                    <input type="" placeholder="输入航班/车站" id="" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <th><span class="need">●</span>出发地：</th>
+                  <td>
+                    <input type="" placeholder="输入出发地" id="" class="form-control">
+                  </td>
+                  <th><span class="need">●</span>目的地：</th>
+                  <td>
+                    <input type="" placeholder="输入目的地" id="" class="form-control">
+                  </td>
+                </tr>
+              </table>
+              <div class="mb10"><span class="selectd">飞机(亚洲航空/FD412)<a href="#" class="msYellow_close"></a></span><span class="selectd">飞机(亚洲航空/FD412)<a href="#" class="msYellow_close"></a></span></div>
+              <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+                <tr>
+                  <th width="20%">交通类型</th>
+                  <th width="20%">航班</th>
+                  <th width="40%">往返</th>
+                  <th width="20%">操作</th>
+                </tr>
+                <tr>
+                  <td>飞机</td>
+                  <td>亚洲航空/FD412</td>
+                  <td>
+                    <p><span class="blue_txt">出发06:30</span> 泰国廊曼国际机场</p>
+                    <p><span class="red_t">到达11:30</span> 宁波栎社国际机场</p>
+                  </td>
+                  <td><a class="yellow_txt" href="#">选择</a></td>
+                </tr>
+              </table>
+            </div>
+            <div class="btnRow clearFix">
+              <input class="btn_ok mr10" value="保存" name="" type="button">
+              <input class="btn_cancel" value="取消" name="" type="button">
+            </div>
+            <div class="tipMy color9 mb10 pt10 center">----------------------7 添加交通确定(请程序删除这行提示)--------------------</div>
+            <div class="clearFix mb10"><strong class="ft14">交通信息</strong><a class="floatR ft14 yellow_txt" href="#"><i class="glyphicon glyphicon-edit mr5"></i>编辑</a></div>
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra mb20 td-center">
+              <tr>
+                <th width="25%">交通类型</th>
+                <th width="25%">航班</th>
+                <th>往返</th>
+              </tr>
+              <tr>
+                <td>飞机</td>
+                <td>亚洲航空/FD412</td>
+                <td>
+                  <p><span class="blue_txt">出发06:30</span> 泰国廊曼国际机场</p>
+                  <p><span class="red_t">到达11:30</span> 宁波栎社国际机场</p>
+                </td>
+              </tr>
+            </table>
+            <div class="rowBottomFix"><a href="#" class="btn_s red_btn"><strong>保存</strong></a></div>
+          </div>
+          <!--7 交通信息  END-->
+        </div>
+        <!--autoFlow_con END-->
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="下一步">
+        </div>
+      </div>
+
+      <!--step2_travelSet END-->
+      <!--step3保险 start-->
+      <div class="each_step">
+        <div class="mb10"><a class="yellow_txt mr20" href="#"><span class="glyphicon glyphicon-chevron-left"></span> 返回</a> 添加险种</div>
+        <div class="clearFix mb15">
+          <label class="search_qp floatL mr10"><span class="search_i"></span>
+            <input type="text" placeholder="输入相关保险公司或者保险类型进行搜索" class="form-control">
+          </label>
+          <select class="form-control floatL w120 mr10">
+            <option value="选择国家">选择保险公司</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="mb10"><span class="selectd">泰康境内旅意险(高端版)<a class="msYellow_close" href="#"></a></span></div>
+        <table cellspacing="0" cellpadding="0" border="0" class="tabTra">
+          <tr>
+            <th width="10%">保险ID</th>
+            <th width="14%">保险公司</th>
+            <th width="15%">险种编号</th>
+            <th width="22%">保险类型</th>
+            <th width="32%">保险说明</th>
+            <th width="7%">操作 </th>
+          </tr>
+          <tr>
+            <td class="center">26</td>
+            <td class="center">泰康保险</td>
+            <td class="center">20201424</td>
+            <td>泰康境内旅意险(高端版)</td>
+            <td>高端境内旅游保障，彰显尊贵身价，全面护航</td>
+            <td class="center"> <a class="yellow_txt" href="#">选择</a> </td>
+          </tr>
+          <tr>
+            <td class="center">26</td>
+            <td class="center">泰康保险</td>
+            <td class="center">20201424</td>
+            <td>泰康境外旅意险(户外运动版)</td>
+            <td>特别承保滑雪、骑马、潜水、攀岩等热门娱乐项目</td>
+            <td class="center"> <a class="yellow_txt" href="#">选择</a> </td>
+          </tr>
+        </table>
+        <div class="btnRow clearFix">
+          <input type="button" class="btn_ok mr10" value="保存" name="">
+          <input type="button" class="btn_cancel" value="取消" name="">
+        </div>
+        <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是已添加保险(请程序删除这行提示)--------------------</div>
+        <div class="mb10"><a class="blue_txt mr20" href="#">添加险种</a> </div>
+        <table cellspacing="0" cellpadding="0" border="0" class="tabTra">
+          <tr>
+            <th width="10%">保险ID</th>
+            <th width="14%">保险公司</th>
+            <th width="15%">险种编号</th>
+            <th width="22%">保险类型</th>
+            <th width="32%">保险说明</th>
+            <th width="7%">操作 </th>
+          </tr>
+          <tr>
+            <td class="center">26</td>
+            <td class="center">泰康保险</td>
+            <td class="center">20201424</td>
+            <td>泰康境内旅意险(高端版)</td>
+            <td>高端境内旅游保障，彰显尊贵身价，全面护航</td>
+            <td class="center"> <a class="blue_txt" href="#">删除</a> </td>
+          </tr>
+          <tr>
+            <td class="center">26</td>
+            <td class="center">泰康保险</td>
+            <td class="center">20201424</td>
+            <td>泰康境外旅意险(户外运动版)</td>
+            <td>特别承保滑雪、骑马、潜水、攀岩等热门娱乐项目</td>
+            <td class="center"> <a class="blue_txt" href="#">删除</a> </td>
+          </tr>
+        </table>
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="下一步">
+        </div>
+      </div>
+      <!--step3保险 END-->
+      <!--step4 集散地 start-->
+      <div class="each_step">
+        <div class="mb10"> 添加集散地</div>
+        <div class="js_row clearFix"><span class="l_js"><font class="gather floatL">集合</font><font class="floatR pt10"><span class="need">●</span>时间：</font></span>
+          <div class="floatL">
+            <input type="text" class="form-control w50">
+            <font class="ml5 mr5">:</font>
+            <input type="text" class="form-control w50">
+          </div>
+          <div class="col-md-8 pt5">
+            <label class="ml20" style="padding-top:7px;">
+              <input type="checkbox">
+              另行通知时间</label>
+          </div>
+        </div>
+        <div class="js_row clearFix">
+          <label class="l_js right_algin pt5"><span class="need">●</span>地址：</label>
+          <div class="col-md-10">
+            <input type="" id="" class="form-control">
+          </div>
+        </div>
+        <div class="js_row clearFix"><span class="l_js"><font class="gather floatL">解散</font><font class="floatR pt5"><span class="need">●</span>地址：</font></span>
+          <div class="col-md-10">
+            <input type="" id="" class="form-control">
+          </div>
+        </div>
+        <div class="js_row clearFix">
+          <label class="l_js right_algin"><span class="need">●</span>说明：</label>
+          <div class="col-md-10">
+            <textarea class="form-control" name="" cols="" rows=""></textarea>
+          </div>
+        </div>
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="下一步">
+        </div>
+      </div>
+      <!--step4集散地 END-->
+      <!--step5 扩展说明start-->
+      <div class="each_step">
+        <form class="extend_info">
+          <div class="form-group">
+            <label class="ft14"><span class="need">●</span>关于费用</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="ft14"><span class="need">●</span>预定说明</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="ft14"><span class="need">●</span>关于服务</label>
+            <div class="menu_b"><a class="active" href="#">导游</a><a href="#">餐饮</a><a href="#">购物</a><a href="#">住宿</a><a href="#">游览</a><a href="#">交通</a></div>
+            <div class="service_con">
+              <div class="text_area" style="display:block">
+                <textarea placeholder="1"  class="form-control" name="" cols="" rows=""></textarea>
+              </div>
+              <div class="text_area">
+                <textarea placeholder="2" class="form-control"  name="" cols="" rows=""></textarea>
+              </div>
+              <div class="text_area">
+                <textarea placeholder="3"  class="form-control" name="" cols="" rows=""></textarea>
+              </div>
+              <div class="text_area">
+                <textarea placeholder="4"  class="form-control" name="" cols="" rows=""></textarea>
+              </div>
+              <div class="text_area">
+                <textarea placeholder="5" class="form-control"  name="" cols="" rows=""></textarea>
+              </div>
+              <div class="text_area">
+                <textarea placeholder="6" class="form-control"  name="" cols="" rows=""></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="ft14"><span class="need">●</span>温馨提示</label>
+            <textarea rows="3" class="form-control"></textarea>
+          </div>
+        </form>
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="下一步">
+        </div>
+      </div>
+      <!--step5 扩展说明 END-->
+
+      <!--step6 完成start-->
+      <div class="each_step">
+        <div class="finishedRow mb20"><span class="glyphicon glyphicon-ok-circle mr10"></span><span class="ft20 color9">保存成功！</span></div>
+        <p class="ft14 color6 center mb25">您所编辑的该条线路已为您保存成功您可以点击 <a class="blue_txt underline" href="#">查看</a> 进入详细页面也可以点击以下操作继续编辑</p>
+        <div class="center"><a href="#" onClick="add_plan();" class="btn_ok red_btn big_button mr10">去添加计划</a><a href="#" class="btn_ok big_button cancelBtn">暂时不添加计划</a></div>
+      </div>
+      <!--step6 完成 END-->
+    </div>
+    <!-- add_groupTravel 添加组团游 END-->
+    <!-- add_groupPlan 添加计划 start-->
+    <div class="popInner" id="add_plan" style="display:none;">
+      <div class="mb10 titT clearFix"><a onclick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">发团计划</span></div>
+      <div class="tag_info mb10 clearFix"><a href="#" class="tag floatL active">浙江立喜国际旅游有限公司</a><a href="#" class="tag floatL">海口民间旅行社有限公司</a></div>
+      <div><img src="../images/default/calendar.gif" alt=""></div>
+      <p class="red_t center mb15">（*点击以上多选框，可对有着相同计划的团期进行批量编辑）</p>
+      <div class="mb15"><span class="selectd">2015-9-12<a href="#" class="msYellow_close"></a></span><span class="selectd">2015-9-20<a href="#" class="msYellow_close"></a></span></div>
+      <div class="mb10">
+        <label class="checkbox-inline">
+          <input type="checkbox" name="" id="" value="3">
+          <span class="blue_txt ml5">添加活动</span> </label>
+      </div>
+      <table cellspacing="0" cellpadding="0" border="0" class="form_tab mb15">
+        <tr>
+          <th width="10%"><span class="need">●</span>成本名称：</th>
+          <td width="40%">
+            <input type="" placeholder="输入关键词" class="form-control">
+          </td>
+          <th width="12%"><span class="need">●</span>预计成本：</th>
+          <td><span class="mr10">成人 <font class="red_t">2645元/人</font></span> <span class="mr10">小孩 <font class="red_t">2645元/人</font></span><span>婴儿 <font class="red_t">2645元/人</font></span></td>
+        </tr>
+        <tr>
+          <th><span class="need">●</span>选择行程：</th>
+          <td>
+            <select class="form-control">
+              <option>A行程</option>
+            </select>
+          </td>
+          <th><span class="need">●</span>全陪导游：</th>
+          <td>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="option1">
+              有 </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="option2">
+              否 </label>
+            <input type="text" style="width:40px;" class="form-control ml5">
+            元/人 <font class="color9">（成本价200元/人）</font> </td>
+        </tr>
+        <tr>
+          <th><span class="need">●</span>下单截止：</th>
+          <td>
+            <input type="text" class="form-control w100">
+            <font class="ml5 mr10">天</font>
+            <input type="text" class="form-control w100">
+            小时 </td>
+          <th><span class="need">●</span>预留时间：</th>
+          <td>
+            <input type="text" class="form-control w100">
+            <font class="ml5 mr10">天</font>
+            <input type="text" class="form-control w100">
+            小时 </td>
+        </tr>
+        <tr>
+          <th><span class="need">●</span>计划类型：</th>
+          <td>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="3">
+              自组团 </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="" value="3">
+              同行拼团 </label>
+          </td>
+          <th><span class="need">●</span>网络订单：</th>
+          <td>
+            <label class="radio-inline">
+              <input type="radio" name="4" id="" value="option4">
+              直接付款 </label>
+            <label style="margin-left:0;" class="radio-inline">
+              <input type="radio" name="4" id="" value="option4">
+              提交销售 </label>
+          </td>
+        </tr>
+        <tr>
+          <th><span class="need">●</span>最低成员：</th>
+          <td>
+            <input type="text" class="form-control w100">
+            <font class="ml5">人</font></td>
+          <th><span class="need">●</span>暂留时间：</th>
+          <td>
+            <input type="text" class="form-control w100">
+            <font class="ml5 mr10">天</font>
+            <input type="text" class="form-control w100">
+            小时 </td>
+        </tr>
+        <tr>
+          <th><span class="need">●</span>机建费：</th>
+          <td> 成人
+            <input type="text" class="form-control w65">
+            元/人 <font class="ml15">小孩</font>
+            <input type="text" class="form-control w65">
+            元/人</td>
+          <th><span class="need">●</span>签证费：</th>
+          <td>
+            <input type="text" class="form-control w65">
+            元/人</td>
+        </tr>
+      </table>
+      <div class="menu_M"><a href="#" class="active">活动说明</a></div>
+      <div class="box_yellow mb20" style="display:block;">
+        <table class="tab_fa" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="9%"><span class="need">●</span>选择活动:</th>
+            <td width="46%">
+              <select class="form-control w300">
+                <option>选择活动</option>
+                <option>2</option>
+              </select>
+            </td>
+            <th width="9%"><span class="need">●</span>赞助方式:</th>
+            <td width="35%">按人头</td>
+          </tr>
+          <tr>
+            <th width="9%"><span class="need">●</span>余位:</th>
+            <td width="46%"><span class="mr10">手机
+              <input type="text" class="form-control w40">
+              位</span><span class="mr10">网站
+              <input type="text" class="form-control w40">
+              位</span><span>系统
+              <input type="text" class="form-control w40">
+              位</span></td>
+            <th width="9%"><span class="need">●</span>赞助商:</th>
+            <td width="35%">
+              <select class="form-control">
+                <option>选择赞助商</option>
+                <option>2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th width="9%"><span class="need">●</span>立减金额:</th>
+            <td width="45%"><span class="mr10">成人
+              <input type="text" class="form-control w40">
+              元/人</span><span class="mr10">小孩
+              <input type="text" class="form-control w40">
+              元/人</span><span>婴儿
+              <input type="text" class="form-control w40">
+              元/人</span></td>
+            <th width="9%">&nbsp;</th>
+            <td width="36%">&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+      <div class="menu_M menuA"><a class="active" href="#">常规方案</a><a href="#">升级方案</a></div>
+      <div class="tabM_con">
+        <!--常规方案 start-->
+        <div class="box_yellow" style="display:block;">
+          <table class="tab_fa" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="9%"><span class="need">●</span>收人总数:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">人</font></td>
+              <th width="9%"><span class="need">●</span>保留总数:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">人</font></td>
+              <th width="9%"><span class="need">●</span>直客价格:</th>
+              <td width="46%"><span class="mr10">成人
+                <input type="text" class="form-control w40">
+                元/人</span><span class="mr10">小孩
+                <input type="text" class="form-control w40">
+                元/人</span><span>婴儿
+                <input type="text" class="form-control w40">
+                元/人</span></td>
+            </tr>
+            <tr>
+              <th><span class="need">●</span>单房差:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">元</font></td>
+              <th><span class="need">●</span>抵用券:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">元</font></td>
+              <th><span class="need">●</span>同行价格:</th>
+              <td><span class="mr10">成人
+                <input type="text" class="form-control w40">
+                元/人</span><span class="mr10">小孩
+                <input type="text" class="form-control w40">
+                元/人</span><span>婴儿
+                <input type="text" class="form-control w40">
+                元/人</span></td>
+            </tr>
+          </table>
+        </div>
+        <!--常规方案 END-->
+
+        <!--升级方案 start-->
+        <div class="box_yellow">
+          <table class="tab_fa mb10" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="9%"><span class="need">●</span>价格标题:</th>
+              <td colspan="5">
+                <input type="text" class="form-control w300"><a class="floatR blue_txt pt5" href="#">删除</a>
+              </td>
+            </tr>
+            <tr>
+              <th width="9%"><span class="need">●</span>收人总数:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">人</font></td>
+              <th width="9%"><span class="need">●</span>保留总数:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">人</font></td>
+              <th width="9%"><span class="need">●</span>直客价格:</th>
+              <td width="46%"><span class="mr10">成人
+                <input type="text" class="form-control w40">
+                元/人</span><span class="mr10">小孩
+                <input type="text" class="form-control w40">
+                元/人</span><span>婴儿
+                <input type="text" class="form-control w40">
+                元/人</span></td>
+            </tr>
+            <tr>
+              <th><span class="need">●</span>单房差:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">元</font></td>
+              <th><span class="need">●</span>抵用券:</th>
+              <td>
+                <input type="text" class="form-control w65">
+                <font class="ml5">元</font></td>
+              <th><span class="need">●</span>同行价格:</th>
+              <td><span class="mr10">成人
+                <input type="text" class="form-control w40">
+                元/人</span><span class="mr10">小孩
+                <input type="text" class="form-control w40">
+                元/人</span><span>婴儿
+                <input type="text" class="form-control w40">
+                元/人</span></td>
+            </tr>
+          </table>
+          <p><a class="blue_txt" href="#"><span class="glyphicon glyphicon-plus"></span> 新添升级方案</a></p>
+        </div>
+        <!--升级方案 END-->
+      </div>
+      <div class="fixed_btnRow">
+        <input type="button" class="btn_ok red_btn" value="保存">
+      </div>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是查看发团计划(请程序删除这行提示)--------------------</div>
+
+      <!-- view_groupPlan 查看计划 start-->
+      <div id="view_groupPlan">
+        <h3 class="mb10"><strong class="ft14">发团计划</strong></h3>
+        <div class="tag_info mb10 clearFix"><span class="floatL"><a class="tag active" href="#">浙江立喜国际旅游有限公司</a><a class="tag" href="#">海口民间旅行社有限公司</a></span><span class="r_edit"><a class="active" href="#">批量编辑</a><a class="glyphicon glyphicon-th-large active"></a><a class="glyphicon glyphicon-th-list"></a></span></div>
+        <div class="mb20"><img src="../images/default/c2.gif" alt=""></div>
+        <h3 class="mb10 clearFix relative"><strong class="ft14 floatL">2015-09-21</strong><span class="r_edit2 floatR"><a class="default" href="#">编辑</a><a class="default popBtn" href="#">车辆安排</a><a class="default" href="#">团队设置</a><a  id="order" class="default popBtn" href="#">下单</a><a class="default" href="#">删除</a></span>
+          <div class="popBox" style="top:20px;">
+            <h3 class="popover-title"><b class="mr20 ft14">车辆安排</b> <a style="margin-top:-2px;" class="close" href="#">×</a></h3>
+            <div class="popover-content">
+              <table class="form_tab noFixed" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="8%">2号车：</td>
+                  <th width="12%">座位数：</th>
+                  <td>
+                    <input type="" class="form-control w120" id="" placeholder="">
+                    位 </td>
+                  <th width="11%">保留数：</th>
+                  <td>
+                    <input type="" class="form-control w120" id="" placeholder="">
+                    位 </td>
+                </tr>
+                <tr>
+                  <td>&nbsp;</td>
+                  <th>集合地：</th>
+                  <td> 时间
+                    <input type="" class="form-control w120" id="" placeholder="">
+                  </td>
+                  <th>地址：</th>
+                  <td>
+                    <input type="" class="form-control w200" id="" placeholder="">
+                    <a href="#" class="blue_txt ml15">添加集合地</a></td>
+                </tr>
+              </table>
+              <div><a href="#" class="blue_txt">+ 新增车辆</a></div>
+              <div class="tipMy color9 mb10 pt10 center">---------------------- 以下已添加车辆情况(请程序删除这行提示)--------------------</div>
+              <div class="mb10"><a class="blue_txt" href="#">添加车辆</a></div>
+              <table class="tabTra td-center" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <th width="15%">车辆号</th>
+                  <th width="12%">座位数</th>
+                  <th width="12%">保留数</th>
+                  <th>集合时间</th>
+                  <th width="12%">操作</th>
+                </tr>
+                <tr>
+                  <td>1号车</td>
+                  <td>58</td>
+                  <td>10</td>
+                  <td>早上8:00    富茂大厦8楼爱飞扬旅游广场</td>
+                  <td><a class="yellow_txt" href="#">删除</a></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </h3>
+        <div class="dashed_tip mb10"><span class="yellow_txt">团期情况</span><span>计划总数：<font class="red_t">450</font>人</span><span>保留数：<font class="red_t">10</font>人</span><span>余位：<font class="green_txt">10</font>人</span><span>实收：<font class="red_t">100</font>人</span><span>暂留订单：<font class="red_t">50</font>人</span><span>已签订单：<font class="red_t">50</font>人</span></div>
+        <table class="tab_infoList mb15" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="10%">选择委托社：</th>
+            <td width="40%">中国国际友好关系旅行商</td>
+            <th width="10%">预计成本价：</th>
+            <td width="40%"><span class="mr10">成人 <font class="red_t">2645元/人</font></span> <span class="mr10">小孩 <font class="red_t">2645元/人</font></span><span>婴儿 <font class="red_t">2645元/人</font></td>
+          </tr>
+          <tr>
+            <th>选择行程：</th>
+            <td>B行程</td>
+            <th>全陪导游：</th>
+            <td>300元/人</td>
+          </tr>
+          <tr>
+            <th>下单截止：</th>
+            <td>1天12小时</td>
+            <th>预留时间：</th>
+            <td>0天12小时</td>
+          </tr>
+          <tr>
+            <th>计划类型：</th>
+            <td>自组团</td>
+            <th>网络订单：</th>
+            <td>直接付款</td>
+          </tr>
+          <tr>
+            <th>最低成员：</th>
+            <td>50人</td>
+            <th>暂留时间：</th>
+            <td>1 天 0 小时</td>
+          </tr>
+          <tr>
+            <th>机建费：</th>
+            <td><font class="mr20">成人 200元/人</font>小孩 100元/人</td>
+            <th>签证费：</th>
+            <td><font class="mr20">成人 200元/人</font>小孩 100元/人</td>
+          </tr>
+        </table>
+        <div class="menu_M"><a class="active" href="#">活动说明</a></div>
+        <div style="display:block;" class="box_yellow mb20">
+          <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList">
+            <tbody>
+              <tr>
+                <th width="9%">选择活动:</th>
+                <td width="46%">飞扬周年庆</td>
+                <th width="9%">赞助方式:</th>
+                <td width="35%">按人头</td>
+              </tr>
+              <tr>
+                <th width="9%">余位:</th>
+                <td width="46%"><span class="mr10">手机 200 位</span><span class="mr10">网站 100 位</span><span>系统 500 位</span></td>
+                <th width="9%">赞助商:</th>
+                <td width="35%">飞扬旅行社</td>
+              </tr>
+              <tr>
+                <th width="9%">立减金额:</th>
+                <td width="45%"><span class="mr10">成人 50 元/人</span><span class="mr10">小孩 50 元/人</span><span>婴儿 50 元/人</span></td>
+                <th width="9%">&nbsp;</th>
+                <td width="36%">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="menu_M menuA"><a class="active" href="#">常规方案</a><a href="#">升级方案</a></div>
+        <div class="tabM_con">
+          <!--常规方案 start-->
+          <div class="box_yellow" style="display:block;">
+            <table class="border_tab" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th colspan="3">直客价格</th>
+                <th width="10%" rowspan="2">收人总数</th>
+                <th width="10%" rowspan="2">保留总数</th>
+                <th width="10%" rowspan="2">单房差</th>
+                <th width="10%" rowspan="2">抵用券</th>
+              </tr>
+              <tr>
+                <th width="10%">成人</th>
+                <th width="10%">小孩</th>
+                <th width="10%">婴儿</th>
+              </tr>
+              <tr>
+                <td>500</td>
+                <td>300</td>
+                <td>600</td>
+                <td>60</td>
+                <td>6</td>
+                <td>100</td>
+                <td>50</td>
+              </tr>
+            </table>
+          </div>
+          <!--常规方案 END-->
+
+          <!--升级方案 start-->
+          <div class="box_yellow">
+            <table class="border_tab mb10" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <th width="169" rowspan="2">标题</th>
+                <th colspan="3">直客价格</th>
+                <th width="82" rowspan="2">收人总数</th>
+                <th width="84" rowspan="2">保留总数</th>
+                <th width="70" rowspan="2">单房差</th>
+                <th width="70" rowspan="2">抵用券</th>
+                <th width="51" rowspan="2">操作</th>
+              </tr>
+              <tr>
+                <th width="67">成人</th>
+                <th width="64">小孩</th>
+                <th width="63">婴儿</th>
+              </tr>
+              <tr>
+                <td><a href="#">国庆豪华游游升级版</a></td>
+                <td>450</td>
+                <td>200</td>
+                <td>100</td>
+                <td>60</td>
+                <td>6</td>
+                <td>100</td>
+                <td>50</td>
+                <td><a class="yellow_txt" href="#">删除</a></td>
+              </tr>
+            </table>
+          </div>
+          <!--升级方案 END-->
+        </div>
+        <div class="fixed_btnRow">
+          <input type="button" class="btn_ok red_btn" value="保存">
+        </div>
+      </div>
+      <!-- view_groupPlan 查看计划 END-->
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是产品计划列表(请程序删除这行提示)--------------------</div>
+      <div id="planList">
+        <table class="tab_list" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="12%">发团日期</th>
+            <th width="12%">计划总数</th>
+            <th width="11%">保留数</th>
+            <th width="11%">余位</th>
+            <th width="11%">实收</th>
+            <th width="12%">暂留订单</th>
+            <th width="12%">已签订单</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>2015-11-07</td>
+            <td>200</td>
+            <td>10</td>
+            <td><span class="green_txt">30</span></td>
+            <td>100</td>
+            <td>2</td>
+            <td>3</td>
+            <td>
+              <p><a class="blue_txt mr10" href="#">下单</a><a class="blue_txt mr10" href="#">车辆</a><a class="blue_txt popBtn team" href="#">团队</a></p>
+              <p><a class="blue_txt mr10 popBtn copy" href="#">复制</a><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt" href="#">删除</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td>2015-11-07</td>
+            <td>200</td>
+            <td>10</td>
+            <td><span class="green_txt">30</span></td>
+            <td>100</td>
+            <td>2</td>
+            <td>3</td>
+            <td>
+              <p><a class="blue_txt mr10" href="#">下单</a><a class="blue_txt mr10" href="#">车辆</a><a class="blue_txt popBtn team" href="#">团队</a></p>
+              <p><a class="blue_txt mr10 popBtn copy" href="#">复制</a><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt" href="#">删除</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td>2015-11-07</td>
+            <td>200</td>
+            <td>10</td>
+            <td><span class="green_txt">30</span></td>
+            <td>100</td>
+            <td>2</td>
+            <td>3</td>
+            <td>
+              <p><a class="blue_txt mr10" href="#">下单</a><a class="blue_txt mr10" href="#">车辆</a><a class="blue_txt popBtn team" href="#">团队</a></p>
+              <p><a class="blue_txt mr10 popBtn copy" href="#">复制</a><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt" href="#">删除</a></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- add_groupPlan 添加计划END-->
+
+  </div>
+</div>
+<!--subConts END-->
+<!--datetimepicker-->
+<div class="cars-head">
+  <div class="clearFix ft12"><span class="floatL">车辆安排</span><a class="yellow_txt floatR" href="#"><font class="arr_st"><</font> 返回</a></div>
+</div>
+<!--pop-carsCon start-->
+
+<!--pop-carsCon END-->
+<!--pop-orderCon start-->
+<div class="pop-orderCon hide"> <a class="b_t mr15" href="#">同行</a><a class="b_t border" href="#">直客</a> </div>
+<!--pop-orderCon END-->
+<!--pop-copyCon start-->
+<div class="pop-copyCon hide">
+  <form class="form-horizontal" style="width:320px">
+    <div class="form-group">
+      <label for="" class="col-md-20 control-label">发团时间：</label>
+      <div class="input-group date form_date col-md-7"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input class="form-control" size="16" type="text" value="" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-20 control-label">下单截止：</label>
+      <div class="col-md-80"> <span class="mr10">
+        <input type="" class="form-control w80" id="" placeholder="">
+        天</span> <span>
+        <input type="" class="form-control w80" id="" placeholder="">
+        小时</span> </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="col-md-20 control-label">预留时间：</label>
+      <div class="col-md-80"> <span class="mr10">
+        <input type="" class="form-control w80" id="" placeholder="">
+        天</span> <span>
+        <input type="" class="form-control w80" id="" placeholder="">
+        小时</span> </div>
+    </div>
+    <div class="algin_right"><a href="#" class="btn_ok s">保存</a><a href="#" class="btn_cancel s">取消</a></div>
+  </form>
+</div>
+<!--pop-copyCon END-->
+<!--pop-teamCon start-->
+<div class="pop-teamCon hide">
+  <div class="teamCon">
+    <div class="dashed_tip mb15"> <span>营业款总计：<font class="red_t">30000.00</font>元</span><span>已收款总计：<font class="red_t">20000.00</font>元</span> <span>应收款总计：<font class="red_t">30000.00</font>元</span><span>保险总成本：<font class="red_t">30000.00</font>元</span> <span>人数：<font class="red_t">12</font>(成人)+<font class="red_t">12</font>(小孩)+<font class="red_t">0</font>(婴儿)</span> </div>
+    <div class="teamTab_menu mb10"><a class="active" href="#">默认团队</a><a href="#">HK_1511071</a><a href="#">HK_1511072</a></div>
+    <div class="team_con">
+      <table class="tabTra td-center" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="7%">
+            <input name="" type="checkbox" value="">
+          </th>
+          <th width="12%">订单编号</th>
+          <th width="11%">会员名称</th>
+          <th width="11%">营业款</th>
+          <th width="11%">已收款</th>
+          <th width="11%">应收款</th>
+          <th>人数</th>
+          <th width="11%">操作</th>
+        </tr>
+        <tr>
+          <td>
+            <input name="" type="checkbox" value="">
+          </td>
+          <td><a class="blue_txt" href="#">D00273812</a></td>
+          <td>李向阳</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>
+            <p>10</p>
+            <p>10(成人)+0(小孩)+0(婴儿)</p>
+          </td>
+          <td><a class="blue_txt popBtn team_tra" href="#">团队转移</a></td>
+        </tr>
+        <tr>
+          <td>
+            <input name="" type="checkbox" value="">
+          </td>
+          <td><a class="blue_txt" href="#">D00273812</a></td>
+          <td>李向阳</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>
+            <p>10</p>
+            <p>10(成人)+0(小孩)+0(婴儿)</p>
+          </td>
+          <td><a class="blue_txt popBtn team_tra" href="#">团队转移</a></td>
+        </tr>
+        <tr>
+          <td>
+            <input name="" type="checkbox" value="">
+          </td>
+          <td><a class="blue_txt" href="#">D00273812</a></td>
+          <td>李向阳</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>500.00</td>
+          <td>
+            <p>10</p>
+            <p>10(成人)+0(小孩)+0(婴儿)</p>
+          </td>
+          <td><a class="blue_txt popBtn team_tra" href="#">团队转移</a></td>
+        </tr>
+        <tr>
+          <td colspan="8">
+            <div class="algin_left ml15"><span class="mr20">
+              <input name="" type="checkbox" value="">
+              全选</span><a class="blue_txt mr20" href="#">团队转移</a><a class="blue_txt mr20" href="#">生成新团队</a><a class="blue_txt" href="#">移出团队</a></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--pop-teamCon END-->
+<!--pop-teamTraCon start-->
+<div class="pop-teamTraCon"> 转移至
+  <select class="form-control inline w100 ml10" name="">
+    <option>??</option>
+  </select>
+  <a class="btn_ok s" href="#">保存</a> <a class="btn_cancel s" href="#">取消</a> </div>
+<!--pop-teamTraCon END-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+
+</script>
+<script src="../js/common.js"></script>
+<!--timepicker-->
+<script src="../js/timepicker/angular.js"></script>
+<script src="../js/timepicker/angular-animate.js"></script>
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script>
+<script src="../js/timepicker/timepicker.js"></script>
+<script src="../js/product.js"></script>
+<!--datetimepicker-->
+<link href="../js/datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<!--tagsinput-->
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script>
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script>
+$('.tagsinput').tagsinput({
+  typeahead: {
+	name: 'citynames',
+    displayKey: 'name',
+    valueKey: 'name',
+	itemText: 'label',
+	trimValue: true,
+    source: function(query) {
+	 var cities=$.getJSON('assets/citynames.json');
+	 return cities;
+    }
+  },
+   freeInput: true
+
+});
+
+$(".testI").each(function() {
+  var str=$(this).text();
+  $(this).text(str.split("|",1));
+});
+
+$('.tagsinput').on('itemAdded', function(event) {
+ 	$(".testI").each(function() {
+		var str=$(this).text();
+		$(this).text(str.split("|",1));
+	});
+});
+
+
+
+//发团计划 下单POP
+$('#order').popover({
+	trigger:'manual',
+	placement:'left',
+    html : true,
+	title: '下单',
+    content: function() {
+           return $(".pop-orderCon").html();
+       }
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+
+	 $(".btn_cancel").click( function() {
+		 $('#order').popover('hide')
+    });
+    $(".btn_ok").click( function() {
+		alert("");
+    });
+});
+//发团计划-列表  复制 pop
+$('.copy').popover({
+	trigger:'manual',
+	placement:'left',
+    html : true,
+    content: function() {
+           return $(".pop-copyCon").html();
+       }
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+
+	 $(".btn_cancel").click( function() {
+		 $('.copy').popover('hide')
+    });
+    $(".btn_ok").click( function() {
+		alert("复制");
+    });
+	$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+});
+//发团计划-列表  团队 pop
+$('.team').popover({
+	trigger:'manual',
+	placement:'left',
+    html : true,
+    content: function() {
+           return $(".pop-teamCon").html();
+       }
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+
+	 $(".btn_cancel").click( function() {
+		 $('.team').popover('hide')
+    });
+    $(".btn_ok").click( function() {
+		alert("团队");
+    });
+//发团计划-列表团队转移 pop
+$('.team_tra').popover({
+		trigger:'manual',
+		placement:'left',
+		html : true,
+		content: function() {
+			   return $(".pop-teamTraCon").html();
+		   }
+	}).on("click", function () {
+		// $(".team_tra").popover('hide')
+		 var _this = this;
+		 $(this).popover("show");
+		 $(this).parents("tr").siblings().find(".team_tra").popover("hide");
+
+		 $(".btn_cancel").click( function() {
+			 $(".team_tra").popover('hide')
+		});
+		$(".btn_ok").click( function() {
+			alert("团队转移");
+    });
+});
+
+
+});
+
+
+//点击popover外pop消失
+$(document).bind("click",function(e){
+	var target = $(e.target);
+	if(target.closest(".popover,.popBtn").length == 0){
+	   $(".popover").hide();
+	}
+})
+
+
+</script>
+</body>
+</html>

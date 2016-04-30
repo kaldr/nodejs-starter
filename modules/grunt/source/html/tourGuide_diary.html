@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/tourGuide.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">导游中心</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a class="menu" href="#">导游排班</a> </li>
+      <li><a class="menu" href="#">导游安排</a> </li>
+      <li><a class="menu active" href="#">导游游记</a></li>
+      <li><a class="menu" href="#">导游管理</a></li>
+      <li><a class="menu" href="#">导游荣誉</a></li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">导游游记</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a href="#" class="btn_s floatL mr20 red_btn" onclick="addLine();"><i class="glyphicon glyphicon-plus mr5"></i>新建游记</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入相关游记信息">
+        </label>
+        <div class="input-group date form_date hideEle w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input class="form-control" size="16" type="text" value="" placeholder="" readonly>
+        </div>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-4 two">游记标题</span><span class="col-md-2 hideEle">目的地</span><span class="col-md-2 hideEle">行程天数</span><span class="col-md-2 hideEle">发布日期</span><span class="col-md-2 two">作者</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-4 two"><span class="l_c">如果你恰巧要去云南，三月罗平的阳光正在等着你！</span></div>
+          <div class="col-md-2 hideEle">云南</div>
+          <div class="col-md-2 hideEle">3天</div>
+          <div class="col-md-2 hideEle">2015-09-06</div>
+          <div class="col-md-2 two">张桃子</div>
+        </li>
+        <li>
+          <div class="col-md-4 two"><span class="l_c">如果你恰巧要去云南，三月罗平的阳光正在等着你！</span></div>
+          <div class="col-md-2 hideEle">云南</div>
+          <div class="col-md-2 hideEle">3天</div>
+          <div class="col-md-2 hideEle">2015-09-06</div>
+          <div class="col-md-2 two">张桃子</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix diaryT"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">游记详情</span><a class="ft14 floatR"  style="color:#fff;" href="#"><i class="glyphicon glyphicon-trash"></i> 删除</a><a class="ft14 floatR mr20"  style="color:#fff;" href="#"><i class="glyphicon glyphicon-edit"></i> 编辑</a></div>
+      <!-- diary_panel start-->
+      <div class="diary_panel"> <img class="uploaed_pic" src="../images/default/hotel.jpg" alt="">
+        <div class="ava_author"> <img class="ava_au" src="../images/default/pic1.jpg" alt="">
+          <div class="author_rInfo clearfix">
+            <h2>如果你恰巧要去云南，三月罗平的阳光下如果你恰巧要去云南，三月罗平的阳光下.如果你恰巧要去云南，三月罗平的阳光下.如果你恰巧要去云南，三月罗平的阳光下.</h2>
+            <div class="mb10"><span class="ft16 color6 mr20">张桃子 <i class="author_i ad_i">&nbsp;</i></span><font class="ft14 color9">2015-08-31  17:52</font></div>
+            <div class="ft14 diary_active"><a href="#"><i class="author_i view">&nbsp;</i>8756</a> / <a href="#"><i class="author_i cmts">&nbsp;</i>8756</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- diary_panel END--> 
+      <!-- diaryInfo start-->
+      <div class="diaryInfo">
+        <div class="color9 ft14 mb15"><span class="mr30"><i class="author_i site">&nbsp;</i> 柬埔寨</span><span><i class="author_i day_nums">&nbsp;</i> 10天</span></div>
+        <div class="diary_conts">
+          <p>在路途上想起爱来，觉得最好的爱是两个人彼此做个伴。<br>
+            不要束缚，不要缠绕，不要占有，不要渴望从对方的身上挖掘到意义，那是注定要落空的东西。<br>
+            而应该是，我们两个人，并排站在一起，看看这个落寞的人间。 ——安妮宝贝《清醒纪》<br>
+            -----------------------------------------------------------------------------------------------------------</p>
+          <p>写在前面的话：<br>
+            黄太和胖先生是一对摄影重度爱好的新婚夫妻，楼主我（黄太）是一个极度喜欢折腾的处女座，从决定领证开始，楼主一直在思考怎么能够给自己一个不一样的婚礼。从小时候起，对家乡四川那边的婚礼宴请等等提不起兴趣，反倒“私奔、旅行、教堂、牧师”等诸如此类的美好词汇却日益根深蒂固，成为内心的向往。</p>
+          <p>楼主的完美主义开始作祟，从结婚登记照、婚纱自拍、旅行婚拍到即将举行的婚礼全部决定自己动手丰衣足食，全程自己上，不折不扣的不折腾会死星球人。成片虽然不敢说完美，但至少胖先生和我都是非常满意的，放图预告一下。</p>
+          <img src="../images/default/p5.jpg" alt=""> </div>
+      </div>
+      <!-- diaryInfo END--> 
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop">
+    <div class="popInner">
+      <div class="mb20 titT clearFix diaryT"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">新建游记</span></div>
+      <!-- diary_panel start-->
+      <div class="diary_panel"> 
+        <!-- <img class="uploaed_pic" src="../images/default/hotel.jpg" alt="">-->
+        <div class="addPic"><a class="addpic_Btn" href="#"><i>&nbsp;</i><font>设置游记头图</font>
+          <input type="file" name="pic" size="3" title="" class="filePrew_img">
+          </a></div>
+        <div class="diaryTit">
+          <div class="mb20">
+            <input class="bT" placeholder="游记标题" name="" type="text">
+          </div>
+          <div class="de_day"><span>
+            <input class="de" placeholder="目的地" name="" type="text">
+            </span><span>
+            <input class="dayN" placeholder="行程天数" name="" type="text">
+            </span><span>
+            <input class="lineNo" placeholder="线路编号关联（选题）" name="" type="text">
+            </span></div>
+        </div>
+      </div>
+      <!-- diary_panel END--> 
+      <!--diary_con start-->
+      <div class="diary_con">
+        
+        <div class="edit_input">
+          <textarea name="" cols="" placeholder="请输入游记内容" rows=""></textarea>
+        </div>
+      </div>
+      <!--diary_con END--> 
+      <!--diary_b start-->
+      <div class="diary_b clearFix">
+        <span class="floatR"><font class="saveTxt">保存草稿</font>
+        <input type="button" class="btn_ok big_button ft14 ml15" value="发表游记" name="">
+        </span></div>
+      <!--diary_b END--> 
+    </div>
+  </div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+$('#add_tit').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '添加标题',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#add_tit').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#add_tit,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+})	
+</script>
+</body>
+</html>

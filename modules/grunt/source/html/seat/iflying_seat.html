@@ -1,0 +1,99 @@
+<html ng-app='app'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>2016冲上云霄新春年会</title>
+    <meta name="viewport" content="width=650,user-scalable=0"/>
+    <link rel='stylesheet' href='/public/css/bootstrap.css'></link>
+    <script src="/public/jquery/js/jquery-1.11.3.min.js"></script>
+    <script src="/public/components/angular1.4.9/angular.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        font-size: 1.2em;
+        text-align: left;
+      }
+
+      .find {
+        position: relative;
+      }
+      .shuru {
+        position: absolute;
+        background: url(/public/images/iflying/ll_03.jpg);
+        width: 578px;
+        height: 131px;
+        top: 20%;
+        left: 5%;
+      }
+      .shuru input {
+        padding-left: 15px;
+        float: left;
+        width: 360px;
+        height: 70px;
+        border: none;
+        font-size: 24px;
+        background: #fff;
+        color: #999;
+        font-family: '微软雅黑';
+        line-height: 30px;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+      }
+      .shuru a {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+      }
+      .people .table {
+        font-size: 40px;
+        font-family: '微软雅黑';
+      }
+      .people .content {
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .people .title {
+        font-size: 48px;
+        font-family: '微软雅黑';
+        margin: 20px 0;
+        text-align: center;
+      }
+
+    </style>
+    <script type='text/javascript'>
+      angular.module('app', []).controller("seat", function($scope) {
+        $scope.firstTable = '[{"name":"叶建国", "content":"1.叶建国  浙江省旅游局副局长"},{"name":"吴胜武", "content":"2.吴胜武  宁波市海曙区 区长"},{"name":"陈佳强", "content":"3.陈佳强  宁波市审计局 局长"},{"name":"励永惠", "content":"4.励永惠  宁波市旅游局 局长"},{"name":"何国强", "content":"5.何国强  宁波梅山保税港区管委会 副主任"},{"name":"赵吉明", "content":"6.赵吉明  宁波市旅游局 巡视员"},{"name":"宣柏林", "content":"7.宣柏林  宁波市政府办公厅 副主任"},{"name":"顾卫卫", "content":"8.顾卫卫  宁波市旅游局 副书记"},{"name":"张宁辉", "content":"9.张宁辉  宁波市海曙区 常委"},{"name":"周明力", "content":"10.周明力  宁波市旅游局副局长"},{"name":"陈刚", "content":"11.陈  刚  宁波市旅游局副局长"},{"name":"杨雄鹰", "content":"12.杨雄鹰  宁波市旅游局副局长"},{"name":"金维连", "content":"13.金维连  宁波市规划局副局长"},{"name":"卜明长", "content":"14.卜明长  宁波市海曙区 副区长"},{"name":"林斌", "content":"15.林  斌  宁波市海曙区人大 副主任  海曙区总工会主席"},{"name":"朱至珍", "content":"16.朱至珍  原 宁波市旅游局局长  东钱湖管委会主任"},{"name":"陈国强", "content":"17.陈国强  原宁波市政府副秘书长  市大活动办 主任"},{"name":"王民宣", "content":"18.王民宣  原宁波市旅游局 巡视员"},{"name":"陈民宪", "content":"19.陈民宪  原宁波市旅游局 巡视员"},{"name":"王刚", "content":"20.王  刚  原宁波市旅游局副局长  饭店业协会会长"},{"name":"沈志宏", "content":"21.沈志宏  宁波市百精企业家俱乐部理事长  前程股份集团董事长"},{"name":"刘海洋", "content":"22.刘海洋  东方航空浙江分公司 副总经理"},{"name":"何斌锋", "content":"23.何斌锋  浙江飞扬旅游集团 董事长"}]';
+        $scope.data = '[{"table":"6号桌：旅游局1","content":"寇相年  刘伟国  潘旭光  邵道良  张春礼  朱敏惠  汤红梅  董聘怡  柳一兵  胡雁军 "},{"table":"11号桌：旅游局","content":"应专平  王健成  王挺威 周俏华  宣学军  朱晓豫  王聪  吴俊琦  陈旭钦  殷浩"},{"table":"1号桌：海曙区1","content":"曹杰  李平  庄宏  徐新桥  陈建东  蔡锐  汪卫星   张齐文  王俊  吴滨"},{"table":"2号桌：海曙区2","content":"欧益民  吕大元  林直  邓勇  狄淑波  冯超  季站长  郑韩龙  潘玲玲  童邵数"},{"table":"10号桌：鄞州  梅山","content":"施国裕  顾朝晖  周宏杉  宋文夫  李红伟  李昊阳 卢文庆  严涛  徐蓉蓉  王林彬"},{"table":"12号桌：","content":"王阿姨  王启人  王琪  李波  邬永进  石磊  石总夫人  杨露卿 俞瑶  李凯"},{"table":"55号桌：券商团队","content":"许斌  丁筱云  李惠丰  张伟  王军强  李春  周爱芬  吕群  邓宏玉  熊笛"},{"table":"7号桌：两有两爱班","content":"周千红  鲁国华  王仁祥  张国波  时朦  徐亮  万宏伟  连君斌   陈新卫  林峰"},{"table":"51号桌：朋友桌","content":"马迪  郑斌  严卫东  王晓枫 俞益君  陈雄  周宏山  戴云华  陈碧波  朴贤淑 段文杰  "},{"table":"50号桌：同 学","content":"王凯  郁建达 施晓亮  叶青松  诸琦  徐全忠  肖亮  王可  李迪蓉  童春媛"},{"table":"52号桌：家人桌 ","content":"倪老师  陈胤杰  钱洁  何文锴  秦最最  陈莹  陈嘉禾  季红  刘晶媛  宋玉霞"},{"table":"25号桌 ","content":"陈瑶  谢陈琴  胡佳宁  邵昕怡"},{"table":"75桌 财务","content":"陈威杰  陈伟  刘沛沛  张奕红  严俊海  黄秀娟  刘婧  俞晶晶  邵璐梦  于云帆  "},{"table":"85桌 财务","content":"陈琳、董梅香、周立红、俞禾、周冬微、陆玲玲、朱祥义、吴俊卿、何海雷  "},{"table":"21桌 行政中心","content":"裘郑、俞珊珊、陈思瑾、周佳贤、屠佳儿、杨玲玲、张静娜、潘蒙瑶、王丹丹、麻胜巍 "},{"table":"62桌 人资","content":"沈杨、王晨、黄心雨、宁欢、仝松锋、任旭东、沈璐玲、卢昌松、赖梦吉、崔淑芳 "},{"table":"72桌 人资","content":"李晓光、邓婕、许倩倩、陈贞志、韦小良、潘诗瑜、梁雪松、高吟、朱媛露、毛念露 "},{"table":"82桌 人资","content":"王浩、傅远柏、陈眉霖、潘昱萦、刘红江、葛蕾、华超琰、金鑫、何静妮、王元浩、于莹莹 "},{"table":"98桌 恒越","content":"吴伟龙、刘东、李秀贵、李森松、陈燕娜、陈丹珍、吴辉、林志文、厉刚明、耿巍嵩、李亚军 "},{"table":"99桌 恒越","content":"虞云祥、赖炯、王金燕、鲁盛杰、周科杰、李飞玲、金欠欠、邵瑾颖、倪欢、陈骋、杨剑 "},{"table":"97桌 运营","content":"胡陈君、吴海东、褚聃、陈妮、袁雪芳、李琳、缪靖靖、叶晓云、邹成孝、 "},{"table":"78桌 运营","content":"邵飞国、徐银珠、邹毅、冯骏飞、董银美、罗曼青、王征伊、金晶、虞晨帆、李珍珍、胡建钱 "},{"table":"79桌 运营","content":"王祖光、张和芳、施嫱娣、邵宝娣、陈菊香、王振妹、徐国良、裘顺来、曹力用、汪益敏 "},{"table":"17桌 运营","content":"毛雷君、许忻、邹洪珊、陈浪、戴洁敏、许老师、谢舒奕、周芳、丁晓红、叶佳 "},{"table":"19桌 运营","content":" 珂妮、秀丽、夏邑邈、陈杰、鲍莉瑛、蒋任宁、李白、王孟思、路小灯、陆小凤、刘维"},{"table":"95桌 舟山分公司","content":" 张峰、高晶、陈珂、祝超、钱鑫鑫、王东伟、李楠毅、陈哲、刘益平、沈朋飞"},{"table":"106桌 温州分公司","content":"徐晓晨、戴胜杰、单建文、徐东海、林建丹、张利达、夏伟毓、陈辅印、金大顺、池凤英、应强 "},{"table":"59桌 分公司","content":"成维、俞康雄、史久芳、陈蕙心、王惠祥、严余平、陈淇、朱邵根、魏巍（ "},{"table":"29桌 会展 高总","content":"石灵、陈颖、潘信伟、张光达、吕路宁、周江南、陆建范、高云飞、项海玲、王旖 "},{"table":"69桌 MVP","content":"孙宏娜、贺小春2位、温高峰、孙总、余强跟、孙立毅、朱晓丽、叶梦霞、苏莉娜 "},{"table":"65桌 MVP","content":" 陈英、张瑛、李佳路、袁乐、王益苹、孟静、许婷婷、施又菱、王丹妮、乐琼燕"},{"table":"9桌 导服中心","content":" 庄艳、郑力、康海浩、朱长江、钱咪咪、张金君、陈国健、毛静静、戴欢乐、陈晓枫"},{"table":"16桌 导服中心","content":"戴亚飞、仇金霞、祝一凤、谢程霞、陈琼、岑科、詹梦露、李亚咪、孔思颖、戴妍妃、厉垚斌 "},{"table":"18桌 导服中心","content":"陈圆圆、王燕、陈增来、竺洁莹、郑笛、陈奕、吴海娇、黄蓉、许越铖、康丹凤、邓娇梅 "},{"table":"89桌 导服中心","content":"丁熳菲、毛余雅、胡海娜、潘天芳、周洁琼、叶倩倩、胡伟雄、乐静微、夏小影、张海洋、杨伊莲 "},{"table":"88桌 导服中心","content":"徐卓瑾、陈安琪、唐菲敏、张娜、胡静、何秀芸、叶佳丽、徐冰蕾、尹娇娇、石维、吴蒙蒙 "},{"table":"90桌 导服中心","content":"范丽丽、干慎跃、王乐陆、杜丽娜、华梦阳、乐海滨、梁正艳、牛艳、陆妃娅、王丽、潘文魁 "},{"table":"28桌  航空中心","content":"徐甘霖、刘子田、陈洁、王新、杜洪恩、李凯、谢译雯、周松 "},{"table":"91桌  航空中心","content":"林军峰、龚红艳、龚荣丁、王雷、周镇辉、江上游、秦璐、王江山、黄超 "},{"table":"58桌  航空中心","content":" 张蓓蓓、胡红卫、孙格、叶朝辉、吴杰、朱章随、侯中清、马庆明、宋飞、叶泽东"},{"table":"68桌  航空中心","content":"谢奇敏、陈慧敏、陈立斌、代健、严淼、唐卉、柳丹、咸瑞、陈珑、陈亮 "},{"table":"96桌  航空中心","content":"王媛、王亚琴、曹庆来、童子渝、楼深波、钟雷、潘映晓、康吉祥、刘勇、王宝宁 "},{"table":"92桌  航空中心","content":" 胡丽清、娄彬彬、林莉、陈珍珍、周蓉蓉、张艳学、成以松、陈珠珍、刘治国、郑成忠"},{"table":"71桌 华东","content":"章丹丹、方虹、吴益春、葛剑斌、於金建、王梅凤、陈林娟、孙飞、朱国文、陈青渊 "},{"table":"70桌 华东","content":"叶巧丹、薛强、李荣康、周兴军、李林鹏、吴国信、吴清钦、励娅、周兵兵、江淑娟、蔡胜 "},{"table":"61桌 华东","content":"徐升、吴烨运、李吉喆、丁明辉、卢久望、胡建英、项文胜、杨家顺、高炎、张波 "},{"table":"80桌 华东","content":" 黄菲、孙旦、许其科、陈凯、霍璟、王红英、周军、周斌、吴小平、施斌、包银燕"},{"table":"60桌 华东","content":"乐林乐、胡小倩、章斌超、郑宝玉、王旭东、汪兆维、罗汀、李平、毛亦超 姚静娴 "},{"table":"81桌 华东","content":"郑燕、缪沁儒、柳杰、沈芊余、周巧燕、冯维雅、黄成威、王喆、汪帅帅、唐艳维 "},{"table":"20桌 航空公司","content":"武文韬、许峰、陈英龙、戴辉樾、王莉萍、鲍依伦、徐壮、郭荣彬、罗剑锋、胡渊钦、徐耀斌、陈晓冬 "},{"table":"66桌  澳非","content":"舒蓉淑、周全、徐瑾、陈丽、唐晓慧、鲍毅成、余红、施洁、夏至诚、陈胡叶、黄杏媛 "},{"table":"76桌  日本","content":"杨士培、彭鹰、陈菲、施恩琪、诸晓亮、叶晶晶、杨依蓉、汪叶群、李芷瑶、蒋贝贝、朱颖玮 "},{"table":"57桌  东南亚","content":"马根宝2、陈毅平、金志强、严俊杰、刘美娟、钱佳、卢爆、刘丹妮、王丽、崔志军 "},{"table":"100桌  台湾香港","content":"秦毅、莫燕敏、李康、陈旻沁、Cindy、林千惠、奚挺、汪娇、张静雅、董沁园 "},{"table":"101桌  二级+台湾","content":"叶莹莹、戚天恩、张昊宏、李婷、邬青青、俞琴、陈园园、吕咪、毛丽波、朱淑婷、林忠 "},{"table":"67桌 美洲","content":" 宋丽云、黄敏、陶耿华、阮菲、2供应商、姜文2位、王超、曹宁、顾佳玲"},{"table":"102桌 南亚+韩国 ","content":" 刘桂镁、王美蓉、冯依君、卢超慧、谢爱娜、徐嘉威、余雅、秦文欢、汪薇、陆利君"},{"table":"26桌 邮轮海岛","content":" 徐旭、刘盾、蔡赫2、方璟俊、邵汐、沈娜佳、袁月美、汪晨、褚盈、叶建峰"},{"table":"56桌 海岛邮轮","content":"顾少核、成骁、王亚军、徐珺、王娜佳、林文波、黄雪琪、张盛、黄坚、李晓俊"},{"table":"15桌 欧洲","content":"杨帆、葛冬吉、石韵、谢奕良、李宾斯、柴卿、王春峰、李丽梅、蔡佳丽 "},{"table":"27桌 欧洲+邮轮","content":" 尹莺、王玮、徐蕾、李英、朱晨微、何侃、钱佳慧、陈程、徐家平、刘碧燕、王明杰"},{"table":"77桌 第三方平台","content":"岑建清、孔德飞、龚旭东、傅凯雨、郑栋豪、李乔、冯一栋、戴娇娇、谢佩佩 "},{"table":"87桌 签证中心：","content":"陈健、周正、王晓敏、吴慧雯、彭云璐、潘碧雯、李安琪、施娇、王惠、岑森、汤婷婷"},{"table":"105桌 自由行","content":"宓方明、楼璐娜、胡光、张丽丽、陈丹、翁建军、王玉君、洪俊杰、夏杭晴、陈诗瑜、鲍姣蓉"}]';
+        $scope.people = JSON.parse($scope.data);
+        $scope.firstTableData = JSON.parse($scope.firstTable);
+      });
+    </script>
+  </head>
+  <body ng-controller="seat">
+    <div class="find">
+      <img src="/public/images/iflying/bk_02.jpg" style="height:200px" width="100%"/>
+      <div class="shuru">
+        <input type="text" placeholder="请输入您的姓名" name="" ng-model="search"/>
+        <a href="#"><img src="/public/images/iflying/menu_03.jpg"/></a>
+      </div>
+    </div>
+    <div class="nub_1"><img src="/public/images/iflying/no3.jpg" width="100%"></div>
+    <div class="people">
+      <dt class="title">
+        2016飞扬年会 排桌情况</dt>
+      <dd style="line-height:35px; padding:10px ">
+        <span ng-repeat="lingdao in firstTableData | filter:search:search">
+          <span ng-if="$index == 0" class="table">主桌0：<br/></span>
+
+					<span class="content">{{lingdao.content}}</br></span>
+        </span>
+				<br/>
+      </dd>
+      <div ng-repeat="person in people | filter:search:search" style="padding:10px;line-height:40px; font-size:2.2em;">
+        <span class="table">{{person.table}}</span><br/>
+        <dd class="content">{{person.content}}</dd><br/>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "Status": 0,
+    "Products": [
+        {
+            "Type": 5,
+            "Price": "125.00",
+            "Description": "SHDR Theatre Senior Ticket (BC-OLNET)",
+            "Name": "SHDR Theatre Senior Ticket (BC-OLNET)",
+            "PLU": "SHTHEOLNETSRBC"
+        }
+    ],
+    "OTAId": "OTA",
+    "Timestamp": "2015-11-11 10:05:53",
+    "VisitDate": "2015-11-11"
+}

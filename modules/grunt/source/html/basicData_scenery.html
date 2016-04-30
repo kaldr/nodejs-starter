@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">系统配置</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li>
+        <div class="subArr_tit">权限设置</div>
+        <div class="subMenu_panel"><a class="menu" href="#">未完成 <span>(1)</span></a><a class="menu" href="#">已完成 <span>(4)</span></a></div>
+      </li>
+      <li>
+        <div class="subArr_tit">基础数据</div>
+        <div class="subMenu_panel"><a class="menu" href="#">景点 </a><a class="menu" href="#">酒店 </a><a class="menu" href="#">交通 </a><a class="menu" href="#">签证 </a><a class="menu" href="#">邮轮品牌 </a><a class="menu" href="#">旅游用品 </a><a class="menu" href="#">当地游 </a><a class="menu" href="#">目的地 </a><a class="menu" href="#">委托社 </a></div>
+      </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="ft18 mb15">景区</h2>
+      <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>添加景区</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>国家</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>省份</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>城市</option>
+        </select>
+        <select class="form-control floatL w100 hideEle mr10">
+          <option>签证类型</option>
+        </select>
+      </div>
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1 hideEle">序号</span><span class="col-md-1 hideEle">国家</span><span class="col-md-4 two">景区名称</span><span class="col-md-1 two">景区级别</span><span class="col-md-5 hideEle">景区地址</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-1 hideEle">1</div>
+          <div class="col-md-1 hideEle">西班牙</div>
+          <div class="col-md-4 two">宁波凤凰山主题乐园</div>
+          <div class="col-md-1 two">5A级</div>
+          <div class="col-md-5 hideEle">宁波市北仑区辽河路</div>
+        </li>
+        <li>
+          <div class="col-md-1 hideEle">1</div>
+          <div class="col-md-1 hideEle">西班牙</div>
+          <div class="col-md-4 two">宁波凤凰山主题乐园</div>
+          <div class="col-md-1 two">5A级</div>
+          <div class="col-md-5 hideEle">宁波市北仑区辽河路</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  <!--zz_info start-->
+  <div id="zz_info">
+    <div class="zz_conts">
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">票务详情</span></div>
+      <div class="linkToolBar"><a onclick="edit();" href="#"> <i class="glyphicon glyphicon-edit">&nbsp;</i>编辑</a><a href="#"> <i class="glyphicon glyphicon-print">&nbsp;</i>打印</a><a href="#"> <i class="glyphicon glyphicon-download">&nbsp;</i>下载PDF文档</a><a href="#"> <i class="glyphicon glyphicon-trash">&nbsp;</i>删除</a><a href="#"> <i class="glyphicon glyphicon-shopping-cart">&nbsp;</i>点击下架</a></div>
+      <div class="traTit ft16 bold mb10">南湖风景名胜区</div>
+      <table class="tab_infoList mb20 ft14" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="10%">景区级别：</th>
+          <td>4A</td>
+        </tr>
+        <tr>
+          <th>景区特色：</th>
+          <td>主题乐园</td>
+        </tr>
+        <tr>
+          <th>景区地址：</th>
+          <td>嘉兴城南嘉兴市海盐塘路与南溪路交叉口</td>
+        </tr>
+      </table>
+      <div class="bold mb10 ft14">票价</div>
+      <table class="tabTra td-center mb20"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="8%">序号</th>
+          <th>门票名称</th>
+          <th width="16%">飞扬价格(元/人/张)</th>
+          <th width="16%">票面价格(元/人/张)</th>
+          <th width="16%">优惠（元/人/张）</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td class="left">
+            <p class="color3 mb5">南湖风景名胜区成人票 </p>
+            <div class="color6">预订时间：如需预订，您最晚要在游玩当天13:00前下单，请尽早预订。
+              包含项目：南湖景区大门票（会景园、湖心岛、小瀛洲（文字书碑苑）、伍相祠（壕股塔）、揽秀园、南湖革命纪念馆）。
+              预订说明：①为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息。</div>
+          </td>
+          <td>99.00</td>
+          <td>99.00</td>
+          <td>5.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="left">
+            <p class="color3 mb5">南湖风景名胜区成人票 </p>
+            <div class="color6">预订时间：如需预订，您最晚要在游玩当天13:00前下单，请尽早预订。
+              包含项目：南湖景区大门票（会景园、湖心岛、小瀛洲（文字书碑苑）、伍相祠（壕股塔）、揽秀园、南湖革命纪念馆）。
+              预订说明：①为保证取票、入园顺利，预订时请务必填写真实姓名、手机号码等信息。</div>
+          </td>
+          <td>99.00</td>
+          <td>99.00</td>
+          <td>5.00</td>
+        </tr>
+      </table>
+      <div class="bold mb10 ft14">景区介绍</div>
+      <div class="color6 pan_info mb15"> 南湖是浙江三大名湖之一，因位于嘉兴城南而得名。南湖原名滮湖、陆渭池、马场湖。南湖分为东、西两湖，形似 鸳鸯交颈，古时湖中常有鸳鸯 栖息，因此又名鸳鸯湖。由于地处太湖流域水网地带，四周地势平坦，河港纵横，湖上 承长水塘、海盐塘、杭州塘，下泄平湖塘、嘉善塘、苏州塘， 地形如同八卦，故又有“秀水福地”的雅称。从唐朝起 ，南湖以其“轻烟拂渚，微风欲来”的迷人景色，成为江南著名的游览胜地。宋代起，嘉兴南 湖与杭州的西湖、绍兴 的东湖齐名，成为浙江的三大名湖之一。明代，江南商业繁华，嘉兴被誉为江东一大都会，南湖更是游览兴盛。<br>
+        千百年来，南湖以其特有的风姿吸引着四方的游人，历代文人学士为南湖留下了无数动人的诗篇和美奂绝伦的画卷 ，如今在岛上还保留着不少文物 价值极高的字碑石刻，有：宋朝四大书法家之一米芾的真迹诗碑、宋朝诗人苏东坡的 “马券石刻”、元朝四大书画家之一吴镇的“风竹图”、明朝大 书法家董其昌的“鱼乐国”石碑、清朝书法家冀应龙 “烟雨楼”手迹等等<br>
+        目前，南湖风景名胜区是国家AAAAA级景区、全国红色旅游经典景区、华东旅游线上著名的旅游区、全国百个爱国主义教育示范基地之一。同 时，南湖风景区也是浙江省党员教育基地、廉政文化基地和诚信景区。 </div>
+    </div>
+    <!--zz_info END--> 
+  </div>
+  <!--container END--> 
+  <!--warn_box start-->
+  <div id="warn_box"> <a id="w_close" class="close_s i_common close_b" onClick="window.close()" href="#">&nbsp;</a>
+    <div class="ft16 mb20 clearFix pt20 red_t"><i class="w info_b floatL">&nbsp;</i>提醒事项</div>
+    <h2 class="mb10">转正/调薪审批</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR col-md-9">
+          <p class="mb5 pt5"> <span class="ft14 mr10">余珊珊</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>你的转正/调薪审批已通过</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">意向客户</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：已过预期跟踪时间</p>
+        </div>
+      </div>
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default_ava.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">系统通知</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>意向客户：有一条意向客户认领</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="mb10">最新任务</h2>
+    <div class="mb20">
+      <div class="clearFix warn_rowAva"> <a class="floatL" href="#"><img class="ava50" src="../images/default/pic1.jpg" alt=""></a>
+        <div class="floatR w200">
+          <p class="mb5 pt5"> <span class="ft14 mr10">韩璐</span><font class="color9 date">2015-08-30  13：45：12</font> </p>
+          <p>给你分配了一条任务：设计一条从宁波
+            到美国的组团游线路</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--warn_box END--> 
+</div>
+<!--container END--> 
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  添加定制游 start-->
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onClick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">添加景区</span></div>
+      <ul class="step_info clearFix">
+        <li class="first finished"><span class="stepTxt">基本信息</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="finished"><span class="stepTxt">具体介绍</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="ongoing"><span class="stepTxt">门票设置</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="ongoing"><span class="stepTxt">保险</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li><span class="stepTxt">完成</span><span class="lineStep">&nbsp;</span><span class="dotStep">&nbsp;</span></li>
+        <li class="last"><span class="lineStep">&nbsp;</span></li>
+      </ul>
+      <!-- 基本信息 each_step start-->
+      <div class="each_step" style="display:block;">
+        <p class="ft14 bold mb10">基础信息</p>
+        <form role="form" action="#" class="form-horizontal my_form clearFix mb20" novalidate>
+          <!--basicInfo start-->
+          <div class="basicInfo">
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-2 control-label">景区名称：</label>
+                <div class="col-md-10">
+                  <input type="text" placeholder="输入景区名称" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-2 control-label">景区级别：</label>
+                <div class="col-md-10">
+                  <select class="form-control">
+                    <option>5A级</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-2 control-label">景区地址：</label>
+                <div class="col-md-10">
+                  <p class="mb10">
+                    <select class="form-control w100 mr10">
+                      <option>国家</option>
+                    </select>
+                    <select class="form-control w100 mr10">
+                      <option>省份</option>
+                    </select>
+                    <select class="form-control w100">
+                      <option>城市</option>
+                    </select>
+                  </p>
+                  <p class="mb10">
+                    <input type="text" placeholder="详细地址" class="form-control">
+                  </p>
+                  <p><a class="blue_txt" href="#">地图标注</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="row_h row_full">
+              <div class="form-group">
+                <label class="col-md-2 control-label">简要描述：</label>
+                <div class="col-md-10">
+                  <textarea class="form-control" name="" cols="" placeholder="填写简要描述" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--basicInfo END--> 
+          <!--upload_box start-->
+          <div class="upload_box"> <a class="btn_addPic2 bigLoad" href="javascript:void(0);"><span class="add_txt">+</span>
+            <p>点击添加详细页轮显图<br>
+              此图为封面图</p>
+            <input type="file" class="filePrew_img" title="" size="3" name="pic">
+            <div class="picLoad"></div>
+            </a>
+            <ul class="uploadList">
+              <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                <div class="picLoad"><img src="../images/default/p3.jpg" alt=""></div>
+                </a> </li>
+              <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                <div class="picLoad"></div>
+                </a> </li>
+              <li> <a class="btn_addPic2" href="javascript:void(0);"><span class="add_txt">+</span>
+                <input type="file" class="filePrew_img" title="" size="3" name="pic">
+                <div class="picLoad"></div>
+                </a> </li>
+            </ul>
+          </div>
+          <!--upload_box END-->
+        </form>
+        <p class="mb10">景区特色：</p>
+        <div class="checkGroup gb">
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            滑雪 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            休闲</label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            文化 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            登山 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            探险 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            温泉 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            演出 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            摄影 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            生态旅游 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            园林 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            古镇 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            农家乐 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            古迹 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            避暑 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            游船 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            水乡 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            漂流 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            森林公园 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            海滨海岛 </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" name="" value="">
+            主题乐园 </label>
+        </div>
+        <div class="fixed_btnRow"><a class="btn_s red_btn" href="#">下一步</a></div>
+      </div>
+      <!-- 1 基本信息 each_step END--> 
+      <!-- 2 具体介绍 each_step start-->
+      <div class="each_step">
+        <div class="edit_area">
+          <div class="edit_tool"><a href="#"><i class="pic_i">&nbsp;</i>添加图片</a><a id="add_tit" data-container="body"  data-placement="bottom" href="#"><i class="tit_i">&nbsp;</i>添加标题</a>
+            <div id="popover-content" class="hide">
+              <input class="input" name="" type="text" placeholder="输入标题名称">
+              <div class="algin_right">
+                <input type="button" class="btn_ok mr10" value="确定" name="">
+                <input type="button" class="btn_cancel" value="取消" name="">
+              </div>
+            </div>
+          </div>
+          <div class="editor" contenteditable="true"> </div>
+        </div>
+        <div class="fixed_btnRow"><a class="btn_s red_btn" href="#">下一步</a></div>
+      </div>
+      <!-- 2 具体介绍 each_step END--> 
+      <!-- 3 门票设置 each_step start-->
+      <div class="each_step">
+        <div class="mb10"> <a id="addPic" class="blue_txt" href="#">添加门票</a></div>
+        <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+          <tbody>
+            <tr>
+              <th width="10%">序号</th>
+              <th width="32%">门票名称</th>
+              <th width="18%">销售价格(元/人/张)</th>
+              <th width="18%">代理价格(元/人/张)</th>
+              <th width="13%">库存数量(张)</th>
+              <th>操作 </th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>杭州建德新安江玉温泉门票</td>
+              <td>99.00</td>
+              <td>90.00</td>
+              <td>9998</td>
+              <td> <a class="blue_txt" href="#">删除</a> </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="outline_box" style="overflow:visible;">
+          <p class="mb10"><b class="ft14">添加门票</b></p>
+          <table class="form_tab noFixed mb10"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="10%">门票名称：</th>
+              <td colspan="3">
+                <input type="" placeholder="" id="" class="form-control">
+              </td>
+              <th>有效截止日：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control">
+              </td>
+            </tr>
+            <tr>
+              <th>销售价格：</th>
+              <td width="19%">
+                <input type="" placeholder="" id="" class="form-control w80">
+                元/人/张 </td>
+              <th width="13%">代理价格：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w80">
+                元/人/张 </td>
+              <th width="15%">第三方平台验证：</th>
+              <td>
+                <div class="relative">
+                  <p>
+                    <label class="radio-inline">
+                      <input type="radio" value="option1" id="" name="">
+                      是 </label>
+                    <label class="radio-inline">
+                      <input type="radio" value="option2" id="" name="">
+                      否 </label>
+                  </p>
+                  <!--popBox start-->
+                  <div class="popBox"> <span class="arr_t"></span>
+                    <h3 class="popover-title">第三方产品验证设置</h3>
+                    <div class="popover-content">
+                      <table class="form_tab noFixed" style="width:690px;" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <th width="10%">产品编号：</th>
+                          <td width="20%">
+                            <input type="" class="form-control" id="" placeholder="">
+                          </td>
+                          <th width="15%">产品名称：</th>
+                          <td width="20%">
+                            <input type="" class="form-control" id="" placeholder="">
+                          </td>
+                          <th width="15%">产品来源：</th>
+                          <td width="20%">
+                            <select name="" class="form-control">
+                              <option>选择来源</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="ver_topTh">产品描述：</th>
+                          <td colspan="5">
+                            <textarea rows="" cols="" name="" class="form-control"></textarea>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="ver_topTh">验证说明：</th>
+                          <td colspan="5">
+                            <textarea rows="" cols="" name="" class="form-control"></textarea>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="popover-footer">
+                      <input class="btn_ok red_btn  mr10" type="button" value="确定">
+                      <input type="button" class="btn_cancel" value="取消">
+                    </div>
+                  </div>
+                  <!--popBox END--> 
+                  
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>提前预定：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w100">
+                小时 </td>
+              <th>最少预订：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w100">
+                张 </td>
+              <th>最多预订：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w100">
+                张</td>
+            </tr>
+            <tr>
+              <th>保留票数：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w100">
+                张 </td>
+              <th>库存数量：</th>
+              <td>
+                <input type="" placeholder="" id="" class="form-control w100">
+                张 </td>
+              <th>支付形式：</th>
+              <td>
+                <select name="" class="form-control">
+                  <option>网上付款</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>结算单位：</th>
+              <td class="relative" colspan="5"><a class="btn_s red_btn blueBtn" href="#">选择合作单位 </a>
+                <div class="popBox full-width" style="top:45px;"> <span class="arr_t"></span>
+                  <h3 class="popover-title">选择合作单位 </h3>
+                  <!-- popover-content start-->
+                  <div class="popover-content">
+                    <div class="mb10">
+                      <label class="search_qp mr10"><span class="search_i"></span>
+                        <input type="text" placeholder="输入相关合作单位关键词进行搜索" style="width:270px" class="form-control w250">
+                      </label>
+                      <select class="form-control w120" name="">
+                        <option>全部类型</option>
+                      </select>
+                    </div>
+                    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10">
+                      <tbody>
+                        <tr>
+                          <th width="13%">类型</th>
+                          <th width="20%">单位名称</th>
+                          <th>联系人信息</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="line20">公司</p>
+                          </td>
+                          <td class="left">
+                            <p class="line20">宁波万达国际旅行社有限公司</p>
+                          </td>
+                          <td>
+                            <table cellspacing="0" cellpadding="0" border="0" class="tabTra cellTab">
+                              <tbody>
+                                <tr>
+                                  <td width="34%">
+                                    <div class="algin_left cT">联系人：曹仁<br>
+                                      电话：87233508<br>
+                                      手机：13681991110</div>
+                                  </td>
+                                  <td>
+                                    <div class="algin_left cT">账户：上海美丽旅行社有限公司<br>
+                                      账号：33101983679050523111 </div>
+                                  </td>
+                                  <td width="15%">
+                                    <div class="cT"><a href="#" class="blue_txt">选择</a></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" border="0" class="tabTra cellTab activeT">
+                              <tbody>
+                                <tr>
+                                  <td width="34%">
+                                    <div class="algin_left cT">联系人：曹仁<br>
+                                      电话：87233508<br>
+                                      手机：13681991110</div>
+                                  </td>
+                                  <td>
+                                    <div class="algin_left cT">账户：上海美丽旅行社有限公司<br>
+                                      账号：33101983679050523111 </div>
+                                  </td>
+                                  <td width="15%">
+                                    <div class="cT"><a href="#" class="blue_txt">选择</a></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="line20">公司</p>
+                          </td>
+                          <td class="left">
+                            <p class="line20">宁波万达国际旅行社有限公司</p>
+                          </td>
+                          <td>
+                            <table cellspacing="0" cellpadding="0" border="0" class="tabTra cellTab">
+                              <tbody>
+                                <tr>
+                                  <td width="34%">
+                                    <div class="algin_left cT">联系人：曹仁<br>
+                                      电话：87233508<br>
+                                      手机：13681991110</div>
+                                  </td>
+                                  <td>
+                                    <div class="algin_left cT">账户：上海美丽旅行社有限公司<br>
+                                      账号：33101983679050523111 </div>
+                                  </td>
+                                  <td width="15%">
+                                    <div class="cT"><a href="#" class="blue_txt">选择</a></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="3">
+                            <ul class="pagination">
+                              <li><a href="#">«</a></li>
+                              <li><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li><a href="#">»</a></li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- popover-content END--> 
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="btnRow clearFix">
+          <input type="button" value="确定" class="btn_ok red_btn  mr10">
+          <input type="button" value="取消" class="btn_cancel">
+        </div>
+        <div class="fixed_btnRow"><a class="btn_s red_btn" href="#">下一步</a></div>
+      </div>
+      <!-- 3 门票设置 each_step END--> 
+      <!-- 4 保险 each_step satart-->
+      <div class="each_step">
+        <div style="top:360px; left:10px;" class="popBox full-width"> <span class="arr_t"></span>
+          <h3 class="popover-title">添加险种 </h3>
+          <!-- popover-content start-->
+          <div class="popover-content">
+            <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+              <tbody>
+                <tr>
+                  <th>
+                    <label>
+                      <input name="" type="checkbox" value="">
+                    </label>
+                  </th>
+                  <th width="10%">保险ID</th>
+                  <th width="14%">保险公司</th>
+                  <th width="13%">险种编号</th>
+                  <th width="22%">保险类型</th>
+                  <th width="32%">保险说明</th>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input name="" type="checkbox" value="">
+                    </label>
+                  </td>
+                  <td>262555</td>
+                  <td>泰康保险</td>
+                  <td>20201424</td>
+                  <td class="left">泰康境内旅意险(高端版)</td>
+                  <td class="left">高端境内旅游保障，彰显尊贵身价，全面护航</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- popover-content END-->
+          <div class="popover-footer">
+            <input type="button" class="btn_ok red_btn  mr10" value="确定">
+            <input type="button" class="btn_cancel" value="取消">
+          </div>
+        </div>
+        <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是已添加保险(请程序删除这行提示)--------------------</div>
+        <div class="mb10"><a class="blue_txt mr20" href="#">添加险种</a> </div>
+        <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+          <tr>
+            <th width="10%">保险ID</th>
+            <th width="14%">保险公司</th>
+            <th width="13%">险种编号</th>
+            <th width="22%">保险类型</th>
+            <th width="32%">保险说明</th>
+            <th>操作 </th>
+          </tr>
+          <tr>
+            <td>262555</td>
+            <td>泰康保险</td>
+            <td>20201424</td>
+            <td class="left">泰康境内旅意险(高端版)</td>
+            <td class="left">高端境内旅游保障，彰显尊贵身价，全面护航</td>
+            <td> <a class="blue_txt" href="#">删除</a> </td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>泰康保险</td>
+            <td>20201424</td>
+            <td class="left">泰康境外旅意险(户外运动版)</td>
+            <td class="left">特别承保滑雪、骑马、潜水、攀岩等热门娱乐项目</td>
+            <td> <a class="blue_txt" href="#">删除</a> </td>
+          </tr>
+        </table>
+        <div class="fixed_btnRow"><a class="btn_s red_btn" href="#">下一步</a></div>
+      </div>
+      <!-- 4 保险 each_step END--> 
+      <!-- 5 完成 each_step start-->
+      <div class="each_step">
+        <div class="finishedRow mb20"><span class="glyphicon glyphicon-ok-circle mr10"></span><span class="ft20 color9">保存成功！</span></div>
+        <p class="ft14 color6 center mb25">您所编辑的这家酒店已为您保存成功，您点击以下按钮进行操作</p>
+        <div class="center"><a href="#" class="btn_s mr20 red_btn">继续添加</a><a href="#" class="btn_s mr20 red_btn cancelBtn">返回列表</a></div>
+      </div>
+      <!-- 5 完成 each_step END--> 
+    </div>
+    <!--  END--> 
+    
+  </div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('#add_tit').popover({ 
+	trigger:'manual', 
+    html : true,  
+    title: '添加标题',  
+    content: function() {  
+           return $("#popover-content").html();  
+       }  
+}).on("click", function () {
+	 $(".popover").hide();
+     var _this = this;
+     $(this).popover("show");
+		   
+	 $(".btn_cancel").click( function() { 
+		 $('#add_tit').popover('hide')
+    });
+    $(".btn_ok").click( function() { 
+		alert("test");
+    });
+}); 
+//点击popover外pop消失	
+$(document).bind("click",function(e){ 
+	var target = $(e.target); 
+	if(target.closest("#add_tit,.popover").length == 0){ 
+	   $(".popover").hide();
+	} 
+})
+</script>
+</body>
+</html>

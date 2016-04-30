@@ -1,0 +1,94 @@
+<html ng-app='app'>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>2016冲上云霄新春年会</title>
+    <meta name="viewport" content="width=650,user-scalable=0"/>
+    <link rel='stylesheet' href='/public/css/bootstrap.css'></link>
+    <script src="/public/components/angular1.4.9/angular.min.js"></script>
+    <script type='text/javascript'>
+      angular.module('app', []).controller("seat", function($scope, $http,$timeout) {
+        $scope.url = "http://crm.feiyang.cn:6688/prizeAction.ashx";
+        // $scope.url = "http://erp.iflying.com/draw/insertDraw";
+
+        $scope.isProcess = false;
+
+        $scope.drawCount = 0;
+
+        $scope.successCount = 0;
+
+        $scope.drawList = [];
+
+        $scope.startTime = 0;
+
+        $scope.endTime = 0;
+
+        $scope.draw = function() {
+          if ($scope.isProcess) {
+            var param = {
+              // nickname: '1111',
+              // headimgurl: "http://pic.feiyang.cn//upFile/Personal/551/2014101716260946.jpg",
+              // openid: '111111',
+              // Usertype: 1,
+              personid:Math.ceil(Math.random()*4000)
+            };
+            var config = {
+              url: $scope.url,
+              params: param,
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+              }
+            };
+            $http(config).then(function(response) {
+              $scope.successCount++;
+              $scope.draw();
+              // $scope.drawList.push(response);
+            }, function() {
+              $scope.draw();
+            });
+            $scope.drawCount++;
+          }
+        }
+
+        $scope.clear = function(){
+          $scope.drawCount = 0;
+          $scope.successCount = 0;
+        }
+
+        $scope.startDraw = function(time) {
+          $scope.isProcess = true;
+          $scope.startTime = new Date();
+          $scope.draw();
+          if(time){
+            $timeout(function(){
+              $scope.stopDraw();
+            },time*1000);
+          }
+        }
+
+        $scope.stopDraw = function() {
+          $scope.isProcess = false;
+          $scope.endTime = new Date();
+        }
+      });
+    </script>
+  </head>
+  <body ng-controller="seat">
+    <div>
+      <button ng-click='startDraw()'>开始自动抽奖</button>
+      <button ng-click='startDraw(180)'>开始自动抽奖(3分钟)</button>
+      <button ng-click='stopDraw()'>停止</button>
+      <button ng-click='clear()'>清零</button>
+      <p>抽奖次数：{{drawCount}}次</p>
+      <p>成功次数：{{successCount}}次</p>
+      <p>运行状态：{{isProcess}}</p>
+      <p>开始时间：{{startTime}}</p>
+      <p>结束时间：{{endTime}}</p>
+    </div>
+    <ul>
+      <li ng-repeat='item in drawList'>
+        {{item}}
+      </li>
+    </ul>
+  </body>
+</html>

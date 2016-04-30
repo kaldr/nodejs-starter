@@ -1,0 +1,2669 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<link rel="stylesheet" type="text/css" href="../css/order.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script>
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body style="overflow:auto; position:relative;">
+<!-- 撤回结算start -->
+<div class="popBox auto" style="top:10px; left:10px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">撤回结算</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="23%">结算金额：</th>
+        <td>
+          <input type="text" placeholder="" class="form-control" name="">
+          <p class="color6">可支付金额：<font class="red_t">￥5220</font></p>
+        </td>
+      </tr>
+      <tr>
+        <th>结算通道：</th>
+        <td>
+          <select class="form-control" name="">
+            <option>转账</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!-- 取消结算start -->
+<div class="popBox auto" style="top:240px; left:10px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">取消结算</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="23%">取消理由：</th>
+        <td>
+          <textarea class="form-control" name="" cols="" rows="3"></textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!-- 订单预付款撤回 支出款收款start -->
+<div class="popBox auto" style="top:10px; left:380px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">支出款收款</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="23%">收款金额：</th>
+        <td> <font class="red_t">￥5220</font> </td>
+      </tr>
+      <tr>
+        <th>收款方式：</th>
+        <td>
+          <select class="form-control" name="">
+            <option>转账</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>备注：</th>
+        <td>
+          <textarea rows="3" cols="" name="" class="form-control"></textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!-- 订单预付款撤回 退回start -->
+<div class="popBox auto" style="top:280px; left:380px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">退回</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="23%">退回备注：</th>
+        <td>
+          <textarea class="form-control" name="" cols="" rows="3"></textarea>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!-- 会员卡退款结算start -->
+<div class="popBox auto" style="top:10px; left:740px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">报销结算</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="21%">付款金额：</th>
+        <td>
+          <input type="text" placeholder="" class="form-control" name="">
+          <p class="color6">可支付金额：<font class="red_t">￥5220</font></p>
+        </td>
+      </tr>
+      <tr>
+        <th>发生时间：</th>
+        <td>
+          <div class="input-group date form_date"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+          </div>
+          <span class="color6">如需修改分摊发生时间，请修改，否则无需操作</span> </td>
+      </tr>
+      <tr>
+        <th>支付方式：</th>
+        <td>
+          <select class="form-control" name="">
+            <option>转账</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!-- 支付款付款start -->
+<div class="popBox auto" style="top:320px; left:740px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">支付款付款</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab w300" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="21%">付款金额：</th>
+        <td>
+          <input type="text" placeholder="" class="form-control" name="">
+          <p class="color6">可支付金额：<font class="red_t">￥5220</font></p>
+        </td>
+      </tr>
+      <tr>
+        <th>结算单位：</th>
+        <td>
+          <input type="text" placeholder="" class="form-control w150 floatL mr10" name="">
+          <a href="#" class="btn_s red_btn blueBtn" style="padding:7px 10px;">更改结算单位 </a> </td>
+      </tr>
+      <tr>
+        <th>支付方式：</th>
+        <td>
+          <select class="form-control" name="">
+            <option>现金</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>付款银行：</th>
+        <td>
+          <select class="form-control" name="">
+            <option></option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--选择对应的订单记录 start-->
+<div style="top:10px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择对应的订单记录 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入保单号或姓名">
+      </label>
+      <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          <th width="5%">
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </th>
+          <th>订单信息 </th>
+          <th width="8%">人数</th>
+          <th width="12%">未收款</th>
+          <th width="13%">客户</th>
+          <th width="8%">计调 </th>
+          <th width="8%">销售</th>
+          <th width="8%">业务员</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </td>
+          <td class="left">
+            <p>D00308713(签证)</p>
+            <p>美国B1/B2（商务/旅游）签证(2016-07-16)</p>
+          </td>
+          <td> 9 </td>
+          <td><font class="red_t">15598.00</font></td>
+          <td>陈锦春<br>
+            13967897160</td>
+          <td><a href="#" class="blue_txt">汪娇</a></td>
+          <td><a href="#" class="blue_txt">汪娇</a></td>
+          <td><a href="#" class="blue_txt">汪娇</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--选择对应的地接款记录 start-->
+<div style="top:250px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择对应的地接款记录 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入保单号或姓名">
+      </label>
+      <div class="input-group date form_date w200 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          <th width="5%">
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </th>
+          <th width="12%">三清单日期 </th>
+          <th>结算项目</th>
+          <th width="19%">结算单位 </th>
+          <th width="13%">所属三清单 </th>
+          <th width="11%">未结算 </th>
+          <th width="8%">计调 </th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" value="" name="">
+            </label>
+          </td>
+          <td>2015-12-15</td>
+          <td class="left">
+            <p>2015年12月9日全新泰国魅力六晚七日游</p>
+            <p>地接款,全新泰国魅力六晚七日游</p>
+          </td>
+          <td> <a class="blue_txt" href="#">泰国腾飞旅运有限公司</a> </td>
+          <td><a class="blue_txt" href="#">Q000063169</a>
+            <p class="green_txt">通过审核</p>
+          </td>
+          <td><font class="red_t">-15598.00</font></td>
+          <td><a href="#" class="blue_txt">汪娇</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--结算单位 start-->
+<div style="top:450px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">结算单位</h3>
+  <!-- popover-content start-->
+  <div class="popover-content w400">
+    <p class="ft16 mb10 pt10">中国国际航空股份有限公司</p>
+    <div class="outline_box mb10">
+      <table class="tab_infoList" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="25%">帐户：</th>
+          <td>台州新天地旅行社有限公司</td>
+        </tr>
+        <tr>
+          <th>账号：</th>
+          <td>51151791400015</td>
+        </tr>
+        <tr>
+          <th>开户银行：</th>
+          <td>台州银行市府大道支行</td>
+        </tr>
+      </table>
+    </div>
+    <div class="outline_box">
+      <table class="tab_infoList" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="18%">联系人：</th>
+          <td>TMS</td>
+        </tr>
+        <tr>
+          <th>电话 ：</th>
+          <td>21-61767399*114</td>
+        </tr>
+        <tr>
+          <th>账户  ：</th>
+          <td>PT.TJENDANA MANDRA SAKTI</td>
+        </tr>
+        <tr>
+          <th>账号   ：</th>
+          <td>146-219-1973</td>
+        </tr>
+        <tr>
+          <th>开户行     ：</th>
+          <td>Bank Central Asia</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+<!--添加收款 start-->
+<div style="top:500px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">添加收款 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th width="11%">收款金额：</th>
+          <td width="37%">
+            <input type="text" name="" placeholder="请输入收款金额" class="form-control">
+          </td>
+          <th>收款类型：</th>
+          <td width="37%">
+            <select name="" class="form-control">
+              <option>请选择收款类型</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>收款方式：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>请选择收款方式</option>
+            </select>
+          </td>
+          <th>收款银行：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>请选择收款银行</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--添加退款 start-->
+<div style="top:750px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">添加退款 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th width="11%">退款金额：</th>
+          <td width="37%">
+            <input type="text" name="" placeholder="请输入退款金额" class="form-control">
+          </td>
+          <th>退款类型：</th>
+          <td width="37%">
+            <select name="" class="form-control">
+              <option>请选择退款类型</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>退款方式：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>请选择退款方式</option>
+            </select>
+          </td>
+          <th>退款银行：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>请选择退款银行</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--新增提取 start-->
+<div style="top:750px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">新增提取 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="outline_box mb20">提成金额：应付 <font class="red_t">782144.49</font> 元，已付 <font class="red_t">585613.14</font> 元，未付 <font class="red_t">196531.35</font> 元</div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th>名称：</th>
+          <td colspan="3">
+            <input type="text" name="" placeholder="请输入名称" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <th width="11%">提取金额：</th>
+          <td width="37%">
+            <input type="text" name="" placeholder="" class="form-control">
+          </td>
+          <th>提取方式：</th>
+          <td width="37%">
+            <select name="" class="form-control">
+              <option>支付宝</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--统一开票 start-->
+<div style="left:406px; top:470px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">统一开票</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="21%">订单号：</th>
+          <td>D00311107，D00311106</td>
+        </tr>
+        <tr>
+          <th>销售：</th>
+          <td>崔志军,徐蕾</td>
+        </tr>
+        <tr>
+          <th>订单总额：</th>
+          <td> <font class="red_t">7278</font> </td>
+        </tr>
+        <tr>
+          <th>发票号码：</th>
+          <td>
+            <input type="text" name="" class="form-control" placeholder="请输入发票号码">
+          </td>
+        </tr>
+        <tr>
+          <th>发票金额：</th>
+          <td>
+            <input type="text" name="" class="form-control" placeholder="请输入发票金额">
+          </td>
+        </tr>
+        <tr>
+          <th>备注：</th>
+          <td>
+            <textarea rows="3" cols="" placeholder="请输入备注" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--转移 start-->
+<div style="top:820px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">转移</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="23%">转移对象：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>请选择</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--团队 start-->
+<div style="top:980px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">团队</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="23%">线路名称：</th>
+          <td>
+            <input type="text" placeholder="老班长线路" class="form-control" name="">
+          </td>
+        </tr>
+        <tr>
+          <th>起止时间：</th>
+          <td>
+            <div class="input-group date form_date"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--订单未付款原因 start-->
+<div style="top:1180px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">订单未付款原因</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <textarea class="form-control" name="" placeholder="请输入订单未付款原因" cols="" rows="3"></textarea>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--扣除优惠 start-->
+<div style="top:1380px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">扣除优惠</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="23%">扣除优惠：</th>
+          <td>
+            <input type="text" name="" class="form-control" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th>扣除说明：</th>
+          <td>
+            <textarea class="form-control" name="" placeholder="" cols="" rows="3"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--设置提成比例 start-->
+<div class="popBox auto" style="top:1620px; left:10px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">设置提成比例</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="23%">提成比例：</th>
+          <td>
+            <input type="text" name="" class="form-control w200" placeholder="">
+            % </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--保险信息 start-->
+<div style="top:1100px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">保险信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          <th>被保人</th>
+          <th width="23%">证件信息</th>
+          <th width="23%">保险险种</th>
+          <th width="13%">金额(元)</th>
+          <th width="13%">成本(元)</th>
+          <th width="13%">状态</th>
+        </tr>
+        <tr>
+          <td>顾村长</td>
+          <td>330282199012120235</td>
+          <td>泰康境内旅游意外险</td>
+          <td>20.00</td>
+          <td>18.00</td>
+          <td><span class="green_txt">已投保</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="center">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+<!--手续费信息 start-->
+<div style="top:1250px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">手续费信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10">
+      <tbody>
+        <tr>
+          <th width="12%">消费方式 </th>
+          <th width="18%">银行 </th>
+          <th width="16%">发生金额(元)</th>
+          <th width="15%">手续费(元)</th>
+          <th>描述 </th>
+        </tr>
+        <tr>
+          <td>刷卡</td>
+          <td>其他银行</td>
+          <td>8300.00</td>
+          <td><font class="red_t">20.00</font></td>
+          <td>无</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END--> 
+</div>
+<!--赠品信息 start-->
+<div style="top:1400px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">赠品信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10">
+      <tbody>
+        <tr>
+          <th width="14%">旅行用品名称 </th>
+          <th width="13%">库存数量 </th>
+          <th width="9%">数量</th>
+          <th width="11%">单价(元)</th>
+          <th width="11%">总价(元)</th>
+          <th width="12%">出入库状态</th>
+          <th>备注</th>
+          <th width="12%">操作</th>
+        </tr>
+        <tr>
+          <td>电源转换器</td>
+          <td>6681</td>
+          <td>1</td>
+          <td>29.88</td>
+          <td><font class="red_t">29.88</font></td>
+          <td><font class="green_txt">已出库</font></td>
+          <td></td>
+          <td><a class="blue_txt" href="#">删除</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END--> 
+</div>
+<!--采购信息 start-->
+<div style="top:1550px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">采购信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10">
+      <tbody>
+        <tr>
+          <th width="11%">类型 </th>
+          <th>产品名称 </th>
+          <th width="25%">结算单位</th>
+          <th width="12%">分配成本(元)</th>
+          <th width="27%">报价说明 </th>
+        </tr>
+        <tr>
+          <td>
+            <p>支出</p>
+            <p>（转账）</p>
+          </td>
+          <td>11.19-11.25台湾七天机票款</td>
+          <td><a class="blue_txt" href="#">台湾长荣航空股份有限公司上海代表处</a></td>
+          <td><font class="red_t">29.88</font></td>
+          <td>1335*19成人+735*1领队=26100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END--> 
+</div>
+<!--添加采购成本 start-->
+<div style="top:1750px; left:1100px;" class="popBox full-width">
+<span class="arr_t"></span>
+<h3 class="popover-title">添加采购成本 </h3>
+<!-- popover-content start-->
+<div class="popover-content">
+  <table class="form_tab th-right mb15" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th>产品类型：</th>
+      <td>
+        <select class="form-control" name="">
+          <option>请选择</option>
+        </select>
+      </td>
+      <th>产品名称：</th>
+      <td colspan="5">
+        <input type="text" name="" class="form-control" placeholder="输入产品名称">
+      </td>
+    </tr>
+    <tr>
+      <th>结算单位：</th>
+      <td colspan="5"><a class="btn_s red_btn blueBtn" href="#">选择结算单位 </a></td>
+    </tr>
+    <tr>
+      <th width="10%">结算通道：</th>
+      <td>
+        <select class="form-control" name="">
+          <option>请选择</option>
+        </select>
+      </td>
+      <th width="13%">支付类型：</th>
+      <td width="17%">
+        <select class="form-control" name="">
+          <option>支出</option>
+        </select>
+      </td>
+      <th width="13%">成本金额：</th>
+      <td width="17%">
+        <input type="text" name="" class="form-control" placeholder="输入成本金额">
+      </td>
+    </tr>
+    <tr>
+      <th>成本说明：</th>
+      <td colspan="5">
+        <textarea class="form-control" name="" cols="" rows=""></textarea>
+      </td>
+    </tr>
+  </table>
+  <div class="blueOutline p10">
+    <p class="ft14 mb10"><b>预付暂借核销列表</b></p>
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入标题或金额" class="form-control w250">
+      </label>
+      <select name="" class="form-control w150">
+        <option>类型</option>
+      </select>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10 tTab">
+      <tbody>
+        <tr>
+          <th width="10%">核销类型 </th>
+          <th>核销标题 </th>
+          <th width="12%">申请日期 </th>
+          <th width="12%">付款金额(元)</th>
+          <th width="13%">可核销金额(元) </th>
+          <th width="12%">核销金额(元) </th>
+          <th width="10%">备注</th>
+          <th width="8%">操作 </th>
+        </tr>
+        <tr>
+          <td>暂借款</td>
+          <td>11.19-11.25台湾七天机票11.19-11.25台湾七天机票款</td>
+          <td>2015-12-12</td>
+          <td>5494.74</td>
+          <td><font class="red_t">20.00</font></td>
+          <td>0</td>
+          <td><div class="relative"><div class="maxH">测试</div>
+          <div class="popBox auto right">
+        <span class="arr_t"></span>
+        <div class="popover-content">
+          向途牛切411量子50间房
+费用：标阳双人：3699元/人*2人*25间=184950元，
+      高阳双人：3999元/人*2人*15间=119970元，
+      高阳三人：3499元/人*3人*10间=104970元，
+合计：184950+119970+104970=409890元，现支付预付款200000元
+      </div>
+    </div></div></td>
+          <td><a class="blue_txt" href="#">编辑</a></td>
+        </tr>
+<tr>
+          <td>暂借款</td>
+          <td>11.19-11.25台湾七天机票</td>
+          <td>2015-12-12</td>
+          <td>5494.74</td>
+          <td><font class="red_t">20.00</font></td>
+          <td>0</td>
+          <td><div class="relative"><div class="maxH">测试</div>
+          <div class="popBox auto right">
+        <span class="arr_t"></span>
+        <div class="popover-content">
+          向途牛切411量子50间房
+费用：标阳双人：3699元/人*2人*25间=184950元，
+      高阳双人：3999元/人*2人*15间=119970元，
+      高阳三人：3499元/人*3人*10间=104970元，
+合计：184950+119970+104970=409890元，现支付预付款200000元
+      </div>
+    </div></div></td>
+          <td><a class="blue_txt" href="#">编辑</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--预付明细 start-->
+<div class="popBox full-width" style="top:870px; left:350px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">预付明细 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra th-right noFixed mb10">
+        <tbody><tr>
+          <th width="12%">标题</th>
+          <td width="38%">11月25日 魅力三晋11人机票款</td>
+          <th width="12%">结算单位</th>
+          <td><a href="#" class="blue_txt">海航</a></td>
+        </tr>
+        <tr>
+          <th>付款方式</th>
+          <td>转帐</td>
+          <th>申请时间</th>
+          <td>2015-12-11</td>
+        </tr>
+        <tr>
+          <th>审核状态</th>
+          <td><font class="green_txt">审核通过</font></td>
+          <th>支付状态</th>
+          <td><span class="green_txt">已支付</span></td>
+        </tr>
+        <tr>
+          <th>申请人</th>
+          <td><a class="blue_txt" href="#">张蓓蓓</a></td>
+          <th>所属人</th>
+          <td><a class="blue_txt" href="#">张蓓蓓</a></td>
+        </tr>
+        <tr>
+          <th>金额信息</th>
+          <td colspan="3">总额: <font class="red_t">5900.00</font> 元、 撤销:<span class="red_t"> 0.00</span> 元、核销:<span class="red_t"> 5900.00</span> 元、剩余:<span class="red_t"> 0.00 </span>元</td>
+        </tr>
+        <tr>
+          <th>发票收据</th>
+          <td colspan="3">/</td>
+        </tr>
+        <tr>
+          <th>申请说明</th>
+          <td colspan="3">600元+100元税=700元*11人=7700元-押金1800元=5900元</td>
+        </tr>
+      </tbody></table>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+        <tbody>
+          <tr>
+            <th width="15%">三清单编号</th>
+            <th width="28%">标题</th>
+            <th width="12%">金额</th>
+            <th width="13%">使用日期</th>
+            <th width="13%">使用人</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td><a href="#" class="blue_txt">Q000062599</a></td>
+            <td class="left">2.17-2.22东航3大1小机票</td>
+            <td><font class="red_t">4382.00</font></td>
+            <td>2015-01-13</td>
+            <td><a href="#" class="blue_txt">张桃子</a></td>
+            <td><a href="#" class="blue_txt mr10">编辑</a><a href="#" class="blue_txt">删除</a></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+<!--编辑核销款 start-->
+<div class="popBox full-width" style="top:1170px; left:350px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">编辑核销款<a href="#" class="yellow_txt floatR"><span class="glyphicon glyphicon-chevron-left"></span> 返回</a> </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="tab_infoList th-right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>标题：</th>
+    <td colspan="7">11月25日 魅力三晋11人机票款核销</td>
+  </tr>
+  <tr>
+    <th width="10%">申请金额：</th>
+    <td width="15%">5900.00</td>
+    <th width="12%">原核销金额：</th>
+    <td width="15%">5900.00</td>
+    <th width="12%">现核销金额：</th>
+    <td width="13%"><input class="form-control w80" placeholder="输入金额" name="" type="text"></td>
+    <th width="12%">剩余金额：</th>
+    <td width="13%"><font class="red_t">5900.00</font></td>
+  </tr>
+</table>
+
+    
+  </div>
+  <!-- popover-content END--> 
+  <div class="popover-footer">
+  <label class="mr10"><input name="" type="checkbox" value=""> 是否撤销余额</label>
+    <input type="button" value="保存" class="btn_ok  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--新增报销-->
+<div style="top:1370px; left:350px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">新增报销 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab noFixed">
+          <tbody>
+            <tr>
+              <th width="14%"> 预支抵消标题：</th>
+              <td width="36%">
+                <input type="text" class="form-control" name="">
+              </td>
+              <th width="14%">结算通道：</th>
+              <td>
+                <select name="" class="form-control">
+                  <option></option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th> 预支抵消所属人：</th>
+              <td>
+                <select name="" class="form-control">
+                  <option></option>
+                </select>
+              </td>
+              <th>经办人：</th>
+              <td>张三 </td>
+            </tr>
+            <tr>
+              <th>预支抵消时间：</th>
+              <td>2016-02-01 </td>
+              <th> 结算单位：</th>
+              <td><a class="blue_txt" href="#">中国国际航空股份有限公司宁波营业部</a></td>
+            </tr>
+            <tr>
+              <th> 预支单：</th>
+              <td>
+               <input name="" class="form-control w100 mr10" type="text"> <a style="padding:7px 10px; vertical-align:middle;" class="btn_s red_btn blueBtn mr10" href="#">更改预支单 </a><a class="blue_txt" href="#">清空</a>
+              </td>
+              <th>预支金额：</th>
+              <td><input name="" class="form-control w100 mr10" type="text"> 可预支金额：<font class="red_t">￥3600.00</font> </td>
+            </tr>
+            <tr>
+              <th>合计：</th>
+              <td colspan="3"> 报销合计：<font class="red_t">0 </font>预支合计：<font class="red_t">0</font>结算统计：<font class="red_t">0</font> </td>
+            </tr>
+          </tbody>
+        </table>
+<div class="dot_b mb20"></div>
+<p class="mb15"><b class="ft14">报销内容</b></p>
+<div class="clearFix mb15"><i class="step_dot floatL mt5">1</i>
+          <div class="blueOutline floatR p15" style="width:685px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab th-right noFixed mb15">
+              <tbody>
+                <tr>
+                  <th width="12%">报销内容：</th>
+                  <td width="32%">
+                    <input type="text" name="" class="form-control">
+                  </td>
+                  <th width="14%">费用类别：</th>
+                  <td>
+                    <select class="form-control w100 mr10" name="">
+                      <option></option>
+                    </select>
+                    明细类别：
+                    <select class="form-control w100 floatR" name="">
+                      <option></option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>发生时间：</td>
+                  <td>
+                    <input type="text" name="" class="form-control">
+                  </td>
+                  <th>报销金额：</th>
+                  <td>
+                    <input type="text" name="" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <td>归属部门：</td>
+                  <td>
+                    <select class="form-control" name="">
+                      <option></option>
+                    </select>
+                  </td>
+                  <th>发票编号：</th>
+                  <td>
+                    <input type="text" name="" class="form-control">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="algin_right">
+              <input type="button" name="" value="保存" class="btn_ok mr10">
+              <input type="button" name="" value="取消" class="btn_cancel">
+            </div>
+          </div>
+        </div>
+        
+        <div class="clearFix mb15"><i class="step_dot floatL mt5">2</i>
+          <div class="outline_box floatR" style="width:685px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+              <tbody><tr>
+                <th width="12%">报销内容：</th>
+                <td width="20%">3.22英爱预付款</td>
+                <th width="14%">费用类别：</th>
+                <td width="19%">广告宣传费 </td>
+                <th width="18%">明细类别：</th>
+                <td>推广活动</td>
+              </tr>
+              <tr>
+                <td>发生时间：</td>
+                <td>2015-06-15</td>
+                <th>报销金额：</th>
+                <td><b class="red_t">￥360.00</b></td>
+                <th></th>
+                <td></td>
+              </tr>
+              <tr>
+                <td>归属部门：</td>
+                <td>出境中心一组</td>
+                <th>发票编号：</th>
+                <td>35120125</td>
+                 <th></th>
+                <td></td>
+              </tr>
+            </tbody></table>
+            <div class="algin_right"><a class="blue_txt mr20" href="#">编辑</a><a class="blue_txt" href="#">删除</a></div>
+          </div>
+        </div>
+        <p class="mb20"><a class="blue_txt" href="#"><i class="glyphicon glyphicon-plus mr10"></i>添加预领物品</a></p>
+        
+        <div class="algin_right"> 
+          <input type="button" class="btn_s red_btn big_button mr10" value="提交申请">
+          <input type="button" class="btn_s red_btn big_button cancelBtn" value="取消">
+        </div>
+    
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+<!--选择预支单 -->
+<div class="popBox full-width" style="top:2260px; left:1100px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择预支单 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w250">
+      </label>
+      <select name="" class="form-control w100 mr10">
+            <option>审核通过</option>
+          </select>
+          <select name="" class="form-control w100 mr10">
+            <option>未核销</option>
+          </select>
+          <select name="" class="form-control w100 mr10">
+            <option>已支付</option>
+          </select>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          
+          <th>预支标题 </th>
+          <th width="10%">预支金额 </th>
+          <th width="30%">结算单位 </th>
+          <th width="13%">审核状态 </th>
+          <th width="10%">支付状态 </th>
+          <th width="10%">核销状态 </th>
+            <th width="10%">操作 </th>
+        </tr>
+        <tr>
+          
+          <td>预支申请<font class="green_txt">(已选)</font></td>
+          <td>2400</td>
+          <td class="left"> 中国国际航空股份有限公司宁波营业部 </td>
+          <td><font class="green_txt">已审核</font>
+          </td>
+          <td><font class="green_txt">已支付</font></td>
+          <td><font class="red_t">未核销</font></td>
+          <td><font class="color9">选择</font></td>
+        </tr>
+        <tr>
+          
+          <td>预支申请</td>
+          <td>2400</td>
+          <td class="left"> 中国国际航空股份有限公司宁波营业部 </td>
+          <td><font class="green_txt">已审核</font>
+          </td>
+          <td><font class="green_txt">已支付</font></td>
+          <td><font class="red_t">未核销</font></td>
+          <td><a class="blue_txt" href="#">选择</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="center mb15">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+</div>
+<!--选择预支单 -->
+<div style="top:1800px; left:10px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">添加导游质量评分</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="17%">导游：</th>
+          <td>
+          	<select class="form-control w150" name="">
+                  <option></option>
+                </select>
+</td>
+        </tr>
+        <tr>
+          <th>评分：</th>
+          <td>
+          	<input type="text" class="form-control" name="">
+</td>
+        </tr>
+        <tr>
+          <th>评语：</th>
+          <td>
+         <textarea rows="3" cols="" placeholder="" name="" class="form-control"></textarea> 	
+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--添加结算信息 -->
+<div style="top:2100px; left:350px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">添加结算信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table class="form_tab th-right" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>结算导游：</th>
+    <td colspan="3"><select class="form-control w120" name=""><option></option></select></td>
+  </tr>
+  <tr>
+    <th>费用名称：</th>
+    <td colspan="3"><input type="text" placeholder="" class="form-control w180 mr20" name=""><label class="mr15"><input name="" type="radio" value=""> 房费</label><label class="mr15"><input name="" type="radio" value=""> 餐费</label><label class="mr15"><input name="" type="radio" value=""> 门票</label><label class="mr15"><input name="" type="radio" value=""> 过停费</label><label class="mr15"><input name="" type="radio" value=""> 地接费</label><label class="mr15"><input name="" type="radio" value=""> 备用金</label><label class=""><input name="" type="radio" value=""> 边防费</label></td>
+  </tr>
+  <tr>
+  	<th width="12%">结算类型：</th>
+    <td width="36%">
+    <select name="" class="form-control">
+          <option></option>
+        </select>
+    </td>
+      	<th width="13%">单价：</th>
+    <td>
+    <input type="text" name="" class="form-control">
+    </td>
+  </tr>
+  <tr>
+  	<th></th>
+    <td colspan="3">
+    <div class="bList">
+    	<div class="row2 clearFix"><span class="col-md-2"><label><input name="" type="radio" value=""> 张三</label></span><span class="col-md-4">合同编号：D00304875</span>
+        <span class="col-md-3">已付金额：21676</span><span class="col-md-3">未付金额：600</span>
+        </div>
+        <div class="row2 clearFix"><span class="col-md-2"><label><input name="" type="radio" value=""> 张三</label></span><span class="col-md-4">合同编号：D00304875</span>
+        <span class="col-md-3">已付金额：21676</span><span class="col-md-3">未付金额：600</span>
+        </div>
+        <div class="row2 clearFix"><span class="col-md-2"><label><input name="" type="radio" value=""> 张三</label></span><span class="col-md-4">合同编号：D00304875</span>
+        <span class="col-md-3">已付金额：21676</span><span class="col-md-3">未付金额：600</span>
+        </div>
+    </div>
+    </td>
+  </tr>
+  <tr>
+  	<th>数量：</th>
+    <td>
+    <input type="text" name="" class="form-control">
+    </td>
+      	<th>结算费用：</th>
+    <td>
+    <font class="red_t">￥500.00</font>
+    </td>
+  </tr>
+  <tr>
+  	<th>备注：</th>
+    <td colspan="3">
+   <textarea class="form-control" name="" placeholder="" cols="" rows="3"></textarea>
+    </td>
+
+  </tr>
+</table>
+
+
+    
+  </div>
+  <!-- popover-content END--> 
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+<!--选择团队 -->
+<div style="top:2560px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择团队 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+          </div>
+      <select class="form-control w100 mr10" name="">
+            <option>结算状态</option>
+          </select>
+          
+          
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          
+          <th width="11%">发团日期 </th>
+          <th>团队信息 </th>
+          <th width="10%">预领金额 </th>
+          <th width="13%">预领已用金额 </th>
+          <th width="10%">报账金额 </th>
+          <th width="14%">三清单结算状态 </th>
+          <th width="10%">团队计调</th>
+            <th width="8%">操作 </th>
+        </tr>
+        <tr>
+          
+          <td>2015-02-13</td>
+          <td class="left"><p>Q000061333(一团一议)</p><div class="l_c">飞扬定制团 瑞士+法国特色品</div></td>
+           <td><font class="red_t">123.00</font></td>
+           <td>123.00</td>
+            <td>123.00</td>
+          <td><font class="color9">未结算</font></td>
+          <td><a class="blue_txt" href="#">张三</a></td>
+          <td><a class="blue_txt" href="#">选择</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="center mb15">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+</div>
+<!--申请预领金-->
+<div class="popBox full-width" style="top:2570px; left:350px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">申请预领金 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+<div class="clearFix mb15"><i class="step_dot floatL mt5">1</i>
+          <div style="width:685px;" class="blueOutline floatR p15">
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab th-right noFixed mb10">
+              <tbody>
+                <tr>
+                  <th width="12%">费用名称：</th>
+                  <td>
+                    <input type="text" class="form-control w150 mr10" name="">
+                    <span class="mr10">数量：<input type="text" class="form-control w100" name=""></span>
+                     <span class="mr10">单价：<input type="text" class="form-control w100" name=""></span>
+                      <span class="mr10">总价：<font class="red_t">15.00</font></span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>备注：</th>
+                  <td>
+                  <input type="text" name="" class="form-control">
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <div class="algin_right"><a class="blue_txt mr10" href="#">保存</a><a class="blue_txt mr10" href="#">取消</a><a class="blue_txt mr10" href="#">编辑</a><a class="blue_txt mr10" href="#">删除</a></div>
+          </div>
+        </div>
+        
+        
+        <p class="mb20"><a href="#" class="blue_txt"><i class="glyphicon glyphicon-plus mr10"></i>添加预领物品</a></p>
+        
+        <div class="algin_right"> 
+          <input type="button" value="提交" class="btn_s red_btn big_button mr10">
+          <input type="button" value="取消" class="btn_s red_btn big_button cancelBtn">
+        </div>
+    
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="popBox full-width" style="top:2800px; left:1100px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择团队 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w190">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+          </div>
+      <select name="" class="form-control w100 mr10">
+            <option>选择部门</option>
+          </select>
+          <select name="" class="form-control w100 mr10">
+            <option>全部类型</option>
+          </select>
+          <select name="" class="form-control w100 mr10">
+            <option>未发团</option>
+          </select>
+          
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          
+          <th width="11%">发团日期 </th>
+          <th>团队信息 </th>
+          <th width="10%">订单数 </th>
+          <th width="10%">预领金 </th>
+          <th width="12%">全陪导游 </th>
+          <th width="12%">送机导游 </th>
+          <th width="10%">计调</th>
+            <th width="8%">操作 </th>
+        </tr>
+        <tr>
+          
+          <td>2015-02-13<p class="color9">未发团</p></td>
+          <td class="left"><p>Q000061333(一团一议)</p><div class="l_c">飞扬定制团 瑞士+法国特色品</div></td>
+           <td>1单</td>
+           <td><font class="red_t">123.00</font></td>
+          <td><font class="color9">未安排</font></td>
+          <td><font class="color9">未安排</font></td>
+          <td><a href="#" class="blue_txt">张三</a></td>
+          <td><a href="#" class="blue_txt">选择</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="center mb15">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="popBox auto" style="top:2850px; left:350px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">撤销 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content w600">
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th width="13%">撤销金额：</th>
+          <td width="35%">
+            <input type="text" class="form-control" placeholder="" name="">
+          </td>
+          <th width="15%">撤销方式：</th>
+          <td>
+            <select class="form-control" name="">
+              <option></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+         <th>退款名称：</th>
+         <td colspan="3">
+            <input type="text" class="form-control" placeholder="" name="">
+          </td>
+        </tr>
+        <tr>
+         <th>结算单位：</th>
+         <td colspan="3">
+           海航
+          </td>
+        </tr>
+        
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea class="form-control" name="" cols="" rows=""></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+
+<div style="top:3050px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择三清单 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w190" placeholder="输入关键字">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+          </div>
+      <select class="form-control w100 mr10" name="">
+            <option>选择部门</option>
+          </select>
+          <select class="form-control w100 mr10" name="">
+            <option>三清单类型</option>
+          </select>
+          <select class="form-control w100 mr10" name="">
+            <option>审核状态</option>
+          </select>
+          
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+            <th>三清单信息 </th>
+          <th width="11%">结算日期 </th>
+          <th width="10%">审核状态 </th>
+          <th width="10%">营业收入 </th>
+          <th width="10%">营业成本 </th>
+          <th width="10%">纯毛利 </th>
+          <th width="10%">计调</th>
+            <th width="8%">操作 </th>
+        </tr>
+        <tr>
+          <td class="left"><p>Q000061333(一团一议)</p><div class="l_c">飞扬定制团 瑞士+法国特色品</div></td>
+          <td>2015-02-13</td>
+          <td><font class="color9">未提交</font></td>
+           <td><font class="color9">未确定</font></td>
+          <td><font class="color9">未确定</font></td>
+          <td><font class="color9">未确定</font></td>
+          <td><a class="blue_txt" href="#">张三</a></td>
+          <td><a class="blue_txt" href="#">选择</a></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="center mb15">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+</div>
+
+<div style="top:3050px; left:350px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">收款 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content w600">
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th width="13%">结算单位：</th>
+          <td colspan="3"> <a class="blue_txt" href="#">门票士大夫精品士大夫</a> </td>
+        </tr>
+        <tr>
+          <th width="13%">撤销金额：</th>
+          <td width="35%"> <font class="red_t">1500</font> </td>
+          <th width="15%">申请人：</th>
+          <td> <a class="blue_txt" href="#">张三</a> </td>
+        </tr>
+        <tr>
+          <th>付款方式：</th>
+          <td>转账</td>
+          <th>申请日期：</th>
+          <td>2015-10-01</td>
+        </tr>
+        <tr>
+          <th>撤销理由：</th>
+          <td colspan="3"> 定金退回 </td>
+        </tr>
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea rows="" cols="" name="" class="form-control"></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+
+<div class="popBox full-width" style="top:3300px; left:1100px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">提交结算 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    
+    <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+      <tbody>
+        <tr>
+          <th>结算项目：</th>
+          <td colspan="3">
+            <input type="text" class="form-control" placeholder="" name="">
+          </td>
+        </tr>
+        <tr>
+          <th>结算项目：</th>
+          <td colspan="3">
+           <a href="#" class="btn_s red_btn blueBtn">选择结算单位 </a>
+          </td>
+        </tr>
+        <tr>
+          <th>退款方式：</th>
+          <td colspan="3">
+           <font class="red_t">560.00</font>
+          </td>
+        </tr>
+        <tr>
+          <th width="11%">结算方式：</th>
+          <td width="37%">
+           <select class="form-control" name="">
+              <option></option>
+            </select>
+          </td>
+          <th>发票编号：</th>
+          <td width="37%">
+            <input type="text" class="form-control" placeholder="" name="">
+          </td>
+        </tr>
+        <tr>
+          <th>备      注：</th>
+          <td colspan="3">
+            <textarea class="form-control" name="" cols="" rows=""></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+
+<div style="top:3345px; left:350px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">核销明细 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+<div class="clearFix mb15"><i class="step_dot floatL mt5">1</i>
+          <div class="blueOutline floatR p10" style="width:685px;">
+            <table cellspacing="0" cellpadding="0" border="0" class="form_tab th-right noFixed mb10">
+              <tbody>
+              <tr>
+                  <th>项目：</th>
+                  <td>
+                 <a href="#" class="btn_s red_btn blueBtn">选择项目 </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th width="8%">标题：</th>
+                  <td>
+                    <input type="text" name="" class="form-control w250 mr10">
+                    <span class="mr10">核销金额：<input type="text" name="" class="form-control w100"></span>
+                     <span class="mr10">核销类型：预付款</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th>备注：</th>
+                  <td>
+                  <input type="text" class="form-control" name="">
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+           <div class="algin_right">
+              <input type="button" class="btn_ok mr10" value="保存" name="">
+              <input type="button" class="btn_cancel" value="取消" name="">
+            </div>
+          </div>
+        </div>
+     <div class="clearFix mb15"><i class="step_dot floatL mt5">2</i>
+          <div style="width:685px;" class="outline_box floatR">
+            <table cellspacing="0" cellpadding="0" border="0" class="tab_infoList th-right">
+              <tbody><tr>
+                <th width="8%">标题：</th>
+                <td width="25%">3.22英爱预付款</td>
+                <th width="14%">核销金额：</th>
+                <td width="19%"> <b class="red_t">￥360.00</b></td>
+                <th width="18%">核销类型：</th>
+                <td>预付款</td>
+              </tr>
+              <tr>
+                <th>备注：</th>
+                <td colspan="5"></td>
+              </tr>
+            </tbody></table>
+            <div class="algin_right"><a href="#" class="blue_txt mr20">编辑</a><a href="#" class="blue_txt">删除</a></div>
+          </div>
+        </div>   
+        
+        <p class="mb20"><a class="blue_txt" href="#"><i class="glyphicon glyphicon-plus mr10"></i>添加核销</a></p>
+        
+        <div class="algin_right"> 
+          <input type="button" class="btn_s red_btn big_button mr10" value="提交">
+        </div>
+    
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div style="top:3500px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">选择项目 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <select class="form-control w100 mr10" name="">
+            <option>预付款</option>
+          </select>
+          <select class="form-control w100 mr10" name="">
+            <option>个人</option>
+          </select>
+          
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center">
+      <tbody>
+        <tr>
+          
+          <th>标题 </th>
+          <th width="30%">说明 </th>
+          <th width="10%">金额 </th>
+          <th width="13%">已用 </th>
+          <th width="10%">剩余 </th>
+            <th width="10%">操作 </th>
+        </tr>
+        <tr>
+          
+          <td class="left">股份有限公司宁波营<font class="green_txt">(已选)</font></td>
+        
+          <td class="left"> 中国国际航空股份有限公司宁波营业部 </td>
+          <td>2400</td>
+          <td>0</td>
+          <td><font class="red_t">0</font></td>
+          <td><font class="color9">选择</font></td>
+        </tr>
+        <tr>
+          
+          <td class="left">股份有限公司宁波营<font class="green_txt">(已选)</font></td>
+        
+          <td class="left"> 中国国际航空股份有限公司宁波营业部 </td>
+          <td>2400</td>
+          <td>0</td>
+          <td><font class="red_t">0</font></td>
+          <td><a class="blue_txt">选择</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="center mb15">
+      <ul class="pagination pagination-sm">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+</div>
+<div style="top:3770px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">价格类型 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+    <tbody>
+      <tr>
+        <th width="17%" rowspan="2">价格标题 </th>
+        <th colspan="3">价格(元)</th>
+        <th width="10%" rowspan="2">单房差(元)</th>
+        <th width="10%" rowspan="2">抵用券(元) </th>
+        <th width="8%" rowspan="2">计划数 </th>
+        <th width="8%" rowspan="2">保留数 </th>
+        <th width="8%" rowspan="2">收客数 </th>
+        <th width="8%" rowspan="2">余位 </th>
+      </tr>
+      <tr>
+        <th width="6%">成人</th>
+        <th width="7%">小孩</th>
+        <th width="7%">婴儿</th>
+      </tr>
+      <tr>
+        <td>336589</td>
+        <td>200.00</td>
+        <td>200.00</td>
+        <td>200.00</td>
+        <td><font class="red_t">50.00</font></td>
+        <td>50.00</td>
+        <td>4</td>
+        <td>5</td>
+        <td>10</td>
+        <td>12</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <!-- popover-content END-->
+  
+</div>
+
+<div style="top:4000px; left:1100px;" class="popBox full-width"> <span class="arr_t"></span>
+  <h3 class="popover-title">订单信息 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    
+    <div class="mb10"><span class="mr10">营业款总计：<b class="red_t">12766.00 </b>元</span><span class="mr10">已收款总计：<b class="red_t">12766.00</b> 元</span> <span class="mr10">应收款总计：<b class="red_t">0.00</b> 元</span><span>保险总成本：<b class="red_t">0</b> 元 </span> <span>人数统计：<b class="red_t">38/38(38 + 0 + 0)</b></span></div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+    <tbody>
+      <tr>
+        <th>订单编号</th>
+        <th width="13%">会员信息</th>
+        <th width="10%">营业款(元)</th>
+        <th width="10%">已收款(元) </th>
+        <th width="10%">应收款(元) </th>
+        <th width="10%">保险 </th>
+        <th width="10%">人数 </th>
+        <th width="9%">私顾 </th>
+        <th width="8%">业务员 </th>
+        <th width="9%">状态 </th>
+      </tr>
+      <tr>
+        <td><a href="#" class="blue_txt">D00287305</a></td>
+        <td>
+          <p>竺翠菊</p>
+          15867227591</td>
+        <td><font class="red_t">99.00</font></td>
+        <td>556.00</td>
+        <td>0.00</td>
+        <td>/</td>
+        <td>2人<br>
+          (2+0+0)</td>
+        <td><a href="#" class="blue_txt">章丹丹</a></td>
+        <td>张桃子</td>
+        <td><font class="green_txt">已签约</font></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <!-- popover-content END-->
+  
+</div>
+
+<div class="bigPop" style="top:3800px; left:10px;">
+  <h3 class="popover-title">项目成本构成明细表 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <div class="input-group date form_date w180 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+      <select class="form-control w100 mr10" name="">
+        <option>大类</option>
+      </select>
+      <select class="form-control w100 mr10" name="">
+        <option>成本类型</option>
+      </select>
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="50">序号</th>
+            <th width="100">三清单</th>
+            <th width="100">做账日期</th>
+            <th width="100">提交日期</th>
+            <th width="100">大类</th>
+            <th width="100">成本类型 </th>
+            <th width="100">采购时间</th>
+            <th width="99">采购内容</th>
+            <th width="80">采购金额 </th>
+            <th width="99">结算方式 </th>
+            <th width="180">采购结算单位 </th>
+            <th width="100">付款时间 </th>
+            <th width="100">付款金额 </th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Q0124877777</td>
+            <td>2015-10-01</td>
+            <td>2015-10-01</td>
+            <td>人工成本</td>
+            <td>导游成本</td>
+            <td>2015-10-01</td>
+            <td>餐费</td>
+            <td>12544,00</td>
+            <td>现金</td>
+            <td></td>
+            <td>2015-10-01</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="bigPop" style="top:4030px; left:10px;">
+  <h3 class="popover-title">三清单采购成本列表 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      
+      <div class="input-group date form_date w180 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+      <select class="form-control w150 mr10" name="">
+        <option>收支类型</option>
+      </select>
+      <select class="form-control w150 mr10" name="">
+        <option>选择部门（可多选）</option>
+      </select>
+      <select class="form-control w150 floatR" name="">
+        <option>排序方式</option>
+      </select>
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="10%">序号</th>
+            <th>成本分类</th>
+            <th width="20%">金额</th>
+            <th width="20%">百分比</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>税收成本</td>
+            <td></td>
+            <td>1.77%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="popBox auto" style="top:4200px; left:1000px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">导出Excel</h3>
+  <!-- popover-content start-->
+  <div class="popover-content w450">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="19%">导出类型：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>按月份统计</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>导出时间：</th>
+          <td>
+            <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+            </div>
+            <span class="floatL mr10">-</span>
+            <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>三清单类型：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>全部</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>所属中心：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>选择中心</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>所属部门：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>选择部门</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>排序方式：</th>
+          <td>
+            <select name="" class="form-control">
+              <option>按毛利率从高到低</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<div class="popBox auto" style="top:4200px; left:1450px;"> <span class="arr_t"></span>
+  <h3 class="popover-title">生成三清单</h3>
+  <!-- popover-content start-->
+  <div class="popover-content w450">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody>
+        <tr>
+          <th width="19%">线路名称：</th>
+          <td>
+            【五周年】刷泰隆信用卡有惊喜--宁波达蓬山双人度假休闲
+          </td>
+        </tr>
+        <tr>
+          <th>结算日期：</th>
+          <td>2014-03-09
+          </td>
+        </tr>
+        <tr>
+          <th>三清单标题：</th>
+          <td>
+            <input type="text" class="form-control" name="">
+          </td>
+        </tr>
+        <tr>
+          <th style="vertical-align:top">三清单描述：</th>
+          <td>
+           <textarea class="form-control" name="" cols="" rows=""></textarea>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+
+<div class="bigPop" style="top:4280px; left:10px;">
+  <h3 class="popover-title">会员卡余额 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w250">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="10%">序号</th>
+            <th>会员卡号</th>
+            <th width="15%">会员卡余额</th>
+            <th width="15%">充值</th>
+             <th width="15%">消费</th>
+              <th width="15%">退卡</th>
+               <th width="15%">会员信息</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+                        <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="bigPop" style="top:4500px; left:10px;">
+  <h3 class="popover-title">收入统计 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w250">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+<select name="" class="form-control w150 mr10">
+        <option>审核类型</option>
+      </select>
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="50">序号</th>
+            <th width="100">三清单号</th>
+            <th width="100">订单号</th>
+            <th width="100">所属中心</th>
+            <th width="100">所属部门</th>
+            <th width="100">做账日期 </th>
+            <th width="100">提交日期</th>
+            <th width="99">出团日期</th>
+            <th width="80">区域划分 </th>
+            <th width="99">类型 </th>
+            <th width="220">线路名称 </th>
+            <th width="100">客户名称 </th>
+            <th width="100">客户人数 </th>
+             <th width="100">营业收入 </th>
+              <th width="100">回访日期 </th>
+               <th width="100">发票日期 </th>
+                <th width="100">发票号 </th>
+                 <th width="180">开票单位 </th>
+                  <th width="100">发票金额 </th>
+                   <th width="100">收款日期 </th>
+                    <th width="100">收款金额 </th>
+                     <th width="100">人均毛利 </th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Q0124877777</td>
+            <td>D444444</td>
+            <td>出境中心</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+                        <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>182.08</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="bigPop" style="top:4750px; left:10px;">
+  <h3 class="popover-title">未收统计 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w250">
+      </label>
+      <select name="" class="form-control w150 mr10">
+        <option>时间类型</option>
+      </select>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="6%">序号</th>
+            <th width="10%">订单编号</th>
+            <th>线路名称</th>
+            <th width="10%">回团时间</th>
+             <th width="10%">下单时间</th>
+              <th width="10%">客户名称</th>
+               <th width="10%">营业款</th>
+                <th width="9%">预收款</th>
+                 <th width="9%">计调</th>
+                  <th width="9%">销售</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td>2015-10-01</td>
+             <td></td>
+            <td></td>
+            <td></td>
+                         <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div class="bigPop" style="top:5000px; left:10px;">
+  <h3 class="popover-title">应付账款 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+      
+      
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+      </div>
+
+    </div>
+    <div class="mb10"><a class="mr10" href="#"><i class="iconT i-print">&nbsp;</i>打印</a><a class="mr10" href="#"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="6%">序号</th>
+            <th width="9%">单位编号</th>
+            <th>采购结算单位</th>
+            <th width="9%">采购时间</th>
+             <th width="12%">采购内容</th>
+              <th width="8%">采购金额</th>
+               <th width="9%">提交日期</th>
+                <th width="8%">开票金额</th>
+                 <th width="8%">应付金额</th>
+                  <th width="9%">付款时间</th>
+                  <th width="8%">付款金额</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td>2015-10-01</td>
+             <td></td>
+            <td></td>
+            <td></td>
+                         <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是应收统计(请程序删除这行提示)--------------------</div>
+      <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+      </div>
+
+    </div>
+    <div class="mb10"><a href="#" class="mr10"><i class="iconT i-print">&nbsp;</i>打印</a><a href="#" class="mr10"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+      <table border="0" cellpadding="0" cellspacing="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="5%" rowspan="2">序号</th>
+            <th width="9%" rowspan="2">订单编号</th>
+            <th rowspan="2">订单名称</th>
+            <th width="9%" rowspan="2">发团时间</th>
+            <th width="9%" rowspan="2">下单时间</th>
+              <th width="8%" rowspan="2">营业款</th>
+               <th width="8%" rowspan="2">预收款</th>
+                <th width="37%" colspan="5">预付方式</th>
+          </tr>
+          <tr>
+            <th>现金</th>
+            <th>转账</th>
+            <th>旅游卷</th>
+            <th>其他</th>
+            <th>未收</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td>巴厘岛自由行</td>
+            <td>2015-10-01</td>
+             <td></td>
+            <td></td>
+            <td></td>
+             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1800.00</td>
+          </tr>
+        </tbody>
+      </table>
+      
+            <div class="tipMy color9 mb10 pt10 center">---------------------- 以下是预付账款(请程序删除这行提示)--------------------</div>
+      <div class="mb10 clearFix">
+      <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+      </div>
+      <select class="form-control w120 mr10" name="">
+        <option>类型</option>
+      </select>
+
+    </div>
+    <div class="mb10"><a href="#" class="mr10"><i class="iconT i-print">&nbsp;</i>打印</a><a href="#" class="mr10"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+      <table border="0" cellpadding="0" cellspacing="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="6%">序号</th>
+            <th width="10%">预付编码</th>
+            <th>预付结算单位</th>
+            <th width="10%">预付时间</th>
+             <th width="16%">预付内容</th>
+              <th width="10%">预付金额</th>
+               <th width="10%">核销金额</th>
+                <th width="9%">剩余金额</th>
+                 <th width="9%">付款时间</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td>2015-10-01</td>
+             <td></td>
+            <td></td>
+            <td></td>
+                         <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div style="top:4500px; left:950px;" class="bigPop">
+  <h3 class="popover-title">预估成本 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+     
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+      </div>
+
+    </div>
+    <div class="mb10"><a href="#" class="mr10"><i class="iconT i-print">&nbsp;</i>打印</a><a href="#" class="mr10"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb15">
+        <tbody>
+          <tr>
+            <th width="50">序号</th>
+            <th width="100">三清单号</th>
+            <th width="100">做账日期</th>
+            <th width="100">单位编码</th>
+            <th width="100">采购结算单位</th>
+            <th width="100">采购时间 </th>
+            <th width="100">采购内容</th>
+            <th width="99">采购金额</th>
+            <th width="80">提交日期 </th>
+            <th width="99">开票金额 </th>
+            <th width="100">应付金额 </th>
+            <th width="100">付款时间 </th>
+            <th width="100">付款金额 </th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Q0124877777</td>
+            <td>D444444</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            <td>182.08</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div style="top:4800px; left:950px;" class="bigPop">
+  <h3 class="popover-title">预收统计 </h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <div class="mb10 clearFix">
+     <label class="search_qp mr10 floatL"><span class="search_i"></span>
+        <input type="text" class="form-control w250" placeholder="输入关键字">
+      </label>
+      <div class="input-group date form_date w150 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+      </div>
+
+    </div>
+    <div class="mb10"><a href="#" class="mr10"><i class="iconT i-print">&nbsp;</i>打印</a><a href="#" class="mr10"><i class="iconT i-export">&nbsp;</i>导出</a></div>
+    <div class="scroll_panel">
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb20">
+  <tbody>
+    <tr>
+      <th width="5%" rowspan="2">序号</th>
+      <th width="9%" rowspan="2">订单编号</th>
+      <th rowspan="2">订单名称</th>
+      <th width="9%" rowspan="2">回团时间</th>
+      <th width="9%" rowspan="2">下单时间</th>
+      <th width="10%" rowspan="2">营业款</th>
+      <th width="10%" rowspan="2">预收款</th>
+      <th width="36%" colspan="4">预付方式</th>
+    </tr>
+    <tr>
+      <th width="9%">现金</th>
+      <th width="9%">转账</th>
+      <th width="9%">旅游卷</th>
+      <th width="9%">其他</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td></td>
+      <td>巴厘岛自由行</td>
+      <td>2015-10-01</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1800.00</td>
+    </tr>
+  </tbody>
+</table>
+      
+      <table cellspacing="0" cellpadding="0" border="0" class="tabTra td-center mb10">
+  <tr>
+    <td></td>
+    <td width="10%"><b class="red_t">5.280,146.98</b></td>
+    <td width="10%"><b class="red_t">5.280,146.98</b></td>
+    <td width="9%"><b class="red_t">5,146.98</b></td>
+    <td width="9%"><b class="red_t">5,146.98</b></td>
+    <td width="9%"><b class="red_t">5,146.98</b></td>
+    <td width="9%"><b class="red_t">0</b></td>
+  </tr>
+</table>
+    </div>
+  </div>
+  <!-- popover-content END--> 
+  
+</div>
+
+<div style="top:640px; left:740px;" class="popBox auto"> <span class="arr_t"></span>
+  <h3 class="popover-title">转让</h3>
+  <!-- popover-content start-->
+  <div class="popover-content">
+    <table cellspacing="0" cellpadding="0" border="0" class="form_tab w300">
+      <tbody><tr>
+        <th width="21%">转让类型：</th>
+        <td>	
+        <label class="mr10"><input name="" type="radio" value=""> 销售</label><label class="mr10"><input name="" type="radio" value=""> 计调</label><label class="mr10"><input name="" type="radio" value=""> 部门</label>
+        </td>
+      </tr>
+      <tr>
+        <th>转让对象：</th>
+        <td>
+        	<select name="" class="form-control">
+            <option>选择转让对象</option>
+          </select>
+ </td>
+      </tr>
+      
+      
+    </tbody></table>
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" class="btn_ok red_btn  mr10" value="确定">
+    <input type="button" class="btn_cancel" value="取消">
+  </div>
+</div>
+
+<div class="popBox full-width" style="top:5300px; left:1100px;">
+<span class="arr_t"></span>
+<h3 class="popover-title">添加其他成本 </h3>
+<!-- popover-content start-->
+<div class="popover-content">
+  <table cellspacing="0" cellpadding="0" border="0" class="form_tab th-right mb15">
+    <tbody><tr>
+      <th>损失标题：</th>
+      
+      <td colspan="5">
+        <input type="text" placeholder="输入损失标题" class="form-control" name="">
+      </td>
+    </tr>
+    <tr>
+      <th>结算单位：</th>
+      <td colspan="5"><a href="#" class="btn_s red_btn blueBtn">选择结算单位 </a></td>
+    </tr>
+    <tr>
+      <th width="10%">结算通道：</th>
+      <td>
+        <select name="" class="form-control">
+          <option>请选择</option>
+        </select>
+      </td>
+      <th width="13%">支付类型：</th>
+      <td width="17%">
+        <select name="" class="form-control">
+          <option>支出</option>
+        </select>
+      </td>
+      <th width="13%">成本金额：</th>
+      <td width="17%">
+        <input type="text" placeholder="输入成本金额" class="form-control" name="">
+      </td>
+    </tr>
+    <tr>
+      <th>成本说明：</th>
+      <td colspan="5">
+        <textarea rows="" cols="" name="" class="form-control"></textarea>
+      </td>
+    </tr>
+  </tbody></table>
+  
+  </div>
+  <!-- popover-content END-->
+  <div class="popover-footer">
+    <input type="button" value="确定" class="btn_ok red_btn  mr10">
+    <input type="button" value="取消" class="btn_cancel">
+  </div>
+</div>
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+
+   </script>
+</body>
+</html>

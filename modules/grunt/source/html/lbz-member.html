@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="zh-cn" ng-app="ui.bootstrap.demo">
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统--浙江飞扬国际旅游集团有限公司</title>
+<link rel="shortcut icon" href="">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="keywords">
+<meta content="后台管理系统-浙江飞扬国际旅游集团有限公司" name="description">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<!-- common css and js -->
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/layout_crm.css">
+<link rel="stylesheet" type="text/css" href="../css/product.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<!--multiselect CSS and JS: -->
+<link rel="stylesheet" type="text/css" href="../css/im.css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <link href="js/ie/bootstrap-ie78.css" rel="stylesheet" type="text/css" />
+    <script src="js/ie/respond.min.js" type="text/javascript"></script> 
+    <script src="js/ie/html5.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<!--container start-->
+<div id="container"> 
+  <!--sideBar start-->
+  <div id="sideBar">
+    <div id="avatar_info_panel">
+      <div id="wrap_header" class="clearFix mb10"> <a id="navi_btn" class="floatL" href="javascript:void(0)"><i class="w navi_icon">&nbsp;</i></a> <a id="warn_btn" class="floatR ml5" href="#"><i class="w info_t">&nbsp;</i><span class="warn_tip">2</span></a><a class="floatR" href="#"><i class="w warn">&nbsp;</i></a> </div>
+      <div id="global_navi"> <i class="arr_up">&nbsp;</i>
+        <ul class="navi">
+          <li class="n1"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>产品中心</span></a></li>
+          <li class="n2"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>销售中心</span></a></li>
+          <li class="n3"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>会员中心</span></a></li>
+          <li class="n4"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>财务中心</span></a></li>
+          <li class="n5"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>统计中心</span></a></li>
+          <li class="n6"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>系统中心</span></a></li>
+          <li class="n7"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>办公中心</span></a></li>
+          <li class="n8"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>网站管理</span></a></li>
+          <li class="n9"><a href="javascript:void(0)"><i></i><font>&nbsp;</font><span>首页</span></a></li>
+        </ul>
+      </div>
+      <div class="avatar_Panel center line20"> <a href="#"><img class="ava80" src="../images/default/pic1.jpg" alt="" title=""></a>
+        <p class="ft14">杨颖</p>
+        <p>计调主管</p>
+      </div>
+    </div>
+    <p class="double_line">&nbsp;</p>
+    <h2 class="subTit clearFix"><span class="floatL">老班长</span></h2>
+    <ul class="sub_menu" style="display:block">
+      <li><a href="#" class="menu">活动 <span>(12450 )</span></a> </li>
+      <li><a href="#" class="menu">成员 <span>(2 )</span></a> </li>
+    </ul>
+  </div>
+  <!--sideBar END--> 
+  <!--info_tipPop start-->
+  <div id="info_tipPop" style="display:none;"> <a class="close_s" onClick="hide()" href="#">&nbsp;</a> <img class="ava50 floatL ml20 mr15" src="../images/default/pic1.jpg" alt="">
+    <div class="col-md-8 floatL">
+      <p class="mb5 pt5"><span class="ft14 yellow_txt mr10">余珊珊</span><span class="color9">2015-08-30  13：45：12</span></p>
+      <p>你的转正/调薪审批已通过</p>
+    </div>
+  </div>
+  <!--info_tipPop END--> 
+  <!-- main_con start-->
+  <div id="main_con">
+    <div id="main">
+      <h2 class="mb15"><span class="ft18 mr30">成员</span><span class="ml20"><a class="ft14 blue_txt mr20" href="#"><i class="iconT i-cmt"></i> 群发短信</a><a class="ft14 blue_txt mr20" href="#"><i class="iconT i-exp"></i> 导出成员</a><a class="ft14 blue_txt" href="#"><i class="iconT i-inp"></i> 导入成员</a></span></h2>
+      <!-- toolbar start-->
+      <div class="mb15 clearFix" id="toolbar"> <a onClick="addLine();" class="btn_s floatL mr20 red_btn" href="#"><i class="glyphicon glyphicon-plus mr5"></i>新建成员</a>
+        <label class="search_qp floatL mr20"><span class="search_i"></span>
+          <input type="text" class="form-control w250" placeholder="输入关键字">
+        </label>
+        <select class="form-control floatL w100 mr10">
+          <option>浙江省</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>宁波市</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>海曙区</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>百丈街道</option>
+        </select>
+        <select class="form-control floatL w100 mr10">
+          <option>是否会员</option>
+        </select>
+        <select class="form-control floatL w120">
+          <option>是否俱乐部成员</option>
+        </select>
+        <a href="#" class="blue_txt floatR mr20 mt10">高级搜索 <span class="arr_b"></span></a> 
+        <!--searchMore_pop start-->
+        <div class="searchMore_pop" style="display:none">
+          <div class="clearFix mb10"> <b class="ft14 floatL">选择区域</b> <a href="#" class="blue_txt floatR">高级搜索 <span class="arr_b arr_t1"></span></a> </div>
+          <div class="mb10">
+            <select class="form-control w100  mr10">
+              <option>浙江省</option>
+            </select>
+            <select class="form-control w100  mr10">
+              <option>宁波市</option>
+            </select>
+          </div>
+          <div class="mb5">
+            <label class="ft14">
+              <input name="" type="checkbox" value="">
+              海曙区</label>
+          </div>
+          <ul class="check-list clearFix">
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                江夏街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                南门街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                西门街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                月湖街道</label>
+            </li>
+          </ul>
+          <div class="mb5">
+            <label class="ft14">
+              <input name="" type="checkbox" value="">
+              江东区</label>
+          </div>
+          <ul class="check-list clearFix">
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                体育场路街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                南部商务街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                五彩城街道</label>
+            </li>
+            <li>
+              <label>
+                <input name="" type="checkbox" value="">
+                世纪大道街道</label>
+            </li>
+          </ul>
+          <p class="mb5"><b class="ft14">选择详细信息</b></p>
+          <div class="clearFix line30 mb20"><span class="floatL mr10">成员级别：
+            <select class="form-control w100  mr10">
+              <option></option>
+            </select>
+            </span> <span class="floatL mr20">是否会员：
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              全部</label>
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              是</label>
+            <label>
+              <input name="" type="radio" value="">
+              否</label>
+            </span><span class="floatL mr20">年龄范围：
+            <input class="w65 form-control" name="" type="text">
+            ~
+            <input class="w65 form-control" name="" type="text">
+            </span><span class="floatL">入会时间范围： </span>
+            <div class="input-group date form_date w200 floatL"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+            </div>
+          </div>
+          <div class="clear mb5">
+            <input type="button" name="" value="搜索" class="btn_ok red_btn big_button">
+          </div>
+        </div>
+        <!--searchMore_pop END--> 
+      </div>
+      <!-- toolbar END-->
+      <div class="tit_qx mb10 clearFix"><span class="col-md-1-5">成员编号</span><span class="col-md-1-5">成员姓名</span><span class="col-md-1-5">联系方式</span><span class="col-md-1-5">级别</span><span class="col-md-1-5">性别</span><span class="col-md-1-5">年龄</span><span class="col-md-1-5">是否会员</span><span class="col-md-2">是否俱乐部成员</span><span class="col-md-1-5">入会时间</span></div>
+      <ul class="per_list">
+        <li>
+          <div class="col-md-1-5">YX1510261003</div>
+          <div class="col-md-1-5">王安被</div>
+          <div class="col-md-1-5">15877694453</div>
+          <div class="col-md-1-5">老班长</div>
+          <div class="col-md-1-5">男</div>
+          <div class="col-md-1-5">54</div>
+          <div class="col-md-1-5">是</div>
+          <div class="col-md-2">是</div>
+          <div class="col-md-1-5">2013-11-03</div>
+        </li>
+        <li>
+          <div class="col-md-1-5">YX1510261003</div>
+          <div class="col-md-1-5">王安被</div>
+          <div class="col-md-1-5">15877694453</div>
+          <div class="col-md-1-5">副班长</div>
+          <div class="col-md-1-5">男</div>
+          <div class="col-md-1-5">54</div>
+          <div class="col-md-1-5">是</div>
+          <div class="col-md-2">是</div>
+          <div class="col-md-1-5">2013-11-03</div>
+        </li>
+        <li>
+          <div class="col-md-1-5">YX1510261003</div>
+          <div class="col-md-1-5">王安被</div>
+          <div class="col-md-1-5">15877694453</div>
+          <div class="col-md-1-5">组长</div>
+          <div class="col-md-1-5">男</div>
+          <div class="col-md-1-5">54</div>
+          <div class="col-md-1-5">是</div>
+          <div class="col-md-2">是</div>
+          <div class="col-md-1-5">2013-11-03</div>
+        </li>
+        <li>
+          <div class="col-md-1-5">YX1510261003</div>
+          <div class="col-md-1-5">王安被</div>
+          <div class="col-md-1-5">15877694453</div>
+          <div class="col-md-1-5">组员</div>
+          <div class="col-md-1-5">男</div>
+          <div class="col-md-1-5">54</div>
+          <div class="col-md-1-5">是</div>
+          <div class="col-md-2">是</div>
+          <div class="col-md-1-5">2013-11-03</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- main_con END--> 
+  
+</div>
+<div id="zz_info">
+  <div class="zz_conts">
+    <div class="mb20 titT clearFix"><a class="coll_btn mr20">&nbsp;</a><span class="ft16">公司详情</span></div>
+    <div class="linkToolBar"><a href="#"> <i class="iconT i-edit">&nbsp;</i>编辑</a><a href="#"> <i class="iconT i-trash">&nbsp;</i>删除</a></div>
+    <div class="mb10"><b class="ft16 mr20">王安被</b><span class="mr30">女士</span><a href="#" class="ft14 blue_txt">13459678843</a></div>
+    <table cellspacing="0" cellpadding="0" border="1" class="tabTra lr mb15">
+      <tbody>
+        <tr>
+          <th width="10%">成员级别</th>
+          <td width="15%">普通成员</td>
+          <th width="10%">年龄</th>
+          <td width="15%">56</td>
+          <th width="10%">出生年月</th>
+          <td width="15%">1954/10/01</td>
+          <th width="10%">是否会员</th>
+          <td width="15%">是</td>
+        </tr>
+        <tr>
+          <th>会员卡号</th>
+          <td colspan="3">2103354798011456378</td>
+          <th>证件号</th>
+          <td colspan="3">330133197411030075</td>
+        </tr>
+        <tr>
+          <th>是否俱乐部成员</th>
+          <td>普通成员</td>
+          <th>微信号</th>
+          <td>trojan1880</td>
+          <th>QQ号码</th>
+          <td></td>
+          <th>人物标签</th>
+          <td>摄影、美食</td>
+        </tr>
+        <tr>
+          <th>当前地址</th>
+          <td colspan="7">浙江省宁波市海曙区大沙泥街富茂大厦71号532室</td>
+        </tr>
+        <tr>
+          <th>备注说明</th>
+          <td colspan="7">没什么要说明</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="mb10"><b class="ft14">活动记录（<font class="red_t">20</font>）</b></p>
+    <div class="clearFix mb10">
+      <label class="search_qp floatL mr10"><span class="search_i"></span>
+        <input type="text" placeholder="输入关键字" class="form-control w200">
+      </label>
+      <select class="form-control w100  mr10">
+        <option value="">活动状态</option>
+      </select>
+      <div class="input-group date form_date w180 floatL mr10"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+      </div>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" class="tabTra mb20 td-center">
+      <tbody>
+        <tr>
+          <th width="9%">活动编号</th>
+          <th>活动名称</th>
+          <th width="10%">活动状态</th>
+          <th width="20%">活动时间</th>
+          <th width="11%">目的地</th>
+          <th width="9%">参与人数</th>
+          <th width="9%">创建者</th>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td>
+            <p class="algin_left"><a class="blue_txt" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+          </td>
+          <td>已签约</td>
+          <td>2015.10.20~2015.10.21</td>
+          <td>巴厘岛</td>
+          <td>10</td>
+          <td>陈阳素</td>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td>
+            <p class="algin_left"><a class="blue_txt" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+          </td>
+          <td>进行中</td>
+          <td>2015.10.20~2015.10.21</td>
+          <td>巴厘岛</td>
+          <td>10</td>
+          <td>陈阳素</td>
+        </tr>
+        <tr>
+          <td>H000001</td>
+          <td>
+            <p class="algin_left"><a class="blue_txt" href="#">【宁波暑期爆款，KA转机】尊悦假期-巴厘岛+普
+              吉岛Villa情缘浪漫下午茶五晚六日游 </a></p>
+          </td>
+          <td>等待确认</td>
+          <td>2015.10.20~2015.10.21</td>
+          <td>巴厘岛</td>
+          <td>10</td>
+          <td>陈阳素</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--subConts start-->
+<div id="subConts">
+  <div class="outPop"> 
+    <!--  添加定制游 start-->
+    <div class="popInner">
+      <div class="mb20 titT clearFix"><a onClick="shutDown();" class="coll_btn mr20">&nbsp;</a><span class="ft16">新增成员</span></div>
+      <table class="form_tab mb20" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="9%">客户姓名：</th>
+          <td width="14%">
+            <input type="text" placeholder="" class="form-control">
+          </td>
+          <th width="10%">性别：</th>
+          <td width="12%">
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              男</label>
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              女</label>
+          </td>
+          <th width="12%">手机号码：</th>
+          <td width="15%">
+            <input type="text" placeholder="" class="form-control">
+          </td>
+          <th width="14%">成员级别：</th>
+          <td>
+            <select name="" class="form-control">
+              <option></option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>出生年月：</th>
+          <td colspan="3">
+            <div class="input-group date form_date"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              <input type="text" readonly placeholder="" value="" size="16" class="form-control">
+            </div>
+          </td>
+          <th>是否会员：</th>
+          <td>
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              是</label>
+            <label>
+              <input name="" type="radio" value="">
+              否</label>
+          </td>
+          <th>是否俱乐部成员：</th>
+          <td>
+            <label class="mr10">
+              <input name="" type="radio" value="">
+              是</label>
+            <label>
+              <input name="" type="radio" value="">
+              否</label>
+          </td>
+        </tr>
+        <tr>
+          <th>证件号码：</th>
+          <td colspan="3">
+            <input type="text" class="form-control" placeholder="">
+          </td>
+          <th>微信号：</th>
+          <td>
+            <input type="text" class="form-control" placeholder="">
+          </td>
+          <th>QQ号：</th>
+          <td>
+            <input type="text" class="form-control" placeholder="">
+          </td>
+        </tr>
+        <tr>
+          <th>联系地址：</th>
+          <td colspan="3">
+            <select class="form-control w100 floatL" name="">
+              <option value="">选择省份</option>
+            </select>
+            <select class="form-control w150 floatR" name="">
+              <option value="">选择城市/县区/街道</option>
+            </select>
+          </td>
+          <td colspan="4">
+            <p class="ml20">
+              <input type="text" class="form-control" placeholder="填写详细地址，如门牌号，楼层，房间号">
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <th>人物标签：</th>
+          <td colspan="7">
+            <label class="mr20">
+              <input name="" type="checkbox" value="">
+              跳舞</label>
+            <label class="mr20">
+              <input name="" type="checkbox" value="">
+              爬山</label>
+            <label class="mr20">
+              <input name="" type="checkbox" value="">
+              书法</label>
+            <label>
+              <input name="" type="checkbox" value="">
+              美食</label>
+          </td>
+        </tr>
+        <tr>
+          <th>备注说明：</th>
+          <td colspan="7">
+            <textarea name="" class="form-control" cols="" rows="3"></textarea>
+          </td>
+        </tr>
+      </table>
+      <div class="right_algin">
+        <input type="button" value="保存" class="btn_s red_btn big_button mr10">
+        <input type="button" value="取消" class="btn_s red_btn big_button cancelBtn">
+      </div>
+      <div class="tipMy color9 mb10 pt10 center">----------------------以下是<strong>群发短信</strong>(请程序删除这行提示)--------------------</div>
+      <div class="mb20 titT clearFix"><a class="coll_btn mr20" onclick="shutDown();">&nbsp;</a><span class="ft16">群发短信</span></div>
+      <p class="mb10"><b class="ft14">选择区域</b></p>
+      <div class="mb10">
+        <select class="form-control w100  mr10">
+          <option value="浙江省">浙江省</option>
+        </select>
+        <select class="form-control w100  mr10">
+          <option value="宁波市">宁波市</option>
+        </select>
+      </div>
+      <div class="mb5">
+        <label class="ft14">
+          <input type="checkbox" value="" name="">
+          海曙区</label>
+      </div>
+      <ul class="check-list clearFix">
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            江夏街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            南门街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            西门街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            月湖街道</label>
+        </li>
+      </ul>
+      <div class="mb5">
+        <label class="ft14">
+          <input type="checkbox" value="" name="">
+          江东区</label>
+      </div>
+      <ul class="check-list clearFix">
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            体育场路街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            南部商务街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            五彩城街道</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" value="" name="">
+            世纪大道街道</label>
+        </li>
+      </ul>
+      <p class="mb5"><b class="ft14">选择详细信息</b></p>
+      <div class="clearFix line30 mb10"><span class="floatL mr10">成员级别：
+        <select class="form-control w100  mr10">
+          <option value=""></option>
+        </select>
+        </span> <span class="floatL mr20">是否会员：
+        <label class="mr10">
+          <input type="radio" value="" name="">
+          全部</label>
+        <label class="mr10">
+          <input type="radio" value="" name="">
+          是</label>
+        <label>
+          <input type="radio" value="" name="">
+          否</label>
+        </span> <span class="floatL mr20">是否俱乐部成员：
+        <label class="mr10">
+          <input type="radio" value="" name="">
+          全部</label>
+        <label class="mr10">
+          <input type="radio" value="" name="">
+          是</label>
+        <label>
+          <input type="radio" value="" name="">
+          否</label>
+        </span> </div>
+      <div class="line30 clearFix"><span class="floatL mr20">年龄范围：
+        <input type="text" name="" class="w65 form-control">
+        ~
+        <input type="text" name="" class="w65 form-control">
+        </span><span class="floatL">入会时间范围： </span>
+        <div class="input-group date form_date w200 floatL"> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+          <input type="text" class="form-control" size="16" value="" placeholder="" readonly>
+        </div>
+      </div>
+      <div class="right_algin">
+        <input type="button" class="btn_s red_btn big_button mr10" value="下一步">
+        <input type="button" class="btn_s red_btn big_button cancelBtn" value="取消">
+      </div>
+      <div class="tipMy color9 mb10 pt10 center clearFix">----------------------以下是<strong>群发短信 2</strong>(请程序删除这行提示)--------------------</div>
+      <p class="mb10"><b class="ft14">预计产生<font class="red_t"> 1562</font> 条短信内容</b></p>
+      <div class="clearFix"><span class="col-md-1">成员级别：</span><span class="col-md-11">
+        <textarea class="form-control" name="" cols="" rows="4"></textarea>
+        <font class="color9">0/200</font></span></div>
+      <div class="right_algin">
+        <input type="button" class="btn_s red_btn big_button mr10" value="确认发送">
+        <input type="button" class="btn_s red_btn big_button cancelBtn" value="取消">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--subConts END--> 
+<!--datetimepicker-->
+<link rel="stylesheet" type="text/css" href="../js/datetimepicker/bootstrap-datetimepicker.css">
+<script type="text/javascript" src="../js/datetimepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script> 
+<script src="../js/datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script> 
+<script src="../js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/bootstrap-tagsinput/bootstrap-tagsinput.css">
+<script src="../js/bootstrap-tagsinput/bootstrap.js"></script> 
+<script src="../js/bootstrap-tagsinput/bootstrap-tagsinput.js"></script> 
+<!--timepicker--> 
+<script src="../js/timepicker/angular.js"></script> 
+<script src="../js/timepicker/angular-animate.js"></script> 
+<script src="../js/timepicker/ui-bootstrap-tpls-0.14.2.js"></script> 
+<script src="../js/timepicker/timepicker.js"></script> 
+<script src="../js/product.js"></script> 
+<script src="../js/bootstrap-dialog.js"></script> 
+<script>
+$('.form_date').datetimepicker({
+        language:  'zh-CN',
+		format: 'yyyy-mm-dd',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+   });
+</script>
+</body>
+</html>

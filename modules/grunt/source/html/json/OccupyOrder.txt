@@ -1,0 +1,27 @@
+{
+    "Status": 0,
+    "OrderLines": [
+        {
+            "Amount": 10,
+            "Price": 5,
+            "Quantity": 2,
+            "Description": "1 DAY CHILD EVENT (OLNET)",
+            "Name": "单日票-儿 童票",
+            "PLU": "SH1EOLNETC12101"
+        },
+        {
+            "Amount": 20,
+            "Price": 10,
+            "Quantity": 2,
+            "Description": "1 DAY SENIOR EVENT (OLNET)",
+            "Name": "单日票-老 年票",
+            "PLU": "SH1EOLNETSR12101"
+        }
+    ],
+    "OTAId": "OTA",
+    "Timestamp": "2015-11-11 10:40:12",
+    "OrderDate": "2015-11-11",
+    "VisitDate": "2015-11-19",
+    "SourceID": "ORDER00001",
+    "SessionID": "2015111110401241"
+}
