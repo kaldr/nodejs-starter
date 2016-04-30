@@ -16,10 +16,10 @@
     "angular":"",
     "angular-ui-bootstrap":"",
     "underscore":"",
-    "angular-semantic-ui":"",
-    "grunt":""
+    "angular-semantic-ui":""
   },
   "devDependencies":{
-    "electron-prebuilt":""
+    "electron-prebuilt":"",
+    "grunt":""
   }
 }
