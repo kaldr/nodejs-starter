@@ -16,7 +16,8 @@
     "angular":"",
     "angular-ui-bootstrap":"",
     "underscore":"",
-    "angular-semantic-ui":""
+    "angular-semantic-ui":"",
+    "grunt":""
   },
   "devDependencies":{
     "electron-prebuilt":""
